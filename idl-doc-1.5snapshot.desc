@@ -1,0 +1,13 @@
+IDL_VERSION="v1_05"
+
+name = "idl-doc"
+version = "1.5snapshot"
+build = {
+  type = "command",
+  src = PRODAPP .. "/idl-source-"..version.."/docs",
+  cmd = "doxygen",
+  arguments = "openbus.dox"
+}
+install_files = {
+  ["html"] = "doc/openbus_".. IDL_VERSION,
+}

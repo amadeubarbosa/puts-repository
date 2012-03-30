@@ -1,0 +1,27 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "scsoil"
+version = "1.3snapshot"
+url = SVNREPURL .. "/scs/core/cppoil/trunk"
+directory = PRODAPP .."/scs-cppoil"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/scs-cppoil/src",
+  mf = { "config LUA51="..PRODAPP.."/lua5.1", },
+  Darwin = { mf = {
+    "config LUA51="..PRODAPP.."/lua5.1",
+    "config LUA51="..PRODAPP.."/lua5.1 BUILD_DYLIB=Yes"}, },
+  MacOS = { mf = {
+    "config LUA51="..PRODAPP.."/lua5.1",
+    "config LUA51="..PRODAPP.."/lua5.1 BUILD_DYLIB=Yes"}, },
+  SunOS510_64 = { mf = { "config LUA51="..PRODAPP.."/lua5.1 ".. SUNOS64_TECMAKE_FLAGS } },
+}
+install_files = {
+  ["../lib/${TEC_UNAME}/libscsoil.so"] = "lib",
+  ["../lib/${TEC_UNAME}/libscsoil.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/libscsoil.*"] = "lib",
+  ["*.h"] = "include/scs/cppoil/",
+  ["luaidl/*.h"] = "include/scs/cppoil/luaidl/",
+}

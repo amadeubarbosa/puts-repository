@@ -1,0 +1,51 @@
+name = "openssl"
+version = "0.9.9"
+url = "http://www.tecgraf.puc-rio.br/~openbus/repository/openssl-0.9.9.tar.gz"
+build = {
+  type = "autotools",
+  test_libs = {"libcrypto*0.9.9*"},
+  MacOS = "./Configure darwin64-x86_64-cc no-asm shared --prefix=".. TMPDIR ..
+           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
+  Darwin98x86 = "./config no-asm shared --prefix=".. TMPDIR ..
+           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
+  Linux =  "./config shared --prefix=".. TMPDIR ..
+           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
+  SunOS =  "./config shared --prefix=".. TMPDIR ..
+           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
+  SunOS510 = "./Configure solaris-sparcv9-cc shared --prefix=".. TMPDIR ..
+           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
+  SunOS510_64 = "./Configure solaris64-sparcv9-cc shared --prefix=".. TMPDIR ..
+           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
+  SunOS510x86 = "./config no-asm shared --prefix=".. TMPDIR ..
+           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
+}
+build.Darwin = build.MacOS
+build.IRIX = build.Linux
+
+install_files = {
+    ["libssl*.dll*"] = "lib",      --dynamic windows
+    ["libcrypto*.dll*"] = "lib",
+  [TMPDIR .."/lib/libssl*.so*"] = "lib",       --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libcrypto*.so*"] = "lib",
+  [TMPDIR .."/lib/libssl*.dylib*"] = "lib",    --dynamic macos
+  [TMPDIR .."/lib/libcrypto*.dylib*"] = "lib",
+  [TMPDIR .."/bin/openssl"] = "bin",
+  [TMPDIR .."/bin/c_rehash"] = "bin",
+  [TMPDIR .."/openssl/*"] = "openssl",
+}
+dev_files = {
+  [TMPDIR .."/include/openssl"] = "include/openssl-0.9.9",
+  [TMPDIR .."/lib/libssl*.a*"] = "lib",        --static linux,aix,sunos
+  [TMPDIR .."/lib/libcrypto*.a*"] = "lib",     
+    ["libssl*.lib*"] = "lib",      --static windows
+    ["libcrypto*.lib*"] = "lib",
+    ["libssl*.dll*"] = "lib",      --dynamic windows
+    ["libcrypto*.dll*"] = "lib",
+  [TMPDIR .."/lib/libssl*.so*"] = "lib",       --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libcrypto*.so*"] = "lib",
+  [TMPDIR .."/lib/libssl*.dylib*"] = "lib",    --dynamic macos
+  [TMPDIR .."/lib/libcrypto*.dylib*"] = "lib",
+  [TMPDIR .."/bin/openssl"] = "bin",
+  [TMPDIR .."/bin/c_rehash"] = "bin",
+  [TMPDIR .."/openssl/*"] = "openssl",
+}

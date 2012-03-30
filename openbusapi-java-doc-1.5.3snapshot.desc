@@ -1,0 +1,12 @@
+name = "openbusapi-java-doc"
+version = "1.5.3snapshot"
+build = {
+  type = "command",
+  src = PRODAPP .. "/sdk-java/core",
+  cmd = "mvn",
+  rebuild = "clean",
+  arguments = "javadoc:javadoc -Dquiet",
+}
+install_files = {
+  ["target/site/apidocs"] = "doc",
+}

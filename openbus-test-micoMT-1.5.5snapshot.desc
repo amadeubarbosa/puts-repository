@@ -1,0 +1,39 @@
+name = "openbus-test-micoMT"
+version = "1.5.5snapshot"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/sdk-cpp/test/mico/tests",
+  mf = { 
+    "01 MULTITHREAD=Yes genstubs", 
+    "01 MULTITHREAD=Yes", 
+    "02 MULTITHREAD=Yes", 
+    "03 MULTITHREAD=Yes", 
+    "04 MULTITHREAD=Yes", 
+    "05 MULTITHREAD=Yes", 
+    "06 MULTITHREAD=Yes", 
+    "07 MULTITHREAD=Yes", 
+    "08 MULTITHREAD=Yes", 
+    "09 MULTITHREAD=Yes", 
+    "10 MULTITHREAD=Yes", 
+    "11 MULTITHREAD=Yes", 
+    "12 MULTITHREAD=Yes", 
+    "13 MULTITHREAD=Yes", 
+    "14 MULTITHREAD=Yes", 
+    "15 MULTITHREAD=Yes", 
+    "16 MULTITHREAD=Yes", 
+    "17 MULTITHREAD=Yes", 
+    "18 MULTITHREAD=Yes", 
+    "19 MULTITHREAD=Yes", 
+    "20 MULTITHREAD=Yes", 
+    "21 MULTITHREAD=Yes", 
+    "22 MULTITHREAD=Yes",
+  },
+}
+install_files = {
+  ["../tests"] = "test/mico/",
+  ["../util"] = "test/mico/",
+  ["../runtests*"] = "test/mico/",
+  ["../compile"] = "test/mico/",      
+  ["../config*"] = "test/mico/",
+  ["../../idl/*"] = "test/idl",
+}

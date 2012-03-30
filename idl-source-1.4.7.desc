@@ -1,0 +1,8 @@
+IDL_VERSION="v1_04"
+
+name = "idl-source"
+version = "1.4.7"
+url = SVNREPURL .. "/openbus/tags/OB_v1_04_07_2010_11_11/core/idl"
+install_files = {
+  ["*.idl"] = "idl/"..IDL_VERSION,
+}

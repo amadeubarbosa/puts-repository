@@ -1,0 +1,11 @@
+name = "openbus-demo-delegate-lua"
+version = "1.5.4snapshot"
+directory = PRODAPP .."/sdk-lua/demo/delegate"
+dev_files = {
+  ["client.lua"] = "demo/lua/delegate",
+  ["server.lua"] = "demo/lua/delegate",
+  ["run"] = "demo/lua/delegate",
+  ["Delegate.properties"] = "demo/lua/delegate",
+  ["idl"] = "demo/lua/delegate",
+  ["management"] = "demo/lua/delegate",
+}

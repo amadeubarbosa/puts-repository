@@ -1,0 +1,49 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+LUA51_FLAG = "LUA51="..PRODAPP.."/lua-5.1.3-oblibs1.4snapshot "
+
+name = "openbus-core"
+version = "1.5.4snapshot"
+dependencies = { 
+  "openbus-source == "..version , 
+  "oilall == 0.5.0-oblibs1.4snapshot",
+  "scsall == 1.2.2snapshot",
+  "lualdap == 1.1.0-oblibs1.4snapshot",
+  "lce == 1.0snapshot",
+  "luuid == 1.0-oblibs1.4snapshot",
+  "lpw == 1.5.4snapshot",
+  "luafilesystem == 1.4.2-oblibs1.4snapshot",
+  "openbus-lua == "..version,
+} 
+build = {
+  type = "tecmake",
+  src = SVNDIR .."/core/services",
+  mf = { "config "..LUA51_FLAG, },
+  SunOS510_64 = { mf = { "config "..LUA51_FLAG .. SUNOS64_TECMAKE_FLAGS } },
+  --env LFLAGS="-undefined dynamic_lookup"
+}
+install_files = {
+  ["../bin/${TEC_UNAME}/servicelauncher.bin"] = "bin",
+  ["../bin/*.sh"] = "bin",
+  ["../bin/servicelauncher"] = "bin",
+  ["../services/accesscontrol"] = "src/lua/openbus/core/services",
+  ["../services/registry"] = "src/lua/openbus/core/services",
+  ["../services/faulttolerance"] = "src/lua/openbus/core/services",
+  ["../services/session"] = "src/lua/openbus/core/services",
+  ["../management/*"] = "src/lua/openbus/core/management",
+  ["../../specs/management"] = "specs",
+  ["../../specs/shell"] = "specs",
+  ["../../specs/templates"] = "specs",
+  ["../test/run_check_install.sh"] = "test",
+  ["../test/checkInstall.lua"] = "test",
+  ["../../docs/Como-configurar-LDAP.txt"] = "doc",
+}
+conf_files = {
+  ["../../data/conf"] = "data",
+}
+-- TODO: include here all templates/openbus.lua messages table!!
+conf_template = {
+  SVNDIR .."/specs/templates/openbus.lua",
+}
+dev_files = {
+  ["../test/*"] = "test",
+}

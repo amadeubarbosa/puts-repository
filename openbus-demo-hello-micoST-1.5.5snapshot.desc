@@ -1,0 +1,40 @@
+name = "openbus-demo-hello-micoST"
+version = "1.5.5snapshot"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/sdk-cpp/demo/hello/mico",
+  mf = { 
+    "server genstubs", 
+    "client LUA51="..PRODAPP.."/lua5.1",
+    "server LUA51="..PRODAPP.."/lua5.1" 
+  },
+  SunOS510 = { 
+    mf = { 
+      "server genstubs ",
+      'client "LUA51='..PRODAPP..'/lua5.1"',
+      'server "LUA51='..PRODAPP..'/lua5.1"',
+    }, 
+  },
+  SunOS510_64 = { 
+    mf = { "server genstubs USE_NODEPEND=Yes", 
+           "client LUA51="..PRODAPP.."/lua5.1 USE_NODEPEND=Yes", 
+           "server LUA51="..PRODAPP.."/lua5.1 USE_NODEPEND=Yes"}, 
+  }
+}
+dev_files = {
+  ["bin/${TEC_UNAME}/*"] = "demo/hello/mico/bin",
+  ["../idl/hello.idl"] = "demo/hello/idl/",
+  ["../management"] = "demo/hello",
+  ["../../README"] = "demo",      
+  ["MakefileST.linux"] = "demo/hello/mico",
+  ["MakefileST.sunos"] = "demo/hello/mico",
+  ["Makefile.win"] = "demo/hello/mico",
+  ["client.cpp"] = "demo/hello/mico",
+  ["server.cpp"] = "demo/hello/mico",
+  ["run*"] = "demo/hello/mico",
+  ["*.mak"] = "demo/hello/mico",
+  ["*config"] = "demo/hello/mico",
+  ["run*"] = "demo/hello/mico",
+  ["client"] = "demo/hello/mico",
+  ["server"] = "demo/hello/mico",
+}

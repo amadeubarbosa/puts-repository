@@ -1,0 +1,4 @@
+name = "sdk-lua-source"
+version = "1.5.4snapshot"
+url = SVNREPURL .. "/openbus/sdk/lua/trunk"
+directory = PRODAPP .."/sdk-lua"

@@ -1,0 +1,39 @@
+IDL_VERSION="v1_05"
+
+name = "scs-micoST"
+version = "1.3snapshot"
+url = SVNREPURL .. "/scs/core/cpp/trunk"
+directory = PRODAPP .."/scs-cpp"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/scs-cpp",
+  mf = { 
+    "mico genstubs", 
+    "mico LUA51="..PRODAPP.."/lua5.1"
+  },
+  Darwin = {
+    mf = { 
+      "mico genstubs LD=g++", 
+      "mico BUILD_DYLIB=Yes LD=g++ LUA51="..PRODAPP.."/lua5.1" 
+    },
+  },
+  MacOS = {
+    mf = { 
+      "mico genstubs LD=g++", 
+      "mico BUILD_DYLIB=Yes LD=g++ LUA51="..PRODAPP.."/lua5.1" 
+    },
+  },
+}
+install_files = {
+  ["lib/${TEC_UNAME}/libscsmicoST.*"] = "lib",
+  -- to make sure that .idl files will be in the .tar.gz package
+  [INSTALL.TOP.."/idl/"..IDL_VERSION.."/scs.idl"] =
+      "idl/"..IDL_VERSION,
+}
+dev_files = {
+  ["lib/${TEC_UNAME}/libscsmicoST.*"] = "lib",
+  -- to make sure that .idl files will be in the .tar.gz package
+  [INSTALL.TOP.."/idl/"..IDL_VERSION.."/scs.idl"] =
+      "idl/"..IDL_VERSION,
+  ["include/scs/*"] = "include/scs",
+}

@@ -1,0 +1,26 @@
+name = "openbus-demo-delegate-orbix"
+version = "1.5.5snapshot"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/sdk-cpp/demo/delegate/singlethread/orbix",
+  mf = { 
+    "server genstubs", 
+    "client LUA51="..PRODAPP.."/lua5.1",
+    "server LUA51="..PRODAPP.."/lua5.1" 
+  },
+}
+dev_files = {
+  ["bin/${TEC_UNAME}/*"] = "demo/delegate/singlethread/orbix/bin",
+  ["../../idl/delegate.idl"] = "demo/delegate/singlethread/idl/",
+  ["../../management"] = "demo/delegate/singlethread",
+  ["client.cpp"] = "demo/delegate/singlethread/orbix",
+  ["server.cpp"] = "demo/delegate/singlethread/orbix",
+  ["run*"] = "demo/delegate/singlethread/orbix",
+  ["*.mak"] = "demo/delegate/singlethread/orbix",
+  ["*config"] = "demo/delegate/singlethread/orbix",
+  ["run*"] = "demo/delegate/singlethread/orbix",
+  ["client"] = "demo/delegate/singlethread/orbix",
+  ["server"] = "demo/delegate/singlethread/orbix",
+  [SVNDIR.."/specs/shell/*rc"] = "specs/shell/", -- shell variables
+  [SVNDIR.."/specs/shell/sample-domain_env.*"] = "specs/shell/",
+}

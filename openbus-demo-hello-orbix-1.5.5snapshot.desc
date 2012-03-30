@@ -1,0 +1,26 @@
+name = "openbus-demo-hello-orbix"
+version = "1.5.5snapshot"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/sdk-cpp/demo/hello/orbix",
+  mf = { "server genstubs USE_NODEPEND=Yes", 
+         "client LUA51="..PRODAPP.."/lua5.1", 
+         "server LUA51="..PRODAPP.."/lua5.1" },
+}
+dev_files = {
+  ["bin/${TEC_UNAME}/*"] = "demo/hello/orbix/bin",
+  ["../idl/hello.idl"] = "demo/hello/idl/",
+  ["../management"] = "demo/hello",
+  ["../../README"] = "demo",      
+  ["Makefile"] = "demo/hello/orbix",
+  ["client.cpp"] = "demo/hello/orbix",
+  ["server.cpp"] = "demo/hello/orbix",
+  ["run*"] = "demo/hello/orbix",
+  ["*.mak"] = "demo/hello/orbix",
+  ["*config"] = "demo/hello/orbix",
+  ["run*"] = "demo/hello/orbix",
+  ["client"] = "demo/hello/orbix",
+  ["server"] = "demo/hello/orbix",
+  [SVNDIR.."/specs/shell/*rc"] = "specs/shell/", -- shell variables
+  [SVNDIR.."/specs/shell/sample-domain_env.*"] = "specs/shell/",
+}

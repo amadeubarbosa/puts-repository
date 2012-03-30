@@ -1,0 +1,14 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "openbus-bin-acs"
+version = "1.5.4snapshot"
+build = {
+  type = "tecmake",
+  src = SVNDIR .."/core/services",
+  mf = { "accesscontrol LUA51="..PRODAPP.."/lua5.1", },
+  SunOS510_64 = { mf = { "accesscontrol LUA51="..PRODAPP.."/lua5.1 ".. SUNOS64_TECMAKE_FLAGS } },
+}
+install_files = {
+  ["../bin/${TEC_UNAME}/acs.bin"] = "bin",
+  ["../bin/run_binary_acs.sh"] = "bin",
+}

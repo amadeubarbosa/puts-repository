@@ -1,0 +1,33 @@
+name = "openbus-demo-delegate-multithread-mico"
+version = "1.5.5snapshot"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/sdk-cpp/demo/delegate/multithread/mico",
+  mf = { 
+    "server genstubs", 
+    "client LUA51="..PRODAPP.."/lua5.1",
+    "server LUA51="..PRODAPP.."/lua5.1" 
+  },
+  SunOS510_64 = { 
+    mf = { 
+      "server genstubs ",
+      'client USE_NODEPEND=Yes "LUA51='..PRODAPP..'/lua5.1 "',
+      'server USE_NODEPEND=Yes "LUA51='..PRODAPP..'/lua5.1 "',
+    }, 
+  },
+}
+dev_files = {
+  ["bin/${TEC_UNAME}/*"] = "demo/delegate/multithread/mico/bin",
+  ["../../idl/delegate.idl"] = "demo/delegate/idl/",
+  ["../../management"] = "demo/delegate",
+  ["../../README"] = "demo",      
+  ["Makefile"] = "demo/delegate/multithread/mico",
+  ["client.cpp"] = "demo/delegate/multithread/mico",
+  ["server.cpp"] = "demo/delegate/multithread/mico",
+  ["run*"] = "demo/delegate/multithread/mico",
+  ["*.mak"] = "demo/delegate/multithread/mico",
+  ["*config"] = "demo/delegate/multithread/mico",
+  ["run*"] = "demo/delegate/multithread/mico",
+  ["client"] = "demo/delegate/multithread/mico",
+  ["server"] = "demo/delegate/multithread/mico",
+}

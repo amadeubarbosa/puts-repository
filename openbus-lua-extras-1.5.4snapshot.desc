@@ -1,0 +1,15 @@
+--FIXME: esse pacote deve ser removido quando concluir OPENBUS-1372
+name = "openbus-lua-extras"
+version = "1.5.4snapshot"
+url = SVNREPURL .. "/openbus/trunk/data"
+directory = SVNDIR .. "/data" -- main source directory for PUts!
+dependencies = {
+  "openbus-source == 1.5.4snapshot",
+}
+install_files = {
+  ["conf/config"] = "data/conf",
+  ["conf/ACSFaultToleranceConfiguration.lua"] = "data/conf",
+  ["conf/RSFaultToleranceConfiguration.lua"] = "data/conf",
+  ["conf/FTTimeOutConfiguration.lua"] = "data/conf",
+  ["conf/advanced/InterceptorsConfiguration.lua"] = "data/conf/advanced",
+}

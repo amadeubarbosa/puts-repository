@@ -1,0 +1,36 @@
+IDL_VERSION="v1_05"
+IDL_PREV="v1_04"
+
+name = "openbus-micoMT"
+version = "1.5.5snapshot"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/sdk-cpp",
+  mf = { 
+    "mico genstubs MULTITHREAD=Yes", 
+    "mico LUA51="..PRODAPP.."/lua5.1 MULTITHREAD=Yes" },
+  -- special compile instructions for solaris
+  Darwin = {
+    mf = { 
+      "mico genstubs LD=g++ MULTITHREAD=Yes", 
+      "mico LD=g++ LUA51="..PRODAPP.."/lua5.1 MULTITHREAD=Yes" 
+    },
+  },
+  MacOS = {
+    mf = { 
+      "mico genstubs LD=g++ MULTITHREAD=Yes", 
+      "mico LD=g++ LUA51="..PRODAPP.."/lua5.1 MULTITHREAD=Yes" 
+    },
+  },
+}
+dev_files = {
+  ["CHANGES"] = ".",
+  ["lib/${TEC_UNAME}/libopenbusmicoMT.*"] = "lib",
+  ["include/*.h"] = "include/openbus/cpp", --include
+  ["include/util/*.h"] = "include/openbus/cpp/util/",    --include
+  ["include/interceptors/*.h"] = "include/openbus/cpp/interceptors/",    --include
+  ["stubs/mico"] = "include/openbus/cpp/stubs",     --include
+  [INSTALL.TOP.."/idl/"..IDL_PREV.."/*"] = "idl/"..IDL_PREV,
+  [INSTALL.TOP.."/idl/"..IDL_VERSION.."/*"] = "idl/"..IDL_VERSION,
+  [SVNDIR.."/specs/shell/*rc"] = "specs/shell/", -- shell variables
+}

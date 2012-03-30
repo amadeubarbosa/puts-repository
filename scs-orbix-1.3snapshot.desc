@@ -1,0 +1,25 @@
+IDL_VERSION="v1_05"
+
+name = "scs-orbix"
+version = "1.3snapshot"
+url = SVNREPURL .. "/scs/core/cpp/trunk"
+directory = PRODAPP .."/scs-cpp"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/scs-cpp",
+  mf = { "orbix genstubs", "orbix" },
+}
+install_files = {
+  ["lib/${TEC_UNAME}/libscsorbix.so"] = "lib",
+  -- to make sure that .idl files will be in the .tar.gz package
+  [INSTALL.TOP.."/idl/"..IDL_VERSION.."/scs.idl"] =
+      "idl/"..IDL_VERSION,
+  ["shell/orbix/idl"] = "specs/shell/orbix",        
+}
+dev_files = {
+  ["lib/${TEC_UNAME}/libscsorbix.*"] = "lib",
+  -- to make sure that .idl files will be in the .tar.gz package
+  [INSTALL.TOP.."/idl/"..IDL_VERSION.."/scs.idl"] =
+      "idl/"..IDL_VERSION,
+  ["include/scs/*"] = "include/scs/",
+}

@@ -1,0 +1,39 @@
+name = "openbus-test-micoST"
+version = "1.5.5snapshot"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/sdk-cpp/test/mico/tests",
+  mf = { 
+    "01 genstubs", 
+    "01", 
+    "02", 
+    "03", 
+    "04", 
+    "05", 
+    "06", 
+    "07", 
+    "08", 
+    "09", 
+    "10", 
+    "11", 
+    "12", 
+    "13", 
+    "14", 
+    "15", 
+    "16", 
+    "17", 
+    "18", 
+    "19", 
+    "20", 
+    "21", 
+    "22",
+  },
+}
+install_files = {
+  ["../tests"] = "test/mico/",
+  ["../util"] = "test/mico/",
+  ["../runtests*"] = "test/mico/",
+  ["../compile"] = "test/mico/",      
+  ["../config*"] = "test/mico/",
+  ["../../idl/*"] = "test/idl",
+}

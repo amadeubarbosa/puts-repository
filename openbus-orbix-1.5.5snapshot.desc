@@ -1,0 +1,24 @@
+IDL_VERSION="v1_05"
+
+name = "openbus-orbix"
+version = "1.5.5snapshot"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/sdk-cpp",
+  mf = { "orbix precompile LUA51="..PRODAPP.."/lua5.1", "orbix genstubs", "orbix LUA51="..PRODAPP.."/lua5.1" },
+}
+dev_files = {
+  ["lib/${TEC_UNAME}/libopenbusorbix.*"] = "lib",
+  ["include/*.h"] = "include/openbus/cpp", --include
+  ["include/util/*.h"] = "include/openbus/cpp/util/",    --include
+  ["include/interceptors/*.h"] = "include/openbus/cpp/interceptors/",    --include
+  ["stubs/orbix"] = "include/openbus/cpp/stubs",     --include
+  [INSTALL.TOP.."/idl/"..IDL_VERSION.."/*"] = "idl/"..IDL_VERSION,
+  ["test/orbix/acs/*.cpp"] = "test/orbix/acs/",
+  ["test/orbix/acs/config.mak"] = "test/orbix/acs/",
+  ["test/orbix/rgs/*.cpp"] = "test/orbix/rgs/",
+  ["test/orbix/rgs/config.mak"] = "test/orbix/rgs/",
+  ["test/orbix/config*"] = "test/orbix/",
+  ["test/orbix/runtests*"] = "test/orbix/",
+  ["shell/orbix/idl"] = "specs/shell/orbix",        
+}

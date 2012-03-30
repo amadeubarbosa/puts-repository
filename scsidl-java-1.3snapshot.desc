@@ -1,0 +1,10 @@
+name = "scsidl-java"
+version = "1.3snapshot"
+build = {
+  type = "maven",
+  src = PRODAPP .."/scs-idl",
+}
+install_files = {
+  ["target/*.jar"] = "lib",
+  ["target/dependency/*.jar"] = "lib",
+}

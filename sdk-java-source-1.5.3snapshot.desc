@@ -1,0 +1,4 @@
+name = "sdk-java-source"
+version = "1.5.3snapshot"
+url = SVNREPURL .. "/openbus/sdk/java/trunk"
+directory = PRODAPP .."/sdk-java"

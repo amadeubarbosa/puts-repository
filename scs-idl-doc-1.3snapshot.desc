@@ -1,0 +1,11 @@
+name = "scs-idl-doc"
+version = "1.3snapshot"
+build = {
+  type = "command",
+  src = PRODAPP .. "/scs-idl-"..version.."/docs",
+  cmd = "doxygen",
+  arguments = "scs.dox"
+}
+install_files = {
+  ["html"] = "doc/scs",
+}

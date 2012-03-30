@@ -1,0 +1,5 @@
+name = "auxiliar-files"
+version = "1.5.4snapshot"
+install_files = {
+  [SVNDIR.."/specs/shell/openssl-generate.ksh"] = "bin",
+}

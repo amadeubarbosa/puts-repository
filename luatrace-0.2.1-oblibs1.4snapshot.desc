@@ -1,0 +1,19 @@
+name = "luatrace"
+version = "0.2.1-oblibs1.4snapshot"
+url = SVNREPURL .. "/openbus/libs/trunk/luatrace"
+build = {
+  type = "command",
+  Linux = { cmd = "make PLAT=linux reader static-writer dynamic-writer "..
+     "&& make PLAT=linux INSTALL_TOP=" .. TMPDIR  ..
+     " install-reader install-static-writer install-dynamic-writer",
+  },
+}
+install_files = {
+    [TMPDIR .. "/bin/luatrace"]                       = "bin",
+    [TMPDIR .. "/lib/libluatrace_*.so"]               = "lib",
+    [TMPDIR .. "/lib/lua/5.1/trace/*.so"]             = "lib/trace",
+    [TMPDIR .. "/lib/lua/5.1/trace/inputstream/*.so"] = "lib/trace/inputstream",
+    [TMPDIR .. "/lib/lua/5.1/trace/msgdecoder/*.so"]  = "lib/trace/msgdecoder",
+    [TMPDIR .. "/lib/lua/5.1/trace/msgreader/*.so"]   = "lib/trace/msgreader",
+    [TMPDIR .. "/share/lua/5.1/trace/manager.lua"]    = "lib/lua/5.1/trace",
+}

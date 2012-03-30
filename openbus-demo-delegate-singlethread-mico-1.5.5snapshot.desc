@@ -1,0 +1,33 @@
+name = "openbus-demo-delegate-singlethread-mico"
+version = "1.5.5snapshot"
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/sdk-cpp/demo/delegate/singlethread/mico",
+  mf = { 
+    "server genstubs", 
+    "client LUA51="..PRODAPP.."/lua5.1",
+    "server LUA51="..PRODAPP.."/lua5.1" 
+  },
+  SunOS510_64 = { 
+    mf = { 
+      "server genstubs USE_NODEPEND=Yes",
+      'client USE_NODEPEND=Yes "LUA51='..PRODAPP..'/lua5.1 "',
+      'server USE_NODEPEND=Yes "LUA51='..PRODAPP..'/lua5.1 "',
+    }, 
+  },
+}
+dev_files = {
+  ["bin/${TEC_UNAME}/*"] = "demo/delegate/singlethread/mico/bin",
+  ["../../idl/delegate.idl"] = "demo/delegate/idl/",
+  ["../../management"] = "demo/delegate",
+  ["../../README"] = "demo",      
+  ["Makefile"] = "demo/delegate/singlethread/mico",
+  ["client.cpp"] = "demo/delegate/singlethread/mico",
+  ["server.cpp"] = "demo/delegate/singlethread/mico",
+  ["run*"] = "demo/delegate/singlethread/mico",
+  ["*.mak"] = "demo/delegate/singlethread/mico",
+  ["*config"] = "demo/delegate/singlethread/mico",
+  ["run*"] = "demo/delegate/singlethread/mico",
+  ["client"] = "demo/delegate/singlethread/mico",
+  ["server"] = "demo/delegate/singlethread/mico",
+}

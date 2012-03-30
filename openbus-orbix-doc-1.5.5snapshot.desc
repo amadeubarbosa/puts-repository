@@ -1,0 +1,11 @@
+name = "openbus-orbix-doc"
+version = "1.5.5snapshot"
+build = {
+  type = "command",
+  src = PRODAPP .. "/sdk-cpp",
+  cmd = "doxygen",
+  arguments = "doxygen.cfg"
+}
+install_files = {
+  ["docs/html"] = "docs/cpp/",
+}
