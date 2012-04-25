@@ -8,8 +8,8 @@ url = SVNREPURL .. "/scs/core/lua/branches/SCS_CORE_LUA_v1_02_02_2011_07_28"
 dependencies = {
   "lua-bin == "..lua_pkgversion,
   "oilall == 0.5.0-oblibs1.4snapshot",
-  "scs-idl == 1.3snapshot",
-  "scs-idl == 1.2snapshot",
+  "scs-idl1.3 == 1.3snapshot",
+  "scs-idl1.2 == 1.2snapshot",
 }
 build = {
   type = "tecmake",

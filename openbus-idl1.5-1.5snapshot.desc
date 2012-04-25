@@ -1,6 +1,6 @@
 IDL_VERSION="v1_05"
 
-name = "idl-source"
+name = "openbus-idl1.5"
 version = "1.5snapshot"
 url = SVNREPURL .. "/openbus/idl/trunk"
 install_files = {

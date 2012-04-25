@@ -1,10 +1,10 @@
 IDL_VERSION="v1_05"
 
-name = "idl-doc"
+name = "openbus-idl1.5-doc"
 version = "1.5snapshot"
 build = {
   type = "command",
-  src = PRODAPP .. "/idl-source-"..version.."/docs",
+  src = PRODAPP .. "/openbus-idl1.5-"..version.."/docs",
   cmd = "doxygen",
   arguments = "openbus.dox"
 }

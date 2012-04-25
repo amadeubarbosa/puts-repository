@@ -1,6 +1,6 @@
 IDL_VERSION="v1_04"
 
-name = "scs-idl"
+name = "scs-idl1.2"
 version = "1.2snapshot"
 url = SVNREPURL .. "/scs/core/idl/branches/SCS_CORE_IDL_v1_02_2010_09_21"
 install_files = {

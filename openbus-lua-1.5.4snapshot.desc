@@ -8,8 +8,8 @@ dependencies = {
   "sdk-lua-source == 1.5.4snapshot",
   "lua-bin == "..lua_pkgversion,
   "loop == 2.3beta" ,
-  "idl-source == 1.5snapshot",
-  "idl-source == 1.4.7",
+  "openbus-idl1.5 == 1.5snapshot",
+  "openbus-idl1.4 == 1.4.7",
 }
 build = {
   type = "tecmake",

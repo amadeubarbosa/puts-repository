@@ -1,8 +1,8 @@
-name = "scs-idl-doc"
+name = "scs-idl1.3-doc"
 version = "1.3snapshot"
 build = {
   type = "command",
-  src = PRODAPP .. "/scs-idl-"..version.."/docs",
+  src = PRODAPP .. "/scs-idl1.3-"..version.."/docs",
   cmd = "doxygen",
   arguments = "scs.dox"
 }
