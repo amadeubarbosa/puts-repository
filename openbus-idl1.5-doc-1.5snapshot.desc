@@ -2,6 +2,9 @@ IDL_VERSION="v1_05"
 
 name = "openbus-idl1.5-doc"
 version = "1.5snapshot"
+dependencies = {
+  "scs-idl1.3-doc == 1.3snapshot",
+}
 build = {
   type = "command",
   src = PRODAPP .. "/openbus-idl1.5-"..version.."/docs",
