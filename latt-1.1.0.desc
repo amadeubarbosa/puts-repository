@@ -1,0 +1,10 @@
+name = "latt"
+version = "1.1.0"
+url = SVNREPURL.."/luautils/latt/tags/v1_01_00_2011_11_17"
+build = {
+  type = "tecmake",
+  mf = { },
+}
+dev_files = {
+  ["lua/*"] = "lib/lua/5.1"
+}

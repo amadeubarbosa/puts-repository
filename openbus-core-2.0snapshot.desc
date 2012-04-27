@@ -1,0 +1,43 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+LUA51_FLAG = "LUA51="..PRODAPP.."/lua-5.1.3-oblibs1.4snapshot "
+
+name = "openbus-core"
+version = "2.0snapshot"
+dependencies = { 
+  "openbus-source == "..version , 
+  "loop == 2snapshot" , 
+  "oil-source == 0.5snapshot",
+  "scs-lua == 1.3snapshot",
+  "lualdap == 1.1.0-oblibs1.4snapshot",
+  "lce == 1snapshot",
+  "luaidl == 0.6.0snapshot",
+  "luuid == 1.0-oblibs1.4snapshot",
+  "lpw == 1.5.4snapshot",
+  "luafilesystem == 1.4.2-oblibs1.4snapshot",
+  "openbus-lua == "..version,
+  "latt == 1.1.0",
+  "luastruct == 1.2snapshot",
+  "luavararg == 1.1snapshot",
+  "luasocket == 2.0.2-oblibs1.4snapshot",
+} 
+build = {
+  type = "tecmake",
+  src = SVNDIR .."/src",
+  mf = { "busservices LUA51="..PRODAPP.."/lua-5.1.3-oblibs1.4snapshot OIL_HOME="..PRODAPP.."/oil-0.5snapshot LOOP_HOME="..PRODAPP.."/loop-2snapshot ", },
+  SunOS510_64 = { mf = { "busservices LUA51="..PRODAPP.."/lua-5.1.3-oblibs1.4snapshot OIL_HOME="..PRODAPP.."/oil-0.5snapshot LOOP_HOME="..PRODAPP.."/loop-2snapshot ".. SUNOS64_TECMAKE_FLAGS } },
+  --env LFLAGS="-undefined dynamic_lookup"
+}
+install_files = {
+  ["../bin/${TEC_UNAME}/busservices"] = "bin",
+  ["../specs/management"] = "specs",
+  ["../specs/shell"] = "specs",
+  ["../specs/templates"] = "specs",
+  ["../test/*"] = "test",
+}
+-- TODO: include here all templates/openbus.lua messages table!!
+conf_template = {
+  SVNDIR .."/specs/templates/openbus.lua",
+}
+dev_files = {
+  ["../test/*"] = "test",
+}

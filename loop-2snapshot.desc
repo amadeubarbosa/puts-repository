@@ -1,0 +1,25 @@
+local lua_pkgversion = "5.1.3-oblibs1.4snapshot"
+ALL_FLAGS = " LOOP_HOME="..PRODAPP.."/loop-2snapshot LUA51="..PRODAPP.."/lua-"..lua_pkgversion.." "
+
+name = "loop"
+version = "2snapshot"
+url = SVNREPURL .. "/loop/trunk"
+dependencies = {
+  "lua = 5.1.3-oblibs1.4snapshot",
+  "lua-bin = 5.1.3-oblibs1.4snapshot",
+}
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/loop-2snapshot/openbus",
+  mf = { "loop "..ALL_FLAGS },
+}
+install_files = {
+  ["../lib/"..TEC_UNAME.."/libloop.so"] = "lib",
+  ["../lib/"..TEC_UNAME.."/libloop.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/"..TEC_UNAME.."/libloop.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/loop.h"] = "include/loop",
+  ["../lua/loop"] = "lib/lua/5.1",
+  ["../lua/preloader.lua"] = "lib/lua/5.1",
+}

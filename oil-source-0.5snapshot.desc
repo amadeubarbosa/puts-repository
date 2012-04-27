@@ -1,0 +1,4 @@
+name = "oil-source"
+version = "0.5snapshot"
+url = SVNREPURL .. "/oil/trunk"
+directory = PRODAPP .."/oil-0.5snapshot"

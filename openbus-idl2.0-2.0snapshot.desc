@@ -1,0 +1,12 @@
+IDL_VERSION="v2_00"
+
+name = "openbus-idl2.0"
+version = "2.0snapshot"
+url = SVNREPURL .. "/openbus/idl/branches/openbus_v2_proto"
+dependencies = {
+  "scs-idl1.3 == 1.3snapshot",
+}
+install_files = {
+  ["src/*.idl"] = "idl/"..IDL_VERSION,
+  [PRODAPP.."/scs-idl1.3-1.3snapshot/src/*.idl"] = "idl/"..IDL_VERSION,
+}

@@ -1,0 +1,4 @@
+name = "openbus-source"
+version = "2.0snapshot"
+url = SVNREPURL .. "/openbus/core/trunk"
+directory = SVNDIR
