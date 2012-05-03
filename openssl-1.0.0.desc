@@ -1,5 +1,5 @@
 name = "openssl"
-version = "1.0.0d"
+version = "1.0.0"
 url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/openssl-1.0.0d.tar.gz"
 build = {
   type = "autotools",

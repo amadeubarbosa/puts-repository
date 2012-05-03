@@ -6,7 +6,7 @@ name = "lce"
 version = "1snapshot"
 url = SVNREPURL.."/luautils/lce/trunk"
 dependencies = {
-  "openssl == 0.9.9",
+  "openssl == 1.0.0",
   "lua == "..lua_pkgversion,
   "loop == 2snapshot",
 }
