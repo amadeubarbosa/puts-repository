@@ -10,6 +10,12 @@ dependencies = {
   "loop == 2snapshot",
   "luainspector == 1.0snapshot",
   "luastruct == 1.2snapshot",
+  "luuid == 1.0-oblibs1.4snapshot",
+  "lce == 1snapshot",
+  "luafilesystem == 1.4.2-oblibs1.4snapshot",
+  "luasocket == 2.0.2-oblibs1.4snapshot",
+  "scs-lua == 1.3snapshot",
+  "luaidl == 0.6.0snapshot",
   "luatuple == 1.0snapshot",
   "luacoroutine == 1.0snapshot",
   "luacothread == 1.0snapshot",
@@ -17,6 +23,7 @@ dependencies = {
   "openbus-idl1.5 == 1.5snapshot",
   "openbus-idl2.0 == 2.0snapshot",
   "oil == 0.5snapshot",
+  "openbus-lua == "..version,
 }
 build = {
   type = "tecmake",
@@ -28,10 +35,5 @@ build = {
 build.Darwin = build.MacOS
 
 install_files = {
-  ["../lib/"..TEC_UNAME.."/libluaopenbus.so"] = "lib",
-  ["../lib/"..TEC_UNAME.."/libluaopenbus.dylib"] = "lib",
-}
-dev_files = {
-  ["../lib/"..TEC_UNAME.."/libluaopenbus.*"] = "lib",
-  ["../obj/"..TEC_UNAME.."/luaopenbus.h"] = "include/openbus/lua/",
+  ["../bin/"..TEC_UNAME.."/busconsole"] = "bin",
 }
