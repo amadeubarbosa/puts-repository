@@ -6,19 +6,20 @@ version = "2.0snapshot"
 dependencies = { 
   "openbus-source == "..version , 
   "loop == 2snapshot" , 
-  "oil-source == 0.5snapshot",
+  "oil == 0.5snapshot",
   "scs-lua == 1.3snapshot",
   "lualdap == 1.1.0-oblibs1.4snapshot",
+  "luacoroutine == 1.0snapshot",
+  "luacothread == 1.0snapshot",
+  "luainspector == 1.0snapshot",
+  "luatuple == 1.0snapshot",
+  "luastruct == 1.2snapshot",
+  "luavararg == 1.1snapshot",
   "lce == 1snapshot",
-  "luaidl == 0.6.0snapshot",
   "luuid == 1.0-oblibs1.4snapshot",
-  "lpw == 1.5.4snapshot",
   "luafilesystem == 1.4.2-oblibs1.4snapshot",
   "openbus-lua == "..version,
   "latt == 1.1.0",
-  "luastruct == 1.2snapshot",
-  "luavararg == 1.1snapshot",
-  "luasocket == 2.0.2-oblibs1.4snapshot",
 } 
 build = {
   type = "tecmake",
@@ -33,10 +34,6 @@ install_files = {
   ["../specs/shell"] = "specs",
   ["../specs/templates"] = "specs",
   ["../test/*"] = "test",
-}
--- TODO: include here all templates/openbus.lua messages table!!
-conf_template = {
-  SVNDIR .."/specs/templates/openbus.lua",
 }
 dev_files = {
   ["../test/*"] = "test",

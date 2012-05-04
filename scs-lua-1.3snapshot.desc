@@ -14,8 +14,8 @@ dependencies = {
 build = {
   type = "tecmake",
   mf = { "config "..ALL_FLAGS, },
-  MacOS = { mf = {"scsall "..ALL_FLAGS, "scsall BUILD_DYLIB=Yes "..ALL_FLAGS} },
-  SunOS510_64 = { mf = { "scsall "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS, } },
+  MacOS = { mf = {"config "..ALL_FLAGS, "scsall BUILD_DYLIB=Yes "..ALL_FLAGS} },
+  SunOS510_64 = { mf = { "config "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS, } },
 }
 build.Darwin = build.MacOS
 
@@ -25,10 +25,6 @@ install_files = {
 }
 dev_files = {
   ["../lib/"..TEC_UNAME.."/libluascs.*"] = "lib",
-  ["../obj/"..TEC_UNAME.."/scsall.h"] = "include/scs/lua",
   ["../obj/"..TEC_UNAME.."/luascs.h"] = "include/scs/lua",
   ["../schema"] = "schema",
-}
-symbolic_links = {
-  ["libluascs.so"] = "lib/libscsall.so",
 }

@@ -8,6 +8,8 @@ dependencies = {
   "lua-bin == "..lua_pkgversion,
   "oil-source == 0.5snapshot",
   "loop == 2snapshot",
+  "luaidl == 0.6.0snapshot",
+  "luasocket == 2.0.2-oblibs1.4snapshot",
 }
 build = {
   type = "tecmake",
