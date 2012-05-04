@@ -14,7 +14,7 @@ dependencies = {
 build = {
   type = "tecmake",
   mf = { "config "..ALL_FLAGS, },
-  MacOS = { mf = {"config "..ALL_FLAGS, "scsall BUILD_DYLIB=Yes "..ALL_FLAGS} },
+  MacOS = { mf = {"config "..ALL_FLAGS, "config BUILD_DYLIB=Yes "..ALL_FLAGS} },
   SunOS510_64 = { mf = { "config "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS, } },
 }
 build.Darwin = build.MacOS
