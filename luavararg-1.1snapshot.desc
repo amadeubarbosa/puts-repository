@@ -17,6 +17,5 @@ install_files = {
 }
 dev_files = {
   ["../lib/${TEC_UNAME}/libluavararg.*"] = "lib",
-  ["../obj/luavararg/${TEC_UNAME}/luavararg.h"] = "include/luavararg",
   ["luavararg.h"] = "include/luavararg",
 }

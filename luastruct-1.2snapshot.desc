@@ -16,7 +16,6 @@ install_files = {
   ["../lib/${TEC_UNAME}/libluastruct.dylib"] = "lib",
 }
 dev_files = {
-  ["../lib/${TEC_UNAME}/luastruct.*"] = "lib",
-  ["../src/luastruct.h"] = "include/luastruct",
+  ["../lib/${TEC_UNAME}/libluastruct.*"] = "lib",
   ["luastruct.h"] = "include/luastruct",
 }
