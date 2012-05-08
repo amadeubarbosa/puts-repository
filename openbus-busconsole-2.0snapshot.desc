@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes "
 local lua_pkgversion = "5.1.3-oblibs1.4snapshot"
 ALL_FLAGS = " OIL_HOME="..PRODAPP.."/oil-0.5snapshot LOOP_HOME="..PRODAPP.."/loop-2snapshot LUA51="..PRODAPP.."/lua-"..lua_pkgversion.." "
 
-name = "openbus-luaconsole"
+name = "openbus-busconsole"
 version = "2.0snapshot"
 dependencies = { 
   "sdk-lua-source == 2.0snapshot",
@@ -29,10 +29,8 @@ build = {
   type = "tecmake",
   src = PRODAPP .."/sdk-lua/src",
   mf = { "busconsole ".. ALL_FLAGS },
-  MacOS = { mf = { "luaconsole "..ALL_FLAGS, "openbus "..ALL_FLAGS.." BUILD_DYLIB=YES" }, },
-  SunOS510_64 = { mf = { "luaconsole "..ALL_FLAGS.." "..SUNOS64_TECMAKE_FLAGS } },
+  SunOS510_64 = { mf = { "busconsole "..ALL_FLAGS.." "..SUNOS64_TECMAKE_FLAGS } },
 }
-build.Darwin = build.MacOS
 
 install_files = {
   ["../bin/"..TEC_UNAME.."/busconsole"] = "bin",

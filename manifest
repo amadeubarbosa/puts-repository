@@ -63,7 +63,7 @@
 ,
 }
 ,
- ["openbus-luaconsole"] = {
+ ["openbus-busconsole"] = {
  ["2.0snapshot"] = {
  [1] = {
  ["arch"] = "desc",
