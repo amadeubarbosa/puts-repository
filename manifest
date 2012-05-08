@@ -784,13 +784,6 @@
 ,
 }
 ,
- ["2.0snapshot"] = {
- [1] = {
- ["arch"] = "desc",
-}
-,
-}
-,
 }
 ,
  ["luainspector"] = {
