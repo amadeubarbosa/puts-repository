@@ -4,7 +4,7 @@ ALL_FLAGS = " LOOP_HOME="..PRODAPP.."/loop-3.0alpha LUA51="..PRODAPP.."/lua-"..l
 
 name = "scs-lua"
 version = "1.2.3"
-url = SVNREPURL .. "/scs/core/lua/trunk"
+url = SVNREPURL .. "/scs/core/lua/tags/SCS_CORE_LUA_v1_02_03_00_2012_05_10/"
 dependencies = {
   "loop == 3.0alpha",
   "lua-bin == "..lua_pkgversion,
