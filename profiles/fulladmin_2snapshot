@@ -1,2 +1,3 @@
 openbus-busservice-2.0snapshot +conf +dependencies
 openbus-busadmin-2.0snapshot +dependencies
+openbus-busconsole-2.0snapshot +dependencies
