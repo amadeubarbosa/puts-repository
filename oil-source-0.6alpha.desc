@@ -1,0 +1,4 @@
+name = "oil-source"
+version = "0.6alpha"
+url = SVNREPURL .. "/oil/tags/OIL_0_6_alpha"
+directory = PRODAPP .."/oil-0.6alpha"

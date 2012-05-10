@@ -1,0 +1,3 @@
+openbus-busservice-2.0beta +conf +dependencies
+openbus-busadmin-2.0beta +dependencies
+openbus-busconsole-2.0beta +dependencies

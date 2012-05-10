@@ -1,0 +1,4 @@
+name = "openbus-source"
+version = "2.0beta"
+url = SVNREPURL .. "/openbus/core/tags/OB_v2_00_BETA_2012_05_10"
+directory = SVNDIR

@@ -1,0 +1,31 @@
+name = "e2fsprogs"
+version = "1.40.8-oblibs1.3.2"
+url = SVNREPURL .. "/openbus/libs/tags/OB_LIBS_v1_03_02_2012_05_10/e2fsprogs-1.40.8"
+build = {
+  type = "autotools",
+  test_libs = {"libuuid.*"},
+  MacOS = "./configure --prefix=".. TMPDIR ..
+           " --enable-bsd-shlibs && cd lib/uuid && make && make install",
+  Linux =  "./configure CC=gcc --prefix=".. TMPDIR ..
+           " --enable-elf-shlibs && cd lib/uuid && gmake && gmake install",
+  SunOS =  "./configure --prefix=".. TMPDIR ..
+           " --with-gnu-ld=no --enable-elf-shlibs && cd lib/uuid && make && make install",
+  SunOS510_64 =  "./configure --target=sparc64-sun-solaris2.10 --prefix=".. TMPDIR ..
+           " --with-gnu-ld=no --enable-elf-shlibs && cd lib/uuid && make && make install",
+}
+build.Darwin = build.MacOS
+build.IRIX = build.Linux
+
+install_files = {
+    ["lib/libuuid*.dll*"] = "lib",  --dynamic windows
+  ["lib/libuuid*.so*"] = "lib",   --dynamic linux,aix,sunos
+  ["lib/libuuid*.dylib*"] = "lib",--dynamic macos
+}
+dev_files = {
+  ["lib/libuuid*.a*"] = "lib",    --static linux,aix,sunos
+    ["lib/libuuid*.lib*"] = "lib",  --static windows
+    ["lib/libuuid*.dll*"] = "lib",  --dynamic windows
+  ["lib/libuuid*.so*"] = "lib",   --dynamic linux,aix,sunos
+  ["lib/libuuid*.dylib*"] = "lib",--dynamic macos
+  ["lib/uuid/uuid.h"] = "include/e2fsprogs-1.40.8/uuid",
+}

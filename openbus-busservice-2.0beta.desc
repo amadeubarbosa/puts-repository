@@ -1,0 +1,40 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+ALL_FLAGS = "LUA51="..PRODAPP.."/lua-5.1.3-oblibs1.3.2 "..
+            "OIL_HOME="..PRODAPP.."/oil-0.6alpha LOOP_HOME="..PRODAPP.."/loop-3.0alpha "
+
+name = "openbus-busservice"
+version = "2.0beta"
+dependencies = { 
+  "openbus-source == "..version , 
+  "loop == 3.0alpha" , 
+  "oil == 0.6alpha",
+  "scs-lua == 1.2.3",
+  "lualdap == 1.1.0-oblibs1.3.2",
+  "luacoroutine == 3.0alpha",
+  "luacothread == 3.0alpha",
+  "luainspector == 3.0alpha",
+  "luatuple == 3.0alpha",
+  "luastruct == 1.2-oblibs1.3.2",
+  "luavararg == 1.1-oblibs1.3.2",
+  "lce == 2.0",
+  "luuid == 1.0-oblibs1.3.2",
+  "luafilesystem == 1.4.2-oblibs1.3.2",
+  "openbus-lua == "..version,
+  "latt == 1.1.1",
+} 
+build = {
+  type = "tecmake",
+  src = SVNDIR .."/src",
+  mf = { "busservices "..ALL_FLAGS },
+  SunOS510_64 = { mf = { "busservices "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS } },
+}
+install_files = {
+  ["../bin/${TEC_UNAME}/busservices"] = "bin",
+  ["../specs/management"] = "specs",
+  ["../specs/shell"] = "specs",
+  ["../specs/templates"] = "specs",
+  ["../test/*"] = "test",
+}
+dev_files = {
+  ["../test/*"] = "test",
+}
