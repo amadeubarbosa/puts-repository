@@ -11,8 +11,11 @@ dependencies = {
 build = {
   type = "tecmake",
   mf = { "luavararg "..LUA51_FLAG },
+  MacOS = { mf = { "luavararg "..LUA51_FLAG, "luavararg BUILD_DYLIB=Yes "..LUA51_FLAG } },
   SunOS510_64 = { mf = { "luavararg "..LUA51_FLAG..SUNOS64_TECMAKE_FLAGS } },
 }
+build.Darwin = build.MacOS
+
 install_files = {
   ["../lib/${TEC_UNAME}/libluavararg.so"] = "lib",
   ["../lib/${TEC_UNAME}/libluavararg.dylib"] = "lib",

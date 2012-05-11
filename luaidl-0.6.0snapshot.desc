@@ -13,7 +13,7 @@ build = {
   type = "tecmake",
   src = PRODAPP .."/oil-0.5snapshot/openbus",
   mf = { "luaidl "..ALL_FLAGS, },
-  MacOS = { mf = {"luaidl "..ALL_FLAGS, "oil BUILD_DYLIB=Yes "..ALL_FLAGS} },
+  MacOS = { mf = {"luaidl "..ALL_FLAGS, "luaidl BUILD_DYLIB=Yes "..ALL_FLAGS} },
   SunOS510_64 = { mf = { "luaidl "..ALL_FLAGS .. SUNOS64_TECMAKE_FLAGS } },
 }
 build.Darwin = build.MacOS

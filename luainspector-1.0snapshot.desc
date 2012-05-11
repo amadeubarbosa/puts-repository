@@ -13,8 +13,11 @@ build = {
   type = "tecmake",
   src = PRODAPP .."/loop-2snapshot/openbus",
   mf = { "inspector "..ALL_FLAGS },
+  MacOS = { mf = { "inspector "..ALL_FLAGS, "inspector BUILD_DYLIB=Yes "..ALL_FLAGS } },
   SunOS510_64 = { mf = { "inspector "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS } },
 }
+build.Darwin = build.MacOS
+
 install_files = {
   ["../lib/"..TEC_UNAME.."/libluainspector.so"] = "lib",
   ["../lib/"..TEC_UNAME.."/libluainspector.dylib"] = "lib",

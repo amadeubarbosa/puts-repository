@@ -13,8 +13,11 @@ build = {
   type = "tecmake",
   src = PRODAPP .."/loop-3.0alpha/openbus",
   mf = { "tuple "..ALL_FLAGS },
+  MacOS = { mf = { "tuple "..ALL_FLAGS, "tuple BUILD_DYLIB=Yes "..ALL_FLAGS } },
   SunOS510_64 = { mf = { "tuple "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS } },
 }
+build.Darwin = build.MacOS
+
 install_files = {
   ["../lib/"..TEC_UNAME.."/libluatuple.so"] = "lib",
   ["../lib/"..TEC_UNAME.."/libluatuple.dylib"] = "lib",

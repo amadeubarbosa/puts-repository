@@ -13,8 +13,11 @@ build = {
   type = "tecmake",
   src = PRODAPP .."/loop-3.0alpha/openbus",
   mf = { "coroutine "..ALL_FLAGS },
+  MacOS = { mf = { "coroutine "..ALL_FLAGS, "coroutine BUILD_DYLIB=Yes "..ALL_FLAGS } },
   SunOS510_64 = { mf = { "coroutine "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS } },
 }
+build.Darwin = build.MacOS
+
 install_files = {
   ["../lib/"..TEC_UNAME.."/libluacoroutine.so"] = "lib",
   ["../lib/"..TEC_UNAME.."/libluacoroutine.dylib"] = "lib",

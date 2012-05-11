@@ -11,8 +11,11 @@ dependencies = {
 build = {
   type = "tecmake",
   mf = { "luastruct "..LUA51_FLAG },
+  MacOS = { mf = { "luastruct "..LUA51_FLAG, "luastruct BUILD_DYLIB=Yes "..LUA51_FLAG } },
   SunOS510_64 = { mf = { "luastruct "..LUA51_FLAG..SUNOS64_TECMAKE_FLAGS } },
 }
+build.Darwin = build.MacOS
+
 install_files = {
   ["../lib/${TEC_UNAME}/libluastruct.so"] = "lib",
   ["../lib/${TEC_UNAME}/libluastruct.dylib"] = "lib",

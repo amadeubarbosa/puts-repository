@@ -13,8 +13,11 @@ build = {
   type = "tecmake",
   src = PRODAPP .."/loop-3.0alpha/openbus",
   mf = { "loop "..ALL_FLAGS },
+  MacOS = { mf = { "loop "..ALL_FLAGS, "loop BUILD_DYLIB=Yes "..ALL_FLAGS } },
   SunOS510_64 = { mf = { "loop "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS } },
 }
+build.Darwin = build.MacOS
+
 install_files = {
   ["../lib/"..TEC_UNAME.."/libloop.so"] = "lib",
   ["../lib/"..TEC_UNAME.."/libloop.dylib"] = "lib",
