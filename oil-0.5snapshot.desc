@@ -28,8 +28,3 @@ dev_files = {
   ["../lib/${TEC_UNAME}/liboil.*"] = "lib",
   ["../obj/"..TEC_UNAME.."/oil.h"] = "include/oil",
 }
-symbolic_links = {
-  ["liboil.so"] = "lib/libluaoil.so",
-  ["libluaoil.so"] = "lib/liblualuaidl.so",
-  ["liblualuaidl.so"] = "lib/liblualoop.so",
-}
