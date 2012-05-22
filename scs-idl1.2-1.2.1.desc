@@ -1,4 +1,4 @@
-IDL_VERSION="v1_04"
+IDL_VERSION="v1_05"
 
 name = "scs-idl1.2"
 version = "1.2.1"

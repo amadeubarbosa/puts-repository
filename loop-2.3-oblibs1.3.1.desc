@@ -1,0 +1,12 @@
+name = "loop"
+version = "2.3-oblibs1.3.1"
+dependencies = { "oil-source == 0.5.0-oblibs1.3.1" }
+directory = PRODAPP.."/oil-source-0.5.0-oblibs1.3.1"
+build = {
+  type = "copy",
+}
+dev_files = {
+  ["lua/loop"] = "lib/lua/5.1",
+  ["lua/precompiler.lua"] = "lib/lua/5.1",
+  ["lua/preloader.lua"] = "lib/lua/5.1",
+}

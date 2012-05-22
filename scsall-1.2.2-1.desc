@@ -1,0 +1,32 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+local lua_pkgversion = "5.1.3-oblibs1.3.1"
+ALL_FLAGS = " LOOP_HOME="..INSTALL.TOP.."/lib/lua/5.1 LUA51="..PRODAPP.."/lua-"..lua_pkgversion.." "
+
+name = "scsall"
+version = "1.2.2-1"
+url = SVNREPURL .. "/scs/core/lua/tags/SCS_CORE_LUA_v1_02_02_00_2011_08_03"
+dependencies = {
+  "lua-bin == "..lua_pkgversion,
+  "oilall == 0.5.0-oblibs1.3.1",
+  "scs-idl1.2 == 1.2.1",
+}
+build = {
+  type = "tecmake",
+  mf = { "scsall "..ALL_FLAGS, },
+  MacOS = { mf = {"scsall "..ALL_FLAGS, "scsall BUILD_DYLIB=Yes "..ALL_FLAGS} },
+  SunOS510_64 = { mf = { "scsall "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS, } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/libscsall.so"] = "lib",
+  ["../lib/${TEC_UNAME}/libscsall.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/libscsall.*"] = "lib",
+  ["../obj/${TEC_UNAME}/scsall.h"] = "include/scs",
+  ["../schema"] = "schema",
+}
+symbolic_links = {
+  ["libscsall.so"] = "lib/libluascs.so",
+}

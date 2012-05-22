@@ -1,0 +1,8 @@
+IDL_VERSION="v1_04"
+
+name = "scs-idl1.0"
+version = "1.0.2"
+url = SVNREPURL .. "/scs/tags/SCS_v1_00_02_2010_04_12"
+install_files = {
+  ["idl/scs.idl"] = "idl/"..IDL_VERSION,
+}

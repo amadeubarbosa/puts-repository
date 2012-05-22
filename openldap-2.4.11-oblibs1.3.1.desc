@@ -1,0 +1,43 @@
+name = "openldap"
+version = "2.4.11-oblibs1.3.1"
+url = SVNREPURL .. "/openbus/libs/tags/OB_LIBS_v1_03_01_2011_12_12/openldap-2.4.11"
+build = {
+  type = "autotools",
+  test_libs = {"libldap*2_4*"},
+  external_dependencies = {
+    includes = "db.h", 
+    libs = "libdb.so",
+  },
+  MacOS  = "./configure --prefix=".. TMPDIR .." --disable-slapd --with-cyrus-sasl=no"..
+           " && make depend && make && make install",
+  Linux =  "./configure --prefix=".. TMPDIR .." --disable-slapd --with-cyrus-sasl=no"..
+           " && make depend && make && make install",
+  SunOS =  "./configure --prefix=".. TMPDIR .." --with-tls=openssl --disable-slapd --with-cyrus-sasl=no"..
+           " && make depend && make && make install",
+  -- problem on sunos510 openldap compile: http://www.openldap.org/its/index.cgi/Build?id=4607
+  SunOS510 = "./configure --prefix=".. TMPDIR .." --with-tls=openssl --disable-slapd --with-cyrus-sasl=no"..
+           " && make depend && make && make install",
+  SunOS510_64 = "./configure --target=sparc64-sun-solaris2.10 --prefix=".. TMPDIR .." --with-tls=openssl --disable-slapd --with-cyrus-sasl=no"..
+           " && make depend && make && make install",
+  SunOS510x86 =  "./configure --prefix=".. TMPDIR .." --with-tls=openssl --disable-slapd --with-cyrus-sasl=no"..
+           " && make depend && make && make install",
+  IRIX =   "./configure --prefix=".. TMPDIR .." --disable-slapd --with-cyrus-sasl=no"..
+           " && make depend && make && make install",
+}
+build.Darwin = build.MacOS
+install_files = {
+  [TMPDIR .."/lib/libldap*.so*"] = "lib",   --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libldap*.dylib*"] = "lib",--dynamic macos
+  [TMPDIR .."/lib/liblber*.so*"] = "lib",   --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/liblber*.dylib*"] = "lib",--dynamic macos
+}
+dev_files = {
+  [TMPDIR .."/lib/libldap*.a*"] = "lib",    --static linux,aix,sunos
+  [TMPDIR .."/lib/libldap*.so*"] = "lib",   --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libldap*.dylib*"] = "lib",--dynamic macos
+  [TMPDIR .."/lib/liblber*.a*"] = "lib",    --static linux,aix,sunos
+  [TMPDIR .."/lib/liblber*.so*"] = "lib",   --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/liblber*.dylib*"] = "lib",--dynamic macos
+  [TMPDIR .."/include/ldap*"] = "include/openldap-2.4.11",
+  [TMPDIR .."/include/lber*"] = "include/openldap-2.4.11",
+}

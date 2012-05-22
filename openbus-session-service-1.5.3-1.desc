@@ -1,0 +1,34 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+LUA51_FLAG = "LUA51="..PRODAPP.."/lua-5.1.3-oblibs1.3.1 "
+
+name = "openbus-session-service"
+version = "1.5.3-1"
+url = SVNREPURL .."/openbus/tags/OB_v1_05_03_01_2011_12_12"
+dependencies = { 
+  "oilall == 0.5.0-oblibs1.3.1",
+  "scsall == 1.2.2-1",
+  "lualdap == 1.0.1-oblibs1.3.1",
+  "lce == 1.0-2",
+  "luuid == 1.0-oblibs1.3.1",
+  "lpw == 1.5.3-1",
+  "luafilesystem == 1.4.2-oblibs1.3.1", -- TODO
+  "openbus-lua == "..version, -- já fiz!!
+} 
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/openbus-session-service-1.5.3-1/core/services",
+  mf = { "config "..LUA51_FLAG, },
+  SunOS510_64 = { mf = { "config "..LUA51_FLAG .. SUNOS64_TECMAKE_FLAGS } },
+}
+install_files = {
+  ["../bin/${TEC_UNAME}/servicelauncher.bin"] = "bin",
+  ["../bin/run_session_server.sh"] = "bin",
+  ["../bin/servicelauncher"] = "bin",
+  ["../services/session"] = "src/lua/openbus/core/services",
+  ["../../specs/shell"] = "specs",
+}
+conf_files = {
+  ["../../data/conf/config"] = "data/conf",
+  ["../../data/conf/SessionServerConfiguration.lua"] = "data/conf",
+  ["../../data/conf/advanced"] = "data/conf",
+}
