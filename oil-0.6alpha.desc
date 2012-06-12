@@ -10,6 +10,12 @@ dependencies = {
   "loop == 3.0alpha",
   "luaidl == 0.6alpha",
   "luasocket == 2.0.2-oblibs1.3.2",
+  "luacothread == 3.0alpha",
+  "luacoroutine == 3.0alpha",
+  "luainspector == 3.0alpha",
+  "luatuple == 3.0alpha",
+  "luavararg == 1.1-oblibs1.3.2",
+  "luastruct == 1.2-oblibs1.3.2",
 }
 build = {
   type = "tecmake",

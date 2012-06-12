@@ -10,6 +10,12 @@ dependencies = {
   "loop == 2snapshot",
   "luaidl == 0.6.0snapshot",
   "luasocket == 2.0.2-oblibs1.4snapshot",
+  "luacothread == 1.0snapshot",
+  "luacoroutine == 1.0snapshot",
+  "luainspector == 1.0snapshot",
+  "luatuple == 1.0snapshot",
+  "luavararg == 1.1snapshot",
+  "luastruct == 1.2snapshot",
 }
 build = {
   type = "tecmake",
