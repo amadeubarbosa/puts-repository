@@ -1,4 +1,4 @@
-IDL_VERSION="v2_00"
+IDL_VERSION="v2_0"
 
 name = "openbus-idl2.0"
 version = "2.0snapshot"
