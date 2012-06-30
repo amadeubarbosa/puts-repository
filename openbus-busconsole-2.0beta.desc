@@ -11,7 +11,7 @@ dependencies = {
   "luainspector == 3.0alpha",
   "luastruct == 1.2-oblibs1.3.2",
   "luuid == 1.0-oblibs1.3.2",
-  "lce == 2.0",
+  "lce == 2.0-0",
   "luafilesystem == 1.4.2-oblibs1.3.2",
   "luasocket == 2.0.2-oblibs1.3.2",
   "scs-lua == 1.2.3",
