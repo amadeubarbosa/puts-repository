@@ -1,0 +1,36 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+local lua_pkgversion = "5.1.3-oblibs1.3.2"
+ALL_FLAGS = " OIL_HOME="..PRODAPP.."/oil-0.6alpha2 LOOP_HOME="..PRODAPP.."/loop-3.0alpha2 LUA51="..PRODAPP.."/lua-"..lua_pkgversion.." "
+
+name = "oil"
+version = "0.6alpha2"
+dependencies = {
+  "lua-bin == "..lua_pkgversion,
+  "oil-source == 0.6alpha2",
+  "loop == 3.0alpha2",
+  "luaidl == 0.6alpha2",
+  "luasocket == 2.0.2-oblibs1.3.2",
+  "luacothread == 3.0alpha2",
+  "luacoroutine == 3.0alpha2",
+  "luainspector == 3.0alpha2",
+  "luatuple == 3.0alpha2",
+  "luavararg == 1.1-oblibs1.3.2",
+  "luastruct == 1.2-oblibs1.3.2",
+}
+build = {
+  type = "tecmake",
+  src = PRODAPP .."/oil-0.6alpha2/openbus",
+  mf = { "oil "..ALL_FLAGS, },
+  MacOS = { mf = {"oil "..ALL_FLAGS, "oil BUILD_DYLIB=Yes "..ALL_FLAGS} },
+  SunOS510_64 = { mf = { "oil "..ALL_FLAGS .. SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/liboil.so"] = "lib",
+  ["../lib/${TEC_UNAME}/liboil.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/liboil.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/oil.h"] = "include/oil",
+}
