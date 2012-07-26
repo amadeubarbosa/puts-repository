@@ -4,10 +4,8 @@ url = SVNREPURL .. "/scs/core/java/trunk"
 dependencies = {
   "scs-idl1.3-java == "..version,
 }
-directory = PRODAPP .."/scs-java"
 build = {
   type = "maven",
-  src = PRODAPP .."/scs-java",
 }
 install_files = {
   ["target/*.jar"] = "lib",

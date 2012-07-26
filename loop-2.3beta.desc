@@ -1,11 +1,6 @@
 name = "loop"
 version = "2.3beta"
-dependencies = { "oil-source == 0.5.0-oblibs1.4snapshot" }
-build = {
-  type = "tecmake",
-  src = PRODAPP .."/oil-0.5.0",
-  mf = { },
-}
+subpackage_of = "oil-source == 0.5.0-oblibs1.4snapshot"
 dev_files = {
   ["lua/loop"] = "lib/lua/5.1",
   ["lua/precompiler.lua"] = "lib/lua/5.1",

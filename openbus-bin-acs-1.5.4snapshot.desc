@@ -2,11 +2,27 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "openbus-bin-acs"
 version = "1.5.4snapshot"
+subpackage_of = "openbus-source == "..version
+dependenncies = {
+  "lua == 5.1.3-oblibs1.4snapshot",
+  "oilall == 0.5.0-oblibs1.4snapshot",
+  "scsall == 1.2.2snapshot",
+  "lualdap == 1.1.0-oblibs1.4snapshot",
+  "lce == 1.0snapshot",
+  "luuid == 1.0-oblibs1.4snapshot",
+  "lpw == 1.5.4snapshot",
+  "luafilesystem == 1.4.2-oblibs1.4snapshot",
+  "openbus-lua == "..version,
+}
 build = {
   type = "tecmake",
-  src = SVNDIR .."/core/services",
-  mf = { "accesscontrol LUA51="..PRODAPP.."/lua5.1", },
-  SunOS510_64 = { mf = { "accesscontrol LUA51="..PRODAPP.."/lua5.1 ".. SUNOS64_TECMAKE_FLAGS } },
+  variables = {
+  	LUA51 = "$(lua).directory",
+  	OPENBUS_HOME = INSTALL.TOP,
+  },
+  src = "core/services",
+  mf = { "accesscontrol", },
+  SunOS510_64 = { mf = { "accesscontrol ".. SUNOS64_TECMAKE_FLAGS } },
 }
 install_files = {
   ["../bin/${TEC_UNAME}/acs.bin"] = "bin",

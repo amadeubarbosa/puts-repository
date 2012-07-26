@@ -3,7 +3,6 @@ version = "1.1snapshot"
 url = SVNREPURL .. "/cpputils/logger/branches/LG_v1_01_2010_08_10/"
 build = {
   type = "tecmake",
-  src = PRODAPP .. "/logger",
   mf = { "config" },
   Darwin = {
     mf = {

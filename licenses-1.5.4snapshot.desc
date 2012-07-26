@@ -1,6 +1,7 @@
 name = "licenses"
 version = "1.5.4snapshot"
+subpackage_of = "openbus-core == "..version
 install_files = {
-  [SVNDIR.."/LICENSE"] = ".",
-  [SVNDIR.."/README"]  = ".",
+  ["LICENSE"] = ".",
+  ["README"]  = ".",
 }

@@ -1,11 +1,11 @@
 name = "openbus-demo-hello-lua"
 version = "1.5.4snapshot"
-directory = PRODAPP .."/sdk-lua/demo/hello"
+subpackage_of = "openbus-lua == "..version
 dev_files = {
-  ["client.lua"] = "demo/lua/hello",
-  ["server.lua"] = "demo/lua/hello",
-  ["run"] = "demo/lua/hello",
-  ["Hello.properties"] = "demo/lua/hello",
-  ["idl"] = "demo/lua/hello",
-  ["management"] = "demo/lua/hello",
+  ["demo/hello/client.lua"] = "demo/lua/hello",
+  ["demo/hello/server.lua"] = "demo/lua/hello",
+  ["demo/hello/run"] = "demo/lua/hello",
+  ["demo/hello/Hello.properties"] = "demo/lua/hello",
+  ["demo/hello/idl"] = "demo/lua/hello",
+  ["demo/hello/management"] = "demo/lua/hello",
 }

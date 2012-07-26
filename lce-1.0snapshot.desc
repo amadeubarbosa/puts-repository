@@ -1,19 +1,21 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
-local lua_pkgversion = "5.1.3-oblibs1.4snapshot"
-LUA51_FLAG = "LUA51="..PRODAPP.."/lua-"..lua_pkgversion.." "
 
 name = "lce"
 version = "1.0snapshot"
 url = SVNREPURL.."/luautils/lce/branches/v1_00_2011_03_01"
 dependencies = {
   "openssl == 0.9.9",
-  "lua == "..lua_pkgversion,
+  "lua == 5.1.3-oblibs1.4snapshot",
 }
 build = {
   type = "tecmake",
-  mf = { "config "..LUA51_FLAG },
-  MacOS = { mf = { "config "..LUA51_FLAG, "config BUILD_DYLIB=Yes "..LUA51_FLAG } },
-  SunOS510_64 = { mf = { "config "..LUA51_FLAG .. SUNOS64_TECMAKE_FLAGS } },
+  variables = {
+    LUA51 = "$(lua).directory",
+    OPENBUS_HOME = INSTALL.TOP,
+  },
+  mf = { "config" },
+  MacOS = { mf = { "config", "config BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "config "..SUNOS64_TECMAKE_FLAGS } },
 }
 build.Darwin = build.MacOS
 

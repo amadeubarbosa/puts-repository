@@ -1,8 +1,8 @@
 name = "openbusapi-java"
 version = "1.5.3snapshot"
+url = SVNREPURL .. "/openbus/sdk/java/trunk"
 build = {
   type = "maven",
-  src = PRODAPP .."/sdk-java",   
 }
 install_files = {
   ["target/openbus*.jar"] = "lib",

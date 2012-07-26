@@ -1,26 +1,24 @@
+DEFAULT_FLAGS = "shared --prefix="..TMPDIR.." --openssldir="..TMPDIR.."/openssl"
+
 name = "openssl"
 version = "1.0.0"
 url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/openssl-1.0.0d.tar.gz"
+
 build = {
   type = "autotools",
   test_libs = {"libcrypto*1.0.0*"},
-  MacOS  = "./Configure darwin64-x86_64-cc no-asm shared --prefix=".. TMPDIR ..
-           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
-  Darwin98x86 = "./config no-asm shared --prefix=".. TMPDIR ..
-           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
-  Linux =  "./config shared --prefix=".. TMPDIR ..
-           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
-  SunOS =  "./config shared --prefix=".. TMPDIR ..
-           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
-  SunOS510 = "./Configure solaris-sparcv9-cc shared --prefix=".. TMPDIR ..
-           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
-  SunOS510_64 = "./Configure solaris64-sparcv9-cc shared --prefix=".. TMPDIR ..
-           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
-  SunOS510x86 = "./config no-asm shared --prefix=".. TMPDIR ..
-           " --openssldir=".. TMPDIR .."/openssl && make && make install_sw",
+  configure = "./config "..DEFAULT_FLAGS,
+  compile = "make", -- same default value
+  install = "make install_sw",
 }
+-- macintosh
+build.Darwin98x86 = { configure = "./config no-asm "..DEFAULT_FLAGS }
+build.MacOS = { configure = "./Configure darwin64-x86_64-cc no-asm "..DEFAULT_FLAGS }
 build.Darwin = build.MacOS
-build.IRIX = build.Linux
+-- solaris
+build.SunOS510 = { configure = "./Configure solaris-sparcv9-cc "..DEFAULT_FLAGS }
+build.SunOS510_64 = { configure = "./Configure solaris64-sparcv9-cc "..DEFAULT_FLAGS }
+build.SunOS510x86 = { configure = "./config no-asm "..DEFAULT_FLAGS }
 
 install_files = {
   [TMPDIR .."/lib/libssl*.so*"] = "lib",       --dynamic linux,aix,sunos

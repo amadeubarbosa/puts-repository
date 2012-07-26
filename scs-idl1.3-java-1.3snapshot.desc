@@ -1,11 +1,8 @@
 name = "scs-idl1.3-java"
 version = "1.3snapshot"
-dependencies = {
-  "scs-idl1.3 == "..version
-}
+subpackage_of = "scs-idl1.3 == "..version
 build = {
   type = "maven",
-  src = PRODAPP .."/scs-idl1.3-"..version,
 }
 install_files = {
   ["target/*.jar"] = "lib",

@@ -8,5 +8,5 @@ dependencies = {
 }
 install_files = {
   ["src/*.idl"] = "idl/"..IDL_VERSION,
-  [PRODAPP.."/scs-idl1.3-1.3snapshot/src/*.idl"] = "idl/"..IDL_VERSION,
+  [INSTALL.TOP.."/idl/v1_05/scs.idl"] = "idl/"..IDL_VERSION,
 }

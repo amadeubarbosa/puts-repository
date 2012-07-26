@@ -6,8 +6,11 @@ url = SVNREPURL.."/openbus/puts/trunk"
 dependencies = { "lua == 5.1.3-oblibs1.3.2" }
 build = {
   type = "tecmake",
-  mf = { "config LUA51="..PRODAPP.."/lua-5.1.3-oblibs1.3.2 " },
-  SunOS510_64 = { mf = {"config LUA51="..PRODAPP.."/lua-5.1.3-oblibs1.3.2 ".. SUNOS64_TECMAKE_FLAGS} },
+  variables = {
+    LUA51 = "$(lua).directory",
+  },
+  mf = { "config" },
+  SunOS510_64 = { mf = {"config ".. SUNOS64_TECMAKE_FLAGS} },
 }
 install_files = {
   ["../bin/${TEC_UNAME}/puts"] = "bin",

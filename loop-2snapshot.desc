@@ -1,5 +1,3 @@
-local lua_pkgversion = "5.1.3-oblibs1.4snapshot"
-ALL_FLAGS = " LOOP_HOME="..PRODAPP.."/loop-2snapshot LUA51="..PRODAPP.."/lua-"..lua_pkgversion.." "
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "loop"
@@ -11,10 +9,14 @@ dependencies = {
 }
 build = {
   type = "tecmake",
-  src = PRODAPP .."/loop-2snapshot/openbus",
-  mf = { "loop "..ALL_FLAGS },
-  MacOS = { mf = { "loop "..ALL_FLAGS, "loop BUILD_DYLIB=Yes "..ALL_FLAGS } },
-  SunOS510_64 = { mf = { "loop "..ALL_FLAGS..SUNOS64_TECMAKE_FLAGS } },
+  variables = {
+    LUA51 = "$(lua).directory",
+    LOOP_HOME = "$(loop).directory",
+  },
+  src = "openbus",
+  mf = { "loop" },
+  MacOS = { mf = { "loop", "loop BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "loop "..SUNOS64_TECMAKE_FLAGS } },
 }
 build.Darwin = build.MacOS
 

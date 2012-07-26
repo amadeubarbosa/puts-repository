@@ -1,8 +1,9 @@
 name = "openbusapi-java-doc"
 version = "1.5.3snapshot"
+subpackage_of = "openbusapi-java == "..version
 build = {
   type = "command",
-  src = PRODAPP .. "/sdk-java/core",
+  src = "core",
   cmd = "mvn",
   rebuild = "clean",
   arguments = "javadoc:javadoc -Dquiet",

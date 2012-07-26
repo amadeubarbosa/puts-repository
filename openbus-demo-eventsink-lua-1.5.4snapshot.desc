@@ -1,11 +1,11 @@
 name = "openbus-demo-eventsink-lua"
 version = "1.5.4snapshot"
-directory = PRODAPP .."/sdk-lua/demo/eventSink"
+subpackage_of = "openbus-lua == "..version
 dev_files = {
-  ["client.lua"] = "demo/lua/eventSink",
-  ["client.sh"] = "demo/lua/eventSink",
-  ["server.lua"] = "demo/lua/eventSink",
-  ["server.sh"] = "demo/lua/eventSink",
-  ["EventSink.properties"] = "demo/lua/eventSink",
-  ["management"] = "demo/lua/eventSink",
+  ["demo/eventSink/client.lua"] = "demo/lua/eventSink",
+  ["demo/eventSink/client.sh"] = "demo/lua/eventSink",
+  ["demo/eventSink/server.lua"] = "demo/lua/eventSink",
+  ["demo/eventSink/server.sh"] = "demo/lua/eventSink",
+  ["demo/eventSink/EventSink.properties"] = "demo/lua/eventSink",
+  ["demo/eventSink/management"] = "demo/lua/eventSink",
 }

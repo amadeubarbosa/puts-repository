@@ -1,5 +1,6 @@
 name = "auxiliar-files"
 version = "1.5.4snapshot"
+subpackage_of = "openbus-core == "..version
 install_files = {
-  [SVNDIR.."/specs/shell/openssl-generate.ksh"] = "bin",
+  ["specs/shell/openssl-generate.ksh"] = "bin",
 }

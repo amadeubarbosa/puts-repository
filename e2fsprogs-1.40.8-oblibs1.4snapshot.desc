@@ -17,14 +17,14 @@ build.Darwin = build.MacOS
 build.IRIX = build.Linux
 
 install_files = {
-    ["lib/libuuid*.dll*"] = "lib",  --dynamic windows
+--  ["lib/libuuid*.dll*"] = "lib",  --dynamic windows
   ["lib/libuuid*.so*"] = "lib",   --dynamic linux,aix,sunos
   ["lib/libuuid*.dylib*"] = "lib",--dynamic macos
 }
 dev_files = {
   ["lib/libuuid*.a*"] = "lib",    --static linux,aix,sunos
-    ["lib/libuuid*.lib*"] = "lib",  --static windows
-    ["lib/libuuid*.dll*"] = "lib",  --dynamic windows
+--  ["lib/libuuid*.lib*"] = "lib",  --static windows
+--  ["lib/libuuid*.dll*"] = "lib",  --dynamic windows
   ["lib/libuuid*.so*"] = "lib",   --dynamic linux,aix,sunos
   ["lib/libuuid*.dylib*"] = "lib",--dynamic macos
   ["lib/uuid/uuid.h"] = "include/e2fsprogs-1.40.8/uuid",
