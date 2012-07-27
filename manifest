@@ -1296,6 +1296,16 @@ repository = {
     ,
   }
   ,
+  ["sdk-idl-source"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["sdk-lua-source"] = {
     ["2.0.0rc1"] = {
       [1] = {
