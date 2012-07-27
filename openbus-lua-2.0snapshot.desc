@@ -14,6 +14,7 @@ dependencies = {
   "luavararg == 1.1snapshot",
   "openbus-idl1.5 == 1.5snapshot",
   "openbus-idl2.0 == 2.0snapshot",
+  "sdk-idl-source == 2.0snapshot",
   "oil == 0.5snapshot",
 }
 build = {
