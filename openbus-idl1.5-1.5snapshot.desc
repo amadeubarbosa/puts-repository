@@ -2,7 +2,7 @@ IDL_VERSION="v1_05"
 
 name = "openbus-idl1.5"
 version = "1.5snapshot"
-url = SVNREPURL .. "/openbus/idl/trunk"
+url = SVNREPURL .. "/openbus/idl/branches/OB_IDL_v1_05_2010_05_13"
 dependencies = {
   "scs-idl1.3 == 1.3snapshot",
 }
