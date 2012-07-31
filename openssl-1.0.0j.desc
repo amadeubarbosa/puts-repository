@@ -1,0 +1,43 @@
+DEFAULT_FLAGS = "shared --prefix="..TMPDIR.." --openssldir="..TMPDIR.."/openssl"
+
+name = "openssl"
+version = "1.0.0j"
+url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/openssl-1.0.0j.tar.gz"
+
+build = {
+  type = "autotools",
+  test_libs = {"libcrypto*1.0.0*"},
+  configure = "./config "..DEFAULT_FLAGS,
+  compile = "make", -- same default value
+  install = "make install_sw",
+}
+-- macintosh
+build.Darwin98x86 = { configure = "./config no-asm "..DEFAULT_FLAGS }
+build.MacOS = { configure = "./Configure darwin64-x86_64-cc no-asm "..DEFAULT_FLAGS }
+build.Darwin = build.MacOS
+-- solaris
+build.SunOS510 = { configure = "./Configure solaris-sparcv9-cc "..DEFAULT_FLAGS }
+build.SunOS510_64 = { configure = "./Configure solaris64-sparcv9-cc "..DEFAULT_FLAGS }
+build.SunOS510x86 = { configure = "./config no-asm "..DEFAULT_FLAGS }
+
+install_files = {
+  [TMPDIR .."/lib/libssl*.so*"] = "lib",       --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libcrypto*.so*"] = "lib",
+  [TMPDIR .."/lib/libssl*.dylib*"] = "lib",    --dynamic macos
+  [TMPDIR .."/lib/libcrypto*.dylib*"] = "lib",
+  [TMPDIR .."/bin/openssl"] = "bin",
+  [TMPDIR .."/bin/c_rehash"] = "bin",
+  [TMPDIR .."/openssl/*"] = "openssl",
+}
+dev_files = {
+  [TMPDIR .."/include/openssl"] = "include/openssl-1.0.0",
+  [TMPDIR .."/lib/libssl*.a*"] = "lib",        --static linux,aix,sunos
+  [TMPDIR .."/lib/libcrypto*.a*"] = "lib",
+  [TMPDIR .."/lib/libssl*.so*"] = "lib",       --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libcrypto*.so*"] = "lib",
+  [TMPDIR .."/lib/libssl*.dylib*"] = "lib",    --dynamic macos
+  [TMPDIR .."/lib/libcrypto*.dylib*"] = "lib",
+  [TMPDIR .."/bin/openssl"] = "bin",
+  [TMPDIR .."/bin/c_rehash"] = "bin",
+  [TMPDIR .."/openssl/*"] = "openssl",
+}
