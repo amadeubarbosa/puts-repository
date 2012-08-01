@@ -28,6 +28,7 @@ build = {
     LUA51 = "$(lua-bin).directory",
     LOOP_HOME = "$(loop).directory",
     OIL_HOME = "$(oil).directory",
+    OPENBUS_HOME = INSTALL.TOP,
   },
   mf = { "busconsole USE_STATIC=YES" },
   SunOS510_64 = { mf = { "busconsole USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
