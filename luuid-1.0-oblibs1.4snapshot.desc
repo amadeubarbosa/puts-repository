@@ -11,6 +11,7 @@ build = {
   type = "tecmake",
   variables = {
     LUA51 = "$(lua).directory",
+    OPENBUS_HOME = INSTALL.TOP,
   },
   mf = { "config", },
   MacOS = { mf = { "config", "config BUILD_DYLIB=Yes"} },

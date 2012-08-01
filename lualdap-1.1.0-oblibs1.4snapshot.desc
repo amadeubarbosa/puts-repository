@@ -1,4 +1,4 @@
-SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+ls SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "lualdap"
 version = "1.1.0-oblibs1.4snapshot"
@@ -11,6 +11,7 @@ build = {
   type = "tecmake",
   variables = {
     LUA51 = "$(lua).directory",
+    OPENBUS_HOME = INSTALL.TOP,
   },
   mf = { "config", },
   MacOS = { mf = {"config", "config BUILD_DYLIB=Yes"} },
