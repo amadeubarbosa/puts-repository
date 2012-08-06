@@ -1,0 +1,21 @@
+name = "ftc-client-cpp"
+version = "1.1.4"
+url = SVNREPURL .. "/ftc/tags/FTC_v1_01_04_2012_08_06/cpp"
+dependencies = {
+	"openssl == 1.0.0j",
+}
+build = {
+	type = "cmake",
+}
+install_files = {
+  ["../src/*.h"] = "include/ftc-"..version,
+  ["src/libftc*.a"] = "lib",
+  ["src/libftc."..version..".dylib"] = "lib",
+  ["src/libftc.so."..version] = "lib",
+}
+symbolic_links = {
+  ["lib/libftc."..version..".dylib"] = "lib/libftc.1.dylib",
+  ["lib/libftc.1.dylib"] = "lib/libftc.dylib",
+  ["lib/libftc.so."..version] = "lib/libftc.so.1",
+  ["lib/libftc.so.1"] = "lib/libftc.so",
+}

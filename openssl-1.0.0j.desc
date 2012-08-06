@@ -21,10 +21,10 @@ build.SunOS510_64 = { configure = "./Configure solaris64-sparcv9-cc "..DEFAULT_F
 build.SunOS510x86 = { configure = "./config no-asm "..DEFAULT_FLAGS }
 
 install_files = {
-  [TMPDIR .."/lib/libssl*.so*"] = "lib",       --dynamic linux,aix,sunos
-  [TMPDIR .."/lib/libcrypto*.so*"] = "lib",
-  [TMPDIR .."/lib/libssl*.dylib*"] = "lib",    --dynamic macos
-  [TMPDIR .."/lib/libcrypto*.dylib*"] = "lib",
+  [TMPDIR .."/lib/libssl.so.1.0.0"] = "lib",       --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libcrypto.so.1.0.0"] = "lib",
+  [TMPDIR .."/lib/libssl.1.0.0.dylib"] = "lib",    --dynamic macos
+  [TMPDIR .."/lib/libcrypto.1.0.0.dylib"] = "lib",
   [TMPDIR .."/bin/openssl"] = "bin",
   [TMPDIR .."/bin/c_rehash"] = "bin",
   [TMPDIR .."/openssl/*"] = "openssl",
@@ -33,11 +33,17 @@ dev_files = {
   [TMPDIR .."/include/openssl"] = "include/openssl-1.0.0",
   [TMPDIR .."/lib/libssl*.a*"] = "lib",        --static linux,aix,sunos
   [TMPDIR .."/lib/libcrypto*.a*"] = "lib",
-  [TMPDIR .."/lib/libssl*.so*"] = "lib",       --dynamic linux,aix,sunos
-  [TMPDIR .."/lib/libcrypto*.so*"] = "lib",
-  [TMPDIR .."/lib/libssl*.dylib*"] = "lib",    --dynamic macos
-  [TMPDIR .."/lib/libcrypto*.dylib*"] = "lib",
+  [TMPDIR .."/lib/libssl.so.1.0.0"] = "lib",       --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libcrypto.so.1.0.0"] = "lib",
+  [TMPDIR .."/lib/libssl.1.0.0.dylib"] = "lib",    --dynamic macos
+  [TMPDIR .."/lib/libcrypto.1.0.0.dylib"] = "lib",
   [TMPDIR .."/bin/openssl"] = "bin",
   [TMPDIR .."/bin/c_rehash"] = "bin",
   [TMPDIR .."/openssl/*"] = "openssl",
+}
+symbolic_links = {
+  ["lib/libssl.so.1.0.0"] = "lib/libssl.so",
+  ["lib/libcrypto.so.1.0.0"] = "lib/libcrypto.so",
+  ["lib/libssl.1.0.0.dylib"] = "lib/libssl.dylib",
+  ["lib/libcrypto.1.0.0.dylib"] = "lib/libcrypto.dylib",
 }
