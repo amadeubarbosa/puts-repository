@@ -14,8 +14,8 @@ install_files = {
   ["src/libftc.so."..version] = "lib",
 }
 symbolic_links = {
-  ["lib/libftc."..version..".dylib"] = "lib/libftc.1.dylib",
-  ["lib/libftc.1.dylib"] = "lib/libftc.dylib",
-  ["lib/libftc.so."..version] = "libftc.so.1",
-  ["lib/libftc.so.1"] = "libftc.so",
+  ["libftc."..version..".dylib"] = "lib/libftc.1.dylib",
+  ["libftc.1.dylib"] = "lib/libftc.dylib",
+  ["libftc.so."..version] = "lib/libftc.so.1",
+  ["libftc.so.1"] = "lib/libftc.so",
 }

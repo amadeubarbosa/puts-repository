@@ -42,8 +42,8 @@ dev_files = {
   [TMPDIR .."/openssl/*"] = "openssl",
 }
 symbolic_links = {
-  ["lib/libssl.so.1.0.0"] = "lib/libssl.so",
-  ["lib/libcrypto.so.1.0.0"] = "lib/libcrypto.so",
-  ["lib/libssl.1.0.0.dylib"] = "lib/libssl.dylib",
-  ["lib/libcrypto.1.0.0.dylib"] = "lib/libcrypto.dylib",
+  ["libssl.so.1.0.0"] = "lib/libssl.so",             --dynamic linux,aix,sunos
+  ["libcrypto.so.1.0.0"] = "lib/libcrypto.so",
+  ["libssl.1.0.0.dylib"] = "lib/libssl.dylib",       --dynamic macos
+  ["libcrypto.1.0.0.dylib"] = "lib/libcrypto.dylib",
 }
