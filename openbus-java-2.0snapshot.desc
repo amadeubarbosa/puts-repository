@@ -1,0 +1,58 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes "
+
+name = "openbus-java"
+version = "2.0snapshot"
+url = SVNREPURL .. "/openbus/sdk/java/trunk"
+dependencies = { 
+  "scs-java == 1.3snapshot",
+  "openbus-idl1.5 == 1.5snapshot",
+  "openbus-idl2.0 == 2.0snapshot",
+  -- TODO criar descritor do javadoc do sdk
+}
+build = {
+  type = "maven",
+  variables = { 
+    -- TODO incluir suporte de definição de variáveis no Maven do PUTS
+    OPENBUS_HOME = INSTALL.TOP,
+  },
+}
+
+install_files = {
+  ["core/target/openbus*.jar"] = "lib",
+  ["core/target/dependency/*.jar"] = "lib",
+  ["interop/simple/target/openbus-sdk-interop-simple-*.jar"] = "interop/java/simple",
+  ["interop/simple/target/dependency/*.jar"] = "lib",
+  ["interop/delegation/target/openbus-sdk-interop-delegation-*.jar"] = "interop/java/delegation",
+  ["interop/delegation/target/dependency/*.jar"] = "lib",
+  ["interop/sharedauth/target/openbus-sdk-interop-sharedauth-*.jar"] = "interop/java/sharedauth",
+  ["interop/sharedauth/target/dependency/*.jar"] = "lib",
+  ["interop/multiplexing/target/openbus-sdk-interop-multiplexing-*.jar"] = "interop/java/multiplexing",
+  ["interop/multiplexing/target/dependency/*.jar"] = "lib",
+}
+
+dev_files = {
+  ["interop/simple/target/openbus-sdk-interop-simple-*.jar"] = "interop/java/simple",
+  ["interop/simple/target/dependency/*.jar"] = "lib",
+  ["interop/simple/resources"] = "interop/java/simple",
+  ["interop/simple/src"] = "interop/java/simple",
+  ["interop/simple/idl"] = "interop/java/simple",
+  ["interop/simple/admin"] = "interop/java/simple",
+  ["interop/delegation/target/openbus-sdk-interop-delegation-*.jar"] = "interop/java/delegation",
+  ["interop/delegation/target/dependency/*.jar"] = "lib",
+  ["interop/delegation/resources"] = "interop/java/delegation",
+  ["interop/delegation/src"] = "interop/java/delegation",
+  ["interop/delegation/idl"] = "interop/java/delegation",
+  ["interop/delegation/admin"] = "interop/java/delegation",
+  ["interop/sharedauth/target/openbus-sdk-interop-sharedauth-*.jar"] = "interop/java/sharedauth",
+  ["interop/sharedauth/target/dependency/*.jar"] = "lib",
+  ["interop/sharedauth/resources"] = "interop/java/sharedauth",
+  ["interop/sharedauth/src"] = "interop/java/sharedauth",
+  ["interop/sharedauth/idl"] = "interop/java/sharedauth",
+  ["interop/sharedauth/admin"] = "interop/java/sharedauth",
+  ["interop/multiplexing/target/openbus-sdk-interop-multiplexing-*.jar"] = "interop/java/multiplexing",
+  ["interop/multiplexing/target/dependency/*.jar"] = "lib",
+  ["interop/multiplexing/resources"] = "interop/java/multiplexing",
+  ["interop/multiplexing/src"] = "interop/java/multiplexing",
+  ["interop/multiplexing/idl"] = "interop/java/multiplexing",
+  ["interop/multiplexing/admin"] = "interop/java/multiplexing",
+}

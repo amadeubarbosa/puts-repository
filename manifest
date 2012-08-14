@@ -1114,6 +1114,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-java"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openldap"] = {
     ["2.4.11-oblibs1.3.1"] = {
       [1] = {
