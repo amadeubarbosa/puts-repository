@@ -1,0 +1,28 @@
+name = "logger-multithread-debug"
+version = "2.0snapshot"
+url = SVNREPURL .. "/cpputils/logger/branches/LG_v2_00_00_2012_02_23"
+dependencies = {
+  "boost == 1.48.0",
+}
+build = {
+  type = "tecmake",
+  src = ".",
+  variables = {
+    OPENBUS_SDK_MULTITHREAD = "Yes",
+    USE_NODEPEND = "Yes",
+    DBG="Yes",
+    OPENBUS_HOME = INSTALL.TOP,
+  },
+  mf = { "config" },
+  MacOS = { mf = { "config BUILD_DYLIB=Yes", } },
+  SunOS = { mf = { "config LD=CC", } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["lib/${TEC_UNAME}/liblogger-multithread-debug.so"] = "lib",
+}
+dev_files = {
+  ["lib/${TEC_UNAME}/liblogger-multithread-debug.*"] = "lib",
+  ["include/log"] = "include/",
+}

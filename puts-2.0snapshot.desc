@@ -3,11 +3,14 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 name = "puts"
 version = "2.0snapshot"
 url = SVNREPURL.."/openbus/puts/trunk"
-dependencies = { "lua == 5.1.3-oblibs1.3.2" }
+dependencies = { 
+  "lua-bin == 5.1.3-oblibs1.4snapshot", 
+  "loop == 2snapshot", 
+}
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "$(lua).directory",
+    LUA51 = "$(lua-bin).directory",
   },
   mf = { "config" },
   SunOS510_64 = { mf = {"config ".. SUNOS64_TECMAKE_FLAGS} },

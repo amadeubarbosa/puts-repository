@@ -1,0 +1,30 @@
+name = "scs-cpp-mico-multithread"
+version = "1.2.0snapshot"
+url = SVNREPURL .. "/scs/core/cpp/branches/SCS_CORE_CPP_v1_02_00_2011_07_29"
+dependencies = {
+  "lua == 5.1.3-oblibs1.4snapshot",
+  "scs-idl1.2 == 1.2snapshot",
+  "scs-idl1.0 == 1.0.2",
+  "mico-multithread == 2.3.13-oblibs1.4snapshot",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA51 = "$(lua).directory",
+    MULTITHREAD = "Yes",
+  },
+  src = ".",
+  mf = { "mico genstubs", "mico" },
+  MacOS = {
+    mf = { "mico genstubs LD=g++", "mico BUILD_DYLIB=Yes LD=g++" },
+  },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["lib/${TEC_UNAME}/libscsmicoMT.*"] = "lib",
+}
+dev_files = {
+  ["lib/${TEC_UNAME}/libscsmicoMT.*"] = "lib",
+  ["include/scs/*"] = "include/scs",
+}

@@ -4,22 +4,15 @@ url = SVNREPURL .. "/cpputils/logger/branches/LG_v1_01_2010_08_10/"
 build = {
   type = "tecmake",
   mf = { "config" },
-  Darwin = {
-    mf = {
-      "config BUILD_DYLIB=Yes",
-    },
-  },
   MacOS = {
-    mf = {
-      "config BUILD_DYLIB=Yes",
-    },
+    mf = { "config BUILD_DYLIB=Yes" },
   },
   SunOS510 = {
-    mf = {
-      "config LD=CC",
-    },
+    mf = { "config LD=CC" },
   },
 }
+build.Darwin = build.MacOS
+
 install_files = {
   ["lib/${TEC_UNAME}/liblogger.so"] = "lib",
 }

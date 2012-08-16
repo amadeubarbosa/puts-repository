@@ -1,4 +1,0 @@
-name = "sdk-cpp-source"
-version = "1.5.5snapshot"
-url = SVNREPURL .. "/openbus/sdk/cpp/trunk"
-directory = PRODAPP .."/sdk-cpp"
