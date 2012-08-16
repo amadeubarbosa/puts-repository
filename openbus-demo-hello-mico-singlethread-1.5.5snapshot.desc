@@ -1,25 +1,23 @@
-name = "openbus-demo-hello-micoST"
+name = "openbus-demo-hello-mico-singlethread"
 version = "1.5.5snapshot"
+subpackage_of = "openbus-cpp-mico-singlethread == "..version
+dependencies = {
+  "lua == 5.1.3-oblibs1.4snapshot",
+}
 build = {
   type = "tecmake",
-  src = PRODAPP .."/sdk-cpp/demo/hello/mico",
-  mf = { 
-    "server genstubs", 
-    "client LUA51="..PRODAPP.."/lua5.1",
-    "server LUA51="..PRODAPP.."/lua5.1" 
+  variables = {
+    LUA51 = "$(lua).directory",
   },
-  SunOS510 = { 
-    mf = { 
-      "server genstubs ",
-      'client "LUA51='..PRODAPP..'/lua5.1"',
-      'server "LUA51='..PRODAPP..'/lua5.1"',
-    }, 
-  },
+  src = "demo/hello/mico",
+  mf = { "server genstubs", "client", "server" },
   SunOS510_64 = { 
-    mf = { "server genstubs USE_NODEPEND=Yes", 
-           "client LUA51="..PRODAPP.."/lua5.1 USE_NODEPEND=Yes", 
-           "server LUA51="..PRODAPP.."/lua5.1 USE_NODEPEND=Yes"}, 
-  }
+    mf = {
+      "server genstubs ",
+      "client USE_NODEPEND=Yes",
+      "server USE_NODEPEND=Yes",
+    },
+  },
 }
 dev_files = {
   ["bin/${TEC_UNAME}/*"] = "demo/hello/mico/bin",

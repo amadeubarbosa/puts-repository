@@ -164,6 +164,13 @@ repository = {
       ,
     }
     ,
+    ["1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["logger-multithread"] = {
@@ -864,7 +871,17 @@ repository = {
     ,
   }
   ,
-  ["openbus-demo-delegate-multithread-mico"] = {
+  ["openbus-demo-delegate-mico-multithread"] = {
+    ["1.5.5snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-delegate-mico-singlethread"] = {
     ["1.5.5snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -875,16 +892,6 @@ repository = {
   }
   ,
   ["openbus-demo-delegate-orbix"] = {
-    ["1.5.5snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-demo-delegate-singlethread-mico"] = {
     ["1.5.5snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -914,7 +921,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-demo-hello-micoMT"] = {
+  ["openbus-demo-hello-mico-multithread"] = {
     ["1.5.5snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -924,7 +931,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-demo-hello-micoST"] = {
+  ["openbus-demo-hello-mico-singlethread"] = {
     ["1.5.5snapshot"] = {
       [1] = {
         ["arch"] = "desc",

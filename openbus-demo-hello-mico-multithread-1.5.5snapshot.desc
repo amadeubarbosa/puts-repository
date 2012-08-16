@@ -1,0 +1,39 @@
+name = "openbus-demo-hello-mico-multithread"
+version = "1.5.5snapshot"
+subpackage_of = "openbus-cpp-mico-multithread == "..version
+dependencies = {
+  "lua == 5.1.3-oblibs1.4snapshot",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA51 = "$(lua).directory",
+    MULTITHREAD = "Yes",
+  },
+  src = "demo/hello/mico",
+  mf = { "server genstubs", "client", "server" },
+  SunOS510_64 = { 
+    mf = {
+      "server genstubs ",
+      "client USE_NODEPEND=Yes",
+      "server USE_NODEPEND=Yes",
+    },
+  },
+}
+dev_files = {
+  ["bin/${TEC_UNAME}/*"] = "demo/hello/mico/bin",
+  ["../idl/hello.idl"] = "demo/hello/idl/",
+  ["../management"] = "demo/hello",
+  ["../../README"] = "demo",      
+  ["MakefileMT.linux"] = "demo/hello/mico",
+  ["MakefileMT.sunos"] = "demo/hello/mico",
+  ["Makefile.win"] = "demo/hello/mico",
+  ["client.cpp"] = "demo/hello/mico",
+  ["server.cpp"] = "demo/hello/mico",
+  ["run*"] = "demo/hello/mico",
+  ["*.mak"] = "demo/hello/mico",
+  ["*config"] = "demo/hello/mico",
+  ["run*"] = "demo/hello/mico",
+  ["client"] = "demo/hello/mico",
+  ["server"] = "demo/hello/mico",
+}
