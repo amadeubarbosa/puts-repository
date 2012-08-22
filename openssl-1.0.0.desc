@@ -6,7 +6,6 @@ url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/openssl-1.0.0d.t
 
 build = {
   type = "autotools",
-  test_libs = {"libcrypto*1.0.0*"},
   configure = "./config "..DEFAULT_FLAGS,
   compile = "make", -- same default value
   install = "make install_sw",

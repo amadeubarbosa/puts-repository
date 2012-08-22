@@ -3,7 +3,6 @@ version = "2.4.11-oblibs1.4snapshot"
 url = SVNREPURL .. "/openbus/libs/trunk/openldap-2.4.11"
 build = {
   type = "autotools",
-  test_libs = {"libldap*2.4*"},
   external_dependencies = {
     includes = "db.h", 
     libs = "libdb.so",

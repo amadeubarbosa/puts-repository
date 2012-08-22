@@ -3,7 +3,6 @@ version = "1.40.8-oblibs1.4snapshot"
 url = SVNREPURL .. "/openbus/libs/trunk/e2fsprogs-1.40.8"
 build = {
   type = "autotools",
-  test_libs = {"libuuid.*"},
   MacOS = "./configure --prefix=".. TMPDIR ..
            " --enable-bsd-shlibs && cd lib/uuid && make && make install",
   Linux =  "./configure CC=gcc --prefix=".. TMPDIR ..
