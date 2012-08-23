@@ -4,7 +4,7 @@ LUA51_FLAG = "LUA51="..PRODAPP.."/lua-"..lua_pkgversion.." "
 
 name = "lpw"
 version = "1.5.3-1"
-url = SVNREPURL .."/openbus/tags/OB_v1_05_03_01_2011_12_12/lib/lpw"
+url = SVNREPURL .."/openbus/core/tags/OB_v1_05_03_01_2011_12_12/lib/lpw"
 dependencies = {
   "lua == "..lua_pkgversion,
 }

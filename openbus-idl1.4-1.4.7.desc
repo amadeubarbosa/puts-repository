@@ -5,7 +5,7 @@ version = "1.4.7"
 dependencies = {
   "scs-idl1.0 == 1.0.2",
 }
-url = SVNREPURL .. "/openbus/tags/OB_v1_04_07_2010_11_11/core/idl"
+url = SVNREPURL .. "/openbus/core/tags/OB_v1_04_07_2010_11_11/core/idl"
 install_files = {
   ["*.idl"] = "idl/"..IDL_VERSION,
 }
