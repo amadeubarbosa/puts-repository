@@ -11,18 +11,20 @@ build = {
   targets = {
     "stage",
   },
-  features = {
-    link = "static",
-    link = "shared",
-    SunOS510 = {
-        toolset = "sun",
-    },
+  variables = {
+    link = { "static", "shared" },
   },
   bjam_opts = {
     "-d+2",
     "--with-thread",
   },
 }
+build.SunOS510 = {
+  variables = {
+    toolset = "sun",
+  }
+}
+
 dev_files = {
   ["boost"] = "include/boost",
 }

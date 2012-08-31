@@ -12,8 +12,8 @@ dependencies = {
 build = {
   type = "maven",
   variables = { 
-    -- TODO incluir suporte de definição de variáveis no Maven do PUTS
-    OPENBUS_HOME = INSTALL.TOP,
+    ["openbus.idlpath"] = INSTALL.TOP.."/idl/v2_0",
+    ["openbus.legacy.idlpath"] = INSTALL.TOP.."/idl/v1_05",
   },
 }
 
