@@ -7,14 +7,13 @@ build = {
     includes = "db.h", 
     libs = "libdb.so",
   },
-  configure = "./configure --prefix="..TMPDIR.." --disable-slapd --with-cyrus-sasl=no",
+  configure = "./configure --prefix="..TMPDIR.." --disable-slapd --with-tls=openssl --with-cyrus-sasl=no",
   compile = "make depend && make",
   install = "make install",
 }
 
 -- problem on sunos510 openldap compile: http://www.openldap.org/its/index.cgi/Build?id=4607
-build.SunOS = { configure = build.configure.." --with-tls=openssl" }
-build.SunOS510_64 = { configure = build.SunOS.configure.." --target=sparc64-sun-solaris2.10" }
+build.SunOS510_64 = { configure = build.configure.." --target=sparc64-sun-solaris2.10" }
 
 install_files = {
   [TMPDIR .."/lib/libldap*.so*"] = "lib",   --dynamic linux,aix,sunos
