@@ -1,13 +1,17 @@
 name = "openldap"
 version = "2.4.11-oblibs1.4snapshot"
 url = SVNREPURL .. "/openbus/libs/trunk/openldap-2.4.11"
+dependencies = {
+  "openssl == 1.0.0j",
+}
 build = {
   type = "autotools",
-  external_dependencies = {
-    includes = "db.h", 
-    libs = "libdb.so",
+  variables = {
+    CPPFLAGS = "-I"..INSTALL.TOP.."/include/openssl-1.0.0",
+    LDFLAGS  = "-L"..INSTALL.TOP.."/lib",
+    ["--prefix"] = TMPDIR,
   },
-  configure = "./configure --prefix="..TMPDIR.." --disable-slapd --with-tls=openssl --with-cyrus-sasl=no",
+  configure = "./configure --disable-slapd --with-tls=openssl --with-cyrus-sasl=no",
   compile = "make depend && make",
   install = "make install",
 }
