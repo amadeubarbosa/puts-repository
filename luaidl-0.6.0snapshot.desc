@@ -17,7 +17,7 @@ build = {
   src = "openbus",
   mf = { "luaidl", },
   MacOS = { mf = { "luaidl", "luaidl BUILD_DYLIB=Yes" } },
-  SunOS510_64 = { mf = { "luaidl".. SUNOS64_TECMAKE_FLAGS } },
+  SunOS510_64 = { mf = { "luaidl ".. SUNOS64_TECMAKE_FLAGS } },
 }
 build.Darwin = build.MacOS
 
