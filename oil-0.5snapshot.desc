@@ -26,7 +26,7 @@ build = {
   src = "openbus",
   mf = { "oil", },
   MacOS = { mf = { "oil", "oil BUILD_DYLIB=Yes" } },
-  SunOS510_64 = { mf = { "oil".. SUNOS64_TECMAKE_FLAGS } },
+  SunOS510_64 = { mf = { "oil ".. SUNOS64_TECMAKE_FLAGS } },
 }
 build.Darwin = build.MacOS
 
