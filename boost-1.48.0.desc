@@ -1,33 +1,6 @@
 name = "boost"
 version = "1.48.0"
 url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/boost-1.48.0.tgz"
-dependencies = {
-  "luafilesystem",
-}
-build = {
-  type = "bjam",
-  bjam_source = "tools/build/v2/engine",
-  boost_build_path = "tools/build/v2",
-  targets = {
-    "stage",
-  },
-  variables = {
-    link = { "static", "shared" },
-  },
-  bjam_opts = {
-    "-d+2",
-    "--with-thread",
-  },
-}
-build.SunOS510 = {
-  variables = {
-    toolset = "sun",
-  }
-}
-
 dev_files = {
   ["boost"] = "include/boost",
-}
-install_files = {
-  ["stage/lib/*"] = "lib",
 }

@@ -2,12 +2,12 @@ name = "openbus-cpp-mico-multithread-debug"
 version = "2.0snapshot"
 url = SVNREPURL .. "/openbus/sdk/cpp/branches/openbus_v2_proto"
 dependencies = {
-  "boost == 1.48.0",
+  "boost-thread == 1.48.0",
   "lua == 5.1.3-oblibs1.4snapshot",
   "openbus-idl2.0 == 2.0snapshot",
   "logger-multithread-debug == 2.0snapshot",
   "scs-cpp-mico-multithread-debug == 1.3snapshot",
-  "openssl == 0.9.9",
+  "openssl == 1.0.0j",
 }
 build = {
   type = "tecmake",

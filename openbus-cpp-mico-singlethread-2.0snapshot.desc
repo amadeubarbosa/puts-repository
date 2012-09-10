@@ -7,7 +7,7 @@ dependencies = {
   "openbus-idl2.0 == 2.0snapshot",
   "logger-singlethread == 2.0snapshot",
   "scs-cpp-mico-singlethread == 1.3snapshot",
-  "openssl == 0.9.9",
+  "openssl == 1.0.0j",
 }
 build = {
   type = "tecmake",

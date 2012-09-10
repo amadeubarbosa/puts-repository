@@ -1,0 +1,29 @@
+name = "boost-thread"
+version = "1.48.0"
+subpackage_of = "boost == "..version
+dependencies = {
+  "luafilesystem",
+}
+build = {
+  type = "bjam",
+  bjam_source = "tools/build/v2/engine",
+  boost_build_path = "tools/build/v2",
+  targets = {
+    "stage",
+  },
+  variables = {
+    link = { "static", "shared" },
+  },
+  bjam_opts = {
+    "-d+2",
+    "--with-thread",
+  },
+}
+build.SunOS510 = {
+  variables = {
+    toolset = "sun",
+  }
+}
+install_files = {
+  ["stage/lib/*"] = "lib",
+}
