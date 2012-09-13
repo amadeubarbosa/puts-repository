@@ -24,6 +24,11 @@ build.SunOS = {
     toolset = "sun",
   }
 }
+build.SunOS510_64 = {
+  variables = {
+    ["address-model"] = "64",
+  }
+}
 install_files = {
   ["stage/lib/*"] = "lib",
 }
