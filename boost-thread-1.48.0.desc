@@ -19,7 +19,7 @@ build = {
     "--with-thread",
   },
 }
-build.SunOS510 = {
+build.SunOS = {
   variables = {
     toolset = "sun",
   }
