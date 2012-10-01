@@ -3,6 +3,7 @@ version = "1.3snapshot"
 url = SVNREPURL .. "/scs/core/java/trunk"
 dependencies = {
   "scs-idl1.3-java == "..version,
+  "jacorb == 2.3.0",
 }
 build = {
   type = "maven",

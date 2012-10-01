@@ -1426,13 +1426,6 @@ repository = {
       ,
     }
     ,
-    ["1.3snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
   }
   ,
   ["scsoil"] = {
