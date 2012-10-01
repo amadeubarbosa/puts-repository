@@ -12,8 +12,8 @@ dependencies = {
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "$(lua-bin).directory",
-    LOOP_HOME = "$(loop).directory",
+    LUA51 = "%directory(lua-bin)%",
+    LOOP_HOME = "%directory(loop)%",
   },
   mf = { "config", },
   MacOS = { mf = {"config", "config BUILD_DYLIB=Yes"} },

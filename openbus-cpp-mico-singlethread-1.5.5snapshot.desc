@@ -11,7 +11,7 @@ dependencies = {
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "$(lua).directory",
+    LUA51 = "%directory(lua)%",
   },
   src = ".",
   mf = { "mico genstubs", "mico" },

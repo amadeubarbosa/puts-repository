@@ -20,9 +20,9 @@ dependencies = {
 build = {
   type = "tecmake",
   variables = { 
-    LUA51 = "$(lua-bin).directory",
-    LOOP_HOME = "$(loop).directory",
-    OIL_HOME = "$(oil).directory",
+    LUA51 = "%directory(lua-bin)%",
+    LOOP_HOME = "%directory(loop)%",
+    OIL_HOME = "%directory(oil)%",
     OPENBUS_HOME = INSTALL.TOP,
   },
   mf = { "openbus" },

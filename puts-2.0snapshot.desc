@@ -9,7 +9,7 @@ dependencies = {
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "$(lua-bin).directory",
+    LUA51 = "%directory(lua-bin)%",
   },
   mf = { "config" },
   SunOS510_64 = { mf = {"config ".. SUNOS64_TECMAKE_FLAGS} },

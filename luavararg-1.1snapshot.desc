@@ -9,7 +9,7 @@ dependencies = {
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "$(lua).directory",
+    LUA51 = "%directory(lua)%",
   },
   mf = { "luavararg" },
   MacOS = { mf = { "luavararg", "luavararg BUILD_DYLIB=Yes" } },

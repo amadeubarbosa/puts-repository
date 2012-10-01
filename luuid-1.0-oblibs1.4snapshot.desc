@@ -10,7 +10,7 @@ dependencies = {
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "$(lua).directory",
+    LUA51 = "%directory(lua)%",
     OPENBUS_HOME = INSTALL.TOP,
   },
   mf = { "config", },

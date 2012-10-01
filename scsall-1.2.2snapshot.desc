@@ -11,8 +11,8 @@ dependencies = {
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "$(lua-bin).directory",
-    LOOP_HOME = INSTALL.TOP.."/lib/lua/5.1"
+    LUA51 = "%directory(lua-bin)%",
+    LOOP_HOME = "%directory(oilall)%/lua"
   },
   mf = { "scsall", },
   MacOS = { mf = { "scsall", "scsall BUILD_DYLIB=Yes" } },

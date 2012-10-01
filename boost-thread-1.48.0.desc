@@ -7,11 +7,11 @@ dependencies = {
 build = {
   type = "bjam",
   bjam_source = "tools/build/v2/engine",
-  boost_build_path = "tools/build/v2",
   targets = {
     "stage",
   },
   variables = {
+    BOOST_BUILD_PATH = "tools/build/v2",
     link = { "static", "shared" },
   },
   bjam_opts = {
