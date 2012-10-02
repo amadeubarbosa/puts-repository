@@ -1,0 +1,40 @@
+name = "ftc-cpp"
+version = "1.4.0snapshot"
+url = SVNREPURL .. "/ftc/core/cpp/branches/FTC_v1_04_00_2012_03_27"
+dependencies = {
+  "openssl == 1.0.0j",
+  "libevent == 2.0.20-stable",
+  "cxxtest",
+}
+build = {
+  type = "cmake",
+  variables = {
+    FTC_ENABLE_TESTS = 0,
+    CXXTEST_INCLUDE_DIR = INSTALL.TOP.."/include/cxxtest",
+    USE_SYSTEM_LIBS  = 0,
+    CMAKE_BUILD_TYPE = "Release",
+    FTCLIB_LIBRARY_PATH = INSTALL.TOP.."/lib",
+    FTCLIB_INCLUDE_PATH = "\'"..INSTALL.TOP.."/include/libevent-2.0;"..
+                                INSTALL.TOP.."/include/openssl-1.0.0".."\'",
+  },
+}
+
+local include_dir  = "include/ftc-1.4.0"
+local libftc       = "libftc-1.4.0"
+local libftcserver = "libftcserver-1.4.0"
+
+install_files = {
+  ["../client/*.h"]               = include_dir,
+  ["../server/include/ftc"]       = include_dir,
+  ["client/"..libftc..".*"]       = "lib",
+  ["server/"..libftcserver..".*"] = "lib",
+  ["../demo/*"]                   = "demo",
+}
+symbolic_links = {
+  [libftc..".a"]           = "lib/libftc.a",
+  [libftc..".so"]          = "lib/libftc.so",
+  [libftc..".dylib"]       = "lib/libftc.dylib",
+  [libftcserver..".a"]     = "lib/libftcserver.a",
+  [libftcserver..".so"]    = "lib/libftcserver.so",
+  [libftcserver..".dylib"] = "lib/libftcserver.dylib",
+}
