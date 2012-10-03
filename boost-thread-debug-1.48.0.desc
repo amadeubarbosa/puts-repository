@@ -1,4 +1,4 @@
-name = "boost-thread"
+name = "boost-thread-debug"
 version = "1.48.0"
 subpackage_of = "boost == "..version
 dependencies = {
@@ -13,11 +13,12 @@ build = {
   variables = {
     BOOST_BUILD_PATH = "tools/build/v2",
     link = { "static", "shared" },
-    variant = "release",
+    variant = "debug",
   },
   bjam_opts = {
     "-d+2",
     "--with-thread",
+    "--buildid=debug"
   },
 }
 build.SunOS = {

@@ -33,6 +33,16 @@ repository = {
     ,
   }
   ,
+  ["boost-thread-debug"] = {
+    ["1.48.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["cxxtest"] = {
     ["1.0.0"] = {
       [1] = {

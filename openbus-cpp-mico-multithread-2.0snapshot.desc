@@ -2,30 +2,46 @@ name = "openbus-cpp-mico-multithread"
 version = "2.0snapshot"
 url = SVNREPURL .. "/openbus/sdk/cpp/branches/openbus_v2_proto"
 dependencies = {
+  "boost == 1.48.0",
   "boost-thread == 1.48.0",
   "lua == 5.1.3-oblibs1.4snapshot",
+  "mico-multithread == 2.3.13-oblibs1.4snapshot",
   "openbus-idl2.0 == 2.0snapshot",
   "logger-multithread == 2.0snapshot",
+  "scs-idl1.3 == 1.3snapshot",
   "scs-cpp-mico-multithread == 1.3snapshot",
   "openssl == 1.0.0j",
 }
 build = {
-  type = "tecmake",
-  variables = {
-    LUA51 = "%directory(lua)%",
-    OPENBUS_SDK_MULTITHREAD = "Yes",
-  },
+  type = "bjam",
   src = ".",
-  mf = { "config genstubs", "config" },
-  MacOS = {
-    mf = { "config genstubs LD=g++", "config LD=g++ BUILD_DYLIB=Yes" },
+  targets = {
+     "stage",
+  },
+  variables = {
+    threading = "multi",
+    variant = "release",
+    link = { "static", "shared" },
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    ["-sMICO_LIB_PATH"] = "%directory(mico-multithread)%/libs",
+    ["-sMICO_INCLUDE_PATH"] = "%directory(mico-multithread)%/include",
+    ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-multithread)%/cpp %directory(mico-multithread)%/idl\"",
+    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.3)%/src",
+    ["-sSCS_PATH"] = "%directory(scs-cpp-mico-multithread)%",
+    ["-sLOGGER_PATH"] = "%directory(logger-multithread)%",
+    ["-sOPENBUS_IDL_PATH"] = "%directory(openbus-idl2.0)%/src",
+    ["-sOPENSSL_LIB_PATH"] = "%directory(openssl)%",
+    ["-sOPENSSL_INCLUDE_PATH"] = "%directory(openssl)%/include",
+    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
+    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
+  },
+  bjam_opts = {
+     "-d+2",
   },
 }
-build.Darwin = build.MacOS
 
 dev_files = {
-  ["lib/${TEC_UNAME}/libopenbus-micomultithread.*"] = "lib",
+  ["stage/libopenbus-*"] = "lib",
   ["include/openbus"] = "include/openbus/cpp",    --include
-  ["stubs"] = "include/openbus/cpp",     --include
-  ["legacy/idl/*"] = "idl/legacy/openbus/cpp",     --include
+  ["stage/stubs"] = "include/openbus/cpp",     --include
 }

@@ -5,29 +5,37 @@ dependencies = {
   "lua == 5.1.3-oblibs1.4snapshot",
   "scs-idl1.3 == 1.3snapshot",
   "mico-multithread == 2.3.13-oblibs1.4snapshot",
+  "boost == 1.48.0",
+  "boost-thread == 1.48.0",
 }
 build = {
-  type = "tecmake",
-  variables = {
-    LUA51 = "%directory(lua)%",
-    SCS_THREADING_ENABLED = "Yes",
-    OPENBUS_HOME = INSTALL.TOP,
-    MICODIR = INSTALL.TOP,
-    MICOVERSION = "2.3.13",
-  },
+  type = "bjam",
   src = ".",
-  mf = { "mico genstubs", "mico" },
-  MacOS = {
-    mf = { "mico genstubs LD=g++", "mico BUILD_DYLIB=Yes LD=g++" },
+  targets = {
+     "stage",
+  },
+  variables = {
+    threading = "multi",
+    variant = "release",
+    link = { "static", "shared" },
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    ["-sMICO_LIB_PATH"] = "%directory(mico-multithread)%/libs",
+    ["-sMICO_INCLUDE_PATH"] = "%directory(mico-multithread)%/include",
+    ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-multithread)%/cpp %directory(mico-multithread)%/idl\"",
+    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.3)%/src",
+    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
+    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
+ },
+  bjam_opts = {
+     "-d+2",
   },
 }
-build.Darwin = build.MacOS
 
 install_files = {
-  ["lib/${TEC_UNAME}/libscs-micomultithread.*"] = "lib",
+  ["stage/libscs-*"] = "lib",
 }
 dev_files = {
-  ["lib/${TEC_UNAME}/libscs-micomultithread.*"] = "lib",
+  ["stage/libscs-*"] = "lib",
   ["include/scs/*"] = "include/scs",
-  ["stubs/mico"] = "include/scs/stubs",
+  ["stage/stubs"] = "include/scs",
 }
