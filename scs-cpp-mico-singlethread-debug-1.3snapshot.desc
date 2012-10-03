@@ -17,6 +17,7 @@ build = {
   variables = {
     threading = "single",
     variant = "debug",
+    link = { "static", "shared" },
     ["-sBOOST_PATH"] = "$(boost).directory",
 --    ["-sMICO_LIB_PATH"] = "$(mico-singlethread-debug).directory/libs",
     ["-sMICO_LIB_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/libs",
@@ -35,5 +36,5 @@ install_files = {
 dev_files = {
   ["stage/libscs-micosinglethread-debug.*"] = "lib",
   ["include/scs/*"] = "include/scs",
-  ["stubs/mico"] = "include/scs/stubs",
+  ["stage/stubs"] = "include/scs",
 }

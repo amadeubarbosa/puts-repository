@@ -39,8 +39,7 @@ build = {
 }
 
 dev_files = {
-  ["lib/${TEC_UNAME}/libopenbus-micosinglethread-debug.*"] = "lib",
+  ["stage/libopenbus-micosinglethread-debug.*"] = "lib",
   ["include/openbus"] = "include/openbus/cpp",    --include
-  ["stubs"] = "include/openbus/cpp",     --include
-  ["legacy/idl/*"] = "idl/legacy/openbus/cpp",     --include
+  ["stage/stubs"] = "include/openbus/cpp",     --include
 }

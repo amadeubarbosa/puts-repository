@@ -15,21 +15,18 @@ build = {
   variables = {
     threading = "single",
     variant = "debug",
+    link = {"shared", "static"},
     ["-sBOOST_PATH"] = "$(boost).directory",
   },
   bjam_opts = {
      "-d+2",
   },
---  mf = { "config" },
---  MacOS = { mf = { "config BUILD_DYLIB=Yes", } },
---  SunOS = { mf = { "config LD=CC", } },
 }
---build.Darwin = build.MacOS
 
 install_files = {
-  ["lib/${TEC_UNAME}/liblogger-singlethread-debug.so"] = "lib",
+  ["stage/liblogger-singlethread-debug.*"] = "lib",
 }
 dev_files = {
-  ["lib/${TEC_UNAME}/liblogger-singlethread-debug.*"] = "lib",
+  ["stage/liblogger-singlethread-debug.*"] = "lib",
   ["include/log"] = "include/",
 }
