@@ -4,6 +4,7 @@ url = SVNREPURL .. "/openbus/sdk/cpp/branches/openbus_v2_proto"
 dependencies = {
   "boost == 1.48.0",
   "lua == 5.1.3-oblibs1.4snapshot",
+  "mico-singlethread-debug == 2.3.13-oblibs1.4snapshot",
   "openbus-idl2.0 == 2.0snapshot",
   "logger-singlethread-debug == 2.0snapshot",
   "scs-idl1.3 == 1.3snapshot",
@@ -11,7 +12,6 @@ dependencies = {
   "openssl == 1.0.0j",
 }
 build = {
-  bjam_source = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/boost-1.48.0/tools/build/v2/engine",
   type = "bjam",
   src = ".",
   targets = {
@@ -21,17 +21,18 @@ build = {
     threading = "single",
     variant = "debug",
     link = { "static", "shared" },
-    ["-sBOOST_PATH"] = "$(boost).directory",
---    ["-sMICO_LIB_PATH"] = "$(mico-singlethread-debug).directory/libs",
-    ["-sMICO_LIB_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/libs",
-    ["-sMICO_INCLUDE_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/include",
-    ["-sMICO_IDL_BIN_PATH"] = "\"/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/cpp /home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/idl\"",
-    ["-sSCS_IDL_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/scs-idl1.3-1.3snapshot/src",
-    ["-sSCS_PATH"] = "$(scs-cpp-mico-singlethread-debug).directory",
-    ["-sLOGGER_PATH"] = "$(logger-singlethread-debug).directory",
-    ["-sOPENBUS_IDL_PATH"] = PRODAPP .. "/openbus-idl2.0-2.0snapshot/src",
-    ["-sOPENSSL_LIB_PATH"] = PRODAPP .. "/openssl-1.0.0j",
-    ["-sOPENSSL_INCLUDE_PATH"] = PRODAPP .. "/openssl-1.0.0j/include",
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    ["-sMICO_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
+    ["-sMICO_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
+    ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-singlethread-debug)%/cpp %directory(mico-singlethread-debug)%/idl\"",
+    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.3)%/src",
+    ["-sSCS_PATH"] = "%directory(scs-cpp-mico-singlethread-debug)%",
+    ["-sLOGGER_PATH"] = "%directory(logger-singlethread-debug)%",
+    ["-sOPENBUS_IDL_PATH"] = "%directory(openbus-idl2.0)%/src",
+    ["-sOPENSSL_LIB_PATH"] = "%directory(openssl)%",
+    ["-sOPENSSL_INCLUDE_PATH"] = "%directory(openssl)%/include",
+    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
+    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
   },
   bjam_opts = {
      "-d+2",
@@ -39,7 +40,7 @@ build = {
 }
 
 dev_files = {
-  ["stage/libopenbus-micosinglethread-debug.*"] = "lib",
+  ["stage/libopenbus-*"] = "lib",
   ["include/openbus"] = "include/openbus/cpp",    --include
   ["stage/stubs"] = "include/openbus/cpp",     --include
 }

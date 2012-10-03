@@ -5,8 +5,6 @@ dependencies = {
   "boost == 1.48.0",
 }
 build = {
-  -- boost_build_path = "$(boost).directory/tools/build/v2",
-  bjam_source = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/boost-1.48.0/tools/build/v2/engine",
   type = "bjam",
   src = ".",
   targets = {
@@ -16,7 +14,9 @@ build = {
     threading = "single",
     variant = "debug",
     link = {"shared", "static"},
-    ["-sBOOST_PATH"] = "$(boost).directory",
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
+    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
   },
   bjam_opts = {
      "-d+2",
@@ -24,9 +24,9 @@ build = {
 }
 
 install_files = {
-  ["stage/liblogger-singlethread-debug.*"] = "lib",
+  ["stage/liblogger-*"] = "lib",
 }
 dev_files = {
-  ["stage/liblogger-singlethread-debug.*"] = "lib",
+  ["stage/liblogger-*"] = "lib",
   ["include/log"] = "include/",
 }

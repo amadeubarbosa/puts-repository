@@ -8,7 +8,6 @@ dependencies = {
   "boost == 1.48.0",
 }
 build = {
-  bjam_source = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/boost-1.48.0/tools/build/v2/engine",
   type = "bjam",
   src = ".",
   targets = {
@@ -18,23 +17,24 @@ build = {
     threading = "single",
     variant = "debug",
     link = { "static", "shared" },
-    ["-sBOOST_PATH"] = "$(boost).directory",
---    ["-sMICO_LIB_PATH"] = "$(mico-singlethread-debug).directory/libs",
-    ["-sMICO_LIB_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/libs",
-    ["-sMICO_INCLUDE_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/include",
-    ["-sMICO_IDL_BIN_PATH"] = "\"/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/cpp /home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/idl\"",
-    ["-sSCS_IDL_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/scs-idl1.3-1.3snapshot/src",
-  },
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    ["-sMICO_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
+    ["-sMICO_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
+    ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-singlethread-debug)%/cpp %directory(mico-singlethread-debug)%/idl\"",
+    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.3)%/src",
+    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
+    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
+ },
   bjam_opts = {
      "-d+2",
   },
 }
 
 install_files = {
-  ["stage/libscs-micosinglethread-debug.*"] = "lib",
+  ["stage/libscs-*"] = "lib",
 }
 dev_files = {
-  ["stage/libscs-micosinglethread-debug.*"] = "lib",
+  ["stage/libscs-*"] = "lib",
   ["include/scs/*"] = "include/scs",
   ["stage/stubs"] = "include/scs",
 }
