@@ -5,18 +5,26 @@ dependencies = {
   "boost == 1.48.0",
 }
 build = {
-  type = "tecmake",
+  -- boost_build_path = "$(boost).directory/tools/build/v2",
+  bjam_source = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/boost-1.48.0/tools/build/v2/engine",
+  type = "bjam",
   src = ".",
-  variables = {
-    USE_NODEPEND = "Yes",
-    DBG="Yes",
-    OPENBUS_HOME = INSTALL.TOP,
+  targets = {
+     "stage",
   },
-  mf = { "config" },
-  MacOS = { mf = { "config BUILD_DYLIB=Yes", } },
-  SunOS = { mf = { "config LD=CC", } },
+  variables = {
+    threading = "single",
+    variant = "debug",
+    ["-sBOOST_PATH"] = "$(boost).directory",
+  },
+  bjam_opts = {
+     "-d+2",
+  },
+--  mf = { "config" },
+--  MacOS = { mf = { "config BUILD_DYLIB=Yes", } },
+--  SunOS = { mf = { "config LD=CC", } },
 }
-build.Darwin = build.MacOS
+--build.Darwin = build.MacOS
 
 install_files = {
   ["lib/${TEC_UNAME}/liblogger-singlethread-debug.so"] = "lib",
