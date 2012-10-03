@@ -5,29 +5,35 @@ dependencies = {
   "lua == 5.1.3-oblibs1.4snapshot",
   "scs-idl1.3 == 1.3snapshot",
   "mico-singlethread-debug == 2.3.13-oblibs1.4snapshot",
+  "boost == 1.48.0",
 }
 build = {
-  type = "tecmake",
-  variables = {
-    LUA51 = "%directory(lua)%",
-    DBG = "Yes",
-    OPENBUS_HOME = INSTALL.TOP,
-    MICODIR = INSTALL.TOP,
-    MICOVERSION = "2.3.13",
-  },
+  bjam_source = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/boost-1.48.0/tools/build/v2/engine",
+  type = "bjam",
   src = ".",
-  mf = { "mico genstubs", "mico" },
-  MacOS = {
-    mf = { "mico genstubs LD=g++", "mico BUILD_DYLIB=Yes LD=g++" },
+  targets = {
+     "stage",
+  },
+  variables = {
+    threading = "single",
+    variant = "debug",
+    ["-sBOOST_PATH"] = "$(boost).directory",
+--    ["-sMICO_LIB_PATH"] = "$(mico-singlethread-debug).directory/libs",
+    ["-sMICO_LIB_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/libs",
+    ["-sMICO_INCLUDE_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/include",
+    ["-sMICO_IDL_BIN_PATH"] = "\"/home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/cpp /home/felipe/dev/tecgraf/openbus2/openbus/lib/mico-singlethread-debug-2.3.13-oblibs1.4snapshot/idl\"",
+    ["-sSCS_IDL_PATH"] = "/home/felipe/dev/tecgraf/openbus2/openbus/lib/scs-idl1.3-1.3snapshot/src",
+  },
+  bjam_opts = {
+     "-d+2",
   },
 }
-build.Darwin = build.MacOS
 
 install_files = {
-  ["lib/${TEC_UNAME}/libscs-micosinglethread-debug.*"] = "lib",
+  ["stage/libscs-micosinglethread-debug.*"] = "lib",
 }
 dev_files = {
-  ["lib/${TEC_UNAME}/libscs-micosinglethread-debug.*"] = "lib",
+  ["stage/libscs-micosinglethread-debug.*"] = "lib",
   ["include/scs/*"] = "include/scs",
   ["stubs/mico"] = "include/scs/stubs",
 }
