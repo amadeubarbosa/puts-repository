@@ -2,27 +2,31 @@ name = "logger-multithread-debug"
 version = "2.0snapshot"
 url = SVNREPURL .. "/cpputils/logger/branches/LG_v2_00_00_2012_02_23"
 dependencies = {
-  "boost-thread == 1.48.0",
+  "boost == 1.48.0",
 }
 build = {
-  type = "tecmake",
+  type = "bjam",
   src = ".",
-  variables = {
-    OPENBUS_SDK_MULTITHREAD = "Yes",
-    USE_NODEPEND = "Yes",
-    DBG="Yes",
-    OPENBUS_HOME = INSTALL.TOP,
+  targets = {
+     "stage",
   },
-  mf = { "config" },
-  MacOS = { mf = { "config BUILD_DYLIB=Yes", } },
-  SunOS = { mf = { "config LD=CC", } },
+  variables = {
+    threading = "multi",
+    variant = "debug",
+    link = {"shared", "static"},
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
+    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
+  },
+  bjam_opts = {
+     "-d+2",
+  },
 }
-build.Darwin = build.MacOS
 
 install_files = {
-  ["lib/${TEC_UNAME}/liblogger-multithread-debug.so"] = "lib",
+  ["stage/liblogger-*"] = "lib",
 }
 dev_files = {
-  ["lib/${TEC_UNAME}/liblogger-multithread-debug.*"] = "lib",
+  ["stage/liblogger-*"] = "lib",
   ["include/log"] = "include/",
 }
