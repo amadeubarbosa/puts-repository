@@ -2,7 +2,6 @@ name = "scs-cpp-mico-multithread"
 version = "1.3snapshot"
 url = SVNREPURL .. "/scs/core/cpp/trunk"
 dependencies = {
-  "lua == 5.1.3-oblibs1.4snapshot",
   "scs-idl1.3 == 1.3snapshot",
   "mico-multithread == 2.3.13-oblibs1.4snapshot",
   "boost == 1.48.0",
