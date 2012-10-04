@@ -10,6 +10,7 @@ dependencies = {
   "scs-idl1.3 == 1.3snapshot",
   "scs-cpp-mico-multithread == 1.3snapshot",
   "openssl == 1.0.0j",
+  "openssl-static == 1.0.0j",
 }
 build = {
   type = "bjam",

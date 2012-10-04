@@ -3,10 +3,10 @@ version = "2.3.13-oblibs1.4snapshot"
 url = SVNREPURL .. "/openbus/libs/trunk/mico-2.3.13"
 build = {
   type = "autotools",
-  Linux = "rm -f config.cache && ./configure --disable-threads --disable-optimize --enable-debug --prefix=".. TMPDIR .. " && make && make install",
-  Darwin = "rm -f config.cache && ./configure --disable-threads --disable-optimize --enable-debug --prefix=".. TMPDIR .. " && make && make install",
-  MacOS = "rm -f config.cache && ./configure --disable-threads --disable-optimize --enable-debug --prefix=".. TMPDIR .. " && make && make install",
-  SunOS = 'rm -f config.cache && CC=cc CXX=CC CONF_AR=CC CONF_ARFLAGS="-m64 -xar -o" CFLAGS="-KPIC -m64" CXXFLAGS="-erroff=badargtype2w -library=stlport4 -KPIC -m64" LDFLAGS="-m64" ./configure --disable-threads --disable-optimize --enable-debug --prefix='.. TMPDIR .. ' && make && make install',
+  Linux = "rm -f config.cache && ./configure --disable-threads --disable-optimize --enable-debug --disable-dynamic --prefix=".. TMPDIR .. " && make && make install",
+  Darwin = "rm -f config.cache && ./configure --disable-threads --disable-optimize --enable-debug --disable-dynamic --prefix=".. TMPDIR .. " && make && make install",
+  MacOS = "rm -f config.cache && ./configure --disable-threads --disable-optimize --enable-debug --disable-dynamic --prefix=".. TMPDIR .. " && make && make install",
+  SunOS = 'rm -f config.cache && CC=cc CXX=CC CONF_AR=CC CONF_ARFLAGS="-m64 -xar -o" CFLAGS="-KPIC -m64" CXXFLAGS="-erroff=badargtype2w -library=stlport4 -KPIC -m64" LDFLAGS="-m64" ./configure --disable-threads --disable-optimize --disable-dynamic --enable-debug --prefix='.. TMPDIR .. ' && make && make install',
 }
 install_files = {
   [TMPDIR .."/lib/libmico*.so*"] = "lib/mico-2.3.13-singlethread-debug",       --dynamic linux,aix,sunos

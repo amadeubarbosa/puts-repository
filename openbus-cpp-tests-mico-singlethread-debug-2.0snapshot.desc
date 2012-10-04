@@ -1,6 +1,6 @@
-name = "openbus-cpp-mico-singlethread-debug"
+name = "openbus-cpp-tests-mico-singlethread-debug"
 version = "2.0snapshot"
-url = SVNREPURL .. "/openbus/sdk/cpp/branches/openbus_v2_proto"
+subpackage_of = "openbus-cpp-mico-singlethread-debug == "..version
 dependencies = {
   "boost == 1.48.0",
   "mico-singlethread-debug == 2.3.13-oblibs1.4snapshot",
@@ -10,17 +10,18 @@ dependencies = {
   "scs-cpp-mico-singlethread-debug == 1.3snapshot",
   "openssl == 1.0.0j",
   "openssl-static == 1.0.0j",
+  "openbus-cpp-mico-singlethread-debug == 2.0snapshot",
 }
 build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage",
+     "stage-tests",
   },
   variables = {
     threading = "single",
     variant = "debug",
-    link = { "static", "shared" },
+    link = "static",
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
     ["-sMICO_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
@@ -39,8 +40,8 @@ build = {
   },
 }
 
-dev_files = {
-  ["stage/libopenbus-*"] = "lib",
-  ["include/openbus"] = "include/openbus/cpp",    --include
-  ["stage/stubs"] = "include/openbus/cpp",     --include
-}
+-- dev_files = {
+--   ["stage/libopenbus-*"] = "lib",
+--   ["include/openbus"] = "include/openbus/cpp",    --include
+--   ["stage/stubs"] = "include/openbus/cpp",     --include
+-- }

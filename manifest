@@ -901,6 +901,26 @@ repository = {
     ,
   }
   ,
+  ["openbus-cpp-tests-mico-singlethread"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-cpp-tests-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-delegate-lua"] = {
     ["1.5.4snapshot"] = {
       [1] = {
@@ -1274,6 +1294,16 @@ repository = {
       ,
     }
     ,
+    ["1.0.0j"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openssl-static"] = {
     ["1.0.0j"] = {
       [1] = {
         ["arch"] = "desc",
