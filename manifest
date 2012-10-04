@@ -1303,16 +1303,6 @@ repository = {
     ,
   }
   ,
-  ["openssl-static"] = {
-    ["1.0.0j"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
   ["puts"] = {
     ["2.0snapshot"] = {
       [1] = {
