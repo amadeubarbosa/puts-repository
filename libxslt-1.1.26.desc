@@ -1,0 +1,16 @@
+name = "libxslt"
+version = "1.1.26"
+url = "ftp://xmlsoft.org/libxslt/libxslt-1.1.26.tar.gz"
+dependencies = {
+   "libxml2 == 2.8.0",
+}
+build = {
+   type = "autotools",
+   variables = {
+      prefix = TMPDIR,
+      -- ["--with-python"] = "NO",
+      -- ["--with-crypto"] = "NO",
+      -- ["--with-plugins"] = "NO",
+      ["--with-libxml-src"] = "%directory(libxml2)%",
+   }
+}

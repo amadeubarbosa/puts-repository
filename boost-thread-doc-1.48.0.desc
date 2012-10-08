@@ -1,0 +1,24 @@
+name = "boost-thread-doc"
+version = "1.48.0"
+subpackage_of = "boost == "..version
+dependencies = {
+  "libxslt == 1.1.26",
+  "docbook-dtd == 4.2",
+  "docbook-xsl == 1.75.2",
+}
+build = {
+  type = "bjam",
+  bjam_source = "tools/build/v2/engine",
+  targets = {
+    "libs/thread/doc//standalone",
+  },
+  variables = {
+    BOOST_BUILD_PATH = "tools/build/v2",
+    xsltproc = {"USING", "%directory(libxslt)%/xsltproc/xsltproc"},
+    boostbook = {"USING", "%directory(docbook-xsl)%", "%directory(docbook-dtd)%"},
+    quickbook = {"USING"}
+  },
+  bjam_opts = {
+    "-d+2",
+  },
+}
