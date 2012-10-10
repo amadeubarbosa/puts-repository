@@ -23,16 +23,6 @@ repository = {
     ,
   }
   ,
-  ["boost-build"] = {
-    ["1.48.0"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
   ["boost-thread"] = {
     ["1.48.0"] = {
       [1] = {
@@ -85,13 +75,6 @@ repository = {
   ,
   ["docbook-xsl"] = {
     ["1.75.2"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-    ["1.77.1"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -245,13 +228,6 @@ repository = {
   ,
   ["libxslt"] = {
     ["1.1.26"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-    ["1.1.27"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -995,6 +971,36 @@ repository = {
     ,
   }
   ,
+  ["openbus-demo-audit-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-chain-validation-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-dedicated-clock-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-delegate-lua"] = {
     ["1.5.4snapshot"] = {
       [1] = {
@@ -1067,6 +1073,23 @@ repository = {
   ,
   ["openbus-demo-hello-mico-singlethread"] = {
     ["1.5.5snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-hello-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
