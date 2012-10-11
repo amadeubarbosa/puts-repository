@@ -1051,6 +1051,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-demo-greetings-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-hello-lua"] = {
     ["1.5.4snapshot"] = {
       [1] = {
@@ -1079,13 +1089,6 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
   }
   ,
   ["openbus-demo-hello-mico-singlethread-debug"] = {
@@ -1100,6 +1103,36 @@ repository = {
   ,
   ["openbus-demo-hello-orbix"] = {
     ["1.5.5snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-independent-clock-mico-multithread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-multiplexing-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-sharedauth-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
