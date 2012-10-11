@@ -3,6 +3,9 @@ version = "2.0snapshot"
 subpackage_of = "openbus-cpp-mico-multithread == "..version
 dependencies = {
   "boost == 1.51.0",
+  "boost-thread == 1.51.0",
+  "boost-system == 1.51.0",
+  "boost-chrono == 1.51.0",
   "mico-multithread == 2.3.13-oblibs1.4snapshot",
   "openbus-idl2.0 == 2.0snapshot",
   "logger-multithread == 2.0snapshot",

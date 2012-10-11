@@ -30,6 +30,46 @@ repository = {
     ,
   }
   ,
+  ["boost-chrono"] = {
+    ["1.51.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["boost-chrono-debug"] = {
+    ["1.51.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["boost-system"] = {
+    ["1.51.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["boost-system-debug"] = {
+    ["1.51.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["boost-thread"] = {
     ["1.48.0"] = {
       [1] = {
@@ -958,6 +998,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-cpp-assistant-tests-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-cpp-mico-multithread"] = {
     ["1.5.5snapshot"] = {
       [1] = {
@@ -1113,6 +1163,16 @@ repository = {
   }
   ,
   ["openbus-demo-greetings-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-hello-assistant-mico-singlethread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
