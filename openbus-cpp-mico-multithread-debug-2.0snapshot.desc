@@ -2,8 +2,8 @@ name = "openbus-cpp-mico-multithread-debug"
 version = "2.0snapshot"
 url = SVNREPURL .. "/openbus/sdk/cpp/branches/openbus_v2_proto"
 dependencies = {
-  "boost == 1.48.0",
-  "boost-thread-debug == 1.48.0",
+  "boost == 1.51.0",
+  "boost-thread-debug == 1.51.0",
   "mico-multithread-debug == 2.3.13-oblibs1.4snapshot",
   "openbus-idl2.0 == 2.0snapshot",
   "logger-multithread-debug == 2.0snapshot",

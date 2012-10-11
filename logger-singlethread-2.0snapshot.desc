@@ -2,7 +2,7 @@ name = "logger-singlethread"
 version = "2.0snapshot"
 url = SVNREPURL .. "/cpputils/logger/branches/LG_v2_00_00_2012_02_23"
 dependencies = {
-  "boost == 1.48.0",
+  "boost == 1.51.0",
 }
 build = {
   type = "bjam",

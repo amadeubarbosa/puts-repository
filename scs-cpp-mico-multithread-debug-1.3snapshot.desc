@@ -4,8 +4,8 @@ url = SVNREPURL .. "/scs/core/cpp/trunk"
 dependencies = {
   "scs-idl1.3 == 1.3snapshot",
   "mico-multithread-debug == 2.3.13-oblibs1.4snapshot",
-  "boost == 1.48.0",
-  "boost-thread-debug == 1.48.0",
+  "boost == 1.51.0",
+  "boost-thread-debug == 1.51.0",
 }
 build = {
   type = "bjam",
