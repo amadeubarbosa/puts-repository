@@ -1102,6 +1102,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-demo-dedicated-clock-assistant-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-dedicated-clock-mico-singlethread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
@@ -1204,6 +1214,13 @@ repository = {
   ,
   ["openbus-demo-hello-mico-singlethread"] = {
     ["1.5.5snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
