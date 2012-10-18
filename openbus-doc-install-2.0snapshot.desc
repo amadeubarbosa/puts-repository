@@ -1,0 +1,28 @@
+name = "openbus-doc-install"
+version = "2.0snapshot"
+subpackage_of = "openbus-busservice == "..version
+dependencies = {
+  "libxslt == 1.1.26",
+  "docbook-dtd == 4.2",
+  "docbook-xsl == 1.75.2",
+  "boost == 1.48.0",
+}
+build = {
+  type = "bjam",
+  targets = {
+    "doc/install//standalone onehtml",
+  },
+  variables = {
+    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
+    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
+    xsltproc = {"USING", "%directory(libxslt)%/xsltproc/xsltproc"},
+    boostbook = {"USING", "%directory(docbook-xsl)%", "%directory(docbook-dtd)%"},
+    quickbook = {"USING"}
+  },
+  bjam_opts = {
+    "-d+2",
+  },
+}
+install_files = {
+  ["doc/install/bin/*/debug/installation.html"] = "doc/install/",
+}

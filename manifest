@@ -1279,6 +1279,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-doc-install"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-idl1.4"] = {
     ["1.4.7"] = {
       [1] = {
