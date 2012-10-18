@@ -1092,6 +1092,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-demo-chain-validation-assistant-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-chain-validation-mico-singlethread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
@@ -1164,6 +1174,16 @@ repository = {
   ,
   ["openbus-demo-eventsink-lua"] = {
     ["1.5.4snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-greetings-assistant-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
