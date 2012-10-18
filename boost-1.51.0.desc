@@ -1,6 +1,6 @@
 name = "boost"
 version = "1.51.0"
-url = "http://ufpr.dl.sourceforge.net/project/boost/boost/1.51.0/boost_1_51_0.tar.bz2"
+url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/boost-1.51.0.tar.bz2"
 dev_files = {
   ["boost"] = "include/boost",
 }
