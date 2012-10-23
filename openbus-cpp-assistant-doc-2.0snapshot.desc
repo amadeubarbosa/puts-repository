@@ -1,0 +1,33 @@
+name = "openbus-cpp-assistant-doc"
+version = "2.0snapshot"
+subpackage_of = "openbus-cpp-mico-singlethread == "..version
+dependencies = {
+  "boost == 1.51.0",
+  "libxslt == 1.1.26",
+  "docbook-dtd == 4.2",
+  "docbook-xsl == 1.75.2",
+}
+build = {
+  type = "bjam",
+  src = "assistant/doc",
+  targets = {
+     "standalone",
+  },
+  variables = {
+    xsltproc = {"USING", "%directory(libxslt)%/xsltproc/xsltproc"},
+    boostbook = {"USING", "%directory(docbook-xsl)%", "%directory(docbook-dtd)%"},
+    quickbook = {"USING"},
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
+    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
+  },
+  bjam_opts = {
+     "-d+2",
+  },
+}
+
+-- dev_files = {
+--   ["stage/libopenbus-*"] = "lib",
+--   ["include/openbus"] = "include/openbus/cpp",    --include
+--   ["stage/stubs"] = "include/openbus/cpp",     --include
+-- }

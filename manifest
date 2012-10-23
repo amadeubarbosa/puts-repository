@@ -958,6 +958,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-cpp-assistant-doc"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-cpp-assistant-mico-multithread"] = {
     ["2.0snapshot"] = {
       [1] = {
@@ -989,6 +999,16 @@ repository = {
   }
   ,
   ["openbus-cpp-assistant-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-cpp-assistant-tests-mico-multithread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
