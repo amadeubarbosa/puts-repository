@@ -1289,6 +1289,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-demo-independent-clock-assistant-mico-multithread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-independent-clock-mico-multithread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
