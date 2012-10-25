@@ -195,6 +195,23 @@ repository = {
     ,
   }
   ,
+  ["ftc-java"] = {
+    ["1.1.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.1.5"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["jacorb"] = {
     ["2.3.0"] = {
       [1] = {
@@ -1109,6 +1126,26 @@ repository = {
     ,
   }
   ,
+  ["openbus-dataservice-core-idl"] = {
+    ["1.2.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-dataservice-core-java"] = {
+    ["1.2.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-audit-mico-singlethread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
@@ -1408,6 +1445,13 @@ repository = {
   }
   ,
   ["openbus-java"] = {
+    ["1.5.2-0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1729,6 +1773,16 @@ repository = {
     ,
   }
   ,
+  ["scs-idl1.2-java"] = {
+    ["1.2.1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["scs-idl1.3"] = {
     ["1.3snapshot"] = {
       [1] = {
@@ -1760,6 +1814,13 @@ repository = {
   }
   ,
   ["scs-java"] = {
+    ["1.2.1-0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.3snapshot"] = {
       [1] = {
         ["arch"] = "desc",
