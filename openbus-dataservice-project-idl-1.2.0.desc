@@ -1,0 +1,9 @@
+name = "openbus-dataservice-project-idl"
+version = "1.2.0"
+url = SVNREPURL .. "/openbus/services/data_service/project/idl/tags/OB_DS_PROJECT_IDL_v1_02_00_2012_10_02"
+dependencies = {
+  "openbus-dataservice-core-idl == "..version,
+}
+install_files = {
+  ["src/project.idl"] = "idl/dataservice/v1_02",
+}

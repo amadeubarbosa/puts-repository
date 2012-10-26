@@ -1,8 +1,9 @@
 name = "openbus-java"
-url = SVNREPURL .. "/openbus/sdk/java/tags/OB_SDK_JAVA_v1_05_02_00_2011_08_03"
-version = "1.5.2-0"
+url = SVNREPURL .. "/openbus/sdk/java/tags/OB_SDK_JAVA_v1_05_02_01_2011_10_26"
+version = "1.5.2-1"
 dependencies = {
   "scs-java == 1.2.1-0",
+  "openbus-idl1.5 == 1.5.2",
 }
 build = {
   type = "maven",

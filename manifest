@@ -1146,6 +1146,26 @@ repository = {
     ,
   }
   ,
+  ["openbus-dataservice-project-idl"] = {
+    ["1.2.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-dataservice-project-java"] = {
+    ["1.2.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-audit-mico-singlethread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
@@ -1445,7 +1465,7 @@ repository = {
   }
   ,
   ["openbus-java"] = {
-    ["1.5.2-0"] = {
+    ["1.5.2-1"] = {
       [1] = {
         ["arch"] = "desc",
       }

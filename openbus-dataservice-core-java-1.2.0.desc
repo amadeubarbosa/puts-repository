@@ -2,17 +2,28 @@ name = "openbus-dataservice-core-java"
 version = "1.2.0"
 url = SVNREPURL .. "/openbus/services/data_service/core/java/tags/OB_DS_CORE_JAVA_v1_02_00_2012_10_02"
 dependencies = {
-  "openbus-java == 1.5.2-0",
-  "ftc-java == 1.1.5",
   "openbus-dataservice-core-idl == 1.2.0",
+  "openbus-java == 1.5.2-1",
+  "ftc-java == 1.1.5",
 }
 build = {
   type = "maven",
+  javadoc = true,
   variables = {
-    ["DS_IDL_PATH"] = "%directory(openbus-dataservice-core-idl)%"
+    ["dataservice.idlpath"] = "%directory(openbus-dataservice-core-idl)%"
   },
 }
 install_files = {
-  ["target/*.jar"] = "lib",
-  ["target/dependency/*.jar"] = "lib",
+  ["api/target/*.jar"]                         = "lib",
+  ["api/target/dependency/*.jar"]              = "lib",
+  ["api/target/site/apidocs/*"]                = "doc/core",
+  ["demo/file_system/target/*.jar"]            = "demo/java/file_system",
+  ["demo/file_system/target/site/apidocs/*"]   = "demo/java/file_system/doc",
+  ["demo/file_system/target/dependency/*.jar"] = "lib",
+}
+dev_files = {
+  ["demo/file_system/src"]        = "demo/java/file_system",
+  ["demo/file_system/idl"]        = "demo/java/file_system",
+  ["demo/file_system/management"] = "demo/java/file_system",
+  ["demo/file_system/resources"]  = "demo/java/file_system",
 }
