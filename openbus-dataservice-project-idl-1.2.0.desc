@@ -5,5 +5,5 @@ dependencies = {
   "openbus-dataservice-core-idl == "..version,
 }
 install_files = {
-  ["src/project.idl"] = "idl/dataservice/v1_02",
+  ["project.idl"] = "idl/dataservice/v1_02",
 }

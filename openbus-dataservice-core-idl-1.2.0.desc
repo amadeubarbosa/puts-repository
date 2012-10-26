@@ -2,5 +2,5 @@ name = "openbus-dataservice-core-idl"
 version = "1.2.0"
 url = SVNREPURL .. "/openbus/services/data_service/core/idl/tags/OB_DS_CORE_IDL_v1_02_00_2012_10_02"
 install_files = {
-  ["src/*.idl"] = "idl/dataservice/v1_02",
+  ["*.idl"] = "idl/dataservice/v1_02",
 }
