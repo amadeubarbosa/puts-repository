@@ -1,6 +1,6 @@
 name = "openbus-demo-chain-validation-assistant-mico-singlethread-debug"
 version = "2.0snapshot"
-subpackage_of = "openbus-cpp-mico-singlethread-debug == "..version
+subpackage_of = "openbus-cpp-assistant-mico-singlethread-debug == "..version
 dependencies = {
   "openbus-cpp-mico-singlethread-debug == "..version,
   "boost == 1.51.0",

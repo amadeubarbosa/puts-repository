@@ -1,6 +1,6 @@
 name = "openbus-cpp-assistant-tests-mico-multithread-debug"
 version = "2.0snapshot"
-subpackage_of = "openbus-cpp-mico-multithread-debug == "..version
+subpackage_of = "openbus-cpp-assistant-mico-multithread-debug == "..version
 dependencies = {
   "boost == 1.51.0",
   "mico-multithread-debug == 2.3.13-oblibs1.4snapshot",
