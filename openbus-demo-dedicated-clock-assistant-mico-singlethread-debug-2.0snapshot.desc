@@ -38,20 +38,11 @@ build = {
      "-d+2",
   },
 }
--- dev_files = {
---   ["bin/${TEC_UNAME}/*"] = "demo/dedicated_clock/mico/bin",
---   ["../idl/dedicated_clock.idl"] = "demo/dedicated_clock/idl/",
---   ["../management"] = "demo/dedicated_clock",
---   ["../../README"] = "demo",      
---   ["MakefileST.linux"] = "demo/dedicated_clock/mico",
---   ["MakefileST.sunos"] = "demo/dedicated_clock/mico",
---   ["Makefile.win"] = "demo/dedicated_clock/mico",
---   ["client.cpp"] = "demo/dedicated_clock/mico",
---   ["server.cpp"] = "demo/dedicated_clock/mico",
---   ["run*"] = "demo/dedicated_clock/mico",
---   ["*.mak"] = "demo/dedicated_clock/mico",
---   ["*config"] = "demo/dedicated_clock/mico",
---   ["run*"] = "demo/dedicated_clock/mico",
---   ["client"] = "demo/dedicated_clock/mico",
---   ["server"] = "demo/dedicated_clock/mico",
--- }
+dev_files = {
+  ["demo/assistant/dedicated_clock/idl"]    = "demo/cpp/assistant/dedicated_clock",
+  ["demo/assistant/dedicated_clock/server"] = "demo/cpp/assistant/dedicated_clock",
+  ["demo/assistant/dedicated_clock/client"] = "demo/cpp/assistant/dedicated_clock",
+  ["demo/assistant/dedicated_clock/admin"]  = "demo/cpp/assistant/dedicated_clock",
+  ["demo/assistant/dedicated_clock/*.mak"]  = "demo/cpp/assistant/dedicated_clock",
+  ["demo/assistant/config.mak"]             = "demo/cpp/assistant",
+}

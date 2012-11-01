@@ -28,12 +28,12 @@ build = {
      "-d+2",
   },
 }
-
 install_files = {
-  ["stage/libscs-*"] = "lib",
+  ["stage/libscs-micosinglethread.so"]    = "lib",
+  ["stage/libscs-micosinglethread.dylib"] = "lib",
 }
 dev_files = {
-  ["stage/libscs-*"] = "lib",
-  ["include/scs/*"] = "include/scs",
-  ["stage/stubs"] = "include/scs",
+  ["stage/libscs-micosinglethread.*"] = "lib",
+  ["include/scs/*"]                   = "include/scs",
+  ["stage/stubs/*.h"]                 = "include/scs/stubs",
 }

@@ -38,20 +38,11 @@ build = {
      "-d+2",
   },
 }
--- dev_files = {
---   ["bin/${TEC_UNAME}/*"] = "demo/hello/mico/bin",
---   ["../idl/hello.idl"] = "demo/hello/idl/",
---   ["../management"] = "demo/hello",
---   ["../../README"] = "demo",      
---   ["MakefileST.linux"] = "demo/hello/mico",
---   ["MakefileST.sunos"] = "demo/hello/mico",
---   ["Makefile.win"] = "demo/hello/mico",
---   ["client.cpp"] = "demo/hello/mico",
---   ["server.cpp"] = "demo/hello/mico",
---   ["run*"] = "demo/hello/mico",
---   ["*.mak"] = "demo/hello/mico",
---   ["*config"] = "demo/hello/mico",
---   ["run*"] = "demo/hello/mico",
---   ["client"] = "demo/hello/mico",
---   ["server"] = "demo/hello/mico",
--- }
+dev_files = {
+  ["assistant/demo/hello/idl"]    = "demo/cpp/assistant/hello",
+  ["assistant/demo/hello/client"] = "demo/cpp/assistant/hello",
+  ["assistant/demo/hello/server"] = "demo/cpp/assistant/hello",
+  ["assistant/demo/hello/admin"]  = "demo/cpp/assistant/hello",
+  ["assistant/demo/hello/*.mak"]  = "demo/cpp/assistant/hello",
+  ["assistant/demo/config.mak"]   = "demo/cpp/assistant",
+}

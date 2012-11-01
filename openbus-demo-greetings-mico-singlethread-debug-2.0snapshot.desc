@@ -38,20 +38,9 @@ build = {
      "-d+2",
   },
 }
--- dev_files = {
---   ["bin/${TEC_UNAME}/*"] = "demo/greetings/mico/bin",
---   ["../idl/greetings.idl"] = "demo/greetings/idl/",
---   ["../management"] = "demo/greetings",
---   ["../../README"] = "demo",      
---   ["MakefileST.linux"] = "demo/greetings/mico",
---   ["MakefileST.sunos"] = "demo/greetings/mico",
---   ["Makefile.win"] = "demo/greetings/mico",
---   ["client.cpp"] = "demo/greetings/mico",
---   ["server.cpp"] = "demo/greetings/mico",
---   ["run*"] = "demo/greetings/mico",
---   ["*.mak"] = "demo/greetings/mico",
---   ["*config"] = "demo/greetings/mico",
---   ["run*"] = "demo/greetings/mico",
---   ["client"] = "demo/greetings/mico",
---   ["server"] = "demo/greetings/mico",
--- }
+dev_files = {
+  ["demo/greetings/idl"]    = "demo/cpp/greetings",
+  ["demo/greetings/server"] = "demo/cpp/greetings",
+  ["demo/greetings/client"] = "demo/cpp/greetings",
+  ["demo/greetings/admin"]  = "demo/cpp/greetings",
+}

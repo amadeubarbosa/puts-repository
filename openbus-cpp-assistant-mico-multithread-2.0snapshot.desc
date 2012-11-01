@@ -22,7 +22,7 @@ build = {
   },
   variables = {
     threading = "multi",
-    variant = "debug",
+    variant = "release",
     link = { "static", "shared" },
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_LIB_PATH"] = "%directory(mico-multithread)%/libs",
@@ -41,9 +41,7 @@ build = {
      "-d+2",
   },
 }
-
 dev_files = {
-  ["stage/libopenbus-*"] = "lib",
-  ["include/openbus"] = "include/openbus/cpp",    --include
-  ["stage/stubs"] = "include/openbus/cpp",     --include
+  ["stage-assistant/libassistant-micomultithread.*"] = "lib",
+  ["assistant/include/openbus"]                      = "include/openbus/cpp",
 }

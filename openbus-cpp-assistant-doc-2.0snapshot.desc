@@ -43,9 +43,6 @@ build = {
      "-d+2",
   },
 }
-
--- dev_files = {
---   ["stage/libopenbus-*"] = "lib",
---   ["include/openbus"] = "include/openbus/cpp",    --include
---   ["stage/stubs"] = "include/openbus/cpp",     --include
--- }
+dev_files = {
+  ["assistant-doc/*"] = "doc/cpp/assistant"
+}

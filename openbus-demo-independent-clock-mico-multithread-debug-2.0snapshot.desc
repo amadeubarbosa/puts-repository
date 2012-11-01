@@ -38,20 +38,11 @@ build = {
      "-d+2",
   },
 }
--- dev_files = {
---   ["bin/${TEC_UNAME}/*"] = "demo/independent_clock/mico/bin",
---   ["../idl/independent_clock.idl"] = "demo/independent_clock/idl/",
---   ["../management"] = "demo/independent_clock",
---   ["../../README"] = "demo",      
---   ["MakefileST.linux"] = "demo/independent_clock/mico",
---   ["MakefileST.sunos"] = "demo/independent_clock/mico",
---   ["Makefile.win"] = "demo/independent_clock/mico",
---   ["client.cpp"] = "demo/independent_clock/mico",
---   ["server.cpp"] = "demo/independent_clock/mico",
---   ["run*"] = "demo/independent_clock/mico",
---   ["*.mak"] = "demo/independent_clock/mico",
---   ["*config"] = "demo/independent_clock/mico",
---   ["run*"] = "demo/independent_clock/mico",
---   ["client"] = "demo/independent_clock/mico",
---   ["server"] = "demo/independent_clock/mico",
--- }
+dev_files = {
+  ["demo/independent_clock/idl"]    = "demo/cpp/independent_clock",
+  ["demo/independent_clock/client"] = "demo/cpp/independent_clock",
+  ["demo/independent_clock/server"] = "demo/cpp/independent_clock",
+  ["demo/independent_clock/admin"]  = "demo/cpp/independent_clock",
+  ["demo/independent_clock/*.mak"]  = "demo/cpp/independent_clock",
+  ["demo/config.mak"]               = "demo/cpp",
+}

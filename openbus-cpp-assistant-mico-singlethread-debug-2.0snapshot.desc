@@ -40,9 +40,7 @@ build = {
      "-d+2",
   },
 }
-
 dev_files = {
-  ["stage/libopenbus-*"] = "lib",
-  ["include/openbus"] = "include/openbus/cpp",    --include
-  ["stage/stubs"] = "include/openbus/cpp",     --include
+  ["stage-assistant/libassistant-micosinglethread-debug.*"] = "lib",
+  ["assistant/include/openbus"]                             = "include/openbus/cpp",
 }

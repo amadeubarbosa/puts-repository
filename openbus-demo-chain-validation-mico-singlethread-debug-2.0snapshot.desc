@@ -38,20 +38,10 @@ build = {
      "-d+2",
   },
 }
--- dev_files = {
---   ["bin/${TEC_UNAME}/*"] = "demo/chain_validation/mico/bin",
---   ["../idl/chain_validation.idl"] = "demo/chain_validation/idl/",
---   ["../management"] = "demo/chain_validation",
---   ["../../README"] = "demo",      
---   ["MakefileST.linux"] = "demo/chain_validation/mico",
---   ["MakefileST.sunos"] = "demo/chain_validation/mico",
---   ["Makefile.win"] = "demo/chain_validation/mico",
---   ["client.cpp"] = "demo/chain_validation/mico",
---   ["server.cpp"] = "demo/chain_validation/mico",
---   ["run*"] = "demo/chain_validation/mico",
---   ["*.mak"] = "demo/chain_validation/mico",
---   ["*config"] = "demo/chain_validation/mico",
---   ["run*"] = "demo/chain_validation/mico",
---   ["client"] = "demo/chain_validation/mico",
---   ["server"] = "demo/chain_validation/mico",
--- }
+dev_files = {
+  ["demo/chain_validation/idl"]       = "demo/cpp/chain_validation",
+  ["demo/chain_validation/secretary"] = "demo/cpp/chain_validation",
+  ["demo/chain_validation/executive"] = "demo/cpp/chain_validation",
+  ["demo/chain_validation/admin"]     = "demo/cpp/chain_validation",
+  ["demo/chain_validation/client"]    = "demo/cpp/chain_validation",
+}

@@ -38,20 +38,10 @@ build = {
      "-d+2",
   },
 }
--- dev_files = {
---   ["bin/${TEC_UNAME}/*"] = "demo/sharedauth/mico/bin",
---   ["../idl/sharedauth.idl"] = "demo/sharedauth/idl/",
---   ["../management"] = "demo/sharedauth",
---   ["../../README"] = "demo",      
---   ["MakefileST.linux"] = "demo/sharedauth/mico",
---   ["MakefileST.sunos"] = "demo/sharedauth/mico",
---   ["Makefile.win"] = "demo/sharedauth/mico",
---   ["client.cpp"] = "demo/sharedauth/mico",
---   ["server.cpp"] = "demo/sharedauth/mico",
---   ["run*"] = "demo/sharedauth/mico",
---   ["*.mak"] = "demo/sharedauth/mico",
---   ["*config"] = "demo/sharedauth/mico",
---   ["run*"] = "demo/sharedauth/mico",
---   ["client"] = "demo/sharedauth/mico",
---   ["server"] = "demo/sharedauth/mico",
--- }
+dev_files = {
+  ["demo/sharedauth/idl"]   = "demo/cpp/sharedauth",
+  ["demo/sharedauth/src"]   = "demo/cpp/sharedauth",
+  ["demo/sharedauth/admin"] = "demo/cpp/sharedauth",
+  ["demo/sharedauth/*.mak"] = "demo/cpp/sharedauth",
+  ["demo/config.mak"]       = "demo/cpp",
+}

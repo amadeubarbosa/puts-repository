@@ -19,7 +19,7 @@ build = {
   },
   variables = {
     threading = "single",
-    variant = "debug",
+    variant = "release",
     link = { "static" },
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_LIB_PATH"] = "%directory(mico-singlethread)%/libs",
@@ -38,20 +38,11 @@ build = {
      "-d+2",
   },
 }
--- dev_files = {
---   ["bin/${TEC_UNAME}/*"] = "demo/hello/mico/bin",
---   ["../idl/hello.idl"] = "demo/hello/idl/",
---   ["../management"] = "demo/hello",
---   ["../../README"] = "demo",      
---   ["MakefileST.linux"] = "demo/hello/mico",
---   ["MakefileST.sunos"] = "demo/hello/mico",
---   ["Makefile.win"] = "demo/hello/mico",
---   ["client.cpp"] = "demo/hello/mico",
---   ["server.cpp"] = "demo/hello/mico",
---   ["run*"] = "demo/hello/mico",
---   ["*.mak"] = "demo/hello/mico",
---   ["*config"] = "demo/hello/mico",
---   ["run*"] = "demo/hello/mico",
---   ["client"] = "demo/hello/mico",
---   ["server"] = "demo/hello/mico",
--- }
+dev_files = {
+  ["demo/hello/idl"]    = "demo/cpp/hello",
+  ["demo/hello/server"] = "demo/cpp/hello",
+  ["demo/hello/client"] = "demo/cpp/hello",
+  ["demo/hello/admin"]  = "demo/cpp/hello",
+  ["demo/hello/*.mak"]  = "demo/cpp/hello",
+  ["demo/config.mak"]   = "demo/cpp",
+}

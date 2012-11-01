@@ -38,20 +38,11 @@ build = {
      "-d+2",
   },
 }
--- dev_files = {
---   ["bin/${TEC_UNAME}/*"] = "demo/multiplexing/mico/bin",
---   ["../idl/multiplexing.idl"] = "demo/multiplexing/idl/",
---   ["../management"] = "demo/multiplexing",
---   ["../../README"] = "demo",      
---   ["MakefileST.linux"] = "demo/multiplexing/mico",
---   ["MakefileST.sunos"] = "demo/multiplexing/mico",
---   ["Makefile.win"] = "demo/multiplexing/mico",
---   ["client.cpp"] = "demo/multiplexing/mico",
---   ["server.cpp"] = "demo/multiplexing/mico",
---   ["run*"] = "demo/multiplexing/mico",
---   ["*.mak"] = "demo/multiplexing/mico",
---   ["*config"] = "demo/multiplexing/mico",
---   ["run*"] = "demo/multiplexing/mico",
---   ["client"] = "demo/multiplexing/mico",
---   ["server"] = "demo/multiplexing/mico",
--- }
+dev_files = {
+  ["demo/multiplexing/idl"]    = "demo/cpp/multiplexing",
+  ["demo/multiplexing/client"] = "demo/cpp/multiplexing",
+  ["demo/multiplexing/server"] = "demo/cpp/multiplexing",
+  ["demo/multiplexing/admin"]  = "demo/cpp/multiplexing",
+  ["demo/multiplexing/*.mak"]  = "demo/cpp/multiplexing",
+  ["demo/config.mak"]          = "demo/cpp",
+}
