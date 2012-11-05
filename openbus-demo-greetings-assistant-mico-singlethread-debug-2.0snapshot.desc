@@ -39,7 +39,7 @@ build = {
   },
 }
 dev_files = {
-  ["demo/assistant/greetings/idl"]    = "demo/cpp/assistant/greetings",
-  ["demo/assistant/greetings/server"] = "demo/cpp/assistant/greetings",
-  ["demo/assistant/greetings/client"] = "demo/cpp/assistant/greetings",
+  ["assistant/demo/greetings/idl"]    = "demo/cpp/assistant/greetings",
+  ["assistant/demo/greetings/server"] = "demo/cpp/assistant/greetings",
+  ["assistant/demo/greetings/client"] = "demo/cpp/assistant/greetings",
 }

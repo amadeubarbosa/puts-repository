@@ -39,10 +39,10 @@ build = {
   },
 }
 dev_files = {
-  ["demo/assistant/dedicated_clock/idl"]    = "demo/cpp/assistant/dedicated_clock",
-  ["demo/assistant/dedicated_clock/server"] = "demo/cpp/assistant/dedicated_clock",
-  ["demo/assistant/dedicated_clock/client"] = "demo/cpp/assistant/dedicated_clock",
-  ["demo/assistant/dedicated_clock/admin"]  = "demo/cpp/assistant/dedicated_clock",
-  ["demo/assistant/dedicated_clock/*.mak"]  = "demo/cpp/assistant/dedicated_clock",
-  ["demo/assistant/config.mak"]             = "demo/cpp/assistant",
+  ["assistant/demo/dedicated_clock/idl"]    = "demo/cpp/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/server"] = "demo/cpp/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/client"] = "demo/cpp/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/admin"]  = "demo/cpp/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/*.mak"]  = "demo/cpp/assistant/dedicated_clock",
+  ["assistant/demo/config.mak"]             = "demo/cpp/assistant",
 }
