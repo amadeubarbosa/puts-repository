@@ -3,14 +3,17 @@ version = "2.3.13-oblibs1.4snapshot"
 url = SVNREPURL .. "/openbus/libs/trunk/mico-2.3.13"
 build = {
   type = "autotools",
-  Linux = "rm -f config.cache && ./configure --disable-threads --prefix=".. TMPDIR .. " && make && make install",
-  MacOS = "rm -f config.cache && ./configure --disable-threads --prefix=".. TMPDIR .. " && make && make install",
-  SunOS = 'rm -f config.cache && CC=cc CXX=CC CONF_AR=CC CONF_ARFLAGS="-m64 -xar -o" CFLAGS="-KPIC -m64" CXXFLAGS="-erroff=badargtype2w -library=stlport4 -KPIC -m64" LDFLAGS="-m64" ./configure --disable-threads --prefix='.. TMPDIR .. ' && make && make install',
+  variables = {
+    ["--prefix"] = TMPDIR,
+  },
+  configure = "./configure --disable-ssl --disable-elf --disable-threads",
 }
-build.Darwin = build.MacOS
+build.SunOS = { configure = 'CC=cc CXX=CC CONF_AR=CC CONF_ARFLAGS="-xar -o" CFLAGS="-KPIC" CXXFLAGS="-erroff=badargtype2w -library=stlport4 -KPIC " '..build.configure }
+build.SunOS510_64 = { configure = 'CC=cc CXX=CC CONF_AR=CC CONF_ARFLAGS="-m64 -xar -o" CFLAGS="-KPIC -m64" CXXFLAGS="-erroff=badargtype2w -library=stlport4 -KPIC -m64" LDFLAGS="-m64" '..build.configure }
 
 install_files = {
-  [TMPDIR .."/lib/libmico*.so*"] = "lib/mico-2.3.13-singlethread",       --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libmico*.so*"] = "lib/mico-2.3.13-singlethread",     --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libmico*.dylib*"] = "lib/mico-2.3.13-singlethread",  --dynamic macos
   [TMPDIR .."/bin/*"] = "bin/mico-2.3.13-singlethread",
 }
 dev_files = {
