@@ -29,8 +29,3 @@ install_files = {
   [libftc .. ".*"]         = "lib",
   ["../../demo/*"]            = "demo",
 }
-symbolic_links = {
-  [libftc..".a"]           = "lib/libftc.a",
-  [libftc..".so"]          = "lib/libftc.so",
-  [libftc..".dylib"]       = "lib/libftc.dylib",
-}

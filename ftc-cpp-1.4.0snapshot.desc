@@ -30,11 +30,3 @@ install_files = {
   ["server/"..libftcserver..".*"] = "lib",
   ["../demo/*"]                   = "demo",
 }
-symbolic_links = {
-  [libftc..".a"]           = "lib/libftc.a",
-  [libftc..".so"]          = "lib/libftc.so",
-  [libftc..".dylib"]       = "lib/libftc.dylib",
-  [libftcserver..".a"]     = "lib/libftcserver.a",
-  [libftcserver..".so"]    = "lib/libftcserver.so",
-  [libftcserver..".dylib"] = "lib/libftcserver.dylib",
-}
