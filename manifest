@@ -1296,6 +1296,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-interop-simple-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-hello-lua"] = {
     ["1.5.4snapshot"] = {
       [1] = {
