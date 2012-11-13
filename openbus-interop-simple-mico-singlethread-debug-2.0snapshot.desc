@@ -1,6 +1,6 @@
 name = "openbus-interop-simple-mico-singlethread-debug"
 version = "2.0snapshot"
-subpackage_of = "openbus-cpp-mico-singlethread-debug-2.0snapshot.desc == "..version
+subpackage_of = "openbus-cpp-mico-singlethread-debug == "..version
 dependencies = {
   "openbus-cpp-mico-singlethread-debug == "..version,
   "boost == 1.51.0",
