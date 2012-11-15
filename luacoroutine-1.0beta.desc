@@ -1,0 +1,30 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "luacoroutine"
+version = "1.0beta"
+subpackage_of = "loop == 3.0beta"
+dependencies = {
+  "lua == 5.1.3-oblibs1.3.2",
+  "lua-bin == 5.1.3-oblibs1.3.2-1",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA51 = "%directory(lua)%",
+    LOOP_HOME = "%directory(loop)%",
+  },
+  src = "openbus",
+  mf = { "coroutine" },
+  MacOS = { mf = { "coroutine", "coroutine BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "coroutine "..SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/"..TEC_UNAME.."/libluacoroutine.so"] = "lib",
+  ["../lib/"..TEC_UNAME.."/libluacoroutine.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/"..TEC_UNAME.."/libluacoroutine.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/luacoroutine.h"] = "include/loop",
+}

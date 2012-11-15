@@ -1,10 +1,10 @@
 name = "openbus-java"
-version = "2.0snapshot"
-url = SVNREPURL .. "/openbus/sdk/java/trunk"
+version = "2.0.0.0"
+url = SVNREPURL .. "/openbus/sdk/java/tags/02_00_00_00"
 dependencies = { 
-  "scs-java == 1.3snapshot",
-  "openbus-idl1.5 == 1.5snapshot",
-  "openbus-idl2.0 == 2.0snapshot",
+  "scs-java == 1.2.1.0-1",
+  "openbus-idl1.5 == 1.5.2-1",
+  "openbus-idl2.0 == 2.0.0",
 }
 build = {
   type = "maven",

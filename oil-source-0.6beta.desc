@@ -1,0 +1,3 @@
+name = "oil-source"
+version = "0.6beta"
+url = SVNREPURL .. "/oil/tags/OIL_0_6_beta"
