@@ -13,9 +13,9 @@ dependencies = {
 }
 build = {
   type = "bjam",
-  src = ".",
+  src = "interop/simple",
   targets = {
-     "stage-interop-simple",
+     "simple",
   },
   variables = {
     threading = "single",
@@ -39,10 +39,10 @@ build = {
   },
 }
 dev_files = {
-  ["interop/simple/idl"]    = "interop/cpp/simple",
-  ["interop/simple/client"] = "interop/cpp/simple",
-  ["interop/simple/server"] = "interop/cpp/simple",
-  ["interop/simple/admin"]  = "interop/cpp/simple",
-  ["interop/simple/*.mak"]  = "interop/cpp/simple",
-  ["interop/simple/config.mak"]   = "interop/cpp/simple",
+  -- ["interop/simple/idl"]    = "interop/cpp/simple",
+  -- ["interop/simple/client"] = "interop/cpp/simple",
+  -- ["interop/simple/server"] = "interop/cpp/simple",
+  -- ["interop/simple/admin"]  = "interop/cpp/simple",
+  -- ["interop/simple/*.mak"]  = "interop/cpp/simple",
+  -- ["interop/simple/config.mak"]   = "interop/cpp/simple",
 }
