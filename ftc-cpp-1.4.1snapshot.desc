@@ -1,9 +1,13 @@
 name = "ftc-cpp"
 version = "1.4.1snapshot"
-url = SVNREPURL .. "/ftc/core/cpp/branches/ftc_asio_experimental"
+url = SVNREPURL .. "/ftc/core/cpp/branches/FTC_v1_04_01_2012_11_14"
 dependencies = {
   "boost == 1.51.0",
+  "boost-system == 1.51.0",
   "boost-thread == 1.51.0",
+  "boost-chrono == 1.51.0",
+  "boost-filesystem == 1.51.0",
+  "boost-date_time == 1.51.0",
   "openssl == 1.0.0j",
   "cxxtest",
 }
@@ -22,7 +26,7 @@ build = {
 }
 
 local include_dir  = "include/ftc-1.4.1.0"
-local libftc       = "libftc_asio-1.4.1.0"
+local libftc       = "libftc-1.4.1.0"
 
 install_files = {
   ["../include/*"]     = include_dir,
