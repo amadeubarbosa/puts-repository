@@ -1,0 +1,35 @@
+name = "ftc-cpp"
+version = "1.4.1.0"
+url = SVNREPURL .. "/ftc/core/cpp/tags/FTC_v1_04_01_00_2012_11_14"
+dependencies = {
+  "boost == 1.51.0",
+  "boost-system == 1.51.0",
+  "boost-thread == 1.51.0",
+  "boost-chrono == 1.51.0",
+  "boost-filesystem == 1.51.0",
+  "boost-date_time == 1.51.0",
+  "openssl == 1.0.0j",
+  "cxxtest",
+}
+build = {
+  type = "cmake",
+  src = "ftc",
+  variables = {
+    BOOST_ROOT = INSTALL.TOP .. "/include/boost",
+    FTC_ENABLE_TESTS = 0,
+    CXXTEST_INCLUDE_DIR = INSTALL.TOP.."/include/cxxtest",
+    USE_SYSTEM_LIBS  = 0,
+    CMAKE_BUILD_TYPE = "Release",
+    FTCLIB_LIBRARY_PATH = INSTALL.TOP.."/lib",
+    FTCLIB_INCLUDE_PATH = "\'"..INSTALL.TOP.."/include/openssl-1.0.0".."\'",
+  },
+}
+
+local include_dir  = "include/ftc-1.4.1.0"
+local libftc       = "libftc-1.4.1.0"
+
+install_files = {
+  ["../include/*"]     = include_dir,
+  [libftc .. ".*"]         = "lib",
+  ["../../demo/*"]            = "demo",
+}

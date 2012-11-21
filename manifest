@@ -50,6 +50,46 @@ repository = {
     ,
   }
   ,
+  ["boost-date_time"] = {
+    ["1.51.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["boost-date_time-debug"] = {
+    ["1.51.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["boost-filesystem"] = {
+    ["1.51.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["boost-filesystem-debug"] = {
+    ["1.51.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["boost-system"] = {
     ["1.51.0"] = {
       [1] = {
@@ -187,6 +227,13 @@ repository = {
   ,
   ["ftc-cpp"] = {
     ["1.4.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.4.1.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
