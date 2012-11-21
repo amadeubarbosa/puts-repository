@@ -29,5 +29,5 @@ build.SunOS510_64 = {
   }
 }
 install_files = {
-  ["stage/lib/*"] = "lib",
+  ["stage/lib/libboost_thread*"] = "lib",
 }
