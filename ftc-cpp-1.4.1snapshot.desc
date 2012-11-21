@@ -16,6 +16,7 @@ build = {
   src = "ftc",
   variables = {
     BOOST_ROOT = INSTALL.TOP .. "/include/boost",
+    BOOST_LIBRARYDIR = INSTALL.TOP .. "/lib",
     FTC_ENABLE_TESTS = 0,
     CXXTEST_INCLUDE_DIR = INSTALL.TOP.."/include/cxxtest",
     USE_SYSTEM_LIBS  = 0,
