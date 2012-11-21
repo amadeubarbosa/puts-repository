@@ -4,18 +4,24 @@ name = "openbus-lua"
 version = "2.0.0.0"
 url = SVNREPURL .. "/openbus/sdk/lua/tags/02_00_00_00"
 dependencies = { 
-  "lua-bin == 5.1.3-oblibs1.3.2-1",
+  "lce == 2.0.0-1",
   "loop == 3.0beta",
-  "luainspector == 1.0beta",
-  "luastruct == 1.2-oblibs1.3.2-1",
-  "luatuple == 1.0beta",
+  "lua-bin == 5.1.3-oblibs1.3.2-1",
   "luacoroutine == 1.0beta",
   "luacothread == 1.0beta",
+  "luafilesystem == 1.4.2-oblibs1.3.2-1",
+  "luaidl == 0.6beta",
+  "luainspector == 1.0beta",
+  "luasocket == 2.0.2-oblibs1.3.2-1",
+  "luastruct == 1.2-oblibs1.3.2-1",
+  "luatuple == 1.0beta",
   "luavararg == 1.1-oblibs1.3.2-1",
+  "luuid == 1.0-oblibs1.3.2-1",
+  "oil == 0.6beta",
   "openbus-idl1.5 == 1.5.2-1",
   "openbus-idl2.0 == 2.0.0",
+  "scs-lua == 1.2.3-1",
   "sdk-idl-source == 2.0.0",
-  "oil == 0.6beta",
 }
 build = {
   type = "tecmake",
