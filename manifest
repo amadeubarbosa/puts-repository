@@ -1682,6 +1682,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-interop-multiplexing-mico-singlethread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-java"] = {
     ["1.5.2-1"] = {
       [1] = {
