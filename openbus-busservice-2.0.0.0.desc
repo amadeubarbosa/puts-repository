@@ -35,9 +35,6 @@ build = {
 install_files = {
   ["../bin/${TEC_UNAME}/busservices"] = "bin",
   ["../shell/*"] = "bin",
-  ["../doc/install/installation.pdf"] = "doc",
-  ["../doc/openbus/openbus.pdf"] = "doc",
-  ["../doc/protocol/spec.pdf"] = "doc",
 }
 dev_files = {
   ["../test/*"] = "test",

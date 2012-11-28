@@ -1,0 +1,12 @@
+name = "openbus-html-intro"
+version = "1.5.3.1"
+url = SVNREPURL.."/openbus/core/tags/OB_v1_05_03_01_2011_12_12/docs"
+build = {
+  type = "command",
+  src = "introducao",
+  cmd = "latex2html -no_navigation -show_section_numbers -split 0 -mkdir -dir generated introducao_openbus -info '' -address ''"
+}
+install_files = {
+ ["generated/index.html"] = "doc/introducao",
+ ["generated/*.png"]      = "doc/introducao",
+}

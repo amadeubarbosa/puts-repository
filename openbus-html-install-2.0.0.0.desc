@@ -1,0 +1,19 @@
+name = "openbus-html-install"
+version = "2.0.0.0"
+subpackage_of = "openbus-busservice == "..version
+
+local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 generated"
+local gen_metadata = "pdflatex openbus && bibtex openbus && pdflatex openbus"
+local convert_fig = "convert -density 300 -antialias -resize x600 figs/architecture.pdf figs/architecture.png"
+local latex2html = "latex2html -no_navigation -show_section_numbers -split 0 -mkdir -dir generated openbus -info '' -address ''" 
+local sed_crossref = "sed -i -e 's/openbus.html//g' generated/index.html"
+build = {
+  type = "command",
+  src = "doc/install",
+  cmd = clean.." ; "..convert_fig.." && "..gen_metadata.." && "..
+        latex2html .." && ".. sed_crossref
+}
+install_files = {
+ ["generated/index.html"] = "doc/openbus",
+ ["generated/*.png"]      = "doc/openbus",
+}

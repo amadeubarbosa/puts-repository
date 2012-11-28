@@ -1580,7 +1580,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-doc-install"] = {
+  ["openbus-doc-allpdf"] = {
     ["2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1588,7 +1588,37 @@ repository = {
       ,
     }
     ,
+  }
+  ,
+  ["openbus-doc-install"] = {
     ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-html-install"] = {
+    ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-html-intro"] = {
+    ["1.5.3.1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1672,7 +1702,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-interop-simple-mico-singlethread-debug"] = {
+  ["openbus-interop-delegation-mico-singlethread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1692,7 +1722,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-interop-delegation-mico-singlethread-debug"] = {
+  ["openbus-interop-simple-mico-singlethread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1807,6 +1837,16 @@ repository = {
   ,
   ["openbus-orbix-doc"] = {
     ["1.5.5snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-qbk-install"] = {
+    ["2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
