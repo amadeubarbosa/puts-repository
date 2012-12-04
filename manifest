@@ -1756,6 +1756,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-doc-java"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-lua"] = {
     ["1.5.3-1"] = {
       [1] = {
