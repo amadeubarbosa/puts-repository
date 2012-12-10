@@ -40,27 +40,7 @@ repository = {
     ,
   }
   ,
-  ["boost-chrono-debug"] = {
-    ["1.51.0"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
   ["boost-date_time"] = {
-    ["1.51.0"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["boost-date_time-debug"] = {
     ["1.51.0"] = {
       [1] = {
         ["arch"] = "desc",
@@ -80,7 +60,7 @@ repository = {
     ,
   }
   ,
-  ["boost-filesystem-debug"] = {
+  ["boost-program-options"] = {
     ["1.51.0"] = {
       [1] = {
         ["arch"] = "desc",
@@ -91,16 +71,6 @@ repository = {
   }
   ,
   ["boost-system"] = {
-    ["1.51.0"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["boost-system-debug"] = {
     ["1.51.0"] = {
       [1] = {
         ["arch"] = "desc",
@@ -129,13 +99,6 @@ repository = {
   ,
   ["boost-thread-debug"] = {
     ["1.48.0"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-    ["1.51.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1473,6 +1436,26 @@ repository = {
     ,
   }
   ,
+  ["openbus-demo-hello-assistant-mico-multithread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-demo-hello-assistant-mico-singlethread"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-hello-assistant-mico-singlethread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
@@ -1591,6 +1574,16 @@ repository = {
   }
   ,
   ["openbus-doc-install"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-doc-java"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1747,16 +1740,6 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-doc-java"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",

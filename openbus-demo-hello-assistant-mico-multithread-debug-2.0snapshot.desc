@@ -1,9 +1,11 @@
-name = "openbus-cpp-assistant-tests-mico-multithread-debug"
+name = "openbus-demo-hello-assistant-mico-multithread-debug"
 version = "2.0snapshot"
-subpackage_of = "openbus-cpp-assistant-mico-multithread-debug == "..version
+subpackage_of = "openbus-cpp-mico-multithread-debug == "..version
 dependencies = {
+  "openbus-cpp-mico-multithread-debug == "..version,
   "boost == 1.51.0",
   "boost-thread == 1.51.0",
+  "boost-program-options == 1.51.0",
   "boost-system == 1.51.0",
   "boost-chrono == 1.51.0",
   "mico-multithread-debug == 2.3.13-oblibs1.4snapshot",
@@ -12,19 +14,17 @@ dependencies = {
   "scs-idl1.3 == 1.3snapshot",
   "scs-cpp-mico-multithread-debug == 1.3snapshot",
   "openssl == 1.0.0j",
-  "openbus-cpp-mico-multithread-debug == 2.0snapshot",
-  "openbus-cpp-assistant-mico-multithread-debug == 2.0snapshot",
 }
 build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage-assistant-tests",
+     "stage-assistant-demo-hello",
   },
   variables = {
     threading = "multi",
     variant = "debug",
-    link = "static",
+    link = { "static" },
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_LIB_PATH"] = "%directory(mico-multithread-debug)%/libs",
     ["-sMICO_INCLUDE_PATH"] = "%directory(mico-multithread-debug)%/include",
@@ -42,9 +42,20 @@ build = {
      "-d+2",
   },
 }
-
 -- dev_files = {
---   ["stage/libopenbus-*"] = "lib",
---   ["include/openbus"] = "include/openbus/cpp",    --include
---   ["stage/stubs"] = "include/openbus/cpp",     --include
+--   ["bin/${TEC_UNAME}/*"] = "demo/hello/mico/bin",
+--   ["../idl/hello.idl"] = "demo/hello/idl/",
+--   ["../management"] = "demo/hello",
+--   ["../../README"] = "demo",      
+--   ["MakefileST.linux"] = "demo/hello/mico",
+--   ["MakefileST.sunos"] = "demo/hello/mico",
+--   ["Makefile.win"] = "demo/hello/mico",
+--   ["client.cpp"] = "demo/hello/mico",
+--   ["server.cpp"] = "demo/hello/mico",
+--   ["run*"] = "demo/hello/mico",
+--   ["*.mak"] = "demo/hello/mico",
+--   ["*config"] = "demo/hello/mico",
+--   ["run*"] = "demo/hello/mico",
+--   ["client"] = "demo/hello/mico",
+--   ["server"] = "demo/hello/mico",
 -- }

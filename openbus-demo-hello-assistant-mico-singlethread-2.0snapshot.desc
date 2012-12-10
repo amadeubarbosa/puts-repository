@@ -1,10 +1,12 @@
-name = "openbus-demo-hello-mico-singlethread"
+name = "openbus-demo-hello-assistant-mico-singlethread"
 version = "2.0snapshot"
 subpackage_of = "openbus-cpp-mico-singlethread == "..version
 dependencies = {
   "openbus-cpp-mico-singlethread == "..version,
   "boost == 1.51.0",
   "boost-program-options == 1.51.0",
+  "boost-system == 1.51.0",
+  "boost-chrono == 1.51.0",
   "mico-singlethread == 2.3.13-oblibs1.4snapshot",
   "openbus-idl2.0 == 2.0snapshot",
   "logger-singlethread == 2.0snapshot",
@@ -16,11 +18,11 @@ build = {
   type = "bjam",
   src = ".",
   targets = {
-     "demo/hello//hello",
+     "stage-assistant-demo-hello",
   },
   variables = {
     threading = "single",
-    variant = "release",
+    variant = "debug",
     link = { "static" },
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_LIB_PATH"] = "%directory(mico-singlethread)%/libs",
@@ -39,11 +41,20 @@ build = {
      "-d+2",
   },
 }
-dev_files = {
-  ["demo/hello/idl"]    = "demo/cpp/hello",
-  ["demo/hello/server"] = "demo/cpp/hello",
-  ["demo/hello/client"] = "demo/cpp/hello",
-  ["demo/hello/admin"]  = "demo/cpp/hello",
-  ["demo/hello/*.mak"]  = "demo/cpp/hello",
-  ["demo/config.mak"]   = "demo/cpp",
-}
+-- dev_files = {
+--   ["bin/${TEC_UNAME}/*"] = "demo/hello/mico/bin",
+--   ["../idl/hello.idl"] = "demo/hello/idl/",
+--   ["../management"] = "demo/hello",
+--   ["../../README"] = "demo",      
+--   ["MakefileST.linux"] = "demo/hello/mico",
+--   ["MakefileST.sunos"] = "demo/hello/mico",
+--   ["Makefile.win"] = "demo/hello/mico",
+--   ["client.cpp"] = "demo/hello/mico",
+--   ["server.cpp"] = "demo/hello/mico",
+--   ["run*"] = "demo/hello/mico",
+--   ["*.mak"] = "demo/hello/mico",
+--   ["*config"] = "demo/hello/mico",
+--   ["run*"] = "demo/hello/mico",
+--   ["client"] = "demo/hello/mico",
+--   ["server"] = "demo/hello/mico",
+-- }

@@ -10,11 +10,13 @@ build = {
   variables = {
     BOOST_BUILD_PATH = "tools/build/v2",
     link = { "static", "shared" },
-    variant = "release",
+    variant = { "release", "debug" },
+    threading = { "multi", "single" },
   },
   bjam_opts = {
     "-d+2",
     "--with-thread",
+    "--layout=tagged",
   },
 }
 build.SunOS = {
