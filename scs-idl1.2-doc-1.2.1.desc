@@ -1,0 +1,12 @@
+name = "scs-idl1.2-doc"
+version = "1.2.1"
+subpackage_of = "scs-idl1.2 == "..version
+build = {
+  type = "command",
+  src = "docs",
+	cmd = "doxygen",
+	arguments = "scs.dox",
+}
+install_files = {
+  ["html/*"] = "doc/scs-idl",
+}

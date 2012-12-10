@@ -1,7 +1,7 @@
 name = "openbus-html-intro"
 version = "2.0.0.0"
 subpackage_of = "openbus-busservice == "..version
---TODO: faltou fazer o sed do SRC para trocar ./ para http://www.tecgraf.puc-rio.br/ftp_pub/openbus/docs/2.0.0/openbus
+
 local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 generated"
 local gen_metadata = "pdflatex openbus && bibtex openbus && pdflatex openbus"
 local convert_fig = "convert -density 300 -antialias -resize x600 figs/architecture.pdf figs/architecture.png"

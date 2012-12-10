@@ -17,7 +17,6 @@ build = {
 
 install_files = {
   ["core/target/site/apidocs/*"] = "doc/sdk-core",
-  ["legacy/target/site/apidocs/*"] = "doc/sdk-legacy",
   ["core/target/openbus*.jar"] = "lib",
   ["core/target/dependency/*.jar"] = "lib",
   ["legacy/target/*.jar"] = "lib",
