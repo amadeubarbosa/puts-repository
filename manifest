@@ -1249,7 +1249,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-demo-chain-validation-assistant-mico-singlethread-debug"] = {
+  ["openbus-demo-chain-validation-assistant-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1269,7 +1269,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-demo-dedicated-clock-assistant-mico-singlethread-debug"] = {
+  ["openbus-demo-dedicated-clock-assistant-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1339,7 +1339,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-demo-greetings-assistant-mico-singlethread-debug"] = {
+  ["openbus-demo-greetings-assistant-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1359,27 +1359,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-demo-hello-assistant-mico-multithread-debug"] = {
-    ["2.0snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-demo-hello-assistant-mico-singlethread"] = {
-    ["2.0snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-demo-hello-assistant-mico-singlethread-debug"] = {
+  ["openbus-demo-hello-assistant-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1439,7 +1419,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-demo-independent-clock-assistant-mico-multithread-debug"] = {
+  ["openbus-demo-independent-clock-assistant-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
