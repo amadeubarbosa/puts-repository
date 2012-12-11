@@ -21,6 +21,7 @@ dependencies = {
   "openbus-demo-dedicated-clock-mico == 2.0snapshot",
   "openbus-demo-greetings-mico == 2.0snapshot",
   "openbus-demo-hello-mico == 2.0snapshot",
+  "openbus-demo-multiplexing-mico == 2.0snapshot",
   "openbus-demo-sharedauth-mico == 2.0snapshot",
   "openbus-demo-chain-validation-assistant-mico == 2.0snapshot",
   "openbus-demo-dedicated-clock-assistant-mico == 2.0snapshot",
