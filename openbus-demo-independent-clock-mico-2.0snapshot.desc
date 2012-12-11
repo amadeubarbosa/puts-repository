@@ -50,10 +50,9 @@ build = {
   },
 }
 dev_files = {
-  ["demo/independent_clock/idl"]    = "demo/cpp/independent_clock",
-  ["demo/independent_clock/client"] = "demo/cpp/independent_clock",
-  ["demo/independent_clock/server"] = "demo/cpp/independent_clock",
-  ["demo/independent_clock/admin"]  = "demo/cpp/independent_clock",
-  ["demo/independent_clock/*.mak"]  = "demo/cpp/independent_clock",
-  ["demo/config.mak"]               = "demo/cpp",
+  ["demo/independent_clock/idl"]    = "demo/independent_clock",
+  ["demo/independent_clock/client"] = "demo/independent_clock",
+  ["demo/independent_clock/server"] = "demo/independent_clock",
+  ["demo/independent_clock/admin"]  = "demo/independent_clock",
+  ["stage-demos/independent_clock/*"]  = "demo/independent_clock/bin",
 }

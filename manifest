@@ -1129,16 +1129,6 @@ repository = {
     ,
   }
   ,
-  ["openbus-cpp-assistant-doc-mico"] = {
-    ["2.0snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
   ["openbus-cpp-assistant-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
@@ -1149,7 +1139,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-cpp-assistant-tests-mico"] = {
+  ["openbus-cpp-assistant-mico-all"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1181,16 +1171,6 @@ repository = {
   ,
   ["openbus-cpp-mico-singlethread"] = {
     ["1.5.5snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-cpp-tests-mico"] = {
-    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1471,6 +1451,16 @@ repository = {
   ,
   ["openbus-doc-idl2.0"] = {
     ["2.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-doc-cpp-assistant"] = {
+    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1786,6 +1776,26 @@ repository = {
       ,
     }
     ,
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-test-cpp-assistant-mico"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-test-cpp-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",

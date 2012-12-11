@@ -50,9 +50,8 @@ build = {
   },
 }
 dev_files = {
-  ["demo/sharedauth/idl"]   = "demo/cpp/sharedauth",
-  ["demo/sharedauth/src"]   = "demo/cpp/sharedauth",
-  ["demo/sharedauth/admin"] = "demo/cpp/sharedauth",
-  ["demo/sharedauth/*.mak"] = "demo/cpp/sharedauth",
-  ["demo/config.mak"]       = "demo/cpp",
+  ["demo/sharedauth/idl"]   = "demo/sharedauth",
+  ["demo/sharedauth/src"]   = "demo/sharedauth",
+  ["demo/sharedauth/admin"] = "demo/sharedauth",
+  ["stage-demos/sharedauth/*"] = "demo/sharedauth/bin",
 }

@@ -50,8 +50,9 @@ build = {
   },
 }
 dev_files = {
-  ["demo/dedicated_clock/idl"]    = "demo/cpp/dedicated_clock",
-  ["demo/dedicated_clock/server"] = "demo/cpp/dedicated_clock",
-  ["demo/dedicated_clock/client"] = "demo/cpp/dedicated_clock",
-  ["demo/dedicated_clock/admin"]  = "demo/cpp/dedicated_clock",
+  ["demo/dedicated_clock/idl"]    = "demo/dedicated_clock",
+  ["demo/dedicated_clock/server"] = "demo/dedicated_clock",
+  ["demo/dedicated_clock/client"] = "demo/dedicated_clock",
+  ["demo/dedicated_clock/admin"]  = "demo/dedicated_clock",
+  ["stage-demos/dedicated_clock/*"]  = "demo/dedicated_clock/bin",
 }

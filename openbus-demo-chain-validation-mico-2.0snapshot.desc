@@ -50,9 +50,10 @@ build = {
   },
 }
 dev_files = {
-  ["demo/chain_validation/idl"]       = "demo/cpp/chain_validation",
-  ["demo/chain_validation/secretary"] = "demo/cpp/chain_validation",
-  ["demo/chain_validation/executive"] = "demo/cpp/chain_validation",
-  ["demo/chain_validation/admin"]     = "demo/cpp/chain_validation",
-  ["demo/chain_validation/client"]    = "demo/cpp/chain_validation",
+  ["demo/chain_validation/idl"]       = "demo/chain_validation",
+  ["demo/chain_validation/secretary"] = "demo/chain_validation",
+  ["demo/chain_validation/executive"] = "demo/chain_validation",
+  ["demo/chain_validation/admin"]     = "demo/chain_validation",
+  ["demo/chain_validation/client"]    = "demo/chain_validation",
+  ["stage-demos/chain_validation/*"]    = "demo/chain_validation/bin",
 }

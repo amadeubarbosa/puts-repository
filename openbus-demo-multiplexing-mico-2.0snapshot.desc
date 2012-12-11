@@ -50,10 +50,9 @@ build = {
   },
 }
 dev_files = {
-  ["demo/multiplexing/idl"]    = "demo/cpp/multiplexing",
-  ["demo/multiplexing/client"] = "demo/cpp/multiplexing",
-  ["demo/multiplexing/server"] = "demo/cpp/multiplexing",
-  ["demo/multiplexing/admin"]  = "demo/cpp/multiplexing",
-  ["demo/multiplexing/*.mak"]  = "demo/cpp/multiplexing",
-  ["demo/config.mak"]          = "demo/cpp",
+  ["demo/multiplexing/idl"]    = "demo/multiplexing",
+  ["demo/multiplexing/client"] = "demo/multiplexing",
+  ["demo/multiplexing/server"] = "demo/multiplexing",
+  ["demo/multiplexing/admin"]  = "demo/multiplexing",
+  ["stage-demos/multiplexing/*"]  = "demo/multiplexing/bin",
 }

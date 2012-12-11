@@ -53,10 +53,9 @@ build = {
   },
 }
 dev_files = {
-  ["assistant/demo/independent_clock/idl"]    = "demo/cpp/assistant/independent_clock",
-  ["assistant/demo/independent_clock/client"] = "demo/cpp/assistant/independent_clock",
-  ["assistant/demo/independent_clock/server"] = "demo/cpp/assistant/independent_clock",
-  ["assistant/demo/independent_clock/admin"]  = "demo/cpp/assistant/independent_clock",
-  ["assistant/demo/independent_clock/*.mak"]  = "demo/cpp/assistant/independent_clock",
-  ["assistant/demo/config.mak"]               = "demo/cpp/assistant",
+  ["assistant/demo/independent_clock/idl"]    = "demo/assistant/independent_clock",
+  ["assistant/demo/independent_clock/client"] = "demo/assistant/independent_clock",
+  ["assistant/demo/independent_clock/server"] = "demo/assistant/independent_clock",
+  ["assistant/demo/independent_clock/admin"]  = "demo/assistant/independent_clock",
+  ["stage-demos/assistant/independent_clock/*"]  = "demo/assistant/independent_clock/bin",
 }

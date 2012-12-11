@@ -12,13 +12,12 @@ build.SunOS = { configure = 'CC=cc CXX=CC CONF_AR=CC CONF_ARFLAGS="-xar -o" CFLA
 build.SunOS510_64 = { configure = 'CC=cc CXX=CC CONF_AR=CC CONF_ARFLAGS="-m64 -xar -o" CFLAGS="-KPIC -m64" CXXFLAGS="-erroff=badargtype2w -library=stlport4 -KPIC -m64" LDFLAGS="-m64" '..build.configure }
 
 install_files = {
-  [TMPDIR .."/lib/libmico*.so*"] = "lib/mico-2.3.13-singlethread",     --dynamic linux,aix,sunos
-  [TMPDIR .."/lib/libmico*.dylib*"] = "lib/mico-2.3.13-singlethread",  --dynamic macos
-  [TMPDIR .."/bin/*"] = "bin/mico-2.3.13-singlethread",
+  [TMPDIR .."/lib/libmico*.so*"] = "lib/mico-st",     --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libmico*.dylib*"] = "lib/mico-st",  --dynamic macos
+  [TMPDIR .."/bin/*"] = "bin/mico-st",
 }
 dev_files = {
-  [TMPDIR .."/lib/libmico*.*"] = "lib/mico-2.3.13-singlethread",       --dynamic linux,aix,sunos
-  [TMPDIR .."/bin/*"] = "bin/mico-2.3.13-singlethread",
-  [TMPDIR .."/include/*"] = "include/mico-2.3.13-singlethread",
-  [SVNDIR.."/specs/shell/mico-setup-singlethread*"] = "specs/shell/",
+  [TMPDIR .."/lib/libmico*.*"] = "lib/mico-st",       --dynamic linux,aix,sunos
+  [TMPDIR .."/bin/*"] = "bin/mico-st",
+  [TMPDIR .."/include/*"] = "include/mico-st",
 }

@@ -50,8 +50,9 @@ build = {
   },
 }
 dev_files = {
-  ["demo/greetings/idl"]    = "demo/cpp/greetings",
-  ["demo/greetings/server"] = "demo/cpp/greetings",
-  ["demo/greetings/client"] = "demo/cpp/greetings",
-  ["demo/greetings/admin"]  = "demo/cpp/greetings",
+  ["demo/greetings/idl"]    = "demo/greetings",
+  ["demo/greetings/server"] = "demo/greetings",
+  ["demo/greetings/client"] = "demo/greetings",
+  ["demo/greetings/admin"]  = "demo/greetings",
+  ["stage-demos/greetings/*"]  = "demo/greetings/bin",
 }

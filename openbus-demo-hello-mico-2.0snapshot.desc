@@ -51,10 +51,9 @@ build = {
   },
 }
 dev_files = {
-  ["demo/hello/idl"]    = "demo/cpp/hello",
-  ["demo/hello/server"] = "demo/cpp/hello",
-  ["demo/hello/client"] = "demo/cpp/hello",
-  ["demo/hello/admin"]  = "demo/cpp/hello",
-  ["demo/hello/*.mak"]  = "demo/cpp/hello",
-  ["demo/config.mak"]   = "demo/cpp",
+  ["demo/hello/idl"]    = "demo/hello",
+  ["demo/hello/server"] = "demo/hello",
+  ["demo/hello/client"] = "demo/hello",
+  ["demo/hello/admin"]  = "demo/hello",
+  ["stage-demos/hello/*"]  = "demo/hello/bin",
 }

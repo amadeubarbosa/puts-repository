@@ -52,7 +52,9 @@ build = {
   },
 }
 dev_files = {
-  ["assistant/demo/greetings/idl"]    = "demo/cpp/assistant/greetings",
-  ["assistant/demo/greetings/server"] = "demo/cpp/assistant/greetings",
-  ["assistant/demo/greetings/client"] = "demo/cpp/assistant/greetings",
+  ["assistant/demo/greetings/idl"]    = "demo/assistant/greetings",
+  ["assistant/demo/greetings/server"] = "demo/assistant/greetings",
+  ["assistant/demo/greetings/client"] = "demo/assistant/greetings",
+  ["assistant/demo/greetings/admin"] = "demo/assistant/greetings",
+  ["stage-demos/assistant/greetings/*"] = "demo/assistant/greetings/bin",
 }

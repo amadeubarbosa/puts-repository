@@ -1,8 +1,11 @@
-name = "openbus-cpp-tests-mico"
+name = "openbus-test-cpp-assistant-mico"
 version = "2.0snapshot"
-subpackage_of = "openbus-cpp-mico == "..version
+subpackage_of = "openbus-cpp-assistant-mico == "..version
 dependencies = {
   "boost == 1.51.0",
+  "boost-thread == 1.51.0",
+  "boost-system == 1.51.0",
+  "boost-chrono == 1.51.0",
   "mico-singlethread-debug == 2.3.13-oblibs1.4snapshot",
   "mico-multithread-debug == 2.3.13-oblibs1.4snapshot",
   "mico-singlethread == 2.3.13-oblibs1.4snapshot",
@@ -13,17 +16,18 @@ dependencies = {
   "scs-cpp-mico == 1.3snapshot",
   "openssl == 1.0.0j",
   "openbus-cpp-mico == 2.0snapshot",
+  "openbus-cpp-assistant-mico == 2.0snapshot",
 }
 build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage-tests",
+     "stage-assistant-tests",
   },
   variables = {
-    threading = { "single", "multi" },
-    variant = { "debug", "release" },
-    link = { "static", "shared" },
+    threading = {"single", "multi"},
+    variant = {"debug", "release"},
+    link = {"static", "shared"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_ST_DBG_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
     ["-sMICO_ST_DBG_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",

@@ -50,11 +50,10 @@ build = {
   },
 }
 dev_files = {
-  ["demo/hello/idl"]    = "demo/cpp/hello",
-  ["demo/audit/client"] = "demo/cpp/audit",
-  ["demo/audit/server"] = "demo/cpp/audit",
-  ["demo/audit/proxy"]  = "demo/cpp/audit",
-  ["demo/audit/admin"]  = "demo/cpp/audit",
-  ["demo/audit/*.mak"]  = "demo/cpp/audit",
-  ["demo/config.mak"]   = "demo/cpp",
+  ["demo/hello/idl"]    = "demo/hello",
+  ["demo/audit/client"] = "demo/audit",
+  ["demo/audit/server"] = "demo/audit",
+  ["demo/audit/proxy"]  = "demo/audit",
+  ["demo/audit/admin"]  = "demo/audit",
+  ["stage-demos/audit/*"]  = "demo/audit/bin",
 }
