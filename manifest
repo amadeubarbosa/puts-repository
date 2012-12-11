@@ -1449,8 +1449,8 @@ repository = {
     ,
   }
   ,
-  ["openbus-doc-idl2.0"] = {
-    ["2.0.0"] = {
+  ["openbus-doc-cpp-assistant"] = {
+    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1459,8 +1459,8 @@ repository = {
     ,
   }
   ,
-  ["openbus-doc-cpp-assistant"] = {
-    ["2.0snapshot"] = {
+  ["openbus-doc-idl2.0"] = {
+    ["2.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
