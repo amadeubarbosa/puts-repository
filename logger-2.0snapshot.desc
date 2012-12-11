@@ -1,8 +1,9 @@
-name = "logger-singlethread-debug"
+name = "logger"
 version = "2.0snapshot"
 url = SVNREPURL .. "/cpputils/logger/branches/LG_v2_00_00_2012_02_23"
 dependencies = {
   "boost == 1.51.0",
+  "boost-thread == 1.51.0",
 }
 build = {
   type = "bjam",
@@ -11,8 +12,8 @@ build = {
      "stage",
   },
   variables = {
-    threading = "single",
-    variant = "debug",
+    threading = { "single", "multi" },
+    variant = { "debug", "release" },
     link = {"shared", "static"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
     BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",

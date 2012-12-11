@@ -1,9 +1,12 @@
-name = "scs-cpp-mico-singlethread-debug"
+name = "scs-cpp-mico"
 version = "1.3snapshot"
 url = SVNREPURL .. "/scs/core/cpp/trunk"
 dependencies = {
   "scs-idl1.3 == 1.3snapshot",
   "mico-singlethread-debug == 2.3.13-oblibs1.4snapshot",
+  "mico-multithread-debug == 2.3.13-oblibs1.4snapshot",
+  "mico-singlethread == 2.3.13-oblibs1.4snapshot",
+  "mico-multithread == 2.3.13-oblibs1.4snapshot",
   "boost == 1.51.0",
 }
 build = {
@@ -13,13 +16,20 @@ build = {
      "stage",
   },
   variables = {
-    threading = "single",
-    variant = "debug",
+    threading = { "single", "multi" },
+    variant = { "debug", "release" },
     link = { "static", "shared" },
     ["-sBOOST_PATH"] = "%directory(boost)%",
-    ["-sMICO_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
-    ["-sMICO_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
+    ["-sMICO_ST_DBG_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
+    ["-sMICO_ST_DBG_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
+    ["-sMICO_MT_DBG_LIB_PATH"] = "%directory(mico-multithread-debug)%/libs",
+    ["-sMICO_MT_DBG_INCLUDE_PATH"] = "%directory(mico-multithread-debug)%/include",
+    ["-sMICO_ST_LIB_PATH"] = "%directory(mico-singlethread)%/libs",
+    ["-sMICO_ST_INCLUDE_PATH"] = "%directory(mico-singlethread)%/include",
+    ["-sMICO_MT_LIB_PATH"] = "%directory(mico-multithread-debug)%/libs",
+    ["-sMICO_MT_INCLUDE_PATH"] = "%directory(mico-multithread)%/include",
     ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-singlethread-debug)%/cpp %directory(mico-singlethread-debug)%/idl\"",
+    ["-sMICO_IDL_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
     ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.3)%/src",
     BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
     BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
