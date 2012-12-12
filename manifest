@@ -1480,6 +1480,13 @@ repository = {
   }
   ,
   ["openbus-doc-java"] = {
+    ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",

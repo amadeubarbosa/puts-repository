@@ -1,2 +1,4 @@
-openbus-java-2.0snapshot +dependencies +dev
-openbus-doc-java-2.0snapshot
+openbus-java-2.0.0.0 +dependencies +dev
+openbus-doc-java-2.0.0.0
+openbus-doc-idl2.0-2.0.0
+scs-idl1.2-doc-1.2.1
