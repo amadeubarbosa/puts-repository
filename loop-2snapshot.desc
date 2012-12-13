@@ -4,8 +4,8 @@ name = "loop"
 version = "2snapshot"
 url = SVNREPURL .. "/loop/trunk"
 dependencies = {
-  "lua = 5.1.3-oblibs1.4snapshot",
-  "lua-bin = 5.1.3-oblibs1.4snapshot",
+  "lua == 5.1.3-oblibs1.4snapshot",
+  "lua-bin == 5.1.3-oblibs1.4snapshot",
 }
 build = {
   type = "tecmake",
@@ -27,6 +27,4 @@ install_files = {
 dev_files = {
   ["../lib/"..TEC_UNAME.."/libloop.*"] = "lib",
   ["../obj/"..TEC_UNAME.."/loop.h"] = "include/loop",
-  ["../lua/loop"] = "lib/lua/5.1",
-  ["../lua/preloader.lua"] = "lib/lua/5.1",
 }
