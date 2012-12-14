@@ -31,34 +31,3 @@ dependencies = {
   "openbus-test-cpp-mico == 2.0snapshot",
   "openbus-test-cpp-assistant-mico == 2.0snapshot",
 }
-build = {
-  type = "bjam",
-  src = ".",
-  targets = {
-     "stage",
-  },
-  variables = {
-    ["-sBOOST_PATH"] = "%directory(boost)%",
-    ["-sMICO_ST_DBG_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
-    ["-sMICO_ST_DBG_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
-    ["-sMICO_MT_DBG_LIB_PATH"] = "%directory(mico-multithread-debug)%/libs",
-    ["-sMICO_MT_DBG_INCLUDE_PATH"] = "%directory(mico-multithread-debug)%/include",
-    ["-sMICO_ST_LIB_PATH"] = "%directory(mico-singlethread)%/libs",
-    ["-sMICO_ST_INCLUDE_PATH"] = "%directory(mico-singlethread)%/include",
-    ["-sMICO_MT_LIB_PATH"] = "%directory(mico-multithread-debug)%/libs",
-    ["-sMICO_MT_INCLUDE_PATH"] = "%directory(mico-multithread)%/include",
-    ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-singlethread-debug)%/cpp %directory(mico-singlethread-debug)%/idl\"",
-    ["-sMICO_IDL_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
-    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.3)%/src",
-    ["-sSCS_PATH"] = "%directory(scs-cpp-mico)%",
-    ["-sLOGGER_PATH"] = "%directory(logger)%",
-    ["-sOPENBUS_IDL_PATH"] = "%directory(openbus-idl2.0)%/src",
-    ["-sOPENSSL_LIB_PATH"] = "%directory(openssl)%",
-    ["-sOPENSSL_INCLUDE_PATH"] = "%directory(openssl)%/include",
-    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
-    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
-  },
-  bjam_opts = {
-     "-d+2",
-  },
-}

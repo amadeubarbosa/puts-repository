@@ -21,6 +21,7 @@ build = {
   },
   bjam_opts = {
      "-d+2",
+     "--openbus-with-puts",
   },
 }
 
