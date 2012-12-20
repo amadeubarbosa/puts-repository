@@ -1419,6 +1419,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-demo-mico-sources"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-multiplexing-mico"] = {
     ["2.0snapshot"] = {
       [1] = {

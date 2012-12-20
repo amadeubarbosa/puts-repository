@@ -40,11 +40,11 @@ build = {
   },
 }
 install_files = {
-  ["stage/libscs-micosinglethread-debug.so"]    = "lib",
-  ["stage/libscs-micosinglethread-debug.dylib"] = "lib",
+  ["stage/libscs*.so"]    = "lib",
+  ["stage/libscs*.a"]    = "lib",
+  ["stage/libscs*.dylib"] = "lib",
 }
 dev_files = {
-  ["stage/libscs-micosinglethread-debug.*"] = "lib",
   ["include/scs/*"]                         = "include/scs",
   ["stage/stubs/*.h"]                       = "include/scs/stubs",
 }
