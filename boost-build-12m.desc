@@ -1,0 +1,13 @@
+name = "boost-build"
+version = "12m"
+url = SVNREPURL .. "/openbus/libs/boost-build/branches/milestone-12"
+build = {
+  type = "autotools",
+  configure = "echo OK",
+  compile = "cd engine && ./build.sh",
+  install = "echo OK",
+}
+install_files = {
+  ["engine/bin.*/b2"] = "bin",
+  ["."] = "boost-build",
+}

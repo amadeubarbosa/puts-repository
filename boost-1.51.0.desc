@@ -1,6 +1,6 @@
 name = "boost"
 version = "1.51.0"
-url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/boost-1.51.0.tar.bz2"
+url = SVNREPURL .. "/openbus/libs/boost/branches/1.51.0"
 dev_files = {
   ["boost"] = "include/boost",
 }

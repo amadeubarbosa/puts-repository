@@ -30,6 +30,16 @@ repository = {
     ,
   }
   ,
+  ["boost-build"] = {
+    ["12m"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["boost-chrono"] = {
     ["1.51.0"] = {
       [1] = {
@@ -62,6 +72,16 @@ repository = {
   ,
   ["boost-program-options"] = {
     ["1.51.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["boost-quickbook"] = {
+    ["1.6"] = {
       [1] = {
         ["arch"] = "desc",
       }
