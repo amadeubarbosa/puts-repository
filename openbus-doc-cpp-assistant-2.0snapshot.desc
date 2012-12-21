@@ -29,7 +29,7 @@ build = {
   },
   variables = {
     xsltproc = {"USING", "%directory(libxslt)%/xsltproc/xsltproc"},
-    boostbook = {"USING", "%directory(docbook-xsl)%", "%directory(docbook-dtd)%"},
+    boostbook = {"USING", "%directory(docbook-xsl)%", "%directory(docbook-dtd)%", "%directory(boost)%/tools/boostbook"},
     quickbook = {"USING", "%directory(boost-quickbook)%/stage/quickbook"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_ST_DBG_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
