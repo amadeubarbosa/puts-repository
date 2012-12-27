@@ -12,10 +12,14 @@ dependencies = {
   "openbus-demo-sharedauth-mico == "..version,
 }
 dev_files = {
+  ["contrib/Jamroot"] = "demo",
+  ["contrib/boost-build.jam"] = "demo",
+
   ["demo/hello/idl"]   = "demo/audit",
   ["demo/audit/client"]   = "demo/audit",
   ["demo/audit/server"]   = "demo/audit",
   ["demo/audit/admin"] = "demo/audit",
+  ["demo/audit/Jamfile"] = "demo/audit",
 
   ["demo/chain_validation/idl"]   = "demo/chain_validation",
   ["demo/chain_validation/client"]   = "demo/chain_validation",

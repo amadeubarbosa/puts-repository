@@ -1459,6 +1459,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-demo-scs-mico-idl"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-demo-sharedauth-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
