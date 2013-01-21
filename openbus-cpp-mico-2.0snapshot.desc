@@ -10,8 +10,8 @@ dependencies = {
   "mico-multithread == 2.3.13-oblibs1.4snapshot",
   "openbus-idl2.0 == 2.0snapshot",
   "logger == 2.0snapshot",
-  "scs-idl1.3 == 1.3snapshot",
-  "scs-cpp-mico == 1.3snapshot",
+  "scs-idl1.2 == 1.2.1",
+  "scs-cpp-mico == 1.2snapshot",
   "openssl == 1.0.0j",
 }
 build = {
@@ -35,7 +35,7 @@ build = {
     ["-sMICO_MT_INCLUDE_PATH"] = "%directory(mico-multithread)%/include",
     ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-singlethread-debug)%/cpp %directory(mico-singlethread-debug)%/idl\"",
     ["-sMICO_IDL_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
-    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.3)%/src",
+    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.2)%/src",
     ["-sSCS_PATH"] = "%directory(scs-cpp-mico)%",
     ["-sLOGGER_PATH"] = "%directory(logger)%",
     ["-sOPENBUS_IDL_PATH"] = "%directory(openbus-idl2.0)%/src",

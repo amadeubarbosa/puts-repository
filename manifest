@@ -1968,6 +1968,13 @@ repository = {
   }
   ,
   ["scs-cpp-mico"] = {
+    ["1.2snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.3snapshot"] = {
       [1] = {
         ["arch"] = "desc",
