@@ -5,6 +5,7 @@ dependencies = {
   "scs-idl1.3 == 1.3snapshot",
   "mico-singlethread == 2.3.13-oblibs1.4snapshot",
   "boost == 1.51.0",
+  "boost-build == 12m",
 }
 build = {
   type = "bjam",
@@ -21,8 +22,8 @@ build = {
     ["-sMICO_INCLUDE_PATH"] = "%directory(mico-singlethread)%/include",
     ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-singlethread)%/cpp %directory(mico-singlethread)%/idl\"",
     ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.3)%/src",
-    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
-    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
+    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
  },
   bjam_opts = {
      "-d+2",

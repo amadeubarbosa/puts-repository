@@ -2,8 +2,9 @@ name = "logger"
 version = "2.0snapshot"
 url = SVNREPURL .. "/cpputils/logger/branches/LG_v2_00_00_2012_02_23"
 dependencies = {
-  "boost == 1.51.0",
-  "boost-thread == 1.51.0",
+  "boost == 1.51.0-oblibs2.0.0.0",
+  "boost-build == 12m",
+  "boost-thread == 1.51.0-oblibs2.0.0.0",
 }
 build = {
   type = "bjam",
@@ -16,12 +17,13 @@ build = {
     variant = { "debug", "release" },
     link = {"shared", "static"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
-    BOOST_BUILD_PATH = "%directory(boost)%/tools/build/v2",
-    BJAM_SOURCE = "%directory(boost)%/tools/build/v2/engine",
+    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
   bjam_opts = {
      "-d+2",
      "--openbus-with-puts",
+     "--layout=tagged",
   },
 }
 

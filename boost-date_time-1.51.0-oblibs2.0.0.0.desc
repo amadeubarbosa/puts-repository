@@ -1,0 +1,34 @@
+name = "boost-date_time"
+version = "1.51.0-oblibs2.0.0.0"
+subpackage_of = "boost == "..version
+build = {
+  type = "bjam",
+  bjam_source = "tools/build/v2/engine",
+  targets = {
+    "stage",
+  },
+  variables = {
+    BOOST_BUILD_PATH = "tools/build/v2",
+    link = { "static", "shared" },
+    variant = { "release", "debug" },
+    threading = { "multi", "single" },
+  },
+  bjam_opts = {
+    "-d+2",
+    "--with-date_time",
+    "--layout=tagged",
+  },
+}
+build.SunOS = {
+  variables = {
+    toolset = "sun",
+  }
+}
+build.SunOS510_64 = {
+  variables = {
+    ["address-model"] = "64",
+  }
+}
+install_files = {
+  ["stage/lib/libboost_date_time*"] = "lib",
+}

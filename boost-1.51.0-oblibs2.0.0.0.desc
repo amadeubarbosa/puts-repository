@@ -1,0 +1,6 @@
+name = "boost"
+version = "1.51.0-oblibs2.0.0.0"
+url = SVNREPURL .. "/openbus/libs/boost/tags/1.51.0-oblibs2.0.0.0"
+dev_files = {
+  ["boost"] = "include/boost",
+}
