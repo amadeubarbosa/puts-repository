@@ -1,0 +1,12 @@
+openbus-demo-audit-mico-2.0.0.0 +dependencies +dev
+openbus-demo-chain-validation-mico-2.0.0.0 +dependencies +dev
+openbus-demo-dedicated-clock-mico-2.0.0.0 +dependencies +dev
+openbus-demo-greetings-mico-2.0.0.0 +dependencies +dev
+openbus-demo-hello-mico-2.0.0.0 +dependencies +dev
+openbus-demo-multiplexing-mico-2.0.0.0 +dependencies +dev
+openbus-demo-sharedauth-mico-2.0.0.0 +dependencies +dev
+openbus-demo-chain-validation-assistant-mico-2.0.0.0 +dependencies +dev
+openbus-demo-dedicated-clock-assistant-mico-2.0.0.0 +dependencies +dev
+openbus-demo-greetings-assistant-mico-2.0.0.0 +dependencies +dev
+openbus-demo-hello-assistant-mico-2.0.0.0 +dependencies +dev
+openbus-doc-cpp-assistant-2.0.0.0 +dependencies +dev
