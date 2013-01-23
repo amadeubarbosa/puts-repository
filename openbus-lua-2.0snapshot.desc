@@ -3,24 +3,12 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes "
 name = "openbus-lua"
 version = "2.0snapshot"
 url = SVNREPURL .. "/openbus/sdk/lua/trunk"
-dependencies = { 
-  "lce == 1snapshot",
+dependencies = {
   "loop == 2snapshot",
   "lua-bin == 5.1.3-oblibs1.4snapshot",
-  "luacoroutine == 1.0snapshot",
-  "luacothread == 1.0snapshot",
-  "luafilesystem == 1.4.2-oblibs1.4snapshot", 
-  "luaidl == 0.6.0snapshot",
-  "luainspector == 1.0snapshot",
-  "luasocket == 2.0.2-oblibs1.4snapshot",
-  "luastruct == 1.2snapshot",
-  "luatuple == 1.0snapshot",
-  "luavararg == 1.1snapshot",
-  "luuid == 1.0-oblibs1.4snapshot",
   "oil == 0.5snapshot",
   "openbus-idl1.5 == 1.5snapshot",
   "openbus-idl2.0 == 2.0snapshot",
-  "scs-lua == 1.3snapshot",
   "sdk-idl-source == 2.0snapshot",
 }
 build = {
@@ -29,7 +17,9 @@ build = {
     LUA51 = "%directory(lua-bin)%",
     LOOP_HOME = "%directory(loop)%",
     OIL_HOME = "%directory(oil)%",
-    OPENBUS_HOME = INSTALL.TOP,
+    OPENBUS_OLDIDL = "%directory(openbus-idl1.5)%/src",
+    OPENBUS_NEWIDL = "%directory(openbus-idl2.0)%/src",
+    OPENBUS_LIBIDL = "%directory(sdk-idl-source)%/src",
   },
   mf = { "openbus" },
   MacOS = { mf = { "openbus", "openbus BUILD_DYLIB=YES" }, },
