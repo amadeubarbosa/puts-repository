@@ -9,7 +9,6 @@ dependencies = {
   "lua == 5.1.3-oblibs1.4snapshot",
   "lua-bin == 5.1.3-oblibs1.4snapshot",
   "luacothread == 1.0snapshot",
-  "luafilesystem == 1.4.2-oblibs1.4snapshot", 
   "luaidl == 0.6.0snapshot",
   "luasocket == 2.0.2-oblibs1.4snapshot",
   "luastruct == 1.2snapshot",

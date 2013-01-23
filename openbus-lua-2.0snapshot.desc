@@ -9,6 +9,7 @@ dependencies = {
   "oil == 0.5snapshot",
   "openbus-idl1.5 == 1.5snapshot",
   "openbus-idl2.0 == 2.0snapshot",
+  "scs-idl1.3 == 1.3snapshot",
   "sdk-idl-source == 2.0snapshot",
 }
 build = {
@@ -17,9 +18,10 @@ build = {
     LUA51 = "%directory(lua-bin)%",
     LOOP_HOME = "%directory(loop)%",
     OIL_HOME = "%directory(oil)%",
-    OPENBUS_OLDIDL = "%directory(openbus-idl1.5)%/src",
-    OPENBUS_NEWIDL = "%directory(openbus-idl2.0)%/src",
     OPENBUS_LIBIDL = "%directory(sdk-idl-source)%/src",
+    OPENBUS_NEWIDL = "%directory(openbus-idl2.0)%/src",
+    OPENBUS_OLDIDL = "%directory(openbus-idl1.5)%/src",
+    OPENBUS_SCSIDL = "%directory(scs-idl1.3)%/src",
   },
   mf = { "openbus" },
   MacOS = { mf = { "openbus", "openbus BUILD_DYLIB=YES" }, },
