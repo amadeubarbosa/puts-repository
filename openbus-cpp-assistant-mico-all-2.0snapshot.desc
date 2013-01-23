@@ -32,5 +32,6 @@ dependencies = {
   "openbus-test-cpp-mico == 2.0snapshot",
   "openbus-test-cpp-assistant-mico == 2.0snapshot",
   "openbus-demo-mico-sources == 2.0snapshot",
+  "openbus-demo-assistant-mico-sources == 2.0snapshot",
   "openbus-demo-scs-mico-idl == 2.0snapshot",
 }
