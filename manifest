@@ -455,6 +455,36 @@ repository = {
     ,
   }
   ,
+  ["logger-multithread"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["logger-multithread-debug"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["logger-singlethread"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["loop"] = {
     ["2.3-oblibs1.3.1"] = {
       [1] = {
@@ -1316,6 +1346,13 @@ repository = {
   ,
   ["openbus-demo-assistant-mico-sources"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
