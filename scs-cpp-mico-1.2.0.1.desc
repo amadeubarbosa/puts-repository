@@ -1,6 +1,6 @@
 name = "scs-cpp-mico"
 version = "1.2.0.1"
-url = SVNREPURL .. "/scs/core/cpp/tags/01_02_00_01"
+url = SVNREPURL .. "/scs/core/cpp/branches/SCS_CORE_CPP_v1_02_00_2011_07_29"
 dependencies = {
   "scs-idl1.2 == 1.2.1",
   "mico-singlethread-debug == 2.3.13-oblibs2.0.0.0",

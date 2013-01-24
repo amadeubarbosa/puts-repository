@@ -1,6 +1,6 @@
 name = "logger"
 version = "2.0.0.0"
-url = SVNREPURL .. "/cpputils/logger/tags/02_00_00_00"
+url = SVNREPURL .. "/cpputils/logger/branches/LG_v2_00_00_2012_02_23"
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
@@ -28,9 +28,9 @@ build = {
 }
 
 install_files = {
-  ["stage/liblogger-*"] = "lib",
+  ["stage/liblogger*"] = "lib",
 }
 dev_files = {
-  ["stage/liblogger-*"] = "lib",
+  ["stage/liblogger*"] = "lib",
   ["include/log"] = "include/",
 }
