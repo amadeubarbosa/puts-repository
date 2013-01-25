@@ -1,6 +1,6 @@
 name = "logger"
 version = "2.0.0.0"
-url = SVNREPURL .. "/cpputils/logger/branches/LG_v2_00_00_2012_02_23"
+url = SVNREPURL .. "/cpputils/logger/tags/02_00_00"
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
