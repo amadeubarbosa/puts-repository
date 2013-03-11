@@ -1,6 +1,6 @@
 name = "openbus-cpp-mico"
 version = "2.0snapshot"
-url = SVNREPURL .. "/openbus/sdk/cpp/branches/openbus_v2_proto"
+url = SVNREPURL .. "/openbus/sdk/cpp/branches/02_00_00"
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
