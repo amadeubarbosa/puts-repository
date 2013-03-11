@@ -1,6 +1,9 @@
 name = "scs-idl1.3-java"
 version = "1.3snapshot"
 subpackage_of = "scs-idl1.3 == "..version
+dependencies = {
+  "jacorb == 2.3.0",
+}
 build = {
   type = "maven",
 }
