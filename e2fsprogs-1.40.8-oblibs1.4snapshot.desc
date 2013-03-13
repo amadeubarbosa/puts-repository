@@ -1,6 +1,6 @@
 name = "e2fsprogs"
 version = "1.40.8-oblibs1.4snapshot"
-url = SVNREPURL .. "/openbus/libs/trunk/e2fsprogs-1.40.8"
+url = SVNREPURL .. "/openbus/libs/e2fsprogs/branches/1.40.8"
 build = {
   type = "autotools",
   MacOS = "./configure --prefix=".. TMPDIR ..

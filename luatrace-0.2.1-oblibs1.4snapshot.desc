@@ -1,6 +1,6 @@
 name = "luatrace"
 version = "0.2.1-oblibs1.4snapshot"
-url = SVNREPURL .. "/openbus/libs/trunk/luatrace"
+url = SVNREPURL .. "/openbus/libs/luatrace/branches/0.2.1-beta"
 build = {
   type = "command",
   Linux = { cmd = "make PLAT=linux reader static-writer dynamic-writer "..

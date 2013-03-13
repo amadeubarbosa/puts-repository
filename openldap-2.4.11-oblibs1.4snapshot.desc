@@ -1,6 +1,6 @@
 name = "openldap"
 version = "2.4.11-oblibs1.4snapshot"
-url = SVNREPURL .. "/openbus/libs/trunk/openldap-2.4.11"
+url = SVNREPURL .. "/openbus/libs/openldap/branches/2.4.11"
 dependencies = {
   "openssl == 1.0.0j",
 }

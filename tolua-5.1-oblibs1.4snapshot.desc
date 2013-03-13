@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "tolua"
 version = "5.1-oblibs1.4snapshot"
-url = SVNREPURL .. "/openbus/libs/trunk/tolua5.1"
+url = SVNREPURL .. "/openbus/libs/tolua/branches/5.1"
 dependencies = {
   "lua == 5.1.3-oblibs1.4snapshot",
 }
