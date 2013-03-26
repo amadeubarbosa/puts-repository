@@ -1,0 +1,19 @@
+name = "ftc-java"
+version = "1.1.6"
+url = SVNREPURL .. "/ftc/tags/01_01_06/java"
+build = {
+  type = "maven",
+  javadoc = true,
+  variables = {
+  	encoding = "iso8859-1",
+  	docencoding = "iso8859-1",
+  },
+}
+install_files = {
+  ["target/*.jar"] = "lib",
+  ["demo/pom.xml"] = "demo",
+  ["demo/src"] = "demo",
+  ["demo/lib"] = "demo",
+  ["demo/README.txt"] = "demo",
+  ["target/site/apidocs/*"] = "doc",
+}
