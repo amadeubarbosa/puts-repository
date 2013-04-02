@@ -1,0 +1,23 @@
+name = "openbus-doc-allpdf"
+version = "2.0.0.1"
+subpackage_of = "openbus-busservice == "..version
+
+local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 *.pdf ; "
+local generate = "pdflatex FILE && bibtex FILE && pdflatex FILE && pdflatex FILE"
+local convert_fig = "convert -density 300 -antialias -resize x600 figs/architecture.pdf figs/architecture.png"
+build = {
+  type = "command",
+  src = "doc",
+  cmd = [[
+  cd install &&
+]]..clean..generate:gsub("FILE","installation")..[[ &&
+  cd ../openbus && ]]..convert_fig             ..[[ &&
+]]..clean..generate:gsub("FILE","openbus")     ..[[ &&
+  cd ../protocol &&
+  pdflatex spec ]]
+}
+install_files = {
+  ["install/installation.pdf"] = "doc/install",
+  ["openbus/openbus.pdf"]      = "doc/openbus",
+  ["protocol/spec.pdf"]        = "doc/protocol",
+}
