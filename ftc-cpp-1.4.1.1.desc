@@ -1,0 +1,43 @@
+name = "ftc-cpp"
+version = "1.4.1.1"
+url = SVNREPURL .. "/ftc/core/cpp/tags/01_04_01_01"
+dependencies = {
+  "boost == 1.51.0-oblibs2.0.0.0",
+  "boost-build == 12m",
+  "boost-system == 1.51.0-oblibs2.0.0.0",
+  "boost-chrono == 1.51.0-oblibs2.0.0.0",
+  "boost-thread == 1.51.0-oblibs2.0.0.0",
+  "boost-filesystem == 1.51.0-oblibs2.0.0.0",
+  "boost-date_time == 1.51.0-oblibs2.0.0.0",
+  "openssl == 1.0.0j",
+  "cxxtest",
+}
+build = {
+  type = "bjam",
+  src = ".",
+  targets = {
+     "stage",
+  },
+  variables = {
+    threading = {"single", "multi"},
+    variant = {"debug", "release"},
+    link = { "static", "shared" },
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
+  },
+  bjam_opts = {
+     "-d+2",
+     "--ftc-with-puts",
+     "--layout=tagged",
+  },
+}
+
+local include_dir  = "include/ftc-1.4.1.0"
+local libftc       = "stage/libftc-1.4.1.0"
+
+install_files = {
+  ["ftc/include/*"]     = include_dir,
+  [libftc .. "*"]         = "lib",
+  ["demo/*"]            = "demo",
+}
