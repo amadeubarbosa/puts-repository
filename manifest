@@ -1353,6 +1353,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-dataservice-core-cpp"] = {
+    ["1.2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-dataservice-core-idl"] = {
     ["1.2.0"] = {
       [1] = {
