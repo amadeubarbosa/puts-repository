@@ -953,6 +953,16 @@ repository = {
     ,
   }
   ,
+  ["mico-bb"] = {
+    ["0.1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["mico-multithread"] = {
     ["2.3.13-oblibs1.4snapshot"] = {
       [1] = {
@@ -1375,6 +1385,16 @@ repository = {
   ,
   ["openbus-dataservice-core-java"] = {
     ["1.2.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-dataservice-project-cpp"] = {
+    ["1.2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
