@@ -1,0 +1,6 @@
+name = "mico-bb"
+version = "0.1"
+url = SVNREPURL .. "/cpputils/mico-bb/branches/00_01"
+dependencies = {
+  "boost-build == 12m",
+}
