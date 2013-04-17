@@ -5,6 +5,7 @@ url = SVNREPURL .. "/openbus/services/data_service/project/cpp/branches/project_
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
+  "mico-bb == 0.1",
   "mico-singlethread-debug == 2.3.13-oblibs2.0.0.0",
   "mico-multithread-debug == 2.3.13-oblibs2.0.0.0",
   "mico-singlethread == 2.3.13-oblibs2.0.0.0",
@@ -49,6 +50,7 @@ build = {
     ["-sOPENSSL_INCLUDE_PATH"] = "%directory(openssl)%/include",
     ["-sFTC_PATH"] = "%directory(ftc-cpp)%",
     ["-sDATASERVICE_PATH"] = "%directory(openbus-dataservice-core-cpp)%",
+    ["-sMICO_BB_PATH"] = "%directory(mico-bb)%",
     BOOST_BUILD_PATH = "%directory(boost-build)%",
     BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
