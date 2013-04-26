@@ -1031,6 +1031,16 @@ repository = {
     ,
   }
   ,
+  ["morbid"] = {
+    ["0.1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["oil"] = {
     ["0.5snapshot"] = {
       [1] = {
@@ -1791,6 +1801,16 @@ repository = {
     }
     ,
     ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-diagnostics"] = {
+    ["0.1"] = {
       [1] = {
         ["arch"] = "desc",
       }

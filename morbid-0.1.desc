@@ -1,0 +1,29 @@
+name = "morbid"
+version = "0.1"
+url = "git://github.com/amadeubarbosa/mORBid.git"
+dependencies = {
+  "boost == 1.51.0",
+  "boost-build == 12m",
+}
+--[[TODO: por enquanto só precisamos dos headers do morbid
+build = {
+	type = "bjam",
+	src = ".",
+	targets = {
+	   "install",
+	},
+	variables = {
+	    threading = {"multi"},
+    	variant = {"release"},
+    	link = {"static"},
+	    ["-sBOOST_PATH"] = "%directory(boost)%",
+    	BOOST_BUILD_PATH = "%directory(boost-build)%",
+    	BJAM_SOURCE = "%directory(boost-build)%/engine",
+	},
+	bjam_opts = {
+    	"-d+2",
+     	"--openbus-with-puts",
+     	"--layout=tagged",
+  	},
+}
+]]
