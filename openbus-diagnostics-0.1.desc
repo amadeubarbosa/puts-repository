@@ -2,11 +2,11 @@ name = "openbus-diagnostics"
 version = "0.1"
 url = "git://github.com/amadeubarbosa/openbus-diagnostics.git"
 dependencies = {
-  "boost == 1.51.0",
+  "boost == 1.53.0",
   "boost-build == 12m",
   "morbid == 0.1",
-  "boost-program-options == 1.51.0",
-  "boost-system == 1.51.0",
+  "boost-program-options == 1.53.0",
+  "boost-system == 1.53.0",
   "openssl == 1.0.0j",
 }
 build = {

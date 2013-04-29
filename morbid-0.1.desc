@@ -2,7 +2,7 @@ name = "morbid"
 version = "0.1"
 url = "git://github.com/amadeubarbosa/mORBid.git"
 dependencies = {
-  "boost == 1.51.0",
+  "boost == 1.53.0",
   "boost-build == 12m",
 }
 --[[TODO: por enquanto só precisamos dos headers do morbid

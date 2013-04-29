@@ -1,0 +1,6 @@
+name = "boost"
+version = "1.53.0"
+url = SVNREPURL .. "/openbus/libs/boost/branches/1.53.0"
+dev_files = {
+  ["boost"] = "include/boost",
+}
