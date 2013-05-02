@@ -1,0 +1,24 @@
+name = "lsqlite3"
+version = "0.9.1-devel"
+url = SVNREPURL .. "/openbus/libs/luasqlite3/branches/0.9.1"
+
+dependencies = {
+  "boost-build == 12m",
+}
+
+build = {
+  type = "bjam",
+  src = ".",
+  targets = { "dist" },
+  variables = {
+    threading = { "single" },
+    variant = { "release" },
+    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
+  },
+  bjam_opts = { "-d+2" },
+}
+
+dev_files = {
+  ["dist/liblsqlite3*"] = "lib",
+}
