@@ -4,6 +4,7 @@ url = SVNREPURL .. "/openbus/libs/luasqlite3/branches/0.9.1"
 
 dependencies = {
   "boost-build == 12m",
+  "sqlite3 == 3.7.16.2",
 }
 
 build = {
@@ -16,7 +17,10 @@ build = {
     BOOST_BUILD_PATH = "%directory(boost-build)%",
     BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
-  bjam_opts = { "-d+2" },
+  bjam_opts = {
+    "-d+2",
+    "--user-config=bbuild/puts/user-config.jam",
+  },
 }
 
 dev_files = {
