@@ -1,4 +1,4 @@
-name = "sqlite3"
+name = "sqlite"
 version = "3.7.16.2"
 url = SVNREPURL .. "/openbus/libs/sqlite/branches/3.7.16.2"
 build = {

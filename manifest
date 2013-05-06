@@ -207,6 +207,16 @@ repository = {
     ,
   }
   ,
+  ["collaboration-service"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["cxxtest"] = {
     ["1.0.0"] = {
       [1] = {

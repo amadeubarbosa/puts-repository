@@ -3,8 +3,9 @@ version = "0.9.1-devel"
 url = SVNREPURL .. "/openbus/libs/luasqlite3/branches/0.9.1"
 
 dependencies = {
+  "luafilesystem == 1.4.2-oblibs1.3.2-1",
   "boost-build == 12m",
-  "sqlite3 == 3.7.16.2",
+  "sqlite == 3.7.16.2",
 }
 
 build = {

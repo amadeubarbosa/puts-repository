@@ -1,0 +1,44 @@
+name = "collaboration-service"
+version = "1.0"
+url = "svn+https://subversion.tecgraf.puc-rio.br/engdist/openbus/services/collaboration/trunk"
+dependencies = {
+	"luafilesystem == 1.4.2-oblibs1.3.2-1",
+	"boost-build == 12m",
+	"sqlite == 3.7.16.2",
+	"lsqlite3 == 0.9.1-devel",
+	"lce == 2.0.0-1",
+    "luuid == 1.0-oblibs1.3.2-1",
+	"openbus-idl2.0 == 2.0.0",
+	"oil == 0.6beta",
+	"scs-lua == 1.2.3-1",
+	"luacoroutine == 1.0beta",
+	"luacothread == 1.0beta",
+	"luainspector == 1.0beta",
+	"luatuple == 1.0beta",
+	"luavararg == 1.1-oblibs1.3.2-1",
+	"loop == 3.0beta",
+    "openbus-lua == 2.0.0.0",
+}
+build = {
+	type = "bjam",
+	src = ".",
+	targets = {
+		"dist",
+	},
+	variables = {
+		variant = {"release"},
+		["-sLOOP_BUILD"] = "%directory(loop)%",
+		["-sOIL_BUILD"] = "%directory(oil)%",
+		["-sPUTS_INSTALL"] = INSTALL.TOP,
+		BOOST_BUILD_PATH = "%directory(boost-build)%:"
+			.."%directory(collaboration-service)%/bbuild",
+		BJAM_SOURCE = "%directory(boost-build)%/engine",
+	},
+	bjam_opts = {
+		"-d+2",
+		"--user-config=bbuild/puts/user-config.jam",
+	},
+}
+install_files = {
+	["dist/collaboration-service"] = "bin",
+}
