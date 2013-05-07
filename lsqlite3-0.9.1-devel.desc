@@ -26,4 +26,5 @@ build = {
 
 dev_files = {
   ["dist/liblsqlite3*"] = "lib",
+  ["lsqlite3.h"] = "include/lsqlite3",
 }
