@@ -3,7 +3,7 @@ version = "3.7.16.2"
 url = SVNREPURL .. "/openbus/libs/sqlite/branches/3.7.16.2"
 build = {
   type = "autotools",
-  Linux =  "CC=gcc ./configure --prefix="..TMPDIR.." && make",
+  Linux =  "CC=gcc ./configure --enable-threadsafe=no --prefix="..TMPDIR.." && make",
 }
 
 install_files = {

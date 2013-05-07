@@ -27,6 +27,7 @@ build = {
 	},
 	variables = {
 		variant = {"release"},
+        link = { "static" },
 		["-sLOOP_BUILD"] = "%directory(loop)%",
 		["-sOIL_BUILD"] = "%directory(oil)%",
 		["-sPUTS_INSTALL"] = INSTALL.TOP,
