@@ -1,6 +1,7 @@
 name = "collaboration-service"
 version = "1.0"
-url = "svn+https://subversion.tecgraf.puc-rio.br/engdist/openbus/services/collaboration/trunk"
+url = "svn+https://subversion.tecgraf.puc-rio.br/engdist"
+      .."openbus/services/collaboration/trunk"
 dependencies = {
 	"luafilesystem == 1.4.2-oblibs1.3.2-1",
 	"boost-build == 12m",
@@ -42,4 +43,5 @@ build = {
 }
 install_files = {
 	["dist/collaboration-service"] = "bin",
+	["idl/collaboration.idl"] = "idl/collaboration-service-1.0",
 }
