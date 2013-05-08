@@ -1,6 +1,6 @@
 name = "collaboration-service"
 version = "1.0"
-url = SVNREPURL.."/openbus/services/collaboration/trunk"
+url = SVNREPURL.."/openbus/services/collaboration/branches/1.0"
 dependencies = {
 	"luafilesystem == 1.4.2-oblibs1.3.2-1",
 	"boost-build == 12m",
@@ -43,4 +43,5 @@ build = {
 install_files = {
 	["dist/collaboration-service"] = "bin",
 	["idl/collaboration.idl"] = "idl/collaboration-service-1.0",
+  ["collab.adm"] = "admin",
 }
