@@ -1,7 +1,6 @@
 name = "collaboration-service"
 version = "1.0"
-url = "svn+https://subversion.tecgraf.puc-rio.br/engdist"
-      .."openbus/services/collaboration/trunk"
+url = SVNREPURL.."/openbus/services/collaboration/trunk"
 dependencies = {
 	"luafilesystem == 1.4.2-oblibs1.3.2-1",
 	"boost-build == 12m",
