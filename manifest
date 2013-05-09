@@ -208,7 +208,7 @@ repository = {
   }
   ,
   ["collaboration-service"] = {
-    ["1.0"] = {
+    ["1.0.0_0"] = {
       [1] = {
         ["arch"] = "desc",
       }
