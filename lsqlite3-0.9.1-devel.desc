@@ -3,6 +3,7 @@ version = "0.9.1-devel"
 url = SVNREPURL .. "/openbus/libs/luasqlite3/branches/0.9.1"
 
 dependencies = {
+  "lua == 5.1.3-oblibs1.3.2",
   "luafilesystem == 1.4.2-oblibs1.3.2-1",
   "boost-build == 12m",
   "sqlite == 3.7.16.2",
@@ -16,12 +17,13 @@ build = {
     threading = { "single" },
     variant = { "release" },
     link = { "static", "shared" },
-    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    ["-sPUTS_INSTALL"] = INSTALL.TOP,
+    BOOST_BUILD_PATH = "%directory(boost-build)%:"
+      .."$directory(lsqlite3)/bbuild/puts"
     BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
   bjam_opts = {
     "-d+2",
-    "--user-config=bbuild/puts/user-config.jam",
   },
 }
 
