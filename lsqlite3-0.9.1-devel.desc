@@ -18,12 +18,12 @@ build = {
     variant = { "release" },
     link = { "static", "shared" },
     ["-sPUTS_INSTALL"] = INSTALL.TOP,
-    BOOST_BUILD_PATH = "%directory(boost-build)%:"
-      .."%directory(lsqlite3)%/bbuild/puts",
+    BOOST_BUILD_PATH = "%directory(boost-build)%",
     BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
   bjam_opts = {
     "-d+2",
+    "--user-config=bbuild/puts/user-config.jam",
   },
 }
 
