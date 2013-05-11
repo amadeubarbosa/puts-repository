@@ -19,7 +19,7 @@ build = {
     link = { "static", "shared" },
     ["-sPUTS_INSTALL"] = INSTALL.TOP,
     BOOST_BUILD_PATH = "%directory(boost-build)%:"
-      .."$directory(lsqlite3)/bbuild/puts",
+      .."%directory(lsqlite3)%/bbuild/puts",
     BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
   bjam_opts = {
