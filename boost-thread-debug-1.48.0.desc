@@ -1,6 +1,9 @@
 name = "boost-thread-debug"
 version = "1.48.0"
 subpackage_of = "boost == "..version
+dependencies = {
+  "boost-chrono == "..version,
+}
 build = {
   type = "bjam",
   bjam_source = "tools/build/v2/engine",
