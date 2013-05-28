@@ -44,4 +44,5 @@ install_files = {
 	["dist/collaboration-service"] = "bin",
 	["idl/collaboration.idl"] = "idl/collaboration-service-1.0",
 	["collab.adm"] = "admin",
+    ["shell"] = ".",
 }
