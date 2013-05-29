@@ -1,6 +1,6 @@
 name = "openbus-diagnostics"
 version = "0.1"
-url = "git://github.com/amadeubarbosa/openbus-diagnostics.git"
+url = "git://github.com/amadeubarbosa/openbus-diagnostics.git;tag=v0.1"
 dependencies = {
   "boost == 1.53.0",
   "boost-build == 12m",
