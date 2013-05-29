@@ -2061,6 +2061,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-interop-delegation-mico"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-interop-multiplexing-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
