@@ -2061,17 +2061,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-interop-delegation-mico-singlethread-debug"] = {
-    ["2.0snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-interop-multiplexing-mico-singlethread-debug"] = {
+  ["openbus-interop-multiplexing-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -2082,16 +2072,6 @@ repository = {
   }
   ,
   ["openbus-interop-simple-mico"] = {
-    ["2.0snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-interop-simple-mico-singlethread-debug"] = {
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
