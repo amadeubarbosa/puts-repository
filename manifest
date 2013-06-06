@@ -2228,6 +2228,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-run-test-cpp-mico"] = {
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-session-service"] = {
     ["1.5.3-1"] = {
       [1] = {
