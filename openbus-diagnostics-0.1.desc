@@ -1,6 +1,6 @@
 name = "openbus-diagnostics"
 version = "0.1"
-url = "git://github.com/amadeubarbosa/openbus-diagnostics.git;tag=v0.1"
+url = "git+ssh://git@vcs.tecgraf.puc-rio.br/openbus/openbus-diagnostics.git;tag=v0.1"
 dependencies = {
   "boost == 1.53.0",
   "boost-build == 12m",
@@ -10,28 +10,30 @@ dependencies = {
   "openssl == 1.0.0j",
 }
 build = {
-	type = "bjam",
-	src = ".",
-	targets = {
-	   "stage",
-	},
-	variables = {
-	    threading = {"multi"},
-    	variant = {"release"},
-    	link = {"static"},
-		["-sBOOST_PATH"] = "%directory(boost)%",
-		["-sMORBID_PATH"] = "%directory(morbid)%",
-    	["-sOPENSSL_LIB_PATH"] = "%directory(openssl)%",
-    	["-sOPENSSL_INCLUDE_PATH"] = "%directory(openssl)%/include",
-    	BOOST_BUILD_PATH = "%directory(boost-build)%",
-    	BJAM_SOURCE = "%directory(boost-build)%/engine",
-	},
-	bjam_opts = {
-    	"-d+2",
-     	"--openbus-with-puts",
-     	"--layout=tagged",
-  	},
+  type = "bjam",
+  src = ".",
+  targets = {
+     "stage",
+  },
+  variables = {
+      threading = {"multi"},
+      variant = {"release"},
+      link = {"static"},
+      ["-sBOOST_PATH"] = "%directory(boost)%",
+      ["-sMORBID_PATH"] = "%directory(morbid)%",
+      ["-sOPENSSL_LIB_PATH"] = "%directory(openssl)%",
+      ["-sOPENSSL_INCLUDE_PATH"] = "%directory(openssl)%/include",
+      BOOST_BUILD_PATH = "%directory(boost-build)%",
+      BJAM_SOURCE = "%directory(boost-build)%/engine",
+  },
+  bjam_opts = {
+      "-d+2",
+      "--openbus-with-puts",
+      "--layout=tagged",
+    },
 }
 install_files = {
-	["stage/openbus-diagnostics"] = "bin",
+  ["stage/openbus-diagnostics"] = "bin",
+  ["shell/*"] = "bin",
+  ["doc/*"] = "doc",
 }
