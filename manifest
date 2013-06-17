@@ -1882,6 +1882,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-doc-cpp-assistant"] = {
@@ -1977,6 +1984,16 @@ repository = {
       ,
     }
     ,
+    ["2.0.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-html-quick-start"] = {
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
