@@ -1463,6 +1463,13 @@ repository = {
       ,
     }
     ,
+    ["1.2snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-dataservice-project-cpp"] = {
