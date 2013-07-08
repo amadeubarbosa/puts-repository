@@ -1507,6 +1507,23 @@ repository = {
       ,
     }
     ,
+    ["1.2snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-dataservice-utils-java"] = {
+    ["1.2snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-demo-assistant-mico-sources"] = {
