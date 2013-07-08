@@ -3,6 +3,7 @@ version = "1.2snapshot"
 url = SVNREPURL .. "/openbus/services/data_service/utils/java/trunk"
 dependencies = {
   "openbus-dataservice-core-java == 1.2snapshot",
+  "openbus-dataservice-project-java == 1.2snapshot",
   "openbus-java == 2.0.0.0",
   "ftc-java == 1.4.0.1",
 }
@@ -17,10 +18,16 @@ install_files = {
   ["demo/file_system/target/*.jar"]            = "demo/java/file_system",
   ["demo/file_system/target/site/apidocs/*"]   = "demo/java/file_system/doc",
   ["demo/file_system/target/dependency/*.jar"] = "lib",
+  ["demo/session/target/*.jar"]            = "demo/java/session",
+  ["demo/session/target/site/apidocs/*"]   = "demo/java/session/doc",
+  ["demo/session/target/dependency/*.jar"] = "lib",
 }
 dev_files = {
   ["demo/file_system/src"]        = "demo/java/file_system",
   ["demo/file_system/idl"]        = "demo/java/file_system",
   ["demo/file_system/management"] = "demo/java/file_system",
   ["demo/file_system/resources"]  = "demo/java/file_system",
+  ["demo/session/src"]        = "demo/java/session",
+  ["demo/session/resources"]  = "demo/java/session",
+  ["demo/session/management"] = "demo/java/session",
 }
