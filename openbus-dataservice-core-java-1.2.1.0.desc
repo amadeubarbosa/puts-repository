@@ -1,0 +1,18 @@
+name = "openbus-dataservice-core-java"
+version = "1.2.1.0"
+url = SVNREPURL .. "/openbus/services/data_service/core/java/tags/01_02_01_00"
+dependencies = {
+  "openbus-dataservice-core-idl == 1.2.0",
+}
+build = {
+  type = "maven",
+  javadoc = true,
+  variables = {
+    ["dataservice.idlpath"] = "%directory(openbus-dataservice-core-idl)%"
+  },
+}
+install_files = {
+  ["target/*.jar"]                         = "lib",
+  ["target/dependency/*.jar"]              = "lib",
+  ["target/site/apidocs/*"]                = "doc/core",
+}
