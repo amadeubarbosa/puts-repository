@@ -15,11 +15,11 @@ build = {
 }
 
 install_files = {
-  ["clock/target/openbus-collaboration-demo-java-clock-*.jar"] = "clock",
+  ["clock/target/openbus-collaboration-demo-java-clock-*.jar"] = "demo/java/collaboration/clock",
   ["clock/target/dependency/*.jar"] = "lib",
-  ["clock/README.txt"] = "demo/java/clock",
+  ["clock/README.txt"] = "demo/java/collaboration/clock",
 }
 
 dev_files = {
-  ["clock/src"] = "clock",
+  ["clock/src"] = "demo/java/collaboration/clock",
 }
