@@ -19,7 +19,7 @@ dependencies = {
   "luuid == 1.0-oblibs1.3.2-1",
   "oil == 0.6beta",
   "openbus-idl1.5 == 1.5.2-1",
-  "openbus-idl2.0 == 2.0.0",
+  "openbus-idl2.0 == 2.0snapshot",
   "scs-lua == 1.2.3-1",
   "sdk-idl-source == 2.0.0",
 }
