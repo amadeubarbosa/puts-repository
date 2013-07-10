@@ -1,0 +1,25 @@
+name = "collaboration-service-demo-java"
+version = "1.0snapshot"
+subpackage_of = "collaboration-service == "..version
+dependencies = {
+  "scs-idl1.2 == 1.2.1",
+  "openbus-idl2.0 == 2.0.0",
+}
+build = {
+  type = "maven",
+  src = "demo/java",
+  variables = {
+    ["scs.idlpath"] = "%directory(scs-idl1.2)%/src",
+    ["openbus.idlpath"] = "%directory(openbus-idl2.0)%/src",
+  },
+}
+
+install_files = {
+  ["clock/target/openbus-collaboration-demo-java-clock-*.jar"] = "clock",
+  ["clock/target/dependency/*.jar"] = "lib",
+  ["clock/README.txt"] = "demo/java/clock",
+}
+
+dev_files = {
+  ["clock/src"] = "clock",
+}

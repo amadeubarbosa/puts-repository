@@ -224,6 +224,16 @@ repository = {
     ,
   }
   ,
+  ["collaboration-service-demo-java"] = {
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["cxxtest"] = {
     ["1.0.0"] = {
       [1] = {
