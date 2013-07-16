@@ -18,6 +18,9 @@ install_files = {
   ["clock/target/openbus-collaboration-demo-java-clock-*.jar"] = "demo/java/collaboration/clock",
   ["clock/target/dependency/*.jar"] = "lib",
   ["clock/README.txt"] = "demo/java/collaboration/clock",
+  ["observer/target/openbus-collaboration-demo-java-observer-*.jar"] = "demo/java/collaboration/observer",
+  ["observer/target/dependency/*.jar"] = "lib",
+  ["observer/README.txt"] = "demo/java/collaboration/observer",
   ["assistant/clock/target/openbus-collaboration-demo-java-assistant-clock-*.jar"] = "demo/java/collaboration/assistant/clock",
   ["assistant/clock/target/dependency/*.jar"] = "lib",
   ["assistant/clock/README.txt"] = "demo/java/collaboration/assistant/clock",
@@ -25,5 +28,6 @@ install_files = {
 
 dev_files = {
   ["clock/src"] = "demo/java/collaboration/clock",
+  ["observer/src"] = "demo/java/collaboration/observer",
   ["assistant/clock/src"] = "demo/java/collaboration/assistant/clock",
 }
