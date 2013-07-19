@@ -4,8 +4,9 @@ name = "puts"
 version = "2.0snapshot"
 url = SVNREPURL.."/openbus/puts/trunk"
 dependencies = { 
-  "lua-bin == 5.1.3-oblibs1.4snapshot",
-  "luafilesystem = 1.4.2-oblibs1.4snapshot",
+  "tecmake == 3.21",
+  "lua-bin ~> 5.1.3",
+  "luafilesystem ~> 1.4",
 }
 build = {
   type = "tecmake",

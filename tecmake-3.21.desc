@@ -1,0 +1,32 @@
+name = "tecmake"
+version = "3.21"
+url = SVNREPURL.."/openbus/utils/tecmake/"..version
+
+
+local tecmake_wrapper = [[#!/bin/bash
+
+INSTALL_DIR=$(dirname $0)
+export TECTOOLS_HOME=$INSTALL_DIR/../share
+export TECMAKE_HOME=$TECTOOLS_HOME/tecmake
+
+. $TECMAKE_HOME/tec_uname.bsh
+
+$TECMAKE_HOME/tecmake $@
+]]
+
+local fname = config.TMPDIR.."/tecmake"
+local f = io.open(fname,"w")
+f:write(tecmake_wrapper)
+f:close()
+
+local comment_variables = [[sed -i .orig -e 's!^export TECTOOLS_HOME!#export TECTOOLS_HOME!' -e 's!^export TECMAKE_HOME!#export TECMAKE_HOME!']]
+
+build = {
+  type = "command",
+  cmd = comment_variables.." tec_uname.bsh ; chmod 755 ".. fname,
+}
+
+install_files = {
+  [fname] = "bin",
+  ["*"] = "share/tecmake",
+}

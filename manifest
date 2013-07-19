@@ -2802,6 +2802,16 @@ repository = {
     ,
   }
   ,
+  ["tecmake"] = {
+    ["3.21"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["tolua"] = {
     ["5.1-oblibs1.4snapshot"] = {
       [1] = {
