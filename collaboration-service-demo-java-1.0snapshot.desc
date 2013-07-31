@@ -33,6 +33,12 @@ install_files = {
   ["assistant/observer/target/openbus-collaboration-demo-java-assistant-observer-*.jar"] = "demo/java/collaboration/assistant/observer",
   ["assistant/observer/target/dependency/*.jar"] = "lib",
   ["assistant/observer/README.txt"] = "demo/java/collaboration/assistant/observer",
+  ["assistant/hello/target/openbus-collaboration-demo-java-assistant-hello-*.jar"] = "demo/java/collaboration/assistant/hello",
+  ["assistant/hello/target/dependency/*.jar"] = "lib",
+  ["assistant/hello/README.txt"] = "demo/java/collaboration/assistant/hello",
+  ["assistant/hello_observer/target/openbus-collaboration-demo-java-assistant-hello-observer-*.jar"] = "demo/java/collaboration/assistant/hello_observer",
+  ["assistant/hello_observer/target/dependency/*.jar"] = "lib",
+  ["assistant/hello_observer/README.txt"] = "demo/java/collaboration/assistant/hello_observer",
 }
 
 dev_files = {
@@ -42,4 +48,6 @@ dev_files = {
   ["hello_observer/src"] = "demo/java/collaboration/hello_observer",
   ["assistant/clock/src"] = "demo/java/collaboration/assistant/clock",
   ["assistant/observer/src"] = "demo/java/collaboration/assistant/observer",
+  ["assistant/hello/src"] = "demo/java/collaboration/assistant/hello",
+  ["assistant/hello_observer/src"] = "demo/java/collaboration/assistant/hello_observer",
 }
