@@ -234,6 +234,23 @@ repository = {
     ,
   }
   ,
+  ["collaboration-service-idl"] = {
+    ["1.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["cxxtest"] = {
     ["1.0.0"] = {
       [1] = {
