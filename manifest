@@ -208,14 +208,14 @@ repository = {
   }
   ,
   ["collaboration-service"] = {
-    ["1.0.0_0"] = {
+    ["1.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
       ,
     }
     ,
-    ["1.0snapshot"] = {
+    ["1.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -235,7 +235,7 @@ repository = {
   }
   ,
   ["collaboration-service-idl"] = {
-    ["1.0.0.0"] = {
+    ["1.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
