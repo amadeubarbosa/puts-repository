@@ -18,6 +18,7 @@ dependencies = {
 	"luavararg == 1.1-oblibs1.3.2-1",
 	"loop == 3.0beta",
 	"openbus-lua == 2.0.0snapshot",
+    "collaboration-service-idl == 1.0.0",
 }
 build = {
 	type = "bjam",
@@ -42,7 +43,6 @@ build = {
 }
 install_files = {
 	["dist/collaboration-service"] = "bin",
-	["idl/collaboration.idl"] = "idl/collaboration-service-1.0",
 	["collab.adm"] = "admin",
     ["shell"] = ".",
 }
