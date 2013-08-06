@@ -1,6 +1,6 @@
 name = "collaboration-service"
-version = "1.0snapshot"
-url = SVNREPURL.."/openbus/services/collaboration/branches/1.0.0"
+version = "1.0.0snapshot"
+url = SVNREPURL.."/openbus/services/collaboration/branches/01_00_00"
 dependencies = {
 	"luafilesystem == 1.4.2-oblibs1.3.2-1",
 	"boost-build == 12m",
