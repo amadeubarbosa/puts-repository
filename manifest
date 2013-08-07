@@ -242,14 +242,14 @@ repository = {
   }
   ,
   ["collaboration-service-idl"] = {
-    ["1.0.0"] = {
+    ["1.0snapshot_1.0.0.1"] = {
       [1] = {
         ["arch"] = "desc",
       }
       ,
     }
     ,
-    ["1.0snapshot"] = {
+    ["1.0snapshot_1.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
