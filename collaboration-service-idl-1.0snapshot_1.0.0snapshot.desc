@@ -1,8 +1,8 @@
 name = "collaboration-service-idl"
-version = "1.0snapshot"
+version = "1.0snapshot_1.0.0snapshot"
 subpackage_of = "collaboration-service == 1.0.0snapshot"
 dependencies = {
-  "scs-idl1.2 == 1.2snapshot",
+  "scs-idl1.2 == 1.2.1",
   "openbus-idl2.0 == 2.0snapshot",
 }
 install_files = {
