@@ -1,9 +1,9 @@
 name = "collaboration-service-demo-java"
-version = "1.0snapshot"
+version = "1.0.0snapshot"
 subpackage_of = "collaboration-service == "..version
 dependencies = {
-  "scs-idl1.2 == 1.2.1",
-  "openbus-idl2.0 == 2.0.0",
+  "scs-idl1.2 == 1.2snapshot",
+  "openbus-idl2.0 == 2.0snapshot",
 }
 build = {
   type = "maven",
