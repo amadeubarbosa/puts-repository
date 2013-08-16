@@ -12,7 +12,7 @@ dependenncies = {
   "luuid == 1.0-oblibs1.4snapshot",
   "lpw == 1.5.4snapshot",
   "luafilesystem == 1.4.2-oblibs1.4snapshot",
-  "openbus-lua == "..version,
+  "openbus-lua == 1.5.3snapshot",
 }
 build = {
   type = "tecmake",

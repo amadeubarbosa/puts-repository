@@ -242,6 +242,20 @@ repository = {
   }
   ,
   ["collaboration-service-idl"] = {
+    ["1.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.0snapshot_1.0.0.1"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1690,16 +1704,6 @@ repository = {
     ,
   }
   ,
-  ["openbus-demo-delegate-lua"] = {
-    ["1.5.4snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
   ["openbus-demo-delegate-mico-multithread"] = {
     ["1.5.5snapshot"] = {
       [1] = {
@@ -1722,16 +1726,6 @@ repository = {
   ,
   ["openbus-demo-delegate-orbix"] = {
     ["1.5.5snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-demo-eventsink-lua"] = {
-    ["1.5.4snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1783,16 +1777,6 @@ repository = {
     }
     ,
     ["2.0snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-demo-hello-lua"] = {
-    ["1.5.4snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2264,13 +2248,6 @@ repository = {
       ,
     }
     ,
-    ["1.5.4snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
     ["2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
@@ -2316,7 +2293,7 @@ repository = {
       ,
     }
     ,
-    ["1.5.4snapshot"] = {
+    ["1.5.3snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }

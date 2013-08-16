@@ -1,7 +1,7 @@
 --FIXME: esse pacote deve ser removido quando concluir OPENBUS-1372
 name = "openbus-lua-extras"
-version = "1.5.4snapshot"
-url = SVNREPURL .. "/openbus/core/branches/OB_v1_05_04_2012_07_31/data"
+version = "1.5.3snapshot"
+url = SVNREPURL .. "/openbus/core/branches/OB_v1_05_03_2011_07_28/data"
 install_files = {
   ["conf/config"] = "data/conf",
   ["conf/ACSFaultToleranceConfiguration.lua"] = "data/conf",
