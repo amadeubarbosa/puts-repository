@@ -1,7 +1,7 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "openbus-core"
-version = "1.5.4snapshot"
+version = "1.5.3snapshot"
 subpackage_of = "openbus-source == "..version
 dependencies = {
   "lua == 5.1.3-oblibs1.4snapshot",
@@ -40,11 +40,11 @@ install_files = {
   ["../test/run_check_install.sh"] = "test",
   ["../test/checkInstall.lua"] = "test",
   ["../../docs/Como-configurar-LDAP.txt"] = "doc",
-  ["../../idl/extensions/*"] = "idl/v1_05",
 }
 conf_files = {
   ["../../data/conf"] = "data",
 }
+-- TODO: include here all templates/openbus.lua messages table!!
 conf_template = {
   "../../specs/templates/openbus.lua",
 }

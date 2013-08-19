@@ -1396,6 +1396,13 @@ repository = {
   }
   ,
   ["openbus-core"] = {
+    ["1.5.3snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.5.4snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -2360,6 +2367,13 @@ repository = {
   }
   ,
   ["openbus-source"] = {
+    ["1.5.3snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.5.4snapshot"] = {
       [1] = {
         ["arch"] = "desc",
