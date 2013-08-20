@@ -4,14 +4,14 @@ name = "openbus-bin-acs"
 version = "1.5.4snapshot"
 subpackage_of = "openbus-source == "..version
 dependenncies = {
-  "lua == 5.1.3-oblibs1.4snapshot",
-  "oilall == 0.5.0-oblibs1.4snapshot",
+  "lua == 5.1.3snapshot",
+  "oilall == 0.5.0snapshot",
   "scsall == 1.2.2snapshot",
-  "lualdap == 1.1.0-oblibs1.4snapshot",
+  "lualdap == 1.1.0snapshot",
   "lce == 1.0snapshot",
-  "luuid == 1.0-oblibs1.4snapshot",
+  "luuid == 1.0snapshot",
   "lpw == 1.5.4snapshot",
-  "luafilesystem == 1.4.2-oblibs1.4snapshot",
+  "luafilesystem == 1.4.2snapshot",
   "openbus-lua == 1.5.3snapshot",
 }
 build = {

@@ -4,7 +4,7 @@ name = "openbus-busadmin"
 version = "2.0snapshot"
 subpackage_of = "openbus-busservice == "..version
 dependencies = {
-  "lua-bin == 5.1.3-oblibs1.4snapshot",
+  "lua-bin == 5.1.3snapshot",
   "loop == 2snapshot" , 
   "oil == 0.5snapshot",
   "scs-lua == 1.3snapshot",
@@ -15,8 +15,8 @@ dependencies = {
   "luastruct == 1.2snapshot",
   "luavararg == 1.1snapshot",
   "lce == 1snapshot",
-  "luuid == 1.0-oblibs1.4snapshot",
-  "luafilesystem == 1.4.2-oblibs1.4snapshot",
+  "luuid == 1.0snapshot",
+  "luafilesystem == 1.4.2snapshot",
   "openbus-lua == "..version,
   "latt == 1.1snapshot",
 } 

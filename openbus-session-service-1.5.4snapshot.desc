@@ -1,6 +1,6 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
-name = "openbus-core"
+name = "openbus-session-service"
 version = "1.5.4snapshot"
 subpackage_of = "openbus-source == "..version
 dependencies = {
@@ -27,27 +27,14 @@ build = {
 }
 install_files = {
   ["../bin/${TEC_UNAME}/servicelauncher.bin"] = "bin",
-  ["../bin/*.sh"] = "bin",
+  ["../bin/run_session_server.sh"] = "bin",
   ["../bin/servicelauncher"] = "bin",
-  ["../services/accesscontrol"] = "src/lua/openbus/core/services",
-  ["../services/registry"] = "src/lua/openbus/core/services",
-  ["../services/faulttolerance"] = "src/lua/openbus/core/services",
   ["../services/session"] = "src/lua/openbus/core/services",
-  ["../management/*"] = "src/lua/openbus/core/management",
-  ["../../specs/management"] = "specs",
   ["../../specs/shell"] = "specs",
-  ["../../specs/templates"] = "specs",
-  ["../test/run_check_install.sh"] = "test",
-  ["../test/checkInstall.lua"] = "test",
-  ["../../docs/Como-configurar-LDAP.txt"] = "doc",
   ["../../idl/extensions/*"] = "idl/v1_05",
 }
 conf_files = {
-  ["../../data/conf"] = "data",
-}
-conf_template = {
-  "../../specs/templates/openbus.lua",
-}
-dev_files = {
-  ["../test/*"] = "test",
+  ["../../data/conf/config"] = "data/conf",
+  ["../../data/conf/SessionServerConfiguration.lua"] = "data/conf",
+  ["../../data/conf/advanced"] = "data/conf",
 }

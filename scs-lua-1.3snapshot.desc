@@ -4,7 +4,7 @@ name = "scs-lua"
 version = "1.3snapshot"
 url = SVNREPURL .. "/scs/core/lua/trunk"
 dependencies = {
-  "lua-bin == 5.1.3-oblibs1.4snapshot",
+  "lua-bin == 5.1.3snapshot",
   "loop == 2snapshot",
   "oil == 0.5snapshot",
   "scs-idl1.3 == "..version,

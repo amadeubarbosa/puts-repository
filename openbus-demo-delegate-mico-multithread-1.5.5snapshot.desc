@@ -2,7 +2,7 @@ name = "openbus-demo-delegate-mico-multithread"
 version = "1.5.5snapshot"
 subpackage_of = "openbus-cpp-mico-multithread == "..version
 dependencies = {
-  "lua == 5.1.3-oblibs1.4snapshot",
+  "lua == 5.1.3snapshot",
 }
 build = {
   type = "tecmake",

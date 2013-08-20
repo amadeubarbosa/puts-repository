@@ -3,7 +3,7 @@ version = "1.3snapshot"
 url = SVNREPURL .. "/scs/core/cpp/trunk"
 dependencies = {
   "scs-idl1.3 == 1.3snapshot",
-  "mico-multithread == 2.3.13-oblibs1.4snapshot",
+  "mico-multithread == 2.3.13snapshot",
   "boost == 1.51.0",
   "boost-build == 12m",
   "boost-thread == 1.51.0",

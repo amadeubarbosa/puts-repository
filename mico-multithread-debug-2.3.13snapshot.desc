@@ -1,23 +1,23 @@
-name = "mico-multithread"
-version = "2.3.13-oblibs1.4snapshot"
+name = "mico-multithread-debug"
+version = "2.3.13snapshot"
 url = SVNREPURL .. "/openbus/libs/mico/branches/2.3.13"
 build = {
   type = "autotools",
   variables = {
     ["--prefix"] = TMPDIR,
   },
-  configure = "./configure --disable-ssl --disable-elf",
+  configure = "./configure --disable-ssl --disable-elf --disable-optimize --enable-debug",
 }
 build.SunOS = { configure = 'CC=cc CXX=CC CONF_AR=CC CONF_ARFLAGS="-xar -o" CFLAGS="-KPIC" CXXFLAGS="-erroff=badargtype2w -library=stlport4 -KPIC " '..build.configure }
 build.SunOS510_64 = { configure = 'CC=cc CXX=CC CONF_AR=CC CONF_ARFLAGS="-m64 -xar -o" CFLAGS="-KPIC -m64" CXXFLAGS="-erroff=badargtype2w -library=stlport4 -KPIC -m64" LDFLAGS="-m64" '..build.configure }
 
 install_files = {
-  [TMPDIR .."/lib/libmico*.so*"] = "lib/mico-mt",     --dynamic linux,aix,sunos
-  [TMPDIR .."/lib/libmico*.dylib*"] = "lib/mico-mt",  --dynamic macos
-  [TMPDIR .."/bin/*"] = "bin/mico-mt",
+  [TMPDIR .."/lib/libmico*.so*"] = "lib/mico-mt-d",     --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libmico*.dylib*"] = "lib/mico-mt-d",  --dynamic macos
+  [TMPDIR .."/bin/*"] = "bin/mico-mt-d",
 }
 dev_files = {
-  [TMPDIR .."/lib/libmico*.*"] = "lib/mico-mt",       --dynamic linux,aix,sunos
-  [TMPDIR .."/bin/*"] = "bin/mico-mt",
-  [TMPDIR .."/include/*"] = "include/mico-mt",
+  [TMPDIR .."/lib/libmico*.*"] = "lib/mico-mt-d",       --dynamic linux,aix,sunos
+  [TMPDIR .."/bin/*"] = "bin/mico-mt-d",
+  [TMPDIR .."/include/*"] = "include/mico-mt-d",
 }

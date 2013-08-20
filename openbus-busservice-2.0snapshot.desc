@@ -4,11 +4,11 @@ name = "openbus-busservice"
 version = "2.0snapshot"
 url = SVNREPURL .. "/openbus/core/trunk"
 dependencies = {
-  "lua-bin == 5.1.3-oblibs1.4snapshot",
+  "lua-bin == 5.1.3snapshot",
   "loop == 2snapshot" , 
   "oil == 0.5snapshot",
   "scs-lua == 1.3snapshot",
-  "lualdap == 1.1.0-oblibs1.4snapshot",
+  "lualdap == 1.1.0snapshot",
   "luacoroutine == 1.0snapshot",
   "luacothread == 1.0snapshot",
   "luainspector == 1.0snapshot",
@@ -16,8 +16,8 @@ dependencies = {
   "luastruct == 1.2snapshot",
   "luavararg == 1.1snapshot",
   "lce == 1snapshot",
-  "luuid == 1.0-oblibs1.4snapshot",
-  "luafilesystem == 1.4.2-oblibs1.4snapshot",
+  "luuid == 1.0snapshot",
+  "luafilesystem == 1.4.2snapshot",
   "openbus-lua == "..version,
   "latt == 1.1snapshot",
 } 

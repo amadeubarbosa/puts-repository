@@ -4,7 +4,7 @@ name = "luastruct"
 version = "1.2snapshot"
 url = SVNREPURL.."/openbus/libs/struct/branches/1.2"
 dependencies = {
-  "lua == 5.1.3-oblibs1.4snapshot",
+  "lua == 5.1.3snapshot",
 }
 build = {
   type = "tecmake",

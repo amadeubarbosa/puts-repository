@@ -1,6 +1,6 @@
 name = "loop"
 version = "2.3beta"
-subpackage_of = "oil-source == 0.5.0-oblibs1.4snapshot"
+subpackage_of = "oil-source == 0.5.0snapshot"
 dev_files = {
   ["lua/loop"] = "lib/lua/5.1",
   ["lua/precompiler.lua"] = "lib/lua/5.1",

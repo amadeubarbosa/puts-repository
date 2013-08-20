@@ -324,7 +324,7 @@ repository = {
       ,
     }
     ,
-    ["1.40.8-oblibs1.4snapshot"] = {
+    ["1.40.8snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -679,7 +679,7 @@ repository = {
       ,
     }
     ,
-    ["5.1.3-oblibs1.4snapshot"] = {
+    ["5.1.3snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -710,7 +710,7 @@ repository = {
       ,
     }
     ,
-    ["5.1.3-oblibs1.4snapshot"] = {
+    ["5.1.3snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -803,7 +803,7 @@ repository = {
       ,
     }
     ,
-    ["1.4.2-oblibs1.4snapshot"] = {
+    ["1.4.2snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -896,7 +896,7 @@ repository = {
       ,
     }
     ,
-    ["1.1.0-oblibs1.4snapshot"] = {
+    ["1.1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -927,7 +927,7 @@ repository = {
       ,
     }
     ,
-    ["2.0.2-oblibs1.4snapshot"] = {
+    ["2.0.2snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -961,7 +961,7 @@ repository = {
   }
   ,
   ["luatrace"] = {
-    ["0.2.1-oblibs1.4snapshot"] = {
+    ["0.2.1snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1047,7 +1047,7 @@ repository = {
       ,
     }
     ,
-    ["1.0-oblibs1.4snapshot"] = {
+    ["1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1067,14 +1067,14 @@ repository = {
   }
   ,
   ["mico-multithread"] = {
-    ["2.3.13-oblibs1.4snapshot"] = {
+    ["2.3.13-oblibs2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
       ,
     }
     ,
-    ["2.3.13-oblibs2.0.0.0"] = {
+    ["2.3.13snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1084,14 +1084,14 @@ repository = {
   }
   ,
   ["mico-multithread-debug"] = {
-    ["2.3.13-oblibs1.4snapshot"] = {
+    ["2.3.13-oblibs2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
       ,
     }
     ,
-    ["2.3.13-oblibs2.0.0.0"] = {
+    ["2.3.13snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1101,14 +1101,14 @@ repository = {
   }
   ,
   ["mico-singlethread"] = {
-    ["2.3.13-oblibs1.4snapshot"] = {
+    ["2.3.13-oblibs2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
       ,
     }
     ,
-    ["2.3.13-oblibs2.0.0.0"] = {
+    ["2.3.13snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1118,14 +1118,14 @@ repository = {
   }
   ,
   ["mico-singlethread-debug"] = {
-    ["2.3.13-oblibs1.4snapshot"] = {
+    ["2.3.13-oblibs2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
       ,
     }
     ,
-    ["2.3.13-oblibs2.0.0.0"] = {
+    ["2.3.13snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1183,7 +1183,7 @@ repository = {
       ,
     }
     ,
-    ["0.5.0-oblibs1.4snapshot"] = {
+    ["0.5.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1228,7 +1228,7 @@ repository = {
       ,
     }
     ,
-    ["0.5.0-oblibs1.4snapshot"] = {
+    ["0.5.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2374,6 +2374,13 @@ repository = {
       ,
     }
     ,
+    ["1.5.4snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-source"] = {
@@ -2520,7 +2527,7 @@ repository = {
       ,
     }
     ,
-    ["2.4.11-oblibs1.4snapshot"] = {
+    ["2.4.11snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2848,7 +2855,7 @@ repository = {
   }
   ,
   ["tolua"] = {
-    ["5.1-oblibs1.4snapshot"] = {
+    ["5.1snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }

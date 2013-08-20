@@ -4,8 +4,8 @@ name = "luacoroutine"
 version = "1.0snapshot"
 subpackage_of = "loop == 2snapshot"
 dependencies = {
-  "lua == 5.1.3-oblibs1.4snapshot",
-  "lua-bin == 5.1.3-oblibs1.4snapshot",
+  "lua == 5.1.3snapshot",
+  "lua-bin == 5.1.3snapshot",
 }
 build = {
   type = "tecmake",
