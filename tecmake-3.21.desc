@@ -14,19 +14,21 @@ export TECMAKE_HOME=$TECTOOLS_HOME/tecmake
 $TECMAKE_HOME/tecmake $@
 ]]
 
-local fname = config.TMPDIR.."/tecmake"
-local f = io.open(fname,"w")
+local fname_config = config.TMPDIR.."/tec_uname.bsh"
+local fname_script = config.TMPDIR.."/tecmake"
+local f = io.open(fname_script,"w")
 f:write(tecmake_wrapper)
 f:close()
 
-local comment_variables = [[sed -i .orig -e 's!^export TECTOOLS_HOME!#export TECTOOLS_HOME!' -e 's!^export TECMAKE_HOME!#export TECMAKE_HOME!']]
+local comment_variables = "sed -e 's!^export TECTOOLS_HOME!#export TECTOOLS_HOME!' -e 's!^export TECMAKE_HOME!#export TECMAKE_HOME!' > "..fname_config
 
 build = {
   type = "command",
-  cmd = comment_variables.." tec_uname.bsh ; chmod 755 ".. fname,
+  cmd = comment_variables.." tec_uname.bsh ; chmod 755 ".. fname_script,
 }
 
 install_files = {
-  [fname] = "bin",
+  [fname_script] = "bin",
   ["*"] = "share/tecmake",
+  [fname_config] = "share/tecmake",
 }
