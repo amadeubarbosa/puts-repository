@@ -1,0 +1,3 @@
+name = "openbus-source"
+version = "1.5.4.0"
+url = SVNREPURL .. "/openbus/core/tags/01_05_04_00"

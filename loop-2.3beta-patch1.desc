@@ -1,0 +1,8 @@
+name = "loop"
+version = "2.3beta-patch1"
+subpackage_of = "oil-source == 0.5.0-patch1"
+dev_files = {
+  ["lua/loop"] = "lib/lua/5.1",
+  ["lua/precompiler.lua"] = "lib/lua/5.1",
+  ["lua/preloader.lua"] = "lib/lua/5.1",
+}
