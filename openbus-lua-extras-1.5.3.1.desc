@@ -1,6 +1,6 @@
 --FIXME: esse pacote deve ser removido quando concluir OPENBUS-1372
 name = "openbus-lua-extras"
-version = "1.5.3-1"
+version = "1.5.3.1"
 url = SVNREPURL .."/openbus/core/tags/OB_v1_05_03_01_2011_12_12/data"
 install_files = {
   ["conf/config"] = "data/conf",
