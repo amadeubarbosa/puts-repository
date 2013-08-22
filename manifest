@@ -1489,7 +1489,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1669,7 +1669,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1703,7 +1703,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1720,7 +1720,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1737,7 +1737,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1801,7 +1801,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1818,7 +1818,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1835,7 +1835,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1882,7 +1882,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1899,7 +1899,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1916,7 +1916,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1933,7 +1933,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1950,7 +1950,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1967,7 +1967,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2045,7 +2045,7 @@ repository = {
   }
   ,
   ["openbus-doc-install"] = {
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2215,7 +2215,7 @@ repository = {
   }
   ,
   ["openbus-interop-multiplexing-mico"] = {
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2225,7 +2225,7 @@ repository = {
   }
   ,
   ["openbus-interop-reloggedjoin-mico"] = {
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2235,7 +2235,7 @@ repository = {
   }
   ,
   ["openbus-interop-sharedauth-mico"] = {
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2245,7 +2245,7 @@ repository = {
   }
   ,
   ["openbus-interop-simple-mico"] = {
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2399,7 +2399,7 @@ repository = {
   }
   ,
   ["openbus-run-test-cpp-mico"] = {
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2485,7 +2485,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2502,7 +2502,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
