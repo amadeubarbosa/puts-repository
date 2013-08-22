@@ -28,6 +28,7 @@ build = {
  },
   bjam_opts = {
      "-d+2",
+     "--layout=tagged",
   },
 }
 install_files = {
