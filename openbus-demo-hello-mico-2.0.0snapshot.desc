@@ -1,9 +1,11 @@
-name = "openbus-test-cpp-mico"
-version = "2.0snapshot"
+name = "openbus-demo-hello-mico"
+version = "2.0.0snapshot"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
+  "openbus-cpp-mico == "..version,
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
+  "boost-program-options == 1.51.0-oblibs2.0.0.0",
   "mico-singlethread-debug == 2.3.13snapshot",
   "mico-multithread-debug == 2.3.13snapshot",
   "mico-singlethread == 2.3.13snapshot",
@@ -18,14 +20,13 @@ dependencies = {
 build = {
   type = "bjam",
   src = ".",
-  jobs = 1,
   targets = {
-     "run-tests",
+     "stage-demo-hello",
   },
   variables = {
-    threading = { "single", "multi" },
-    variant = { "debug", "release" },
-    link = { "static", "shared" },
+    threading = {"single", "multi"},
+    variant = {"debug", "release"},
+    link = {"static", "shared"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_ST_DBG_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
     ["-sMICO_ST_DBG_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
@@ -51,4 +52,11 @@ build = {
      "--openbus-with-puts",
      "--layout=tagged",
   },
+}
+dev_files = {
+  ["demo/hello/idl"]    = "demo/hello",
+  ["demo/hello/server"] = "demo/hello",
+  ["demo/hello/client"] = "demo/hello",
+  ["demo/hello/admin"]  = "demo/hello",
+  ["stage-demos/hello/*"]  = "demo/hello/bin",
 }

@@ -1,13 +1,11 @@
-name = "openbus-demo-dedicated-clock-assistant-mico"
-version = "2.0snapshot"
-subpackage_of = "openbus-cpp-assistant-mico == "..version
+name = "openbus-demo-dedicated-clock-mico"
+version = "2.0.0snapshot"
+subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
   "openbus-cpp-mico == "..version,
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
   "boost-program-options == 1.51.0-oblibs2.0.0.0",
-  "boost-system == 1.51.0-oblibs2.0.0.0",
-  "boost-chrono == 1.51.0-oblibs2.0.0.0",
   "mico-singlethread-debug == 2.3.13snapshot",
   "mico-multithread-debug == 2.3.13snapshot",
   "mico-singlethread == 2.3.13snapshot",
@@ -23,7 +21,7 @@ build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage-assistant-demo-dedicated_clock",
+     "stage-demo-dedicated_clock",
   },
   variables = {
     threading = {"single", "multi"},
@@ -56,9 +54,9 @@ build = {
   },
 }
 dev_files = {
-  ["assistant/demo/dedicated_clock/idl"]    = "demo/assistant/dedicated_clock",
-  ["assistant/demo/dedicated_clock/server"] = "demo/assistant/dedicated_clock",
-  ["assistant/demo/dedicated_clock/client"] = "demo/assistant/dedicated_clock",
-  ["assistant/demo/dedicated_clock/admin"]  = "demo/assistant/dedicated_clock",
-  ["stage-demos/assistant/dedicated_clock/*"]  = "demo/assistant/dedicated_clock/bin",
+  ["demo/dedicated_clock/idl"]    = "demo/dedicated_clock",
+  ["demo/dedicated_clock/server"] = "demo/dedicated_clock",
+  ["demo/dedicated_clock/client"] = "demo/dedicated_clock",
+  ["demo/dedicated_clock/admin"]  = "demo/dedicated_clock",
+  ["stage-demos/dedicated_clock/*"]  = "demo/dedicated_clock/bin",
 }

@@ -1,11 +1,10 @@
-name = "openbus-demo-independent-clock-mico"
-version = "2.0snapshot"
+name = "openbus-demo-audit-mico"
+version = "2.0.0snapshot"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
   "openbus-cpp-mico == "..version,
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
-  "boost-program-options == 1.51.0-oblibs2.0.0.0",
   "mico-singlethread-debug == 2.3.13snapshot",
   "mico-multithread-debug == 2.3.13snapshot",
   "mico-singlethread == 2.3.13snapshot",
@@ -21,10 +20,10 @@ build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage-demo-independent_clock",
+     "stage-demo-audit",
   },
   variables = {
-    threading = "multi",
+    threading = {"single", "multi"},
     variant = {"debug", "release"},
     link = {"static", "shared"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
@@ -54,9 +53,10 @@ build = {
   },
 }
 dev_files = {
-  ["demo/independent_clock/idl"]    = "demo/independent_clock",
-  ["demo/independent_clock/client"] = "demo/independent_clock",
-  ["demo/independent_clock/server"] = "demo/independent_clock",
-  ["demo/independent_clock/admin"]  = "demo/independent_clock",
-  ["stage-demos/independent_clock/*"]  = "demo/independent_clock/bin",
+  ["demo/hello/idl"]    = "demo/hello",
+  ["demo/audit/client"] = "demo/audit",
+  ["demo/audit/server"] = "demo/audit",
+  ["demo/audit/proxy"]  = "demo/audit",
+  ["demo/audit/admin"]  = "demo/audit",
+  ["stage-demos/audit/*"]  = "demo/audit/bin",
 }

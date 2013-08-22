@@ -1,11 +1,12 @@
-name = "openbus-demo-sharedauth-mico"
-version = "2.0snapshot"
-subpackage_of = "openbus-cpp-mico == "..version
+name = "openbus-test-cpp-assistant-mico"
+version = "2.0.0snapshot"
+subpackage_of = "openbus-cpp-assistant-mico == "..version
 dependencies = {
-  "openbus-cpp-mico == "..version,
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
-  "boost-program-options == 1.51.0-oblibs2.0.0.0",
+  "boost-thread == 1.51.0-oblibs2.0.0.0",
+  "boost-system == 1.51.0-oblibs2.0.0.0",
+  "boost-chrono == 1.51.0-oblibs2.0.0.0",
   "mico-singlethread-debug == 2.3.13snapshot",
   "mico-multithread-debug == 2.3.13snapshot",
   "mico-singlethread == 2.3.13snapshot",
@@ -16,12 +17,13 @@ dependencies = {
   "scs-cpp-mico == 1.2snapshot",
   "openssl == 1.0.0j",
   "openbus-cpp-mico == 2.0snapshot",
+  "openbus-cpp-assistant-mico == 2.0snapshot",
 }
 build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage-demo-sharedauth",
+     "stage-assistant-tests",
   },
   variables = {
     threading = {"single", "multi"},
@@ -53,9 +55,9 @@ build = {
      "--layout=tagged",
   },
 }
-dev_files = {
-  ["demo/sharedauth/idl"]   = "demo/sharedauth",
-  ["demo/sharedauth/src"]   = "demo/sharedauth",
-  ["demo/sharedauth/admin"] = "demo/sharedauth",
-  ["stage-demos/sharedauth/*"] = "demo/sharedauth/bin",
-}
+
+-- dev_files = {
+--   ["stage/libopenbus-*"] = "lib",
+--   ["include/openbus"] = "include/openbus/cpp",    --include
+--   ["stage/stubs"] = "include/openbus/cpp",     --include
+-- }

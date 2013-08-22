@@ -1,5 +1,5 @@
-name = "openbus-interop-multiplexing-mico"
-version = "2.0snapshot"
+name = "openbus-interop-simple-mico"
+version = "2.0.0snapshot"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
   "openbus-cpp-mico == "..version,
@@ -18,9 +18,9 @@ dependencies = {
 }
 build = {
   type = "bjam",
-  src = "interop/multiplexing",
+  src = "interop/simple",
   targets = {
-    "multiplexing",
+    "simple",
   },
   variables = {
     threading = {"single", "multi"},

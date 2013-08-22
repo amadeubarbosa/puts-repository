@@ -1,11 +1,11 @@
-name = "openbus-interop-simple-mico"
-version = "2.0snapshot"
+name = "openbus-demo-greetings-mico"
+version = "2.0.0snapshot"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
   "openbus-cpp-mico == "..version,
   "boost == 1.51.0-oblibs2.0.0.0",
-  "boost-program-options == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
+  "boost-program-options == 1.51.0-oblibs2.0.0.0",
   "mico-singlethread-debug == 2.3.13snapshot",
   "mico-multithread-debug == 2.3.13snapshot",
   "mico-singlethread == 2.3.13snapshot",
@@ -15,12 +15,13 @@ dependencies = {
   "scs-idl1.2 == 1.2snapshot",
   "scs-cpp-mico == 1.2snapshot",
   "openssl == 1.0.0j",
+  "openbus-cpp-mico == 2.0snapshot",
 }
 build = {
   type = "bjam",
-  src = "interop/simple",
+  src = ".",
   targets = {
-    "simple",
+     "stage-demo-greetings",
   },
   variables = {
     threading = {"single", "multi"},
@@ -35,8 +36,7 @@ build = {
     ["-sMICO_ST_INCLUDE_PATH"] = "%directory(mico-singlethread)%/include",
     ["-sMICO_MT_LIB_PATH"] = "%directory(mico-multithread-debug)%/libs",
     ["-sMICO_MT_INCLUDE_PATH"] = "%directory(mico-multithread)%/include",
-    ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-singlethread-debug)%/cpp "..
-      "%directory(mico-singlethread-debug)%/idl\"",
+    ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-singlethread-debug)%/cpp %directory(mico-singlethread-debug)%/idl\"",
     ["-sMICO_IDL_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
     ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.2)%/src",
     ["-sSCS_PATH"] = "%directory(scs-cpp-mico)%",
@@ -48,10 +48,15 @@ build = {
     BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
   bjam_opts = {
-    "-d+2",
-    "--openbus-with-puts",
-    "--layout=tagged",
+     "-d+2",
+     "--openbus-with-puts",
+     "--layout=tagged",
   },
 }
 dev_files = {
+  ["demo/greetings/idl"]    = "demo/greetings",
+  ["demo/greetings/server"] = "demo/greetings",
+  ["demo/greetings/client"] = "demo/greetings",
+  ["demo/greetings/admin"]  = "demo/greetings",
+  ["stage-demos/greetings/*"]  = "demo/greetings/bin",
 }

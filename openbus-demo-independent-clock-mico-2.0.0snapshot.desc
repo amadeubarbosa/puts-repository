@@ -1,9 +1,11 @@
-name = "openbus-cpp-mico"
-version = "2.0snapshot"
-url = SVNREPURL .. "/openbus/sdk/cpp/branches/02_00_00"
+name = "openbus-demo-independent-clock-mico"
+version = "2.0.0snapshot"
+subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
+  "openbus-cpp-mico == "..version,
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
+  "boost-program-options == 1.51.0-oblibs2.0.0.0",
   "mico-singlethread-debug == 2.3.13snapshot",
   "mico-multithread-debug == 2.3.13snapshot",
   "mico-singlethread == 2.3.13snapshot",
@@ -13,17 +15,18 @@ dependencies = {
   "scs-idl1.2 == 1.2snapshot",
   "scs-cpp-mico == 1.2snapshot",
   "openssl == 1.0.0j",
+  "openbus-cpp-mico == 2.0snapshot",
 }
 build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage",
+     "stage-demo-independent_clock",
   },
   variables = {
-    threading = { "single", "multi" },
-    variant = { "debug", "release" },
-    link = { "static", "shared" },
+    threading = "multi",
+    variant = {"debug", "release"},
+    link = {"static", "shared"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_ST_DBG_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
     ["-sMICO_ST_DBG_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
@@ -50,9 +53,10 @@ build = {
      "--layout=tagged",
   },
 }
-
 dev_files = {
-  ["stage/libopenbus-*"] = "lib",
-  ["include/openbus"] = "include/openbus/cpp",    --include
-  ["stage/stubs"] = "include/openbus/cpp",     --include
+  ["demo/independent_clock/idl"]    = "demo/independent_clock",
+  ["demo/independent_clock/client"] = "demo/independent_clock",
+  ["demo/independent_clock/server"] = "demo/independent_clock",
+  ["demo/independent_clock/admin"]  = "demo/independent_clock",
+  ["stage-demos/independent_clock/*"]  = "demo/independent_clock/bin",
 }

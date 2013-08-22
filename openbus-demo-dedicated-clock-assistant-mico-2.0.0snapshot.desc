@@ -1,5 +1,5 @@
-name = "openbus-demo-hello-assistant-mico"
-version = "2.0snapshot"
+name = "openbus-demo-dedicated-clock-assistant-mico"
+version = "2.0.0snapshot"
 subpackage_of = "openbus-cpp-assistant-mico == "..version
 dependencies = {
   "openbus-cpp-mico == "..version,
@@ -23,7 +23,7 @@ build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage-assistant-demo-hello",
+     "stage-assistant-demo-dedicated_clock",
   },
   variables = {
     threading = {"single", "multi"},
@@ -56,9 +56,9 @@ build = {
   },
 }
 dev_files = {
-  ["assistant/demo/hello/idl"]    = "demo/assistant/hello",
-  ["assistant/demo/hello/client"] = "demo/assistant/hello",
-  ["assistant/demo/hello/server"] = "demo/assistant/hello",
-  ["assistant/demo/hello/admin"]  = "demo/assistant/hello",
-  ["stage-demos/assistant/hello/*"]  = "demo/assistant/hello/bin",
+  ["assistant/demo/dedicated_clock/idl"]    = "demo/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/server"] = "demo/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/client"] = "demo/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/admin"]  = "demo/assistant/dedicated_clock",
+  ["stage-demos/assistant/dedicated_clock/*"]  = "demo/assistant/dedicated_clock/bin",
 }

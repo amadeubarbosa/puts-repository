@@ -1,10 +1,11 @@
-name = "openbus-demo-multiplexing-mico"
-version = "2.0snapshot"
+name = "openbus-demo-sharedauth-mico"
+version = "2.0.0snapshot"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
   "openbus-cpp-mico == "..version,
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
+  "boost-program-options == 1.51.0-oblibs2.0.0.0",
   "mico-singlethread-debug == 2.3.13snapshot",
   "mico-multithread-debug == 2.3.13snapshot",
   "mico-singlethread == 2.3.13snapshot",
@@ -20,7 +21,7 @@ build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage-demo-multiplexing",
+     "stage-demo-sharedauth",
   },
   variables = {
     threading = {"single", "multi"},
@@ -53,9 +54,8 @@ build = {
   },
 }
 dev_files = {
-  ["demo/multiplexing/idl"]    = "demo/multiplexing",
-  ["demo/multiplexing/client"] = "demo/multiplexing",
-  ["demo/multiplexing/server"] = "demo/multiplexing",
-  ["demo/multiplexing/admin"]  = "demo/multiplexing",
-  ["stage-demos/multiplexing/*"]  = "demo/multiplexing/bin",
+  ["demo/sharedauth/idl"]   = "demo/sharedauth",
+  ["demo/sharedauth/src"]   = "demo/sharedauth",
+  ["demo/sharedauth/admin"] = "demo/sharedauth",
+  ["stage-demos/sharedauth/*"] = "demo/sharedauth/bin",
 }
