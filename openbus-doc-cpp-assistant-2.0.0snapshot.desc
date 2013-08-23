@@ -1,6 +1,6 @@
 name = "openbus-doc-cpp-assistant"
 version = "2.0.0snapshot"
-subpackage_of = "openbus-cpp-assistant-mico == 2.0snapshot"
+subpackage_of = "openbus-cpp-assistant-mico == 2.0.0snapshot"
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
@@ -18,7 +18,7 @@ dependencies = {
   "logger == 2.0.0.0",
   "scs-idl1.2 == 1.2.1",
   "scs-cpp-mico == 1.2.0.1",
-  "openbus-cpp-mico == 2.0snapshot",
+  "openbus-cpp-mico == 2.0.0snapshot",
   "openssl == 1.0.0j",
 }
 build = {

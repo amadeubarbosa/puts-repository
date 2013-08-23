@@ -1,5 +1,5 @@
 name = "openbus-doc-cpp-assistant"
-version = "2.0snapshot"
+version = "2.0.0snapshot"
 subpackage_of = "openbus-cpp-assistant-mico == "..version
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
@@ -19,7 +19,7 @@ dependencies = {
   "scs-idl1.2 == 1.2snapshot",
   "scs-cpp-mico == 1.2snapshot",
   "openssl == 1.0.0j",
-  "openbus-cpp-mico == 2.0snapshot",
+  "openbus-cpp-mico == 2.0.0snapshot",
 }
 build = {
   type = "bjam",
