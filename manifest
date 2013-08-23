@@ -1455,7 +1455,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1472,7 +1472,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1652,7 +1652,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1686,7 +1686,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1784,7 +1784,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2205,7 +2205,7 @@ repository = {
   }
   ,
   ["openbus-interop-delegation-mico"] = {
-    ["2.0snapshot"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
