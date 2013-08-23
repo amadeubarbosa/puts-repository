@@ -1,5 +1,5 @@
 name = "openbus-demo-assistant-mico-sources"
-version = "2.0snapshot"
+version = "2.0.0snapshot"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
   "openbus-demo-chain-validation-assistant-mico == "..version,

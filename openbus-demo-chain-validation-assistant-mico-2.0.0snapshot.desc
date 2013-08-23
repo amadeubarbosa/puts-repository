@@ -1,9 +1,11 @@
-name = "openbus-cpp-assistant-mico"
-version = "2.0snapshot"
-subpackage_of = "openbus-cpp-mico == "..version
+name = "openbus-demo-chain-validation-assistant-mico"
+version = "2.0.0snapshot"
+subpackage_of = "openbus-cpp-assistant-mico == "..version
 dependencies = {
+  "openbus-cpp-mico == "..version,
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
+  "boost-program-options == 1.51.0-oblibs2.0.0.0",
   "boost-system == 1.51.0-oblibs2.0.0.0",
   "boost-chrono == 1.51.0-oblibs2.0.0.0",
   "mico-singlethread-debug == 2.3.13snapshot",
@@ -14,19 +16,19 @@ dependencies = {
   "logger == 2.0snapshot",
   "scs-idl1.2 == 1.2snapshot",
   "scs-cpp-mico == 1.2snapshot",
-  "openbus-cpp-mico == 2.0snapshot",
   "openssl == 1.0.0j",
+  "openbus-cpp-mico == 2.0.0snapshot",
 }
 build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage-assistant",
+     "stage-assistant-demo-chain_validation",
   },
   variables = {
     threading = {"single", "multi"},
     variant = {"debug", "release"},
-    link = { "static", "shared" },
+    link = {"static", "shared"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_ST_DBG_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
     ["-sMICO_ST_DBG_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
@@ -54,6 +56,11 @@ build = {
   },
 }
 dev_files = {
-  ["stage/libassistant*"] = "lib",
-  ["assistant/include/openbus"]     = "include/openbus/cpp",
+  ["assistant/demo/chain_validation/idl"]       = "demo/assistant/chain_validation",
+  ["assistant/demo/chain_validation/client"] = "demo/assistant/chain_validation",
+  ["assistant/demo/chain_validation/secretary"] = "demo/assistant/chain_validation",
+  ["assistant/demo/chain_validation/executive"] = "demo/assistant/chain_validation",
+  ["assistant/demo/chain_validation/admin"]     = "demo/assistant/chain_validation",
+  ["stage-demos/assistant/chain_validation/*"]     = "demo/assistant/chain_validation/bin",
 }
+
