@@ -38,4 +38,5 @@ install_files = {
 }
 dev_files = {
   ["../test/*"] = "test",
+  ["../idl/*.idl"] = "idl/adm", -- for tests only
 }
