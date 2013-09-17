@@ -10,6 +10,7 @@ build = {
   type = "tecmake",
   variables = {
     LUA51 = "%directory(lua)%",
+    USE_LUA51 = "Yes",
   },
   mf = { "luastruct" },
   MacOS = { mf = { "luastruct", "luastruct BUILD_DYLIB=Yes" } },
