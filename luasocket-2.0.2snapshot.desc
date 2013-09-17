@@ -10,6 +10,7 @@ build = {
   type = "tecmake",
   variables = {
     LUA51 = "%directory(lua)%",
+    USE_LUA51 = "Yes",
   },
   mf = { "config", },
   MacOS = { mf = {"config", "config BUILD_DYLIB=Yes"} },
