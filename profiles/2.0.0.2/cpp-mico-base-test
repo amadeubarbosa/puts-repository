@@ -1,0 +1,4 @@
+openbus-cpp-mico-2.0.0.2 +dependencies +dev
+openbus-cpp-assistant-mico-2.0.0.2 +dependencies +dev
+openbus-test-cpp-mico-2.0.0.2 +dependencies +dev
+openbus-test-cpp-assistant-mico-2.0.0.2 +dependencies +dev
