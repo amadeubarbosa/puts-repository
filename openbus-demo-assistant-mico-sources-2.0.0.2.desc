@@ -1,0 +1,42 @@
+name = "openbus-demo-assistant-mico-sources"
+version = "2.0.0.2"
+subpackage_of = "openbus-cpp-mico == "..version
+dependencies = {
+  "openbus-demo-chain-validation-assistant-mico == "..version,
+  "openbus-demo-dedicated-clock-assistant-mico == "..version,
+  "openbus-demo-greetings-assistant-mico == "..version,
+  "openbus-demo-hello-assistant-mico == "..version,
+  "openbus-demo-independent-clock-assistant-mico == "..version,
+}
+dev_files = {
+  ["assistant/demo/chain_validation/idl"]   = "demo/assistant/chain_validation",
+  ["assistant/demo/chain_validation/client"]   = "demo/assistant/chain_validation",
+  ["assistant/demo/chain_validation/executive"]   = "demo/assistant/chain_validation",
+  ["assistant/demo/chain_validation/secretary"]   = "demo/assistant/chain_validation",
+  ["assistant/demo/chain_validation/admin"] = "demo/assistant/chain_validation",
+  ["assistant/demo/chain_validation/Jamfile"] = "demo/assistant/chain_validation",
+
+  ["assistant/demo/dedicated_clock/idl"]   = "demo/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/client"]   = "demo/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/server"]   = "demo/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/admin"] = "demo/assistant/dedicated_clock",
+  ["assistant/demo/dedicated_clock/Jamfile"] = "demo/assistant/dedicated_clock",
+
+  ["assistant/demo/greetings/idl"]   = "demo/assistant/greetings",
+  ["assistant/demo/greetings/client"]   = "demo/assistant/greetings",
+  ["assistant/demo/greetings/server"]   = "demo/assistant/greetings",
+  ["assistant/demo/greetings/admin"] = "demo/assistant/greetings",
+  ["assistant/demo/greetings/Jamfile"] = "demo/assistant/greetings",
+
+  ["assistant/demo/hello/idl"]   = "demo/assistant/hello",
+  ["assistant/demo/hello/client"]   = "demo/assistant/hello",
+  ["assistant/demo/hello/server"]   = "demo/assistant/hello",
+  ["assistant/demo/hello/admin"] = "demo/assistant/hello",
+  ["assistant/demo/hello/Jamfile"] = "demo/assistant/hello",
+
+  ["assistant/demo/independent_clock/idl"]   = "demo/assistant/independent_clock",
+  ["assistant/demo/independent_clock/client"]   = "demo/assistant/independent_clock",
+  ["assistant/demo/independent_clock/server"]   = "demo/assistant/independent_clock",
+  ["assistant/demo/independent_clock/admin"] = "demo/assistant/independent_clock",
+  ["assistant/demo/independent_clock/Jamfile"] = "demo/assistant/independent_clock",
+}

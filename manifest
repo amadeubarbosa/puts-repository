@@ -1455,6 +1455,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1472,6 +1479,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1483,6 +1497,13 @@ repository = {
   ,
   ["openbus-cpp-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1652,6 +1673,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1663,6 +1691,13 @@ repository = {
   ,
   ["openbus-demo-audit-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1686,6 +1721,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1697,6 +1739,13 @@ repository = {
   ,
   ["openbus-demo-chain-validation-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1720,6 +1769,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1731,6 +1787,13 @@ repository = {
   ,
   ["openbus-demo-dedicated-clock-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1784,6 +1847,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1795,6 +1865,13 @@ repository = {
   ,
   ["openbus-demo-greetings-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1818,6 +1895,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1829,6 +1913,13 @@ repository = {
   ,
   ["openbus-demo-hello-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1882,6 +1973,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1893,6 +1991,13 @@ repository = {
   ,
   ["openbus-demo-independent-clock-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1916,6 +2021,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1927,6 +2039,13 @@ repository = {
   ,
   ["openbus-demo-multiplexing-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1950,6 +2069,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1961,6 +2087,13 @@ repository = {
   ,
   ["openbus-demo-sharedauth-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2012,6 +2145,13 @@ repository = {
   ,
   ["openbus-doc-cpp-assistant"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2492,6 +2632,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -2503,6 +2650,13 @@ repository = {
   ,
   ["openbus-test-cpp-mico"] = {
     ["2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
