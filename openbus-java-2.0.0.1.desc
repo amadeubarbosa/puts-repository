@@ -4,7 +4,7 @@ url = SVNREPURL .. "/openbus/sdk/java/tags/02_00_00_01"
 dependencies = { 
   "scs-java == 1.2.1.1",
   "openbus-idl1.5 == 1.5.2-1",
-  "openbus-idl2.0 == 2.0snapshot",
+  "openbus-idl2.0 == 2.0.1",
 }
 build = {
   type = "maven",
