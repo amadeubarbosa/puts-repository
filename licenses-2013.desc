@@ -1,0 +1,7 @@
+name = "licenses"
+version = "2013"
+url = SVNREPURL .. "/openbus/license"
+install_files = {
+  ["LICENSE"] = ".",
+  ["COPYRIGHT"]  = ".",
+}
