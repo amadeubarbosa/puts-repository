@@ -5,3 +5,4 @@ openbus-demo-assistant-mico-sources-2.0.0.2 +dev
 boost-program-options-1.51.0-oblibs2.0.0.0
 openbus-demo-scs-mico-idl-2.0.0.2
 openbus-doc-cpp-assistant-2.0.0.2 +dependencies +dev
+licenses-2013
