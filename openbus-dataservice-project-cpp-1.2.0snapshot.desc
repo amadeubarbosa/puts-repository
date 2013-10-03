@@ -66,6 +66,7 @@ install_files = {
 }
 dev_files = {
   ["include/*"]        = "include/dataservice/project",
+  ["stage/stubs/*"]        = "include/dataservice/stubs",
   ["demo/file_system/source"]        = "demo/dataservice/file_system",
   ["demo/file_system/idl"]        = "demo/dataservice/file_system",
   ["demo/file_system/admin"] = "demo/dataservice/file_system",
