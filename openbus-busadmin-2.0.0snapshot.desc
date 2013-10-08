@@ -17,7 +17,7 @@ dependencies = {
   "lce == 2.0.0-1",
   "luuid == 1.0-oblibs1.3.2-1",
   "luafilesystem == 1.4.2-oblibs1.3.2-1",
-  "openbus-lua == "..version,
+  "openbus-lua == 2.0.0.1",
   "latt == 1.1-2",
 } 
 build = {
