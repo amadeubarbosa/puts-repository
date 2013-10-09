@@ -1,0 +1,13 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "lua-bin"
+version = "5.2.2"
+subpackage_of = "lua == "..version
+build = {
+  type = "tecmake",
+  mf = { "lua" },
+  SunOS510_64 = { mf = {"lua ".. SUNOS64_TECMAKE_FLAGS} },
+}
+install_files = {
+  ["../bin/${TEC_UNAME}/lua5.2"] = "bin",
+}

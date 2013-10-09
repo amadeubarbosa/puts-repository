@@ -656,6 +656,13 @@ repository = {
       ,
     }
     ,
+    ["3.0betaCompatLua52"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["lpw"] = {
@@ -714,6 +721,13 @@ repository = {
       ,
     }
     ,
+    ["5.2.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["lua-bin"] = {
@@ -745,10 +759,24 @@ repository = {
       ,
     }
     ,
+    ["5.2.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["luacoroutine"] = {
     ["1.0beta"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.0betaCompatLua52"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -780,6 +808,13 @@ repository = {
   ,
   ["luacothread"] = {
     ["1.0beta"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.0betaCompatLua52"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -869,10 +904,24 @@ repository = {
       ,
     }
     ,
+    ["0.6betaCompatLua52"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["luainspector"] = {
     ["1.0beta"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.0betaCompatLua52"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -955,6 +1004,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.2compatLua52"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.2snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -973,6 +1029,13 @@ repository = {
     }
     ,
     ["1.2-oblibs1.3.2-1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.2compatLua52"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1000,6 +1063,13 @@ repository = {
   ,
   ["luatuple"] = {
     ["1.0beta"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.0betaCompatLua52"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1038,6 +1108,13 @@ repository = {
     }
     ,
     ["1.1-oblibs1.3.2-1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.1compatLua52"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1201,6 +1278,13 @@ repository = {
       ,
     }
     ,
+    ["0.6betaCompatLua52"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["oil-source"] = {
@@ -1247,6 +1331,13 @@ repository = {
     }
     ,
     ["0.6beta"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["0.6betaCompatLua52"] = {
       [1] = {
         ["arch"] = "desc",
       }

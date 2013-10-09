@@ -1,0 +1,21 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "lua"
+version = "5.2.2"
+url = SVNREPURL .. "/openbus/libs/lua/branches/5.2.2"
+build = {
+  type = "tecmake",
+  mf = { "config" },
+  MacOS = { mf = {"config", "config BUILD_DYLIB=Yes"} },
+  SunOS510_64 = { mf = { "config ".. SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/liblua5.2.so"] = "lib",
+  ["../lib/${TEC_UNAME}/liblua5.2.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/liblua5.2.*"] = "lib",
+  ["../include/*"] = "include/lua5.2.2",
+}
