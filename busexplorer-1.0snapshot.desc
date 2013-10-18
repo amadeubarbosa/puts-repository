@@ -14,6 +14,7 @@ build = {
 
 install_files = {
   ["BusAdminLib/target/site/apidocs/*"] = "doc/busadminlib",
+  ["VisualBusAdmin/src/busexplorer"] = "bin",
   ["VisualBusAdmin/target/*.jar"] = "lib",
   ["VisualBusAdmin/target/dependency/*.jar"] = "lib",
   ["VisualBusAdmin/target/site/apidocs/*"] = "doc/busexplorer",
