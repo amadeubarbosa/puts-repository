@@ -207,6 +207,16 @@ repository = {
     ,
   }
   ,
+  ["busexplorer"] = {
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["collaboration-service"] = {
     ["1.0.0.0"] = {
       [1] = {
