@@ -8,7 +8,7 @@ dependencies = {
 	"lsqlite3 == 0.9.1-devel",
 	"lce == 2.0.0-1",
 	"luuid == 1.0-oblibs1.3.2-1",
-	"openbus-idl2.0 == 2.0snapshot",
+	"openbus-idl2.0 == 2.0.1",
 	"oil == 0.6beta",
 	"scs-lua == 1.2.3-1",
 	"luacoroutine == 1.0beta",
@@ -17,7 +17,7 @@ dependencies = {
 	"luatuple == 1.0beta",
 	"luavararg == 1.1-oblibs1.3.2-1",
 	"loop == 3.0beta",
-	"openbus-lua == 2.0.0snapshot",
+	"openbus-lua == 2.0.0.1",
 }
 build = {
 	type = "bjam",
