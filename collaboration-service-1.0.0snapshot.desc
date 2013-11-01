@@ -43,5 +43,5 @@ build = {
 install_files = {
 	["dist/collaboration-service"] = "bin",
 	["collab.adm"] = "admin",
-    ["shell"] = ".",
+  ["shell"] = ".",
 }
