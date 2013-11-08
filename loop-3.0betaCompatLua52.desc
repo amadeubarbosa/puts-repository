@@ -28,5 +28,5 @@ install_files = {
 dev_files = {
   ["../lib/"..TEC_UNAME.."/libloop.*"] = "lib",
   ["../obj/"..TEC_UNAME.."/loop.h"] = "include/loop",
-  ["../lua/loop/test"] = "lib/lua/5.1/loop",
+  ["../lua/loop/test"] = "lib/lua/5.2/loop",
 }

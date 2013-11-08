@@ -1,0 +1,27 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "luafilesystem"
+version = "1.4.2-oblibs1.3.2-1compatLua52"
+url = SVNREPURL .. "/openbus/libs/luafilesystem/branches/1.4.2/"
+dependencies = {
+  "lua == 5.2.2",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA51 = "%directory(lua)%",
+  },
+  mf = { "config", },
+  MacOS = { mf = {"config", "config BUILD_DYLIB=Yes"} },
+  SunOS510_64 = { mf = { "config ".. SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/liblfs.so"] = "lib",
+  ["../lib/${TEC_UNAME}/liblfs.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/liblfs.*"] = "lib",
+  ["../include/*"] = "include/luafilesystem",
+}
