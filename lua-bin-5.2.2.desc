@@ -9,5 +9,5 @@ build = {
   SunOS510_64 = { mf = {"lua ".. SUNOS64_TECMAKE_FLAGS} },
 }
 install_files = {
-  ["../bin/${TEC_UNAME}/lua5.2"] = "bin",
+  ["../bin/${TEC_UNAME}/lua52"] = "bin",
 }

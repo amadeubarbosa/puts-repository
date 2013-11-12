@@ -12,10 +12,10 @@ build = {
 build.Darwin = build.MacOS
 
 install_files = {
-  ["../lib/${TEC_UNAME}/liblua5.2.so"] = "lib",
-  ["../lib/${TEC_UNAME}/liblua5.2.dylib"] = "lib",
+  ["../lib/${TEC_UNAME}/liblua52.so"] = "lib",
+  ["../lib/${TEC_UNAME}/liblua52.dylib"] = "lib",
 }
 dev_files = {
-  ["../lib/${TEC_UNAME}/liblua5.2.*"] = "lib",
+  ["../lib/${TEC_UNAME}/liblua52.*"] = "lib",
   ["../include/*"] = "include/lua5.2.2",
 }

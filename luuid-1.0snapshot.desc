@@ -11,6 +11,7 @@ build = {
   type = "tecmake",
   variables = {
     LUA51 = "%directory(lua)%",
+    USE_LUA51 = "YES",
     OPENBUS_HOME = INSTALL.TOP,
   },
   mf = { "config", },

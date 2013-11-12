@@ -1,33 +1,33 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes "
 
 name = "openbus-lua"
-version = "2.0.0snapshot"
+version = "2.0.0compatLua52"
 url = SVNREPURL .. "/openbus/sdk/lua/branches/02_00_00"
 dependencies = { 
-  "lce == 2.0.0-1",
-  "loop == 3.0beta",
-  "lua-bin == 5.1.3-oblibs1.3.2-1",
-  "luacoroutine == 1.0beta",
-  "luacothread == 1.0beta",
-  "luafilesystem == 1.4.2-oblibs1.3.2-1",
-  "luaidl == 0.6beta",
-  "luainspector == 1.0beta",
-  "luasocket == 2.0.2-oblibs1.3.2-1",
-  "luastruct == 1.2-oblibs1.3.2-1",
-  "luatuple == 1.0beta",
-  "luavararg == 1.1-oblibs1.3.2-1",
-  "luuid == 1.0-oblibs1.3.2-1",
-  "oil == 0.6beta",
+  "lce == 2.0.0-1compatLua52",
+  "loop == 3.0betaCompatLua52",
+  "lua-bin == 5.2.2",
+  "luacoroutine == 1.0betaCompatLua52",
+  "luacothread == 1.0betaCompatLua52",
+  "luafilesystem == 1.4.2compatLua52",
+  "luaidl == 0.6betaCompatLua52",
+  "luainspector == 1.0betaCompatLua52",
+  "luasocket == 2.0.2compatLua52",
+  "luastruct == 1.2compatLua52",
+  "luatuple == 1.0betaCompatLua52",
+  "luavararg == 1.1compatLua52",
+  "luuid == 1.0compatLua52",
+  "oil == 0.6betaCompatLua52",
   "openbus-idl1.5 == 1.5.2-1",
   "openbus-idl2.0 == 2.0.1",
-  "scs-lua == 1.2.3-1",
+  "scs-lua == 1.2.3-1compatLua52",
   "sdk-idl-source == 2.0.1",
 }
 build = {
   type = "tecmake",
   variables = { 
-    LUA51 = "%directory(lua-bin)%",
-    USE_LUA51 = "YES",
+    LUA52 = "%directory(lua-bin)%",
+    USE_LUA52 = "YES",
     LOOP_HOME = "%directory(loop)%",
     OIL_HOME = "%directory(oil)%",
     OPENBUS_HOME = INSTALL.TOP,
