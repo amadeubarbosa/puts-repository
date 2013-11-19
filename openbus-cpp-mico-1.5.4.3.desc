@@ -1,0 +1,63 @@
+name = "openbus-cpp-mico"
+version = "1.5.4.3"
+url = SVNREPURL .. "/openbus/sdk/cpp/tags/OB_SDK_CPP_v1_05_04_03_2012_12_06"
+dependencies = {
+  "boost-build == 12m",
+  "mico-singlethread-debug == 2.3.13-oblibs2.0.0.0",
+  "mico-multithread-debug == 2.3.13-oblibs2.0.0.0",
+  "mico-singlethread == 2.3.13-oblibs2.0.0.0",
+  "mico-multithread == 2.3.13-oblibs2.0.0.0",
+  "openbus-idl1.5 == 1.5.2",
+  "openbus-idl1.4 == 1.4.7",
+  "logger == 1.1snapshot",
+  "scs-idl1.2 == 1.2.1",
+  "scs-cpp-mico == 1.2.0.1",
+  "openssl == 0.9.9",
+}
+build = {
+  type = "bjam",
+  src = ".",
+  targets = {
+    "",
+  },
+  variables = {
+    threading = { "multi" },
+    variant = { "debug", "release" },
+    link = { "shared", "static" },
+    ["-sMICO_ST_DBG_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
+    ["-sMICO_ST_DBG_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
+    ["-sMICO_MT_DBG_LIB_PATH"] = "%directory(mico-multithread-debug)%/libs",
+    ["-sMICO_MT_DBG_INCLUDE_PATH"] = "%directory(mico-multithread-debug)%/include",
+    ["-sMICO_ST_LIB_PATH"] = "%directory(mico-singlethread)%/libs",
+    ["-sMICO_ST_INCLUDE_PATH"] = "%directory(mico-singlethread)%/include",
+    ["-sMICO_MT_LIB_PATH"] = "%directory(mico-multithread-debug)%/libs",
+    ["-sMICO_MT_INCLUDE_PATH"] = "%directory(mico-multithread)%/include",
+    ["-sMICO_IDL_BIN_PATH"] = "\"%directory(mico-singlethread-debug)%/cpp %directory(mico-singlethread-debug)%/idl\"",
+    ["-sMICO_IDL_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
+    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.2)%/src",
+    ["-sSCS_PATH"] = "%directory(scs-cpp-mico)%",
+    ["-sLOGGER_PATH"] = "%directory(logger)%",
+    ["-sOPENBUS_IDL_PATH"] = "%directory(openbus-idl1.5)%/src",
+    ["-sOPENSSL_LIB_PATH"] = "%directory(openssl)%",
+    ["-sOPENSSL_INCLUDE_PATH"] = "%directory(openssl)%/include",
+		BOOST_BUILD_PATH = "%directory(boost-build)%:"
+			.."%directory(openbus-cpp-mico)%/bbuild",
+		BJAM_SOURCE = "%directory(boost-build)%/engine",    
+  },
+  bjam_opts = {
+     "-d+2",
+     "--openbus-with-puts",
+  },
+}
+
+dev_files = {
+  ["CHANGES"] = ".",
+  ["stage/libopenbus-*"] = "lib",
+  ["include/*"] = "include/openbus",
+  ["stubs/mico"] = "include/openbus/stubs",     --include
+  ["specs/shell"] = "specs",
+  ["management"] = "management",
+  ["demo/hello/idl"] = "demo/hello",
+  ["demo/hello/mico/*.cpp"] = "demo/hello",
+  ["stage-demos/hello*"] = "demo/hello/bin/",
+}

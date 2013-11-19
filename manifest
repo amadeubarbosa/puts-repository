@@ -1705,6 +1705,13 @@ repository = {
   }
   ,
   ["openbus-cpp-mico-multithread"] = {
+    ["1.5.4.3"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.5.5snapshot"] = {
       [1] = {
         ["arch"] = "desc",
