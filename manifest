@@ -1011,6 +1011,13 @@ repository = {
       ,
     }
     ,
+    ["1.1.0CompatLua52"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1681,6 +1688,13 @@ repository = {
   }
   ,
   ["openbus-cpp-mico"] = {
+    ["1.5.4.3"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1705,13 +1719,6 @@ repository = {
   }
   ,
   ["openbus-cpp-mico-multithread"] = {
-    ["1.5.4.3"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
     ["1.5.5snapshot"] = {
       [1] = {
         ["arch"] = "desc",

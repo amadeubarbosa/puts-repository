@@ -1,17 +1,17 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "lualdap"
-version = "1.1.0snapshot"
+version = "1.1.0CompatLua52"
 url = SVNREPURL .. "/openbus/libs/lualdap/branches/1.1.0"
 dependencies = {
-  "lua == 5.1.3snapshot",
+  "lua == 5.2.2",
   "openldap == 2.4.11snapshot",
 }
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "%directory(lua)%",
-    USE_LUA51 = "YES",
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "YES",
     OPENBUS_HOME = INSTALL.TOP,
   },
   mf = { "config", },
