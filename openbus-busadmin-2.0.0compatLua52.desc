@@ -1,8 +1,8 @@
-SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES "
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES"
 
-name = "openbus-busconsole"
+name = "openbus-busadmin"
 version = "2.0.0compatLua52"
-subpackage_of = "openbus-lua == "..version
+subpackage_of = "openbus-busservice == "..version
 dependencies = {
   "lua-bin == 5.2.2",
   "lce == 2.0.0-1compatLua52",
@@ -20,8 +20,9 @@ dependencies = {
   "oil == 0.6betaCompatLua52",
   "scs-lua == 1.2.3-1compatLua52",
   "openbus-lua == "..version,
-}
-
+  "scs-idl1.2 == 1.2.1",
+  "openbus-idl2.0 == 2.0.1",
+} 
 local vars = {
   LUA52 = "%directory(lua-bin)%",
   USE_LUA52 = "YES",
@@ -35,10 +36,9 @@ end
 build = {
   type = "tecmake",
   variables = vars,
-  mf = { "busconsole USE_STATIC=YES" },
-  SunOS510_64 = { mf = { "busconsole USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
+  mf = { "busadmin USE_STATIC=YES" },
+  SunOS510_64 = { mf = { "busadmin USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
 }
-
 install_files = {
-  ["../bin/"..TEC_UNAME.."/busconsole"] = "bin",
+  ["../bin/${TEC_UNAME}/busadmin"] = "bin",
 }

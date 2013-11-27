@@ -4,34 +4,27 @@ name = "openbus-lua"
 version = "2.0.0compatLua52"
 url = SVNREPURL .. "/openbus/sdk/lua/branches/02_00_00"
 dependencies = { 
-  "lce == 2.0.0-1compatLua52",
-  "loop == 3.0betaCompatLua52",
   "lua-bin == 5.2.2",
-  "luacoroutine == 1.0betaCompatLua52",
-  "luacothread == 1.0betaCompatLua52",
-  "luafilesystem == 1.4.2compatLua52",
-  "luaidl == 0.6betaCompatLua52",
-  "luainspector == 1.0betaCompatLua52",
-  "luasocket == 2.0.2compatLua52",
-  "luastruct == 1.2compatLua52",
-  "luatuple == 1.0betaCompatLua52",
-  "luavararg == 1.1compatLua52",
-  "luuid == 1.0compatLua52",
+  "loop == 3.0betaCompatLua52",
   "oil == 0.6betaCompatLua52",
+  "scs-idl1.2 == 1.2.1",
   "openbus-idl1.5 == 1.5.2-1",
   "openbus-idl2.0 == 2.0.1",
-  "scs-lua == 1.2.3-1compatLua52",
   "sdk-idl-source == 2.0.1",
 }
+
+local vars = {
+  LUA52 = "%directory(lua-bin)%",
+  USE_LUA52 = "YES",
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
 build = {
   type = "tecmake",
-  variables = { 
-    LUA52 = "%directory(lua-bin)%",
-    USE_LUA52 = "YES",
-    LOOP_HOME = "%directory(loop)%",
-    OIL_HOME = "%directory(oil)%",
-    OPENBUS_HOME = INSTALL.TOP,
-  },
+  variables = vars,
   mf = { "openbus" },
   MacOS = { mf = { "openbus", "openbus BUILD_DYLIB=YES" }, },
   SunOS510_64 = { mf = { "openbus "..SUNOS64_TECMAKE_FLAGS } },
