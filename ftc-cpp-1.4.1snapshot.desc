@@ -16,7 +16,8 @@ build = {
   type = "bjam",
   src = ".",
   targets = {
-     "stage",
+    "stage",
+    "stage-demos"
   },
   variables = {
     threading = {"single", "multi"},
