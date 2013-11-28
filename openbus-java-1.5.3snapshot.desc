@@ -1,6 +1,6 @@
-name = "openbusapi-java"
+name = "openbus-java"
 version = "1.5.3snapshot"
-url = SVNREPURL .. "/openbus/sdk/java/trunk"
+url = SVNREPURL .. "/openbus/sdk/java/branches/OB_SDK_JAVA_v1_05_03_2012_08_02"
 build = {
   type = "maven",
 }

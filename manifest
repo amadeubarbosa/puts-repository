@@ -2681,6 +2681,20 @@ repository = {
       ,
     }
     ,
+    ["1.5.2snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.5.3snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
@@ -2703,6 +2717,16 @@ repository = {
     }
     ,
     ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-java-doc"] = {
+    ["1.5.3snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2987,26 +3011,6 @@ repository = {
   ,
   ["openbus-test-orbix"] = {
     ["1.5.5snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbusapi-java"] = {
-    ["1.5.3snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbusapi-java-doc"] = {
-    ["1.5.3snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }

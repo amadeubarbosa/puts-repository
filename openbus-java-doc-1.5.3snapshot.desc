@@ -1,6 +1,6 @@
-name = "openbusapi-java-doc"
+name = "openbus-java-doc"
 version = "1.5.3snapshot"
-subpackage_of = "openbusapi-java == "..version
+subpackage_of = "openbus-java == "..version
 build = {
   type = "command",
   src = "core",
