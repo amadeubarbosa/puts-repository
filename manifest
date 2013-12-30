@@ -1787,6 +1787,13 @@ repository = {
   }
   ,
   ["openbus-dataservice-core-java"] = {
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.2.0"] = {
       [1] = {
         ["arch"] = "desc",
