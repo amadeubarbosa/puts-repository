@@ -1777,6 +1777,13 @@ repository = {
   }
   ,
   ["openbus-dataservice-core-idl"] = {
+    ["1.1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.2.0"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1866,6 +1873,13 @@ repository = {
   }
   ,
   ["openbus-dataservice-project-idl"] = {
+    ["1.1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.2.0"] = {
       [1] = {
         ["arch"] = "desc",
