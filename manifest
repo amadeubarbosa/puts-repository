@@ -1935,6 +1935,13 @@ repository = {
   }
   ,
   ["openbus-dataservice-utils-java"] = {
+    ["1.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.2snapshot"] = {
       [1] = {
         ["arch"] = "desc",
