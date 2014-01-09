@@ -1,0 +1,14 @@
+name = "openbus-dataservice-core-java"
+version = "1.0.3snapshot"
+url = SVNREPURL .. "/openbus/services/data_service/core/java/branches/01_00_03"
+build = {
+  type = "maven",
+  javadoc = true,
+}
+install_files = {
+  ["idl/target/*.jar"]                         = "lib",
+  ["idl/target/site/apidocs/*"]                = "doc/idl",
+  ["valuetype/target/*.jar"]                   = "lib",
+  ["valuetype/target/dependency/*.jar"]        = "lib",
+  ["valuetype/target/site/apidocs/*"]          = "doc/core",
+}
