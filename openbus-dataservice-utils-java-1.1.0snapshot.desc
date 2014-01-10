@@ -1,10 +1,10 @@
 name = "openbus-dataservice-utils-java"
-version = "1.1snapshot"
-url = SVNREPURL .. "/openbus/services/data_service/openbus/java/branches/01_01"
+version = "1.1.0snapshot"
+url = SVNREPURL .. "/openbus/services/data_service/openbus/java/branches/01_01_00"
 dependencies = {
   "openbus-dataservice-core-idl == 1.1.0",
-  "openbus-dataservice-core-java == 1.1snapshot",
-  "openbus-dataservice-project-java == 1.1snapshot",
+  "openbus-dataservice-core-java == 1.1.1.0",
+  "openbus-dataservice-project-java == 1.1.1.0",
   "openbus-java == 1.5.2-1",
   "ftc-java == 1.1.2",
 }
