@@ -1,0 +1,15 @@
+name = "openbus-dataservice-project-java"
+version = "1.0.1.0"
+url = SVNREPURL .. "/openbus/services/data_service/project/java/tags/01_00_01_00"
+build = {
+  type = "maven",
+  javadoc = true,
+}
+install_files = { 
+  ["idl/target/*.jar"]                         = "lib",
+  ["idl/target/dependency/*.jar"]              = "lib",
+  ["idl/target/site/apidocs/*"]                = "doc/project",
+  ["valuetype/target/*.jar"]                   = "lib",
+  ["valuetype/target/dependency/*.jar"]        = "lib",
+  ["valuetype/target/site/apidocs/*"]          = "doc/project",
+}
