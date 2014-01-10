@@ -11,4 +11,7 @@ install_files = {
   ["valuetype/target/*.jar"]                   = "lib",
   ["valuetype/target/dependency/*.jar"]        = "lib",
   ["valuetype/target/site/apidocs/*"]          = "doc/core",
+  ["api/target/*.jar"]                         = "lib",
+  ["api/target/dependency/*.jar"]              = "lib",
+  ["api/target/site/apidocs/*"]                = "doc/core",
 }
