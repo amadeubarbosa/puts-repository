@@ -1,0 +1,37 @@
+name = "openbus-dataservice-utils-java"
+version = "1.1.0.0"
+url = SVNREPURL .. "/openbus/services/data_service/openbus/java/tags/01_01_00_00"
+dependencies = {
+  "openbus-dataservice-core-idl == 1.1.0",
+  "openbus-dataservice-core-java == 1.1.1.0",
+  "openbus-dataservice-project-java == 1.1.1.0",
+  "openbus-java == 1.5.2-1",
+  "ftc-java == 1.1.2",
+}
+build = {
+  type = "maven",
+  javadoc = true,
+  variables = {
+    ["dataservice.idlpath"] = "%directory(openbus-dataservice-core-idl)%"
+  },
+}
+install_files = {
+  ["api/target/*.jar"]                         = "lib",
+  ["api/target/dependency/*.jar"]              = "lib",
+  ["api/target/site/apidocs/*"]                = "doc/utils",
+  ["demo/file_system/target/*.jar"]            = "demo/java/file_system",
+  ["demo/file_system/target/site/apidocs/*"]   = "demo/java/file_system/doc",
+  ["demo/file_system/target/dependency/*.jar"] = "lib",
+  ["demo/session/target/*.jar"]                = "demo/java/session",
+  ["demo/session/target/site/apidocs/*"]       = "demo/java/session/doc",
+  ["demo/session/target/dependency/*.jar"]     = "lib",
+}
+dev_files = {
+  ["demo/file_system/src"]        = "demo/java/file_system",
+  ["demo/file_system/idl"]        = "demo/java/file_system",
+  ["demo/file_system/management"] = "demo/java/file_system",
+  ["demo/file_system/resources"]  = "demo/java/file_system",
+  ["demo/session/src"]            = "demo/java/session",
+  ["demo/session/resources"]      = "demo/java/session",
+  ["demo/session/management"]     = "demo/java/session",
+}
