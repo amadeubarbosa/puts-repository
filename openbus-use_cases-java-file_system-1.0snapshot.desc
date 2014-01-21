@@ -1,0 +1,27 @@
+name = "openbus-use_cases-filesystem-java"
+version = "1.0snapshot"
+url = SVNREPURL .. "/openbus/use_cases/java/file_system/trunk"
+dependencies = {
+  "openbus-dataservice-core-idl == 1.2.0",
+  "openbus-dataservice-core-java == 1.2.1.0",
+  "openbus-java == 2.0.0.2",
+  "ftc-java == 1.4.0.1",
+}
+build = {
+  type = "maven",
+  javadoc = true,
+  variables = {
+    ["dataservice.idlpath"] = "%directory(openbus-dataservice-core-idl)%"
+  },
+}
+install_files = {
+  ["target/*.jar"]                         = "use_cases/java/file_system",
+  ["target/dependency/*.jar"]              = "lib",
+  ["target/site/apidocs/*"]                = "use_cases/java/file_system/doc",
+}
+dev_files = {
+  ["src"]        = "use_cases/java/file_system",
+  ["idl"]        = "use_cases/java/file_system",
+  ["admin"]      = "use_cases/java/file_system",
+  ["resources"]  = "use_cases/java/file_system",
+}

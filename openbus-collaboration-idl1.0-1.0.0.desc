@@ -1,0 +1,12 @@
+IDL_VERSION="v1_0"
+
+name = "collaboration-idl1.0"
+version = "1.0.0"
+url = SVNREPURL .. "/openbus/services/collaboration/tags/01_00_00_02/idl"
+dependencies = {
+  "openbus-idl2.0 == 2.0.1",
+  "scs-idl1.2 == 1.2.1",
+}
+install_files = {
+  ["*.idl"] = "idl/"..IDL_VERSION,
+}

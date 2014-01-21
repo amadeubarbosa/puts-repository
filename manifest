@@ -1636,6 +1636,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-collaboration-idl1.0"] = {
+    ["1.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-core"] = {
     ["1.5.3snapshot"] = {
       [1] = {
@@ -1971,13 +1981,6 @@ repository = {
     }
     ,
     ["1.1.0snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-    ["1.2snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -3109,6 +3112,26 @@ repository = {
   ,
   ["openbus-test-orbix"] = {
     ["1.5.5snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-use_cases-file_system"] = {
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-use_cases-session"] = {
+    ["1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }

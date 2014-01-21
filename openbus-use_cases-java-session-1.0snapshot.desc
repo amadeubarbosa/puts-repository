@@ -1,0 +1,32 @@
+name = "openbus-use_cases-session-java"
+version = "1.0snapshot"
+url = SVNREPURL .. "/openbus/use_cases/java/session/trunk"
+dependencies = {
+  "openbus-dataservice-core-idl == 1.2.0",
+  "openbus-dataservice-core-java == 1.2.1.0",
+  "openbus-dataservice-project-java == 1.2.0.1",
+  "openbus-java == 2.0.0.2",
+  "openbus-idl2.0 == 2.0.1",
+  "scs-idl1.2 == 1.2.1",
+  "collaboration-idl1.0 == 1.0.0",
+}
+build = {
+  type = "maven",
+  javadoc = true,
+  variables = {
+    ["dataservice.idlpath"]   = "%directory(openbus-dataservice-core-idl)%",
+    ["openbus.idlpath"]       = "%directory(openbus-idl2.0)%/src",
+    ["scs.idlpath"]           = "%directory(scs-idl1.2)%/src",
+    ["collaboration.idlpath"] = "%directory(collaboration-idl1.0)%",
+  },
+}
+install_files = {
+  ["target/*.jar"]                         = "use_cases/java/session",
+  ["target/dependency/*.jar"]              = "lib",
+  ["target/site/apidocs/*"]                = "use_cases/java/session/doc",
+}
+dev_files = {
+  ["src"]       = "use_cases/java/session",
+  ["admin"]     = "use_cases/java/session",
+  ["resources"] = "use_cases/java/session",
+}
