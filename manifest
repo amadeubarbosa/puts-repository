@@ -3120,7 +3120,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-use_cases-file_system"] = {
+  ["openbus-use_cases-java-file_system"] = {
     ["1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -3130,7 +3130,7 @@ repository = {
     ,
   }
   ,
-  ["openbus-use_cases-session"] = {
+  ["openbus-use_cases-java-session"] = {
     ["1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",

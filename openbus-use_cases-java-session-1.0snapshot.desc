@@ -1,4 +1,4 @@
-name = "openbus-use_cases-session-java"
+name = "openbus-use_cases-java-session"
 version = "1.0snapshot"
 url = SVNREPURL .. "/openbus/use_cases/java/session/trunk"
 dependencies = {
