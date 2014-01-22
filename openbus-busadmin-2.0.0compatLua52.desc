@@ -21,7 +21,7 @@ dependencies = {
   "scs-lua == 1.2.3-1compatLua52",
   "openbus-lua == "..version,
   "scs-idl1.2 == 1.2.1",
-  "openbus-idl2.0 == 2.0.1",
+  "openbus-idl2.0 == 2.0snapshot",
 } 
 local vars = {
   LUA52 = "%directory(lua-bin)%",
