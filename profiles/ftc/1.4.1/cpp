@@ -1,1 +1,8 @@
 ftc-cpp-1.4.1snapshot
+boost-1.51.0-oblibs2.0.0.0 +dev
+boost-system-1.51.0-oblibs2.0.0.0
+boost-chrono-1.51.0-oblibs2.0.0.0
+boost-thread-1.51.0-oblibs2.0.0.0
+boost-program-options-1.51.0-oblibs2.0.0.0
+boost-filesystem-1.51.0-oblibs2.0.0.0
+boost-date_time-1.51.0-oblibs2.0.0.0
