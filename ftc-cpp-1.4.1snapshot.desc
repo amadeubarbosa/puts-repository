@@ -9,6 +9,7 @@ dependencies = {
   "boost-thread == 1.51.0-oblibs2.0.0.0",
   "boost-filesystem == 1.51.0-oblibs2.0.0.0",
   "boost-date_time == 1.51.0-oblibs2.0.0.0",
+  "boost-program-options == 1.51.0-oblibs2.0.0.0",
   "openssl == 1.0.0j",
   "cxxtest",
 }
