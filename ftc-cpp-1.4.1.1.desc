@@ -4,6 +4,10 @@ url = SVNREPURL .. "/ftc/core/cpp/tags/01_04_01_01"
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
+  "boost-quickbook == 1.6",
+  "libxslt == 1.1.26",
+  "docbook-dtd == 4.2",
+  "docbook-xsl == 1.75.2",
   "boost-system == 1.51.0-oblibs2.0.0.0",
   "boost-chrono == 1.51.0-oblibs2.0.0.0",
   "boost-thread == 1.51.0-oblibs2.0.0.0",
@@ -19,11 +23,15 @@ build = {
   targets = {
      "stage",
      "stage-demos",
+     "ftc-doc",
   },
   variables = {
     threading = {"single", "multi"},
     variant = {"debug", "release"},
     link = {"static", "shared"},
+    xsltproc = {"USING", "%directory(libxslt)%/xsltproc/xsltproc"},
+    boostbook = {"USING", "%directory(docbook-xsl)%", "%directory(docbook-dtd)%", "%directory(boost)%/tools/boostbook"},
+    quickbook = {"USING", "%directory(boost-quickbook)%/stage/quickbook"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
     BOOST_BUILD_PATH = "%directory(boost-build)%",
     BJAM_SOURCE = "%directory(boost-build)%/engine",
@@ -32,6 +40,7 @@ build = {
      "-d+2",
      "--ftc-with-puts",
      "--layout=tagged",
+     "format=onehtml",
   },
 }
 
@@ -39,4 +48,6 @@ install_files = {
   ["ftc/include/*"]     = "include",
   ["stage/libftc-*"]    = "lib",
   ["demo/*"]            = "demo",
+  ["doc/tutoriais/ftc.html"] = "doc",
+  ["doc/tutoriais/images"] = "doc",
 }
