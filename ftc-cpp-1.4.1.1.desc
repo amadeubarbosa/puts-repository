@@ -5,6 +5,7 @@ dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
   "boost-quickbook == 1.6",
+  "mico-bb == 0.1",
   "libxslt == 1.1.26",
   "docbook-dtd == 4.2",
   "docbook-xsl == 1.75.2",
@@ -33,7 +34,7 @@ build = {
     boostbook = {"USING", "%directory(docbook-xsl)%", "%directory(docbook-dtd)%", "%directory(boost)%/tools/boostbook"},
     quickbook = {"USING", "%directory(boost-quickbook)%/stage/quickbook"},
     ["-sBOOST_PATH"] = "%directory(boost)%",
-    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    BOOST_BUILD_PATH = "%directory(boost-build)%"..":".."%directory(mico-bb)%",
     BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
   bjam_opts = {
@@ -48,6 +49,7 @@ install_files = {
   ["ftc/include/*"]     = "include",
   ["stage/libftc-*"]    = "lib",
   ["demo/*"]            = "demo",
-  ["doc/tutoriais/ftc.html"] = "doc",
-  ["doc/tutoriais/images"] = "doc",
+  ["doc/tutorial/ftc.html"] = "doc/tutorial",
+  ["doc/tutorial/images"] = "doc/tutorial",
+  ["doc/reference/html"] = "doc/reference",
 }
