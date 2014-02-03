@@ -42,7 +42,6 @@ build = {
      "--ftc-with-puts",
      "--layout=tagged",
      "format=onehtml",
-     "warnings=off",
   },
 }
 

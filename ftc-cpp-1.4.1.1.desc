@@ -22,9 +22,9 @@ build = {
   type = "bjam",
   src = ".",
   targets = {
+     "ftc-doc",
      "stage",
      "stage-demos",
-     "ftc-doc",
   },
   variables = {
     threading = {"single", "multi"},
@@ -51,5 +51,5 @@ install_files = {
   ["demo/*"]            = "demo",
   ["doc/tutorial/ftc.html"] = "doc/tutorial",
   ["doc/tutorial/images"] = "doc/tutorial",
-  ["doc/reference/html"] = "doc/reference",
+  ["doc/html"] = "doc/reference",
 }
