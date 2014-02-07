@@ -3,14 +3,15 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 name = "luacothread"
 version = "1.0snapshot"
 subpackage_of = "loop == 2snapshot"
-dependencies = {
-  "lua == 5.1.3snapshot",
-  "lua-bin == 5.1.3snapshot",
+dependencies = { "luacompat52 == 1.0snapshot",
+  "lua == 5.1.3-oblibs1.3.2",
+  "lua-bin == 5.1.3-oblibs1.3.2-1",
 }
 build = {
   type = "tecmake",
   variables = {
     LUA51 = "%directory(lua)%",
+    LUACOMPAT52_HOME = "%directory(luacompat52)%",
     LOOP_HOME = "%directory(loop)%",
   },
   src = "openbus",

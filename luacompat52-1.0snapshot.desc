@@ -1,0 +1,42 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "luacompat52"
+version = "1.0snapshot"
+url = "git+ssh://git@vcs.tecgraf.puc-rio.br/openbus/lua-compat-52.git"
+
+dependencies = {
+  "lua == 5.1.3-oblibs1.3.2",
+  "lua-bin == 5.1.3-oblibs1.3.2-1",
+  "luabit32 == 1.0snapshot",
+  "luacompat52c == 1.0snapshot",
+  "loop == 2snapshot", -- LOOP 3.0 (trunk)
+}
+
+local vars = {
+  LUA51 = "%directory(lua)%",
+  USE_LUA51 = "YES",
+  LUACOMPAT52_HOME = "%directory(luacompat52)%",
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "tecmake",
+  variables = vars,
+  src = "openbus",
+  mf = { "luacompat52" },
+  MacOS = { mf = { "luacompat52", "luacompat52 BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = {"luacompat52 "..SUNOS64_TECMAKE_FLAGS} },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/"..TEC_UNAME.."/libluacompat52.so"] = "lib",
+  ["../lib/"..TEC_UNAME.."/libluacompat52.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/"..TEC_UNAME.."/libluacompat52.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/luacompat52.h"] = "include/luacompat52",
+}

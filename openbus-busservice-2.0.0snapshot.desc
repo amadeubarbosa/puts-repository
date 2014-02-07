@@ -3,33 +3,40 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES"
 name = "openbus-busservice"
 version = "2.0.0snapshot"
 url = SVNREPURL .. "/openbus/core/branches/02_00_00"
-dependencies = {
-  "lua-bin == 5.2.2",
-  "loop == 3.0betaCompatLua52" , 
-  "oil == 0.6betaCompatLua52",
-  "scs-lua == 1.2.3-1compatLua52",
-  "lualdap == 1.1.0CompatLua52",
-  "luacoroutine == 1.0betaCompatLua52",
-  "luacothread == 1.0betaCompatLua52",
-  "luainspector == 1.0betaCompatLua52",
-  "luatuple == 1.0betaCompatLua52",
-  "luastruct == 1.2compatLua52",
-  "luavararg == 1.1compatLua52",
-  "lce == 2.0.0-1compatLua52",
-  "luuid == 1.0compatLua52",
-  "luafilesystem == 1.4.2compatLua52",
-  "openbus-lua == 2.0.0compatLua52",
-  "latt == 1.1-2",
+dependencies = { "luacompat52 == 1.0snapshot",
+  "lua-bin == 5.1.3-oblibs1.3.2-1",
+  "lce == 2.0.0-1",
+  "luuid == 1.0-oblibs1.3.2-1",
+  "luafilesystem == 1.4.2-oblibs1.3.2-1",
+  "luasocket == 2.0.2-oblibs1.3.2-1",
+  "luastruct == 1.2-oblibs1.3.2-1",
+  "luavararg == 1.1-oblibs1.3.2-1",
+  "luatuple == 1.0snapshot",
+  "loop == 2snapshot", -- LOOP 3.0 (trunk)
+  "luacoroutine == 1.0snapshot",
+  "luacothread == 1.0snapshot",
+  "luaidl == 0.6.0snapshot", -- OiL 0.6 (trunk)
+  "oil == 0.5snapshot", -- OiL 0.6 (trunk)
+  "scs-lua == 1.2.3-1",
+  "openbus-lua == "..version,
+  "scs-idl1.2 == 1.2.1",
+  "openbus-idl2.0 == 2.0snapshot",
+  "lualdap == 1.1.0-oblibs1.3.2-1",
 } 
+
+local vars = {
+  LUA51 = "%directory(lua-bin)%",
+  USE_LUA51 = "YES",
+  OPENBUS_HOME = INSTALL.TOP, -- required by '.mak' when USE_STATIC
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
 build = {
   type = "tecmake",
-  variables = {
-    LUA52 = "%directory(lua-bin)%",
-    USE_LUA52 = "YES",
-    LOOP_HOME = "%directory(loop)%",
-    OIL_HOME = "%directory(oil)%",
-    OPENBUS_HOME = INSTALL.TOP,
-  },
+  variables = vars,
   mf = { "busservices USE_STATIC=YES" },
   SunOS510_64 = { mf = { "busservices USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
 }

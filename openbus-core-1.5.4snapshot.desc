@@ -7,7 +7,7 @@ dependencies = {
   "lua == 5.1.3snapshot",
   "oilall == 0.5.0snapshot",
   "scsall == 1.2.2snapshot",
-  "lualdap == 1.1.0snapshot",
+  "lualdap == 1.1.0-oblibs1.3.2-1",
   "lce == 1.0snapshot",
   "luuid == 1.0snapshot",
   "lpw == 1.5.4snapshot",

@@ -816,6 +816,36 @@ repository = {
     ,
   }
   ,
+  ["luabit32"] = {
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["luacompat52"] = {
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["luacompat52c"] = {
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["luacoroutine"] = {
     ["1.0beta"] = {
       [1] = {

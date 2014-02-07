@@ -11,7 +11,6 @@ dependencies = {
   "luasocket == 2.0.2compatLua52",
   "luastruct == 1.2compatLua52",
   "luavararg == 1.1compatLua52",
-  "luainspector == 1.0betaCompatLua52",
   "luatuple == 1.0betaCompatLua52",
   "loop == 3.0betaCompatLua52",
   "luacoroutine == 1.0betaCompatLua52",
