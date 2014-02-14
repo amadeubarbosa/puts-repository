@@ -5,18 +5,17 @@ version = "2.0.0compatLua52"
 subpackage_of = "openbus-lua == "..version
 dependencies = {
   "lua-bin == 5.2.2",
-  "lce == 2.0.0-1compatLua52",
-  "luuid == 1.0compatLua52",
-  "luafilesystem == 1.4.2compatLua52",
-  "luasocket == 2.0.2compatLua52",
   "luastruct == 1.2compatLua52",
-  "luavararg == 1.1compatLua52",
+  "luasocket == 2.0.2compatLua52",
   "luatuple == 1.0betaCompatLua52",
   "loop == 3.0betaCompatLua52",
-  "luacoroutine == 1.0betaCompatLua52",
   "luacothread == 1.0betaCompatLua52",
   "luaidl == 0.6betaCompatLua52",
   "oil == 0.6betaCompatLua52",
+  "luavararg == 1.1compatLua52",
+  "luafilesystem == 1.4.2compatLua52",
+  "luuid == 1.0compatLua52",
+  "lce == 2.0.0compatLua52",
   "scs-lua == 1.2.3-1compatLua52",
   "openbus-lua == "..version,
 }

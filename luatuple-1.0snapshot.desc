@@ -11,6 +11,7 @@ build = {
   type = "tecmake",
   variables = {
     LUA51 = "%directory(lua)%",
+    USE_LUA51 = "YES",
     LUACOMPAT52_HOME = "%directory(luacompat52)%",
     LOOP_HOME = "%directory(loop)%",
   },

@@ -544,6 +544,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["libevent"] = {
@@ -827,6 +834,16 @@ repository = {
   }
   ,
   ["luacompat52"] = {
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["luacompat52-source"] = {
     ["1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
