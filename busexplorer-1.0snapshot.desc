@@ -2,7 +2,7 @@ name = "busexplorer"
 version = "1.0snapshot"
 url = SVNREPURL .. "/openbus/utils/busexplorer/trunk"
 dependencies = { 
-  "openbus-java == 2.0.0.1",
+  "openbus-java == 2.0.0.2",
 }
 
 build = {
@@ -13,9 +13,5 @@ build = {
 }
 
 install_files = {
-  ["BusAdminLib/target/site/apidocs/*"] = "doc/busadminlib",
-  ["VisualBusAdmin/src/busexplorer"] = "bin",
-  ["VisualBusAdmin/target/*.jar"] = "lib",
-  ["VisualBusAdmin/target/dependency/*.jar"] = "lib",
-  ["VisualBusAdmin/target/site/apidocs/*"] = "doc/busexplorer",
+  ["BusExplorer/target/busexplorer-1.0-SNAPSHOT-jar-with-dependencies.jar"] = ".",
 }
