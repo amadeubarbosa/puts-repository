@@ -1,0 +1,17 @@
+name = "busexplorer"
+version = "1.0.0"
+url = SVNREPURL .. "/openbus/utils/busexplorer/tags/01_00_00"
+dependencies = { 
+  "openbus-java == 2.0.0.2",
+}
+
+build = {
+  type = "maven",
+  javadoc = true,
+  variables = { 
+  },
+}
+
+install_files = {
+  ["BusExplorer/target/busexplorer-1.0-SNAPSHOT-jar-with-dependencies.jar"] = ".",
+}
