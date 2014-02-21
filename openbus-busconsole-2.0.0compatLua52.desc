@@ -15,7 +15,7 @@ dependencies = {
   "luavararg == 1.1compatLua52",
   "luafilesystem == 1.4.2compatLua52",
   "luuid == 1.0compatLua52",
-  "lce == 2.0.0compatLua52",
+  "lce == 2.0.0-1compatLua52",
   "scs-lua == 1.2.3-1compatLua52",
   "openbus-lua == "..version,
 }
