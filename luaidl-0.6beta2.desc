@@ -1,0 +1,32 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "luaidl"
+version = "0.6beta2"
+subpackage_of = "oil-source == "..version
+dependencies = {
+  "lua-bin == 5.2.2.1",
+  "loop == 3.0beta2",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua-bin)%",
+    USE_LUA52 = "YES",
+    LOOP_HOME = "%directory(loop)%",
+    OIL_HOME = "%directory(oil-source)%",
+  },
+  src = "openbus",
+  mf = { "luaidl", },
+  MacOS = { mf = { "luaidl", "luaidl BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "luaidl ".. SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/libluaidl.so"] = "lib",
+  ["../lib/${TEC_UNAME}/libluaidl.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/libluaidl.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/luaidl.h"] = "include/oil",
+}
