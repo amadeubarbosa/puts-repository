@@ -5,7 +5,7 @@ dependencies = {
 	"luafilesystem == 1.4.2-oblibs1.3.2-1",
 	"boost-build == 12m",
 	"sqlite == 3.7.16.2",
-	"lsqlite3 == 0.9.1-devel",
+	"lsqlite3 == 0.9.1.1",
 	"lce == 2.0.0-1",
 	"luuid == 1.0-oblibs1.3.2-1",
 	"openbus-idl2.0 == 2.0.1",
