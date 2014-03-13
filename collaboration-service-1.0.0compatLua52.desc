@@ -1,5 +1,5 @@
 name = "collaboration-service"
-version = "1.0.0snapshot"
+version = "1.0.0compatLua52"
 url = SVNREPURL.."/openbus/services/collaboration/branches/01_00_00"
 dependencies = {
 	"boost-build == 12m",
