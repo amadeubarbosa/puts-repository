@@ -1,0 +1,12 @@
+name = "collaboration-service-idl"
+version = "1.0compatLua52"
+subpackage_of = "collaboration-service == 1.0.0compatLua52"
+dependencies = {
+  "scs-idl1.2 == 1.2.1",
+  "openbus-idl2.0 == 2.0snapshot",
+}
+install_files = {
+  ["idl/*.idl"] = "idl",
+  [INSTALL.TOP.."/idl/v2_0/scs.idl"] = "idl",
+  [INSTALL.TOP.."/idl/v2_0/core.idl"] = "idl",
+}
