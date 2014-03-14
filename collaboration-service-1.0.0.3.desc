@@ -1,6 +1,6 @@
 name = "collaboration-service"
 version = "1.0.0.3"
-url = SVNREPURL.."/openbus/services/collaboration/branches/01_00_00"
+url = SVNREPURL.."/openbus/services/collaboration/tags/01_00_00_03"
 dependencies = {
   "boost-build == 12m",
   "sqlite == 3.7.16.2",
