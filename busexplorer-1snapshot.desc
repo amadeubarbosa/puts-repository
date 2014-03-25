@@ -1,5 +1,5 @@
 name = "busexplorer"
-version = "1.0snapshot"
+version = "1snapshot"
 url = SVNREPURL .. "/openbus/utils/busexplorer/trunk"
 dependencies = { 
   "openbus-java == 2.0.0.2",
@@ -13,5 +13,6 @@ build = {
 }
 
 install_files = {
-  ["BusExplorer/target/busexplorer-1.0-SNAPSHOT-jar-with-dependencies.jar"] = ".",
+  ["BusExplorer/etc/busexplorer.conf"] = ".",
+  ["BusExplorer/target/busexplorer-1-SNAPSHOT-jar-with-dependencies.jar"] = ".",
 }

@@ -222,7 +222,7 @@ repository = {
       ,
     }
     ,
-    ["1.0snapshot"] = {
+    ["1snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
