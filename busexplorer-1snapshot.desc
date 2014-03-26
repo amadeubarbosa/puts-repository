@@ -5,6 +5,8 @@ dependencies = {
   "openbus-java == 2.0.0.2",
 }
 
+local install_path = name .. "-" .. version
+
 build = {
   type = "maven",
   javadoc = true,
@@ -13,6 +15,7 @@ build = {
 }
 
 install_files = {
-  ["BusExplorer/etc/busexplorer.conf"] = ".",
-  ["BusExplorer/target/busexplorer-1-SNAPSHOT-jar-with-dependencies.jar"] = ".",
+  ["BusExplorer/doc/README"] = install_path,
+  ["BusExplorer/etc/busexplorer.conf"] = install_path,
+  ["BusExplorer/target/busexplorer-1-SNAPSHOT-jar-with-dependencies.jar"] = install_path,
 }
