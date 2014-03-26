@@ -1,0 +1,21 @@
+name = "busexplorer"
+version = "1.1.0"
+url = SVNREPURL .. "/openbus/utils/busexplorer/tags/01_01_00"
+dependencies = { 
+  "openbus-java == 2.0.0.2",
+}
+
+local install_path = name .. "-" .. version
+
+build = {
+  type = "maven",
+  javadoc = true,
+  variables = { 
+  },
+}
+
+install_files = {
+  ["BusExplorer/doc/README"] = install_path,
+  ["BusExplorer/etc/busexplorer.conf"] = install_path,
+  ["BusExplorer/target/busexplorer-1.1.0-jar-with-dependencies.jar"] = install_path,
+}
