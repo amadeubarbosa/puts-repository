@@ -3098,6 +3098,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
