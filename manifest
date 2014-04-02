@@ -2801,6 +2801,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-doc-install"] = {
