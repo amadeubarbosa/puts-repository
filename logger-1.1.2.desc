@@ -27,5 +27,5 @@ install_files = {
 }
 dev_files = {
   ["stage/liblogger*"] = "lib",
-  ["include/log"] = "include/",
+  ["include/*"] = "include/logger",
 }
