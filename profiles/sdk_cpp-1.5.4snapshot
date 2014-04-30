@@ -1,0 +1,13 @@
+licenses-2013
+boost-1.51.0-oblibs2.0.0.0 +dev
+boost-build-12m
+mico-multithread-debug-2.3.13-oblibs2.0.0.0 +dev
+mico-multithread-2.3.13-oblibs2.0.0.0 +dev
+openbus-cpp-mico-1.5.4snapshot +dev
+openbus-idl1.5-1.5.2
+openbus-idl1.4-1.4.7
+logger-1.1.2 +dev
+scs-idl1.0-1.0.2
+scs-idl1.2-1.2.1
+scs-cpp-mico-1.2.0.1 +dev
+openssl-0.9.9 +dev
