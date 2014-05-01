@@ -51,6 +51,7 @@ build = {
 }
 
 dev_files = {
+  ["README"] = ".",
   ["stage/libopenbus-*"] = "lib",
   ["include/*"] = "include/openbus",
   ["stubs/mico"] = "include/openbus/stubs",     --include
