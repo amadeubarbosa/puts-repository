@@ -607,6 +607,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.1-loop3.0beta3"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["libevent"] = {
@@ -775,6 +782,13 @@ repository = {
     }
     ,
     ["3.0beta2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["3.0beta3"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1021,6 +1035,13 @@ repository = {
       ,
     }
     ,
+    ["1.0beta3"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.0betaCompatLua52"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1126,6 +1147,13 @@ repository = {
     }
     ,
     ["0.6beta2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["0.6beta3"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1326,6 +1354,13 @@ repository = {
     }
     ,
     ["1.0beta2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.0beta3"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1569,6 +1604,13 @@ repository = {
       ,
     }
     ,
+    ["0.6beta3"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["0.6betaCompatLua52"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1629,6 +1671,13 @@ repository = {
     }
     ,
     ["0.6beta2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["0.6beta3"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1794,6 +1843,13 @@ repository = {
     }
     ,
     ["2.0.0.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.2-loop3.0beta3"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -3244,6 +3300,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0.2-loop3.0beta3"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0compatLua52"] = {
       [1] = {
         ["arch"] = "desc",
@@ -3776,6 +3839,13 @@ repository = {
     }
     ,
     ["1.2.3.1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.2.3.1-loop3.0beta3"] = {
       [1] = {
         ["arch"] = "desc",
       }

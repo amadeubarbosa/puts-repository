@@ -1,0 +1,31 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "luatuple"
+version = "1.0beta3"
+subpackage_of = "loop == 3.0beta3"
+dependencies = {
+  "lua == 5.2.2.1",
+  "lua-bin == 5.2.2.1",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "YES",
+    LOOP_HOME = "%directory(loop)%",
+  },
+  src = "openbus",
+  mf = { "tuple" },
+  MacOS = { mf = { "tuple", "tuple BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "tuple "..SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/"..TEC_UNAME.."/libluatuple.so"] = "lib",
+  ["../lib/"..TEC_UNAME.."/libluatuple.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/"..TEC_UNAME.."/libluatuple.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/luatuple.h"] = "include/loop",
+}
