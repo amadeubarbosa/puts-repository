@@ -17,7 +17,7 @@ dependencies = {
   "luuid == 1.0.1",
   "lce == 2.0.1-loop3.0beta3",
   "scs-lua == 1.2.3.1-loop3.0beta3",
-  "openbus-lua == 2.0.0.2-loop3.0beta3",
+  "openbus-lua == 2.0.0.3",
   "scs-idl1.2 == 1.2.1",
   "openbus-idl2.0 == 2.0.3",
   "lualdap == 1.1.0.1",
