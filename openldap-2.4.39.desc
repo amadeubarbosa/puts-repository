@@ -1,0 +1,37 @@
+name = "openldap"
+version = "2.4.39"
+url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/openldap-2.4.39.tgz"
+dependencies = {
+  "openssl == 1.0.0j",
+}
+build = {
+  type = "autotools",
+  variables = {
+    CPPFLAGS = "-I"..INSTALL.TOP.."/include/openssl-1.0.0",
+    LDFLAGS  = "-L"..INSTALL.TOP.."/lib",
+    ["--prefix"] = TMPDIR,
+  },
+  configure = "./configure --disable-slapd --with-tls=openssl --with-cyrus-sasl=no",
+  compile = "make depend && make",
+  install = "make install",
+}
+
+-- problem on sunos510 openldap compile: http://www.openldap.org/its/index.cgi/Build?id=4607
+build.SunOS510_64 = { configure = build.configure.." --target=sparc64-sun-solaris2.10" }
+
+install_files = {
+  [TMPDIR .."/lib/libldap*.so*"] = "lib",   --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libldap*.dylib*"] = "lib",--dynamic macos
+  [TMPDIR .."/lib/liblber*.so*"] = "lib",   --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/liblber*.dylib*"] = "lib",--dynamic macos
+}
+dev_files = {
+  [TMPDIR .."/lib/libldap*.a*"] = "lib",    --static linux,aix,sunos
+  [TMPDIR .."/lib/libldap*.so*"] = "lib",   --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/libldap*.dylib*"] = "lib",--dynamic macos
+  [TMPDIR .."/lib/liblber*.a*"] = "lib",    --static linux,aix,sunos
+  [TMPDIR .."/lib/liblber*.so*"] = "lib",   --dynamic linux,aix,sunos
+  [TMPDIR .."/lib/liblber*.dylib*"] = "lib",--dynamic macos
+  [TMPDIR .."/include/ldap*"] = "include/openldap-2.4.39",
+  [TMPDIR .."/include/lber*"] = "include/openldap-2.4.39",
+}
