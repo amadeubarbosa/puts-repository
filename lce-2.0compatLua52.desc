@@ -1,19 +1,18 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "lce"
-version = "2.0.0snapshot"
+version = "2.0compatLua52"
 url = SVNREPURL.."/luautils/lce/trunk"
-dependencies = { "luacompat52c == 1.0snapshot",
-  "openssl == 1.0.0j",
-  "lua == 5.1.3-oblibs1.3.2",
-  "loop == 2snapshot",
+dependencies = {
+  "openssl == 1.0.0m",
+  "lua == 5.2.2",
+  "loop == 3.0betaCompatLua52",
 }
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "%directory(lua)%",
-    USE_LUA51 = "YES",
-    LUACOMPAT52_HOME = "%directory(luacompat52c)%",
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "YES",
     LOOP_HOME = "%directory(loop)%",
     OPENBUS_HOME = INSTALL.TOP,
   },

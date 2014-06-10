@@ -4,7 +4,7 @@ name = "lce"
 version = "2.0.1-loop3.0beta3"
 url = SVNREPURL.."/luautils/lce/tags/02_00_01"
 dependencies = {
-  "openssl == 1.0.0j",
+  "openssl == 1.0.0m",
   "lua == 5.2.2.1",
   "loop == 3.0beta3",
 }

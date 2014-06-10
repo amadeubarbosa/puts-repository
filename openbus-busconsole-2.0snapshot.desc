@@ -19,7 +19,7 @@ dependencies = {
   "luacoroutine == 1.0snapshot",
   "luainspector == 1.0snapshot",
   "luatuple == 1.0snapshot",
-  "openssl == 1.0.0j",
+  "openssl == 1.0.0m",
 }
 build = {
   type = "tecmake",
