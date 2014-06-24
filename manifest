@@ -2920,6 +2920,13 @@ repository = {
       ,
     }
     ,
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-doc-install"] = {
@@ -3281,6 +3288,16 @@ repository = {
     }
     ,
     ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-java-assistant"] = {
+    ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
