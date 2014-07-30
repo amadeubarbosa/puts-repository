@@ -1,15 +1,9 @@
-name = "openbus-doc-cpp-assistant"
+name = "openbus-cpp-mico"
 version = "2.0snapshot"
-subpackage_of = "openbus-cpp-assistant-mico == "..version
+url = SVNREPURL .. "/openbus/sdk/cpp/trunk"
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",
-  "boost-quickbook == 1.6",
-  "libxslt == 1.1.26",
-  "docbook-dtd == 4.2",
-  "docbook-xsl == 1.75.2",
-  "boost-system == 1.51.0-oblibs2.0.0.0",
-  "boost-chrono == 1.51.0-oblibs2.0.0.0",
   "mico-singlethread-debug == 2.3.13snapshot",
   "mico-multithread-debug == 2.3.13snapshot",
   "mico-singlethread == 2.3.13snapshot",
@@ -18,19 +12,18 @@ dependencies = {
   "logger == 2.0snapshot",
   "scs-idl1.2 == 1.2snapshot",
   "scs-cpp-mico == 1.2snapshot",
-  "openbus-cpp-mico == 2.0snapshot",
   "openssl == 1.0.0j",
 }
 build = {
   type = "bjam",
   src = ".",
   targets = {
-     "assistant-doc",
+     "stage",
   },
   variables = {
-    xsltproc = {"USING", "%directory(libxslt)%/xsltproc/xsltproc"},
-    boostbook = {"USING", "%directory(docbook-xsl)%", "%directory(docbook-dtd)%", "%directory(boost)%/tools/boostbook"},
-    quickbook = {"USING", "%directory(boost-quickbook)%/stage/quickbook"},
+    threading = { "single", "multi" },
+    variant = { "debug", "release" },
+    link = { "static", "shared" },
     ["-sBOOST_PATH"] = "%directory(boost)%",
     ["-sMICO_ST_DBG_LIB_PATH"] = "%directory(mico-singlethread-debug)%/libs",
     ["-sMICO_ST_DBG_INCLUDE_PATH"] = "%directory(mico-singlethread-debug)%/include",
@@ -57,6 +50,9 @@ build = {
      "--layout=tagged",
   },
 }
+
 dev_files = {
-  ["assistant-doc/*"] = "doc/cpp/assistant"
+  ["stage/libopenbus-*"] = "lib",
+  ["include/openbus"] = "include/openbus/cpp",    --include
+  ["stage/stubs"] = "include/openbus/cpp",     --include
 }

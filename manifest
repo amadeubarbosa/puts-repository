@@ -2029,6 +2029,13 @@ repository = {
       ,
     }
     ,
+    ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-cpp-assistant-mico-all"] = {
@@ -2092,6 +2099,13 @@ repository = {
     }
     ,
     ["2.0.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -3459,6 +3473,13 @@ repository = {
   ,
   ["openbus-run-test-cpp-mico"] = {
     ["2.0.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
