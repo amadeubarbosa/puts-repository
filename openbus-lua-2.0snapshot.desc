@@ -4,25 +4,30 @@ name = "openbus-lua"
 version = "2.0snapshot"
 url = SVNREPURL .. "/openbus/sdk/lua/trunk"
 dependencies = {
-  "loop == 2snapshot",
-  "lua-bin == 5.1.3snapshot",
-  "oil == 0.5snapshot",
+  "lua-bin == 5.2.2",
+  -- dependencies containing shared Tecmake definitions for OpenBus build
+  -- and utilities like 'precompiler.lua' and 'idl2lua.lua' scripts.
+  "loop == 3.0betaCompatLua52",
+  "oil == 0.6betaCompatLua52",
+  -- dependencies containing IDLs precompiled and included in the library
+  "scs-idl1.2 == 1.2snapshot",
   "openbus-idl1.5 == 1.5snapshot",
   "openbus-idl2.0 == 2.0snapshot",
-  "scs-idl1.3 == 1.3snapshot",
   "sdk-idl-source == 2.0snapshot",
 }
+
+local vars = {
+  LUA52 = "%directory(lua-bin)%",
+  USE_LUA52 = "YES",
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
 build = {
   type = "tecmake",
-  variables = { 
-    LUA51 = "%directory(lua-bin)%",
-    LOOP_HOME = "%directory(loop)%",
-    OIL_HOME = "%directory(oil)%",
-    OPENBUS_LIBIDL = "%directory(sdk-idl-source)%/src",
-    OPENBUS_NEWIDL = "%directory(openbus-idl2.0)%/src",
-    OPENBUS_OLDIDL = "%directory(openbus-idl1.5)%/src",
-    OPENBUS_SCSIDL = "%directory(scs-idl1.3)%/src",
-  },
+  variables = vars,
   mf = { "openbus" },
   MacOS = { mf = { "openbus", "openbus BUILD_DYLIB=YES" }, },
   SunOS510_64 = { mf = { "openbus "..SUNOS64_TECMAKE_FLAGS } },
