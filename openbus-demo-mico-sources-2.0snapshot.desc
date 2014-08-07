@@ -1,0 +1,66 @@
+name = "openbus-demo-mico-sources"
+version = "2.0snapshot"
+subpackage_of = "openbus-cpp-mico == "..version
+dependencies = {
+  "openbus-demo-audit-mico == "..version,
+  "openbus-demo-chain-validation-mico == "..version,
+  "openbus-demo-dedicated-clock-mico == "..version,
+  "openbus-demo-greetings-mico == "..version,
+  "openbus-demo-hello-mico == "..version,
+  "openbus-demo-independent-clock-mico == "..version,
+  "openbus-demo-multiplexing-mico == "..version,
+  "openbus-demo-sharedauth-mico == "..version,
+}
+dev_files = {
+  ["contrib/Jamroot"] = "demo",
+  ["contrib/boost-build.jam"] = "demo",
+
+  ["demo/hello/idl"]   = "demo/audit",
+  ["demo/audit/client"]   = "demo/audit",
+  ["demo/audit/server"]   = "demo/audit",
+  ["demo/audit/proxy"]   = "demo/audit",
+  ["demo/audit/admin"] = "demo/audit",
+  ["demo/audit/Jamfile"] = "demo/audit",
+
+  ["demo/chain_validation/idl"]   = "demo/chain_validation",
+  ["demo/chain_validation/client"]   = "demo/chain_validation",
+  ["demo/chain_validation/executive"]   = "demo/chain_validation",
+  ["demo/chain_validation/secretary"]   = "demo/chain_validation",
+  ["demo/chain_validation/admin"] = "demo/chain_validation",
+  ["demo/chain_validation/Jamfile"] = "demo/chain_validation",
+
+  ["demo/dedicated_clock/idl"]   = "demo/dedicated_clock",
+  ["demo/dedicated_clock/client"]   = "demo/dedicated_clock",
+  ["demo/dedicated_clock/server"]   = "demo/dedicated_clock",
+  ["demo/dedicated_clock/admin"] = "demo/dedicated_clock",
+  ["demo/dedicated_clock/Jamfile"] = "demo/dedicated_clock",
+
+  ["demo/greetings/idl"]   = "demo/greetings",
+  ["demo/greetings/client"]   = "demo/greetings",
+  ["demo/greetings/server"]   = "demo/greetings",
+  ["demo/greetings/admin"] = "demo/greetings",
+  ["demo/greetings/Jamfile"] = "demo/greetings",
+
+  ["demo/hello/idl"]   = "demo/hello",
+  ["demo/hello/client"]   = "demo/hello",
+  ["demo/hello/server"]   = "demo/hello",
+  ["demo/hello/admin"] = "demo/hello",
+  ["demo/hello/Jamfile"] = "demo/hello",
+
+  ["demo/independent_clock/idl"]   = "demo/independent_clock",
+  ["demo/independent_clock/client"]   = "demo/independent_clock",
+  ["demo/independent_clock/server"]   = "demo/independent_clock",
+  ["demo/independent_clock/admin"] = "demo/independent_clock",
+  ["demo/independent_clock/Jamfile"] = "demo/independent_clock",
+
+  ["demo/multiplexing/idl"]   = "demo/multiplexing",
+  ["demo/multiplexing/client"]   = "demo/multiplexing",
+  ["demo/multiplexing/server"]   = "demo/multiplexing",
+  ["demo/multiplexing/admin"] = "demo/multiplexing",
+  ["demo/multiplexing/Jamfile"] = "demo/multiplexing",
+
+  ["demo/sharedauth/idl"]   = "demo/sharedauth",
+  ["demo/sharedauth/src"]   = "demo/sharedauth",
+  ["demo/sharedauth/admin"] = "demo/sharedauth",
+  ["demo/sharedauth/Jamfile"] = "demo/sharedauth",
+}

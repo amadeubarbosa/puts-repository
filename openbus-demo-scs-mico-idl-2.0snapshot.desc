@@ -1,0 +1,6 @@
+name = "openbus-demo-scs-mico-idl"
+version = "2.0snapshot"
+subpackage_of = "scs-cpp-mico == 1.2snapshot"
+install_files = {
+  ["mico-idl.jam"] = "demo",
+}
