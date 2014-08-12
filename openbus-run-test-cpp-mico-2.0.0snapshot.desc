@@ -1,4 +1,4 @@
-name = "openbus-test-cpp-mico"
+name = "openbus-run-test-cpp-mico"
 version = "2.0.0snapshot"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
@@ -13,7 +13,6 @@ dependencies = {
   "scs-idl1.2 == 1.2snapshot",
   "scs-cpp-mico == 1.2snapshot",
   "openssl == 1.0.0j",
-  "openbus-cpp-mico == 2.0.0snapshot",
 }
 build = {
   type = "bjam",
