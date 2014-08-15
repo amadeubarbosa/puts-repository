@@ -1,0 +1,6 @@
+name = "sdk-idl-source"
+version = "2.0.0-bugged"
+url = SVNREPURL .. "/openbus/sdk/idl/lib/tags/02_00_00_BUGGED"
+install_files = {
+  ["src/*.idl"] = "idl/lib",
+}
