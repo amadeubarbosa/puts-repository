@@ -139,6 +139,16 @@ repository = {
     ,
   }
   ,
+  ["boost-random"] = {
+    ["1.51.0-oblibs2.0.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["boost-system"] = {
     ["1.51.0"] = {
       [1] = {
@@ -199,6 +209,16 @@ repository = {
   ,
   ["boost-thread-doc"] = {
     ["1.48.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["boost-unit-test-framework"] = {
+    ["1.51.0-oblibs2.0.0.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -487,6 +507,16 @@ repository = {
     }
     ,
     ["1.4.0.1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["ftc-test-cpp"] = {
+    ["1.4.1snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }

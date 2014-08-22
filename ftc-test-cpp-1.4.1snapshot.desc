@@ -1,0 +1,29 @@
+name = "ftc-test-cpp"
+version = "1.4.1snapshot"
+subpackage_of = "ftc-cpp == " .. version
+dependencies = {
+  "boost == 1.51.0-oblibs2.0.0.0",
+  "boost-build == 12m",
+  "boost-random == 1.51.0-oblibs2.0.0.0",
+  "boost-unit-test-framework == 1.51.0-oblibs2.0.0.0",
+}
+build = {
+  type = "bjam",
+  src = ".",
+  targets = {
+    "stage-tests",
+  },
+  variables = {
+    threading = {"multi"},
+    variant = {"debug"}, 
+    link = {"static"}, 
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
+  },
+  bjam_opts = {
+     "-d+2",
+     "--ftc-with-puts",
+     "--layout=tagged",
+  },
+}
