@@ -20,7 +20,7 @@ dependencies = {
   "scs-lua == 1.2.3-1compatLua52",
   "openbus-lua == 2.0.0compatLua52",
   "scs-idl1.2 == 1.2.1",
-  "openbus-idl2.0 == 2.0snapshot",
+  "openbus-idl2.1 == 2.1snapshot",
   "lualdap == 1.1.0CompatLua52",
 } 
 
