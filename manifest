@@ -3339,6 +3339,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-idl2.1"] = {
+    ["2.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-interop-chaining-mico"] = {
     ["2.0snapshot"] = {
       [1] = {
