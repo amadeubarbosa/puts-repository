@@ -1,17 +1,15 @@
 name = "openbus-java"
-version = "2.0snapshot"
+version = "2.1.0snapshot"
 url = SVNREPURL .. "/openbus/sdk/java/trunk"
 dependencies = { 
   "scs-java == 1.2.1.2",
-  "openbus-idl1.5 == 1.5.2-1",
-  "openbus-idl2.0 == 2.0snapshot",
+  "openbus-idl2.1 == 2.1snapshot",
 }
 build = {
   type = "maven",
   javadoc = true,
   variables = { 
-    ["openbus.idlpath"] = INSTALL.TOP.."/idl/v2_0",
-    ["openbus.legacy.idlpath"] = INSTALL.TOP.."/idl/v1_05",
+    ["openbus.idlpath"] = INSTALL.TOP.."/idl/v2_1",
   },
 }
 
