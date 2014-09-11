@@ -1,0 +1,32 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "oil"
+version = "0.6"
+subpackage_of = "oil-source == "..version
+dependencies = {
+  "lua-bin == 5.2.2.1",
+  "loop == 3.0beta3",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua-bin)%",
+    USE_LUA52 = "YES",
+    LOOP_HOME = "%directory(loop)%",
+    OIL_HOME = "%directory(oil-source)%",
+  },
+  src = "openbus",
+  mf = { "oil", },
+  MacOS = { mf = { "oil", "oil BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "oil ".. SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/liboil.so"] = "lib",
+  ["../lib/${TEC_UNAME}/liboil.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/liboil.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/oil.h"] = "include/oil",
+}

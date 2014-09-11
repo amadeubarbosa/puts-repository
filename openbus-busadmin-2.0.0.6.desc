@@ -1,0 +1,44 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES"
+
+name = "openbus-busadmin"
+version = "2.0.0.6"
+subpackage_of = "openbus-busservice == "..version
+dependencies = {
+  "lua-bin == 5.2.2.1",
+  "luastruct == 1.2.1",
+  "luasocket == 2.0.2.1",
+  "luatuple == 1.0beta3",
+  "loop == 3.0beta3",
+  "luacothread == 1.0beta3",
+  "luaidl == 0.6",
+  "oil == 0.6",
+  "luavararg == 1.1.1",
+  "luafilesystem == 1.4.2.1",
+  "luuid == 1.0.1",
+  "lce == 2.0.1-loop3.0beta3",
+  "scs-lua == 1.2.3.1-loop3.0beta3",
+  "openbus-lua == 2.0.0.4",
+  "scs-idl1.2 == 1.2.1",
+  "openbus-idl2.0 == 2.0.3",
+} 
+
+local vars = {
+  LUA52 = "%directory(lua-bin)%",
+  USE_LUA52 = "YES",
+  CODEREV = assert(version:match("^2%.0%.0%.(%d+)$"), "bad 'busadmin' version"),
+  OPENBUS_HOME = INSTALL.TOP, -- required by '.mak' when USE_STATIC
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "tecmake",
+  variables = vars,
+  mf = { "busadmin USE_STATIC=YES" },
+  SunOS510_64 = { mf = { "busadmin USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
+}
+install_files = {
+  ["../bin/${TEC_UNAME}/busadmin"] = "bin",
+}
