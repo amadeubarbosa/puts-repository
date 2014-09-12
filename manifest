@@ -3204,7 +3204,7 @@ repository = {
       ,
     }
     ,
-    ["2.0snapshot"] = {
+    ["2.0.1snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }

@@ -1,5 +1,5 @@
 name = "openbus-doc-java"
-version = "2.0snapshot"
+version = "2.0.1snapshot"
 subpackage_of = "openbus-java == "..version
 
 local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 *.pdf ; "
