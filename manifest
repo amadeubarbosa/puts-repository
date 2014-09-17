@@ -3242,6 +3242,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-html-intro"] = {
