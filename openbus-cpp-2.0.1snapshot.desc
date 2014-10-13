@@ -1,0 +1,49 @@
+name = "openbus-cpp"
+version = "2.0.1snapshot"
+url = SVNREPURL .. "/openbus/sdk/cpp/trunk"
+dependencies = {
+  "boost == 1.51.0-oblibs2.0.0.0",
+  "boost-build == 12m",
+  "tao == 2.2a",
+  "tao-bb == 1.0",
+  "openbus-idl2.0 == 2.0snapshot",
+  "logger == 2.0snapshot",
+  "scs-idl1.2 == 1.2snapshot",
+  "scs-cpp == 1.2snapshot",
+  "openssl == 1.0.0j",
+}
+build = {
+  type = "bjam",
+  src = ".",
+  targets = {
+     "stage",
+     "stage-demos",
+  },
+  variables = {
+    threading = { "multi" },
+    variant = { "debug", "release" },
+    link = { "static", "shared" },
+    ["-sBOOST_ROOT_PATH"] = "%directory(boost)%",
+    ["-sACE_ROOT_PATH"] = "%directory(tao)%",
+    ["-sTAO_ROOT_PATH"] = "%directory(tao)%/TAO",
+    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.2)%/src",
+    ["-sSCS_ROOT_PATH"] = "%directory(scs-cpp)%",
+    ["-sLOGGER_ROOT_PATH"] = "%directory(logger)%",
+    ["-sOPENBUS_IDL_PATH"] = "%directory(openbus-idl2.0)%/src",
+    ["-sOPENSSL_ROOT_PATH"] = "%directory(openssl)%",
+    BOOST_BUILD_PATH = "%directory(boost-build)%"..":".."%directory(tao-bb)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
+  },
+  bjam_opts = {
+     "-d+2",
+     "warnings=off",
+     "--layout=tagged",
+  },
+}
+
+dev_files = {
+  ["stage/libopenbus-*"] = "lib",
+  ["include/openbus"] = "include/openbus/cpp",    --include
+  ["stage-demos/*"] = "demo/cpp",
+  -- ["stage/stubs"] = "include/openbus/cpp",     --include
+}

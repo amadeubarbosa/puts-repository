@@ -1,0 +1,6 @@
+name = "tao-bb"
+version = "1.0"
+url = SVNREPURL .. "/cpputils/tao-bb/trunk"
+dependencies = {
+  "boost-build == 12m",
+}

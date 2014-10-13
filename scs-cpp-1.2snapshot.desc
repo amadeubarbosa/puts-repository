@@ -1,0 +1,44 @@
+name = "scs-cpp"
+version = "1.2snapshot"
+url = SVNREPURL .. "/scs/core/cpp/trunk"
+dependencies = {
+  "scs-idl1.2 == 1.2.1",
+  "logger == 2.0snapshot",
+  "tao == 2.2a",
+  "tao-bb == 1.0",
+  "boost == 1.51.0-oblibs2.0.0.0",
+  "boost-build == 12m",
+}
+build = {
+  type = "bjam",
+  src = ".",
+  targets = {
+     "stage",
+  },
+  variables = {
+    threading = { "single", "multi" },
+    variant = { "debug", "release" },
+    link = { "static", "shared" },
+    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.2)%/src",
+    ["-sLOGGER_ROOT_PATH"] = "%directory(logger)%",
+    ["-sACE_ROOT_PATH"] = "%directory(tao)%",
+    ["-sTAO_ROOT_PATH"] = "%directory(tao)%/TAO",
+    ["-sBOOST_ROOT_PATH"] = "%directory(boost)%",
+    BOOST_BUILD_PATH = "%directory(boost-build)%"..":".."%directory(tao-bb)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
+ },
+  bjam_opts = {
+     "-d+2",
+     "warnings=off",
+     "--layout=tagged",
+  },
+}
+install_files = {
+  ["stage/libscs*.so"]    = "lib",
+  ["stage/libscs*.a"]    = "lib",
+  ["stage/libscs*.dylib"] = "lib",
+}
+dev_files = {
+  ["include/scs/*"]                         = "include/scs",
+  ["stage/stubs/*.h"]                       = "include/scs/stubs",
+}

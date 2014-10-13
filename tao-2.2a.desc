@@ -1,0 +1,13 @@
+name = "tao"
+version = "2.2a"
+url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/tao-2.2a.tgz"
+
+build = {
+  type = "autotools",
+}
+build.Darwin = "echo '#include \"ace/config-macosx-mountainlion.h\"' > ./ace/config.h && "..
+  "echo 'include $(ACE_ROOT)/include/makeinclude/platform_macosx_mountainlion.GNU\ninstall_rpath=0' > ./include/makeinclude/platform_macros.GNU && "..
+  "export ACE_ROOT=`pwd` && "..
+  "export TAO_ROOT=`pwd`/TAO && "..
+  "export DYLD_LIBRARY_PATH=`pwd`/lib && "..
+  "make -j4 && cd TAO && make -j4"

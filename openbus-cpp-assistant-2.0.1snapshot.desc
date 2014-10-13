@@ -1,0 +1,49 @@
+name = "openbus-cpp-assistant"
+version = "2.0.1snapshot"
+subpackage_of = "openbus-cpp == "..version
+dependencies = {
+  "boost == 1.51.0-oblibs2.0.0.0",
+  "boost-build == 12m",
+  "boost-system == 1.51.0-oblibs2.0.0.0",
+  "boost-chrono == 1.51.0-oblibs2.0.0.0",
+  "tao == 2.2a",
+  "openbus-idl2.0 == 2.0snapshot",
+  "logger == 2.0snapshot",
+  "scs-idl1.2 == 1.2snapshot",
+  "scs-cpp == 1.2snapshot",
+  "openbus-cpp == 2.0.1snapshot",
+  "openssl == 1.0.0j",
+}
+build = {
+  type = "bjam",
+  src = ".",
+  targets = {
+     "stage-assistant",
+     "stage-assistant-demos",
+  },
+  variables = {
+    threading = {"multi"},
+    variant = {"debug", "release"},
+    link = { "static", "shared" },
+    ["-sBOOST_ROOT_PATH"] = "%directory(boost)%",
+    ["-sACE_ROOT_PATH"] = "%directory(tao)%",
+    ["-sTAO_ROOT_PATH"] = "%directory(tao)%/TAO",
+    ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.2)%/src",
+    ["-sSCS_ROOT_PATH"] = "%directory(scs-cpp)%",
+    ["-sLOGGER_ROOT_PATH"] = "%directory(logger)%",
+    ["-sOPENBUS_IDL_PATH"] = "%directory(openbus-idl2.0)%/src",
+    ["-sOPENSSL_ROOT_PATH"] = "%directory(openssl)%",
+    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
+  },
+  bjam_opts = {
+     "-d+2",
+     "warnings=off",
+     "--layout=tagged",
+  },
+}
+dev_files = {
+  ["stage/libassistant*"] = "lib",
+  ["assistant/include/openbus"] = "include/openbus/cpp",
+  ["stage-demos/assistant/*"] = "demo/cpp/assistant",
+}

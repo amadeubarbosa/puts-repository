@@ -2089,6 +2089,26 @@ repository = {
     ,
   }
   ,
+  ["openbus-cpp"] = {
+    ["2.0.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-cpp-assistant"] = {
+    ["2.0.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-cpp-assistant-mico"] = {
     ["2.0.0.0"] = {
       [1] = {
@@ -4011,6 +4031,16 @@ repository = {
     ,
   }
   ,
+  ["scs-cpp"] = {
+    ["1.2snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["scs-cpp-mico"] = {
     ["1.2.0.1"] = {
       [1] = {
@@ -4343,6 +4373,26 @@ repository = {
   ,
   ["sqlite"] = {
     ["3.7.16.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["tao"] = {
+    ["2.2a"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["tao-bb"] = {
+    ["1.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
