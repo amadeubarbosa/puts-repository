@@ -6,8 +6,12 @@ build = {
   type = "autotools",
 }
 build.Darwin = "echo '#include \"ace/config-macosx-mountainlion.h\"' > ./ace/config.h && "..
-  "echo 'include $(ACE_ROOT)/include/makeinclude/platform_macosx_mountainlion.GNU\ninstall_rpath=0' > ./include/makeinclude/platform_macros.GNU && "..
+  "echo 'include $(ACE_ROOT)/include/makeinclude/platform_macosx_mountainlion.GNU\ninstall_rpath=0\nstatic_libs_only=1\n' > ./include/makeinclude/platform_macros.GNU && "..
   "export ACE_ROOT=`pwd` && "..
   "export TAO_ROOT=`pwd`/TAO && "..
   "export DYLD_LIBRARY_PATH=`pwd`/lib && "..
-  "make -j4 && cd TAO && make -j4"
+  "make -j4 && cd TAO && make -j4 TAO AnyTypeCode PortableServer PI PI_Server CodecFactory && "..
+  "cd $ACE_ROOT && "..
+  "echo 'include $(ACE_ROOT)/include/makeinclude/platform_macosx_mountainlion.GNU\ninstall_rpath=0\n' > ./include/makeinclude/platform_macros.GNU && "..
+  "make -j4 && cd TAO && make -j4 TAO AnyTypeCode PortableServer PI PI_Server CodecFactory"
+  
