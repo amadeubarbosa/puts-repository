@@ -1,6 +1,6 @@
 name = "boost"
 version = "1.48.0"
-url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/boost-1.48.0.tgz"
+url = "http://webserver2.tecgraf.puc-rio.br/ftp_pub/openbus/repository/boost-1.48.0.tgz"
 dev_files = {
   ["boost"] = "include/boost",
 }

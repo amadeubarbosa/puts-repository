@@ -2,7 +2,7 @@ DEFAULT_FLAGS = "shared --prefix="..TMPDIR.." --openssldir="..TMPDIR.."/openssl"
 
 name = "openssl"
 version = "1.0.0m"
-url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/openssl-1.0.0m.tar.gz"
+url = "http://webserver2.tecgraf.puc-rio.br/ftp_pub/openbus/repository/openssl-1.0.0m.tar.gz"
 
 build = {
   type = "autotools",

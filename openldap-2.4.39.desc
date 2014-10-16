@@ -1,6 +1,6 @@
 name = "openldap"
 version = "2.4.39"
-url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/openldap-2.4.39.tgz"
+url = "http://webserver2.tecgraf.puc-rio.br/ftp_pub/openbus/repository/openldap-2.4.39.tgz"
 dependencies = {
   "openssl == 1.0.0m",
 }

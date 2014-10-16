@@ -1,6 +1,6 @@
 name = "cxxtest"
 version = "1.0.0"
-url = "http://www.tecgraf.puc-rio.br/ftp_pub/openbus/repository/cxxtest-1.0.0.tar.gz"
+url = "http://webserver2.tecgraf.puc-rio.br/ftp_pub/openbus/repository/cxxtest-1.0.0.tar.gz"
 dev_files = {
   ["cxxtestgen.pl"] = "bin",
   ["cxxtestgen.py"] = "bin",
