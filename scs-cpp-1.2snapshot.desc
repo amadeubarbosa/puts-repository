@@ -2,7 +2,7 @@ name = "scs-cpp"
 version = "1.2snapshot"
 url = SVNREPURL .. "/scs/core/cpp/trunk"
 dependencies = {
-  "scs-idl1.2 == 1.2.1",
+  "scs-idl1.2 == 1.2snapshot",
   "logger == 2.0snapshot",
   "tao == 2.2a",
   "tao-bb == 1.0",
