@@ -1,0 +1,8 @@
+openbus-cpp-mico-2.0.0.3 +dependencies +dev
+openbus-cpp-assistant-mico-2.0.0.3 +dependencies +dev
+openbus-demo-mico-sources-2.0.0.3 +dev
+openbus-demo-assistant-mico-sources-2.0.0.3 +dev
+openbus-demo-scs-mico-idl-2.0.0.3
+boost-program-options-1.51.0-oblibs2.0.0.0
+openbus-doc-cpp-assistant-2.0.0.3 +dependencies +dev
+licenses-2013
