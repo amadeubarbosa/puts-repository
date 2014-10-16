@@ -1,16 +1,16 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "luastruct"
-version = "1.2compatLua52"
+version = "1.2lua51snapshot"
 url = SVNREPURL.."/openbus/libs/struct/branches/1.2"
 dependencies = {
-  "lua == 5.2.2",
+  "lua == 5.1.3snapshot",
 }
 build = {
   type = "tecmake",
   variables = {
-    LUA52 = "%directory(lua)%",
-    USE_LUA52 = "Yes",
+    LUA51 = "%directory(lua)%",
+    USE_LUA51 = "Yes",
   },
   mf = { "luastruct" },
   MacOS = { mf = { "luastruct", "luastruct BUILD_DYLIB=Yes" } },

@@ -4,13 +4,13 @@ name = "luastruct"
 version = "1.2snapshot"
 url = SVNREPURL.."/openbus/libs/struct/branches/1.2"
 dependencies = {
-  "lua == 5.1.3snapshot",
+  "lua == 5.2.2",
 }
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "%directory(lua)%",
-    USE_LUA51 = "Yes",
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "Yes",
   },
   mf = { "luastruct" },
   MacOS = { mf = { "luastruct", "luastruct BUILD_DYLIB=Yes" } },

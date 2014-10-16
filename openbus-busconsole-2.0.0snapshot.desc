@@ -3,26 +3,26 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES "
 name = "openbus-busconsole"
 version = "2.0.0snapshot"
 subpackage_of = "openbus-lua == "..version
-dependencies = { "luacompat52 == 1.0snapshot",
-  "lua-bin == 5.1.3snapshot",
+dependencies = {
+  "lua-bin == 5.2.2",
+  "luuid == 1.0snapshot",
   "luastruct == 1.2snapshot",
   "luasocket == 2.0.2snapshot",
-  "luatuple == 1.0snapshot",
-  "loop == 2snapshot", -- LOOP 3.0 (trunk)
-  "luacothread == 1.0snapshot",
-  "luaidl == 0.6.0snapshot", -- OiL 0.6 (trunk)
-  "oil == 0.5snapshot", -- OiL 0.6 (trunk)
-  "luavararg == 1.1snapshot",
-  "luafilesystem == 1.4.2snapshot",
-  "luuid == 1.0snapshot",
   "lce == 2.0snapshot",
-  "scs-lua == 1.2.3-1",
+  "luafilesystem == 1.4.2snapshot",
+  "luavararg == 1.1snapshot",
+  "luatuple == 1.0snapshot",
+  "loop == 3.0snapshot",
+  "luacothread == 1.0snapshot",
+  "luaidl == 0.7snapshot",
+  "oil == 0.7snapshot",
+  "scs-lua == 1.2.3snapshot",
   "openbus-lua == "..version,
-} 
+}
 
 local vars = {
-  LUA51 = "%directory(lua-bin)%",
-  USE_LUA51 = "YES",
+  LUA52 = "%directory(lua-bin)%",
+  USE_LUA52 = "YES",
   OPENBUS_HOME = INSTALL.TOP, -- required by '.mak' when USE_STATIC
 }
 for _, dep in ipairs(dependencies) do

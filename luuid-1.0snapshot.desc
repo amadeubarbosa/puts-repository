@@ -4,14 +4,14 @@ name = "luuid"
 version = "1.0snapshot"
 url = SVNREPURL .. "/openbus/libs/luuid/branches/1.0"
 dependencies = {
-  "e2fsprogs == 1.40.8snapshot",
-  "lua == 5.1.3snapshot",
+  "e2fsprogs == 1.40.8-oblibs1.3.2-1",
+  "lua == 5.2.2",
 }
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "%directory(lua)%",
-    USE_LUA51 = "YES",
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "YES",
     OPENBUS_HOME = INSTALL.TOP,
   },
   mf = { "config", },

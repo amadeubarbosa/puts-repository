@@ -1,24 +1,21 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes "
 
 name = "openbus-lua"
-version = "2.0snapshot"
-url = SVNREPURL .. "/openbus/sdk/lua/trunk"
-dependencies = {
-  "lua-bin == 5.2.2",
-  -- dependencies containing shared Tecmake definitions for OpenBus build
-  -- and utilities like 'precompiler.lua' and 'idl2lua.lua' scripts.
-  "loop == 3.0betaCompatLua52",
-  "oil == 0.6betaCompatLua52",
-  -- dependencies containing IDLs precompiled and included in the library
-  "scs-idl1.2 == 1.2snapshot",
-  "openbus-idl1.5 == 1.5snapshot",
-  "openbus-idl2.1 == 2.1snapshot",
-  "sdk-idl-source == 2.0snapshot",
+version = "2.0.0lua51snapshot"
+url = SVNREPURL .. "/openbus/sdk/lua/branches/02_00_00"
+dependencies = { "luacompat52 == 1.0snapshot",
+  "lua-bin == 5.1.3-oblibs1.3.2-1",
+  "loop == 3.0lua51snapshot",
+  "oil == 0.7lua51snapshot",
+  "scs-idl1.2 == 1.2.1",
+  "openbus-idl1.5 == 1.5.2-1",
+  "openbus-idl2.0 == 2.0snapshot",
+  "sdk-idl-source == 2.0.0",
 }
 
 local vars = {
-  LUA52 = "%directory(lua-bin)%",
-  USE_LUA52 = "YES",
+  LUA51 = "%directory(lua-bin)%",
+  USE_LUA51 = "YES",
 }
 for _, dep in ipairs(dependencies) do
   local name = assert(dep:match("^([^=]-)%s=="))

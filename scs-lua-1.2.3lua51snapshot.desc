@@ -1,19 +1,20 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "scs-lua"
-version = "1.2.3-1compatLua52"
+version = "1.2.3lua51snapshot"
 url = SVNREPURL .. "/scs/core/lua/branches/SCS_CORE_LUA_v1_02_03_2012_05_10"
-dependencies = {
-  "lua-bin == 5.2.2",
-  "loop == 3.0betaCompatLua52",
-  "oil == 0.6betaCompatLua52",
+dependencies = { "luacompat52 == 1.0snapshot",
+  "lua-bin == 5.1.3-oblibs1.3.2-1",
+  "loop == 3.0lua51snapshot",
+  "oil == 0.7lua51snapshot",
   "scs-idl1.2 == 1.2.1",
 }
 build = {
   type = "tecmake",
   variables = {
-    LUA52 = "%directory(lua-bin)%",
-    USE_LUA52 = "YES",
+    LUA51 = "%directory(lua-bin)%",
+    USE_LUA51 = "YES",
+    LUACOMPAT52_HOME = "%directory(luacompat52)%",
     LOOP_HOME = "%directory(loop)%",
   },
   mf = { "config", },

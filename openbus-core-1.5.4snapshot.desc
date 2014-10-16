@@ -9,9 +9,9 @@ dependencies = {
   "scsall == 1.2.2snapshot",
   "lualdap == 1.1.0-oblibs1.3.2-1",
   "lce == 1.0snapshot",
-  "luuid == 1.0snapshot",
+  "luuid == 1.0lua51snapshot",
   "lpw == 1.5.4snapshot",
-  "luafilesystem == 1.4.2snapshot",
+  "luafilesystem == 1.4.2lua51snapshot",
   "openbus-lua == 1.5.3snapshot",
   "latt == 1.0.1",
 } 

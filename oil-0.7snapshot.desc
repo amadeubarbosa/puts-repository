@@ -1,11 +1,11 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "oil"
-version = "0.6betaCompatLua52"
+version = "0.7snapshot"
 subpackage_of = "oil-source == "..version
 dependencies = {
   "lua-bin == 5.2.2",
-  "loop == 3.0betaCompatLua52", -- LOOP 3.0 (trunk)
+  "loop == 3.0snapshot",
 }
 build = {
   type = "tecmake",

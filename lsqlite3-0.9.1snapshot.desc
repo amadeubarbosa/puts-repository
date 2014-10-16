@@ -1,10 +1,10 @@
 name = "lsqlite3"
-version = "0.9.1compatLua52"
+version = "0.9.1snapshot"
 url = SVNREPURL .. "/openbus/libs/luasqlite3/branches/0.9.1"
 
 dependencies = {
   "lua == 5.2.2",
-  "luafilesystem == 1.4.2compatLua52",
+  "luafilesystem == 1.4.2snapshot",
   "boost-build == 12m",
   "sqlite == 3.7.16.2",
 }

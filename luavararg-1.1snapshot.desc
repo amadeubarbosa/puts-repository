@@ -4,13 +4,13 @@ name = "luavararg"
 version = "1.1snapshot"
 url = SVNREPURL.."/openbus/libs/vararg/branches/1.1"
 dependencies = {
-  "lua == 5.1.3snapshot",
+  "lua == 5.2.2",
 }
 build = {
   type = "tecmake",
   variables = {
-    LUA51 = "%directory(lua)%",
-    USE_LUA51 = "Yes",
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "Yes",
   },
   mf = { "luavararg" },
   MacOS = { mf = { "luavararg", "luavararg BUILD_DYLIB=Yes" } },

@@ -6,7 +6,7 @@ subpackage_of = "oil-source == "..version
 dependencies = {
   "lua-bin == 5.1.3snapshot",
   "loop == 2.3beta",
-  "luasocket == 2.0.2snapshot",
+  "luasocket == 2.0.2lua51snapshot",
 }
 build = {
   type = "tecmake",
