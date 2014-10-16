@@ -1,4 +1,4 @@
-name = "openbus-use_cases-java-filesystem"
+name = "openbus-use_cases-java-file_system"
 version = "1.0snapshot"
 url = SVNREPURL .. "/openbus/use_cases/java/file_system/trunk"
 dependencies = {

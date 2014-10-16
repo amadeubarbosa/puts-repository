@@ -1,5 +1,5 @@
 name = "collaboration-service-demo-java"
-version = "1.0.0snapshot"
+version = "1.0snapshot"
 subpackage_of = "collaboration-service == "..version
 dependencies = {
   "scs-idl1.2 == 1.2snapshot",
