@@ -1,5 +1,5 @@
 name = "openbus-demo-independent-clock-assistant-mico"
-version = "2.0.0.3"
+version = "2.0.0.3boost1_55"
 subpackage_of = "openbus-cpp-assistant-mico == "..version
 dependencies = {
   "openbus-cpp-mico == "..version,

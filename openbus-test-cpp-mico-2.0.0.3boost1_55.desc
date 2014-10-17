@@ -1,5 +1,5 @@
 name = "openbus-test-cpp-mico"
-version = "2.0.0.3"
+version = "2.0.0.3boost1_55"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
   "boost == 1.55.0",
@@ -13,7 +13,7 @@ dependencies = {
   "scs-idl1.2 == 1.2.1",
   "scs-cpp-mico == 1.2.0.1",
   "openssl == 1.0.0m",
-  "openbus-cpp-mico == 2.0.0.3",
+  "openbus-cpp-mico == 2.0.0.3boost1_55",
 }
 build = {
   type = "bjam",

@@ -1,5 +1,5 @@
 name = "openbus-cpp-mico"
-version = "2.0.0.3"
+version = "2.0.0.3boost1_55"
 url = SVNREPURL .. "/openbus/sdk/cpp/tags/02_00_00_03"
 dependencies = {
   "boost == 1.55.0",

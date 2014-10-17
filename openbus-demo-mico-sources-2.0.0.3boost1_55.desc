@@ -1,5 +1,5 @@
 name = "openbus-demo-mico-sources"
-version = "2.0.0.3"
+version = "2.0.0.3boost1_55"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
   "openbus-demo-audit-mico == "..version,
