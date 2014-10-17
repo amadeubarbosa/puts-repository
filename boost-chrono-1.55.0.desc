@@ -1,0 +1,37 @@
+name = "boost-chrono"
+version = "1.55.0"
+subpackage_of = "boost == "..version
+dependencies = {
+  "boost-system == "..version,
+}
+build = {
+  type = "bjam",
+  bjam_source = "tools/build/v2/engine",
+  targets = {
+    "stage",
+  },
+  variables = {
+    BOOST_BUILD_PATH = "tools/build/v2",
+    link = { "static", "shared" },
+    variant = { "release", "debug" },
+    threading = { "multi", "single" },
+  },
+  bjam_opts = {
+    "-d+2",
+    "--with-chrono",
+    "--layout=tagged",
+  },
+}
+build.SunOS = {
+  variables = {
+    toolset = "sun",
+  }
+}
+build.SunOS510_64 = {
+  variables = {
+    ["address-model"] = "64",
+  }
+}
+install_files = {
+  ["stage/lib/libboost_chrono*"] = "lib",
+}
