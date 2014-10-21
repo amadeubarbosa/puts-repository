@@ -1,0 +1,13 @@
+name = "boost-build"
+version = "1.55.0"
+url = SVNREPURL .. "/openbus/libs/boost/branches/1.55.0/tools/build/v2"
+build = {
+  type = "autotools",
+  configure = "echo OK",
+  compile = "cd engine && ./build.sh",
+  install = "echo OK",
+}
+install_files = {
+  ["engine/bin.*/b2"] = "bin",
+  ["."] = "boost-build",
+}

@@ -3,7 +3,7 @@ version = "2.0.0.3boost1_55"
 subpackage_of = "openbus-cpp-mico == "..version
 dependencies = {
   "boost == 1.55.0",
-  "boost-build == 12m",
+  "boost-build == 1.55.0",
   "mico-singlethread-debug == 2.3.13-oblibs2.0.0.0",
   "mico-multithread-debug == 2.3.13-oblibs2.0.0.0",
   "mico-singlethread == 2.3.13-oblibs2.0.0.0",

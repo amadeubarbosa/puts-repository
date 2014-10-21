@@ -52,6 +52,13 @@ repository = {
   }
   ,
   ["boost-build"] = {
+    ["1.55.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["12m"] = {
       [1] = {
         ["arch"] = "desc",
