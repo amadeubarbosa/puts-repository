@@ -1,5 +1,5 @@
 name = "openbus-demo-hello-assistant-mico"
-version = "2.0.0.2"
+version = "2.0.0.3boost1_55"
 subpackage_of = "openbus-cpp-assistant-mico == "..version
 dependencies = {
   "openbus-cpp-mico == "..version,
@@ -16,7 +16,7 @@ dependencies = {
   "logger == 2.0.0.0boost1_55",
   "scs-idl1.2 == 1.2.1",
   "scs-cpp-mico == 1.2.0.1boost1_55",
-  "openssl == 1.0.0j",
+  "openssl == 1.0.0m",
 }
 build = {
   type = "bjam",
