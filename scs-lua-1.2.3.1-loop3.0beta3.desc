@@ -6,7 +6,7 @@ url = SVNREPURL.."/scs/core/lua/tags/01_02_03_01"
 dependencies = {
   "lua-bin == 5.2.2.1",
   "loop == 3.0beta3",
-  "oil == 0.6beta3",
+  --"oil == 0.6beta3", -- runtime dependency, not needed for build. Those that use this library should include such dependency though.
   "scs-idl1.2 == 1.2.1",
 }
 build = {
