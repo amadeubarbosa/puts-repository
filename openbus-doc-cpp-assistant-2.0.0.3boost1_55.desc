@@ -4,7 +4,7 @@ subpackage_of = "openbus-cpp-assistant-mico == "..version
 dependencies = {
   "boost == 1.55.0",
   "boost-build == 1.55.0",
-  "boost-quickbook == 1.6",
+  "boost-quickbook == 1.6boost1_55",
   "libxslt == 1.1.26",
   "docbook-dtd == 4.2",
   "docbook-xsl == 1.75.2",

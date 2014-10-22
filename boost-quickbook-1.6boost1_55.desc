@@ -1,0 +1,25 @@
+name = "boost-quickbook"
+version = "1.6boost1_55"
+url = SVNREPURL .. "/openbus/libs/quickbook/branches/1.6"
+dependencies = {
+  "boost == 1.55.0",
+  "boost-build == 1.55.0",
+}
+build = {
+  type = "bjam",
+  src = ".",
+  targets = {
+     "stage",
+  },
+  variables = {
+    variant = "release",
+    link = "static",
+    threading = "single",
+    ["-sBOOST_PATH"] = "%directory(boost)%",
+    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
+  },
+  bjam_opts = {
+     "-d+2",
+  },
+}

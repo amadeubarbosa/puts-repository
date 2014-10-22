@@ -165,6 +165,13 @@ repository = {
       ,
     }
     ,
+    ["1.6boost1_55"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["boost-random"] = {
