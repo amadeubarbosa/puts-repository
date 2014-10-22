@@ -9,10 +9,9 @@ dependencies = { "luacompat52 == 1.0snapshot",
 }
 build = {
   type = "tecmake",
-  variables = {
+  variables = { LUACOMPAT52_HOME = "%directory(luacompat52)%",
     LUA51 = "%directory(lua-bin)%",
     USE_LUA51 = "YES",
-    LUACOMPAT52_HOME = "%directory(luacompat52)%",
     LOOP_HOME = "%directory(loop)%",
   },
   src = "openbus",

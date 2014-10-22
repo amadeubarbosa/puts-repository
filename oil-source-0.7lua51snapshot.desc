@@ -1,3 +1,0 @@
-name = "oil-source"
-version = "0.7lua51snapshot"
-url = SVNREPURL .. "/oil/trunk"
