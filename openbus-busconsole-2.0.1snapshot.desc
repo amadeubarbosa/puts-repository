@@ -1,8 +1,8 @@
-SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES"
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES "
 
-name = "openbus-busservice"
-version = "2.0.0snapshot"
-url = SVNREPURL .. "/openbus/core/branches/02_00_00"
+name = "openbus-busconsole"
+version = "2.0.1snapshot"
+subpackage_of = "openbus-lua == "..version
 dependencies = {
   "lua-bin == 5.2.2.1",
   "luuid == 1.0.1",
@@ -16,12 +16,9 @@ dependencies = {
   "luacothread == 1.0snapshot",
   "luaidl == 0.6snapshot",
   "oil == 0.6snapshot",
-  "scs-idl1.2 == 1.2.1",
   "scs-lua == 1.2.3.1-loop3.0beta3",
-  "openbus-idl2.0 == 2.0snapshot",
-  "openbus-lua == 2.0.1snapshot",
-  "lualdap == 1.1.0.1-openldap2.4.39",
-} 
+  "openbus-lua == "..version,
+}
 
 local vars = {
   LUA52 = "%directory(lua-bin)%",
@@ -36,14 +33,10 @@ end
 build = {
   type = "tecmake",
   variables = vars,
-  mf = { "busservices USE_STATIC=YES" },
-  SunOS510_64 = { mf = { "busservices USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
+  mf = { "busconsole USE_STATIC=YES" },
+  SunOS510_64 = { mf = { "busconsole USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
 }
+
 install_files = {
-  ["../bin/${TEC_UNAME}/busservices"] = "bin",
-  ["../shell/*"] = "bin",
-}
-dev_files = {
-  ["../test/*"] = "test",
-  ["../idl/*.idl"] = "idl/adm", -- for tests only
+  ["../bin/"..TEC_UNAME.."/busconsole"] = "bin",
 }

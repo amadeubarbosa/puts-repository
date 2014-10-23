@@ -1,0 +1,42 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES "
+
+name = "openbus-busconsole"
+version = "2.0.1lua51snapshot"
+subpackage_of = "openbus-lua == "..version
+dependencies = { "luacompat52 == 1.0snapshot",
+  "lua-bin == 5.1.3snapshot",
+  "luuid == 1.0lua51snapshot",
+  "luastruct == 1.2lua51snapshot",
+  "luasocket == 2.0.2lua51snapshot",
+  "lce == 2.0lua51snapshot",
+  "luafilesystem == 1.4.2lua51snapshot",
+  "luavararg == 1.1lua51snapshot",
+  "luatuple == 1.0lua51snapshot",
+  "loop == 3.0lua51snapshot",
+  "luacothread == 1.0lua51snapshot",
+  "luaidl == 0.7lua51snapshot",
+  "oil == 0.7lua51snapshot",
+  "scs-lua == 1.2.3lua51snapshot",
+  "openbus-lua == "..version,
+} 
+
+local vars = {
+  LUA51 = "%directory(lua-bin)%",
+  USE_LUA51 = "YES",
+  OPENBUS_HOME = INSTALL.TOP, -- required by '.mak' when USE_STATIC
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "tecmake",
+  variables = vars,
+  mf = { "busconsole USE_STATIC=YES" },
+  SunOS510_64 = { mf = { "busconsole USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
+}
+
+install_files = {
+  ["../bin/"..TEC_UNAME.."/busconsole"] = "bin",
+}
