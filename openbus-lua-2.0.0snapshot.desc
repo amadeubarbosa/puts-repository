@@ -4,9 +4,9 @@ name = "openbus-lua"
 version = "2.0.0snapshot"
 url = SVNREPURL .. "/openbus/sdk/lua/branches/02_00_00"
 dependencies = { 
-  "lua-bin == 5.2.2",
+  "lua-bin == 5.2.2.1",
   "loop == 3.0snapshot",
-  "oil == 0.7snapshot",
+  "oil == 0.6snapshot",
   "scs-idl1.2 == 1.2.1",
   "openbus-idl1.5 == 1.5.2-1",
   "openbus-idl2.0 == 2.0snapshot",

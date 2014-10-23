@@ -1221,6 +1221,20 @@ repository = {
       ,
     }
     ,
+    ["0.6lua51snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["0.6snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["0.7lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1682,6 +1696,20 @@ repository = {
       ,
     }
     ,
+    ["0.6lua51snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["0.6snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["0.7lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1756,20 +1784,6 @@ repository = {
     }
     ,
     ["0.6beta3"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-    ["0.7lua51snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-    ["0.7snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
