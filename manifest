@@ -1983,6 +1983,20 @@ repository = {
       ,
     }
     ,
+    ["2.0.1lua51snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0beta"] = {
       [1] = {
         ["arch"] = "desc",
@@ -3958,6 +3972,20 @@ repository = {
     }
     ,
     ["2.0.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.1lua51snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.1snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }
