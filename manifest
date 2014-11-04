@@ -3895,6 +3895,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-java-doc"] = {

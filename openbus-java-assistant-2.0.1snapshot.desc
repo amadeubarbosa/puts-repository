@@ -1,8 +1,8 @@
 name = "openbus-java-assistant"
 version = "2.0.0snapshot"
-url = SVNREPURL .. "/openbus/sdk/assistant/java/branches/02_00_00"
+url = SVNREPURL .. "/openbus/sdk/assistant/java/trunk"
 dependencies = { 
-  "openbus-java == 2.0.1snapshot",
+  "openbus-java == 2.0.2snapshot",
 }
 build = {
   type = "maven",
