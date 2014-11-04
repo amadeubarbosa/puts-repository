@@ -4,7 +4,7 @@ name = "openbus-idl2.0"
 version = "2.0snapshot"
 url = SVNREPURL .. "/openbus/idl/branches/02_00"
 dependencies = {
-  "scs-idl1.2 == 1.2snapshot",
+  "scs-idl1.2 == 1.2.1",
 }
 install_files = {
   ["src/*.idl"] = "idl/"..IDL_VERSION,
