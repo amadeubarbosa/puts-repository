@@ -1,6 +1,6 @@
 name = "sdk-idl-source"
 version = "2.0snapshot"
-url = SVNREPURL .. "/openbus/sdk/idl/lib/trunk"
+url = SVNREPURL .. "/openbus/sdk/idl/lib/branches/02_00"
 install_files = {
   ["src/*.idl"] = "idl/lib",
 }

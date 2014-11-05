@@ -10,7 +10,7 @@ dependencies = {
   "scs-idl1.2 == 1.2.1",
   "openbus-idl1.5 == 1.5.2-1",
   "openbus-idl2.0 == 2.0snapshot",
-  "sdk-idl-source == 2.0.0",
+  "sdk-idl-source == 2.0snapshot",
 }
 
 local vars = {
