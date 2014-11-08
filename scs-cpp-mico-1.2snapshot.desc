@@ -30,7 +30,7 @@ build = {
  },
   bjam_opts = {
     "-d+2",
-    "--warnings=off",
+    "warnings=off",
     "--layout=tagged",
   },
 }
