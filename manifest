@@ -3534,6 +3534,23 @@ repository = {
     ,
   }
   ,
+  ["openbus-doc-java-assistant"] = {
+    ["2.0.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-html-install"] = {
     ["2.0.0.0"] = {
       [1] = {
