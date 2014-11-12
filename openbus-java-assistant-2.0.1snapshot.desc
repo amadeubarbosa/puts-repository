@@ -1,5 +1,5 @@
 name = "openbus-java-assistant"
-version = "2.0.0snapshot"
+version = "2.0.1snapshot"
 url = SVNREPURL .. "/openbus/sdk/assistant/java/trunk"
 dependencies = { 
   "openbus-java == 2.0.2snapshot",
