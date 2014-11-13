@@ -4733,6 +4733,13 @@ repository = {
       ,
     }
     ,
+    ["2.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["sdk-lua-source"] = {

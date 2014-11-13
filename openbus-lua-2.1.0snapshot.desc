@@ -11,9 +11,9 @@ dependencies = {
   "oil == 0.7snapshot",
   -- dependencies containing IDLs precompiled and included in the library
   "scs-idl1.2 == 1.2snapshot",
-  "openbus-idl1.5 == 1.5snapshot",
+  "openbus-idl2.0 == 2.0snapshot",
   "openbus-idl2.1 == 2.1snapshot",
-  "sdk-idl-source == 2.0snapshot",
+  "sdk-idl-source == 2.1snapshot",
 }
 
 local vars = {
