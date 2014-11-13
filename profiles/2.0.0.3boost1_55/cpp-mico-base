@@ -1,0 +1,7 @@
+boost-program-options-1.55.0
+licenses-2013
+openbus-cpp-assistant-mico-2.0.0.3boost1_55 +dependencies +dev
+openbus-cpp-mico-2.0.0.3boost1_55 +dependencies +dev
+openbus-demo-assistant-mico-sources-2.0.0.3boost1_55 +dev
+openbus-demo-mico-sources-2.0.0.3boost1_55 +dev
+openbus-demo-scs-mico-idl-2.0.0.3boost1_55
