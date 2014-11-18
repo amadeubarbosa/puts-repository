@@ -1,0 +1,15 @@
+name = "openbus-doc-idl2.0"
+version = "2.0.4"
+subpackage_of = "openbus-idl2.0 == " .. version
+dependencies = {
+  "scs-idl1.2-doc == 1.2.1",
+}
+build = {
+  type = "command",
+  cmd = "doxygen",
+  arguments = "openbus.dox",
+  src = "doc",
+}
+install_files = {
+  ["html/*"] = "doc/core-idl",
+}

@@ -1,6 +1,6 @@
 name = "openbus-doc-java"
 version = "2.0.1snapshot"
-subpackage_of = "openbus-java == "..version
+subpackage_of = "openbus-java-assistant == "..version
 
 local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 *.pdf ; "
 local generate = "pdflatex FILE && bibtex FILE && pdflatex FILE && pdflatex FILE"
