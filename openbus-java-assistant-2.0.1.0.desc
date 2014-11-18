@@ -1,0 +1,54 @@
+name = "openbus-java-assistant"
+version = "2.0.1.0"
+url = SVNREPURL .. "/openbus/sdk/assistant/java/tags/02_00_01_00"
+dependencies = { 
+  "openbus-java == 2.0.2.0",
+}
+build = {
+  type = "maven",
+  javadoc = true,
+}
+
+install_files = {
+  ["core/target/site/apidocs/*"] = "doc/assistant-core",
+  ["core/target/openbus*.jar"] = "lib",
+  ["core/target/dependency/*.jar"] = "lib",
+  ["demo/callchain/target/openbus-sdk-assistant-demo-callchain-*.jar"] = "demo/java/assistant/callchain",
+  ["demo/callchain/target/dependency/*.jar"] = "lib",
+  ["demo/callchain/README.txt"] = "demo/java/assistant/callchain",
+  ["demo/dedicatedclock/target/openbus-sdk-assistant-demo-dedicatedclock-*.jar"] = "demo/java/assistant/dedicatedclock",
+  ["demo/dedicatedclock/target/dependency/*.jar"] = "lib",
+  ["demo/dedicatedclock/README.txt"] = "demo/java/assistant/dedicatedclock",
+  ["demo/greetings/target/openbus-sdk-assistant-demo-greetings-*.jar"] = "demo/java/assistant/greetings",
+  ["demo/greetings/target/dependency/*.jar"] = "lib",
+  ["demo/greetings/README.txt"] = "demo/java/assistant/greetings",
+  ["demo/hello/target/openbus-sdk-assistant-demo-hello-*.jar"] = "demo/java/assistant/hello",
+  ["demo/hello/target/dependency/*.jar"] = "lib",
+  ["demo/hello/README.txt"] = "demo/java/assistant/hello",
+  ["demo/independentclock/target/openbus-sdk-assistant-demo-independentclock-*.jar"] = "demo/java/assistant/independentclock",
+  ["demo/independentclock/target/dependency/*.jar"] = "lib",
+  ["demo/independentclock/README.txt"] = "demo/java/assistant/independentclock",
+  ["demo/sharedauth/target/openbus-sdk-assistant-demo-sharedauth-*.jar"] = "demo/java/assistant/sharedauth",
+  ["demo/sharedauth/target/dependency/*.jar"] = "lib",
+  ["demo/sharedauth/README.txt"] = "demo/java/assistant/sharedauth",
+}
+
+dev_files = {
+  ["demo/callchain/src"] = "demo/java/assistant/callchain",
+  ["demo/callchain/idl"] = "demo/java/assistant/callchain",
+  ["demo/callchain/admin"] = "demo/java/assistant/callchain",
+  ["demo/dedicatedclock/src"] = "demo/java/assistant/dedicatedclock",
+  ["demo/dedicatedclock/idl"] = "demo/java/assistant/dedicatedclock",
+  ["demo/dedicatedclock/admin"] = "demo/java/assistant/dedicatedclock",
+  ["demo/greetings/src"] = "demo/java/assistant/greetings",
+  ["demo/greetings/idl"] = "demo/java/assistant/greetings",
+  ["demo/greetings/admin"] = "demo/java/assistant/greetings",
+  ["demo/hello/src"] = "demo/java/assistant/hello",
+  ["demo/hello/idl"] = "demo/java/assistant/hello",
+  ["demo/hello/admin"] = "demo/java/assistant/hello",
+  ["demo/independentclock/src"] = "demo/java/assistant/independentclock",
+  ["demo/independentclock/idl"] = "demo/java/assistant/independentclock",
+  ["demo/independentclock/admin"] = "demo/java/assistant/independentclock",
+  ["demo/sharedauth/src"] = "demo/java/assistant/sharedauth",
+  ["demo/sharedauth/idl"] = "demo/java/assistant/sharedauth",
+}
