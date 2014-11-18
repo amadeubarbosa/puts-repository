@@ -19,7 +19,7 @@ dependencies = {
   "scs-idl1.2 == 1.2.1",
   "scs-lua == 1.2.3.1-loop3.0beta3",
   "openbus-idl2.0 == 2.0snapshot",
-  "openbus-lua == 2.0.0snapshot",
+  "openbus-lua == 2.0.1snapshot",
 } 
 
 local vars = {
