@@ -2,7 +2,7 @@ name = "openbus-java"
 version = "2.0.2.0"
 url = SVNREPURL .. "/openbus/sdk/java/tags/02_00_02_00"
 dependencies = { 
-  "scs-java == 1.2.1.2",
+  "scs-java == 1.2.1.3",
   "openbus-idl1.5 == 1.5.2-1",
   "openbus-idl2.0 == 2.0.4",
 }
