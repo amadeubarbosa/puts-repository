@@ -2,7 +2,7 @@ name = "busexplorer"
 version = "1snapshot"
 url = SVNREPURL .. "/openbus/utils/busexplorer/trunk"
 dependencies = { 
-  "openbus-java == 2.0.0.2",
+-- recuperando dependencias do nexus
 }
 
 build = {
