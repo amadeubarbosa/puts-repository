@@ -14,13 +14,10 @@ build = {
   cd ../openbus && ]]..convert_fig             ..[[ &&
 ]]..clean..generate:gsub("FILE","openbus")     ..[[ &&
   cd ../quick-start &&
-]]..clean..generate:gsub("FILE","quick-start")..[[ &&
-  cd ../protocol &&
-  pdflatex spec ]]
+]]..clean..generate:gsub("FILE","quick-start")
 }
 install_files = {
   ["install/installation.pdf"]    = "doc/install",
   ["openbus/openbus.pdf"]         = "doc/openbus",
   ["quick-start/quick-start.pdf"] = "doc/quick-start",
-  ["protocol/spec.pdf"]           = "doc/protocol",
 }
