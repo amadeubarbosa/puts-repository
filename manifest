@@ -682,6 +682,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.1-loop3.0beta4"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -871,6 +878,13 @@ repository = {
     }
     ,
     ["3.0beta3"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["3.0beta4"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1110,6 +1124,13 @@ repository = {
       ,
     }
     ,
+    ["1.0beta4"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.0lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1242,6 +1263,13 @@ repository = {
       ,
     }
     ,
+    ["0.7.0beta"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["0.7lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1335,6 +1363,13 @@ repository = {
   }
   ,
   ["luasec"] = {
+    ["0.5.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["0.5snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1453,6 +1488,13 @@ repository = {
     }
     ,
     ["1.0beta3"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.0beta4"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1717,6 +1759,13 @@ repository = {
       ,
     }
     ,
+    ["0.7.0beta"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["0.7lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1924,6 +1973,13 @@ repository = {
       ,
     }
     ,
+    ["2.1.0.0rc1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -2085,6 +2141,13 @@ repository = {
     }
     ,
     ["2.0beta"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.1.0.0rc1"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -3769,6 +3832,13 @@ repository = {
   }
   ,
   ["openbus-idl2.1"] = {
+    ["2.1.0rc1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.1snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -4066,6 +4136,13 @@ repository = {
     }
     ,
     ["2.0beta"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.1.0.0rc1"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -4669,6 +4746,13 @@ repository = {
       ,
     }
     ,
+    ["1.2.3.1-loop3.0beta4"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.2.3lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -4769,6 +4853,13 @@ repository = {
     }
     ,
     ["2.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.1.0rc1"] = {
       [1] = {
         ["arch"] = "desc",
       }
