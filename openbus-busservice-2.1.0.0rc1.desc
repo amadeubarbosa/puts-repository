@@ -1,0 +1,52 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES"
+
+name = "openbus-busservice"
+version = "2.1.0.0rc1"
+url = SVNREPURL.."/openbus/core/tags/02_01_00_00_RC1"
+dependencies = {
+  "lua-bin == 5.2.2.1",
+  "luuid == 1.0.1",
+  "luastruct == 1.2.1",
+  "luasocket == 2.0.2.1",
+  "luasec == 0.5.0",
+  "lce == 2.0.1-loop3.0beta4",
+  "luafilesystem == 1.4.2.1",
+  "luavararg == 1.1.1",
+  "luatuple == 1.0beta4",
+  "loop == 3.0beta4",
+  "luacothread == 1.0beta4",
+  "luaidl == 0.7.0beta",
+  "oil == 0.7.0beta",
+  "scs-idl1.2 == 1.2.1",
+  "scs-lua == 1.2.3.1",
+  "openbus-idl2.0 == 2.0.4",
+  "openbus-idl2.1 == 2.1.0rc1",
+  "openbus-lua == 2.1.0.0rc1",
+  "lualdap == 1.1.0.1-openldap2.4.39",
+} 
+
+local vars = {
+  LUA52 = "%directory(lua-bin)%",
+  USE_LUA52 = "YES",
+  CODEREV = assert(version:match("^2%.1%.0%.(%w+)$"), "bad 'busservice' version"),
+  OPENBUS_HOME = INSTALL.TOP, -- required by '.mak' when USE_STATIC
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "tecmake",
+  variables = vars,
+  mf = { "busservices USE_STATIC=YES" },
+  SunOS510_64 = { mf = { "busservices USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
+}
+install_files = {
+  ["../bin/${TEC_UNAME}/busservices"] = "bin",
+  ["../shell/*"] = "bin",
+}
+dev_files = {
+  ["../test/*"] = "test",
+  ["../idl/*.idl"] = "idl/adm", -- for tests only
+}

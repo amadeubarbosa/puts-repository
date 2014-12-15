@@ -1,0 +1,32 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "loop"
+version = "3.0beta4"
+url = SVNREPURL.."/loop/tags/LOOP_3_0_beta4"
+dependencies = {
+  "lua == 5.2.2.1",
+  "lua-bin == 5.2.2.1",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "YES",
+    LOOP_HOME = "%directory(loop)%",
+  },
+  src = "openbus",
+  mf = { "loop" },
+  MacOS = { mf = { "loop", "loop BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "loop "..SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/"..TEC_UNAME.."/libloop.so"] = "lib",
+  ["../lib/"..TEC_UNAME.."/libloop.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/"..TEC_UNAME.."/libloop.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/loop.h"] = "include/loop",
+  ["../lua/loop/test"] = "lib/lua/5.2/loop",
+}

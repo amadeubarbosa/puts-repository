@@ -1,0 +1,32 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "lce"
+version = "2.0.1-loop3.0beta4"
+url = SVNREPURL.."/luautils/lce/tags/02_00_01"
+dependencies = {
+  "openssl == 1.0.0m",
+  "lua == 5.2.2.1",
+  "loop == 3.0beta4",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "YES",
+    LOOP_HOME = "%directory(loop)%",
+    OPENBUS_HOME = INSTALL.TOP,
+  },
+  mf = { "config" },
+  MacOS = { mf = { "config", "config BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "config ".. SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/liblce*.so"] = "lib",
+  ["../lib/${TEC_UNAME}/liblce*.dylib"] = "lib",
+}
+dev_files = {
+  ["../include/*"] = "include/lce/",
+  ["../lib/${TEC_UNAME}/liblce.*"] = "lib",
+}
