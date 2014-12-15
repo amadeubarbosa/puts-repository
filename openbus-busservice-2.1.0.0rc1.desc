@@ -18,7 +18,7 @@ dependencies = {
   "luaidl == 0.7.0beta",
   "oil == 0.7.0beta",
   "scs-idl1.2 == 1.2.1",
-  "scs-lua == 1.2.3.1",
+  "scs-lua == 1.2.3.1-loop3.0beta4",
   "openbus-idl2.0 == 2.0.4",
   "openbus-idl2.1 == 2.1.0rc1",
   "openbus-lua == 2.1.0.0rc1",
