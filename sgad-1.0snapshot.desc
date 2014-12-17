@@ -1,0 +1,31 @@
+name = "sgad"
+version = "1.0snapshot"
+url = SVNREPURL .. "/csbase/branches/CSGrid2.0/sgad"
+dependencies = { "luacompat52 == 1.0snapshot","luabit32 == 1.0snapshot",
+  "lua-bin == 5.1.3snapshot",
+  "luastruct == 1.2lua51snapshot",
+  "luasocket == 2.0.2lua51snapshot",
+  "luatuple == 1.0lua51snapshot",
+  "loop == 3.0lua51snapshot",
+  "luacothread == 1.0lua51snapshot",
+  "luaidl == 0.7lua51snapshot",
+  "oil == 0.7lua51snapshot",
+}
+
+local vars = { LUA51 = "%directory(lua-bin)%" }
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "tecmake",
+  variables = vars,
+  mf = { "config USE_STATIC=YES" },
+  -- MacOS = { mf = { "config", "config BUILD_DYLIB=YES" }, },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../bin/"..TEC_UNAME.."/sgad"] = "bin",
+}
