@@ -43,10 +43,10 @@ build = {
 }
 install_files = {
   ["../bin/${TEC_UNAME}/busservices"] = "bin",
-  ["../shell/*"] = "bin",
-  --["../doc/install/installation.pdf"] = "doc",
-  --["../doc/openbus/openbus.pdf"] = "doc",
-  --["../doc/protocol/spec.pdf"] = "doc",
+  ["../shell/businit"] = "bin",
+  ["../shell/buscheck"] = "bin",
+  ["../shell/openbus.rc"] = "config",
+  ["../shell/openbus.cfg"] = "config",
 }
 dev_files = {
   ["../test/*"] = "test",
