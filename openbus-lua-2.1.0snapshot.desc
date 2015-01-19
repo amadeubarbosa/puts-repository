@@ -5,12 +5,20 @@ version = "2.1.0snapshot"
 url = SVNREPURL .. "/openbus/sdk/lua/trunk"
 dependencies = {
   "lua-bin == 5.2.2",
-  -- dependencies containing shared Tecmake definitions for OpenBus build
-  -- and utilities like 'precompiler.lua' and 'idl2lua.lua' scripts.
+  "luuid == 1.0snapshot",
+  "luastruct == 1.2snapshot",
+  "luasocket == 2.0.2snapshot",
+  "luasec == 0.5snapshot",
+  "lce == 2.0snapshot",
+  "luafilesystem == 1.4.2snapshot",
+  "luavararg == 1.1snapshot",
+  "luatuple == 1.0snapshot",
   "loop == 3.0snapshot",
+  "luacothread == 1.0snapshot",
+  "luaidl == 0.7snapshot",
   "oil == 0.7snapshot",
-  -- dependencies containing IDLs precompiled and included in the library
   "scs-idl1.2 == 1.2snapshot",
+  "scs-lua == 1.2.3snapshot",
   "openbus-idl2.0 == 2.0snapshot",
   "openbus-idl2.1 == 2.1snapshot",
   "sdk-idl-source == 2.1snapshot",
