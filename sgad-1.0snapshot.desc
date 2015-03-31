@@ -1,6 +1,6 @@
 name = "sgad"
 version = "1.0snapshot"
-url = SVNREPURL .. "/csbase/branches/CSBASE-2.0.0/sgad"
+url = SVNREPURL .. "/csbase/branches/CSBASE-1.0/sgad"
 dependencies = { "luacompat52 == 1.0snapshot","luabit32 == 1.0snapshot",
   "lua-bin == 5.1.3snapshot",
   "luastruct == 1.2lua51snapshot",
