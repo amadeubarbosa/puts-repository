@@ -1886,6 +1886,16 @@ repository = {
     ,
   }
   ,
+  ["openbus-admin-idl2.1"] = {
+    ["2.1snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-bin-acs"] = {
     ["1.5.4snapshot"] = {
       [1] = {
