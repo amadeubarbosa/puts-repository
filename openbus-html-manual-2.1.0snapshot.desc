@@ -1,0 +1,17 @@
+name = "openbus-html-manual"
+version = "2.1.0snapshot"
+subpackage_of = "openbus-busservice == "..version
+
+local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 generated"
+local gen_metadata = "pdflatex installation && bibtex installation && pdflatex installation"
+local latex2html = "latex2html -no_navigation -show_section_numbers -split 0 -mkdir -dir generated installation -info '' -address ''" 
+local sed_crossref = "sed -i.bak -e 's/manual.html//g' generated/index.html"
+build = {
+  type = "command",
+  src = "doc/manual",
+  cmd = clean.." ; "..gen_metadata.." && "..
+        latex2html .." && ".. sed_crossref
+}
+install_files = {
+ ["generated/index.html"] = "doc/manual",
+}
