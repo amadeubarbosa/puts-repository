@@ -898,6 +898,13 @@ repository = {
       ,
     }
     ,
+    ["3.0beta5"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["3.0lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1138,6 +1145,13 @@ repository = {
       ,
     }
     ,
+    ["1.0beta5"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.0lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1215,6 +1229,13 @@ repository = {
   ,
   ["luaidl"] = {
     ["0.6"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["0.6.1"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -1515,6 +1536,13 @@ repository = {
       ,
     }
     ,
+    ["1.0beta5"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["1.0lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -1718,6 +1746,13 @@ repository = {
   ,
   ["oil"] = {
     ["0.6"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["0.6.1"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -2161,6 +2196,13 @@ repository = {
     }
     ,
     ["2.0.0.6"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.0.7"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -3766,6 +3808,26 @@ repository = {
     ,
   }
   ,
+  ["openbus-html-manual"] = {
+    ["2.1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-html-overview"] = {
+    ["2.1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-html-quick-start"] = {
     ["2.0.0snapshot"] = {
       [1] = {
@@ -4177,6 +4239,13 @@ repository = {
     }
     ,
     ["2.0.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.1.0"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -4908,6 +4977,13 @@ repository = {
     }
     ,
     ["2.0.1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["2.0.2"] = {
       [1] = {
         ["arch"] = "desc",
       }
