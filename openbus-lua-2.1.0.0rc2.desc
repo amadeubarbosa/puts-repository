@@ -1,0 +1,60 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes "
+
+name = "openbus-lua"
+version = "2.1.0.0rc2"
+url = SVNREPURL.."/openbus/sdk/lua/tags/02_01_00_00_RC2"
+dependencies = {
+  "lua-bin == 5.2.2.1",
+  "luuid == 1.0.1",
+  "luastruct == 1.2.1",
+  "luasocket == 2.0.2.1",
+  "luasec == 0.5.0",
+  "lce == 2.0.1-loop3.0beta4",
+  "luafilesystem == 1.4.2.1",
+  "luavararg == 1.1.1",
+  "luatuple == 1.0beta5",
+  "loop == 3.0beta5",
+  "luacothread == 1.0beta5",
+  "luaidl == 0.7.0beta",
+  "oil == 0.7.0beta",
+  "scs-idl1.2 == 1.2.1",
+  "scs-lua == 1.2.3.1-loop3.0beta4",
+  "openbus-idl2.0 == 2.0.4",
+  "openbus-idl2.1 == 2.1.0rc2",
+  "sdk-idl-source == 2.1.0rc2",
+}
+
+local vars = {
+  LUA52 = "%directory(lua-bin)%",
+  USE_LUA52 = "YES",
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "tecmake",
+  variables = vars,
+  mf = { "openbus" },
+  MacOS = { mf = { "openbus", "openbus BUILD_DYLIB=YES" }, },
+  SunOS510_64 = { mf = { "openbus "..SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/"..TEC_UNAME.."/libluaopenbus.so"] = "lib",
+  ["../lib/"..TEC_UNAME.."/libluaopenbus.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/"..TEC_UNAME.."/libluaopenbus.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/luaopenbus.h"] = "include/openbus/lua/",
+  ["../demo/assistant/*"]        = "demo/lua/assistant",
+  ["../demo/callchain/*"]        = "demo/lua/callchain",
+  ["../demo/dedicatedclock/*"]   = "demo/lua/dedicatedclock",
+  ["../demo/greetings/*"]        = "demo/lua/greetings",
+  ["../demo/hello/*"]            = "demo/lua/hello",
+  ["../demo/independentclock/*"] = "demo/lua/independentclock",
+  ["../demo/multiplexing/*"]     = "demo/lua/multiplexing",
+  ["../demo/utils.lua"]          = "demo/lua",
+}
