@@ -25,6 +25,7 @@ dependencies = {
 local vars = {
   LUA52 = "%directory(lua-bin)%",
   USE_LUA52 = "YES",
+  CODEREV = assert(version:match("^2%.0%.0%.(%d+)$"), "bad 'busadmin' version"),
   OPENBUS_HOME = INSTALL.TOP, -- required by '.mak' when USE_STATIC
 }
 for _, dep in ipairs(dependencies) do
