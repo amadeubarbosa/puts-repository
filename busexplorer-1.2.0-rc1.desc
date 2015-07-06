@@ -1,0 +1,19 @@
+name = "busexplorer"
+version = "1.2.0rc1"
+url = SVNREPURL .. "/openbus/utils/busexplorer/tags/01_02_00_RC1"
+dependencies = { 
+-- recuperando dependencias do nexus
+}
+
+build = {
+  type = "maven",
+  javadoc = true,
+  variables = { 
+  },
+}
+
+install_files = {
+  ["BusExplorer/doc/README"] = ".",
+  ["BusExplorer/etc/busexplorer.conf"] = ".",
+  ["BusExplorer/target/busexplorer-1.2.0-RC1-jar-with-dependencies.jar"] = ".",
+}
