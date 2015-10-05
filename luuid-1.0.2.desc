@@ -1,0 +1,30 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "luuid"
+version = "1.0.2"
+url = SVNREPURL.."/openbus/libs/luuid/tags/01_00_02"
+dependencies = {
+  "e2fsprogs == 1.40.8-oblibs1.3.2-1",
+  "lua == 5.2.2",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "YES",
+    OPENBUS_HOME = INSTALL.TOP,
+  },
+  mf = { "config", },
+  MacOS = { mf = { "config", "config BUILD_DYLIB=Yes"} },
+  SunOS510_64 = { mf = { "config ".. SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/libluuid.so"] = "lib",
+  ["../lib/${TEC_UNAME}/libluuid.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/libluuid.*"] = "lib",
+  ["../include/*"] = "include/luuid",
+}

@@ -1,0 +1,28 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "luastruct"
+version = "1.2.2"
+url = SVNREPURL.."/openbus/libs/struct/tags/01_02_02"
+dependencies = {
+  "lua == 5.2.2",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "Yes",
+  },
+  mf = { "luastruct" },
+  MacOS = { mf = { "luastruct", "luastruct BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "luastruct "..SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/libluastruct.so"] = "lib",
+  ["../lib/${TEC_UNAME}/libluastruct.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/libluastruct.*"] = "lib",
+  ["luastruct.h"] = "include/luastruct",
+}

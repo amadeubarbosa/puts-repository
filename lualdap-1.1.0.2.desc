@@ -1,0 +1,30 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "lualdap"
+version = "1.1.0.2"
+url = SVNREPURL.."/openbus/libs/lualdap/tags/01_01_00_02"
+dependencies = {
+  "lua == 5.2.2",
+  "openldap == 2.4.39",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "YES",
+    OPENBUS_HOME = INSTALL.TOP,
+  },
+  mf = { "config", },
+  MacOS = { mf = {"config", "config BUILD_DYLIB=Yes"} },
+  SunOS510_64 = { mf = { "config ".. SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/liblualdap.so"] = "lib",
+  ["../lib/${TEC_UNAME}/liblualdap.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/${TEC_UNAME}/liblualdap.*"] = "lib",
+  ["../include/*"] = "include/lualdap-1.1.0",
+}
