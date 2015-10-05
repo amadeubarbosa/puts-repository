@@ -4,9 +4,20 @@ name = "openbus-lua"
 version = "2.0.1snapshot"
 url = SVNREPURL .. "/openbus/sdk/lua/branches/02_00_01"
 dependencies = { 
-  "lua-bin == 5.2.2.1",
+  "lua-bin == 5.2.2",
+  "luuid == 1.0snapshot",
+  "luastruct == 1.2snapshot",
+  "luasocket == 2.0.2snapshot",
+  "lce == 2.0snapshot",
+  "luafilesystem == 1.4.2snapshot",
+  "luavararg == 1.1snapshot",
+  "luatuple == 1.0snapshot",
   "loop == 3.0snapshot",
-  "oil == 0.6snapshot",
+  "luacothread == 1.0snapshot",
+  "luaidl == 0.7snapshot",
+  "oil == 0.7snapshot",
+  "scs-lua == 1.2.3snapshot",
+  -- for build only:
   "scs-idl1.2 == 1.2.1",
   "openbus-idl1.5 == 1.5.2-1",
   "openbus-idl2.0 == 2.0snapshot",
