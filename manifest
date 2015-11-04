@@ -367,6 +367,13 @@ repository = {
       ,
     }
     ,
+    ["1.1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["collaboration-service-demo-java"] = {

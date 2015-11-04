@@ -1,0 +1,48 @@
+name = "collaboration-service"
+version = "1.1.0snapshot"
+url = SVNREPURL.."/openbus/services/collaboration/trunk"
+dependencies = {
+	"boost-build == 12m",
+	"lua-bin == 5.2.2",
+	"luuid == 1.0snapshot",
+	"luastruct == 1.2snapshot",
+	"luasocket == 2.0.2snapshot",
+	"lce == 2.0snapshot", 
+	"luafilesystem == 1.4.2snapshot",
+	"luavararg == 1.1snapshot",
+	"luatuple == 1.0snapshot",
+	"loop == 3.0snapshot",
+	"luacothread == 1.0snapshot",
+	"luaidl == 0.7snapshot",
+	"oil == 0.7snapshot",
+	"scs-lua == 1.2.3snapshot",
+	"openbus-lua == 2.0.0snapshot",
+	"sqlite == 3.7.16.2",
+	"lsqlite3 == 0.9.1snapshot",
+}
+build = {
+	type = "bjam",
+	src = ".",
+	targets = {
+		"dist",
+	},
+	variables = {
+		variant = {"release"},
+		link = { "static" },
+		["-sLOOP_BUILD"] = "%directory(loop)%",
+		["-sOIL_BUILD"] = "%directory(oil)%",
+		["-sPUTS_INSTALL"] = INSTALL.TOP,
+		BOOST_BUILD_PATH = "%directory(boost-build)%:"
+			.."%directory(collaboration-service)%/bbuild",
+		BJAM_SOURCE = "%directory(boost-build)%/engine",
+	},
+	bjam_opts = {
+		"-d+2",
+		"--user-config=bbuild/puts/user-config.jam",
+	},
+}
+install_files = {
+	["dist/collaboration-service"] = "bin",
+	["collab.adm"] = "admin",
+  ["shell"] = ".",
+}
