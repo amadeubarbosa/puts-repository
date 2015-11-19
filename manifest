@@ -2013,6 +2013,13 @@ repository = {
   }
   ,
   ["openbus-admin-idl2.1"] = {
+    ["2.1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.1.0rc1"] = {
       [1] = {
         ["arch"] = "desc",
