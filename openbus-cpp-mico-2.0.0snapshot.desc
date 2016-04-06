@@ -17,7 +17,7 @@ build = {
   type = "bjam",
   src = ".",
   targets = {
-    "stage-libs",
+    "stage",
   },
   variables = {
     threading = { "multi" },
@@ -25,7 +25,7 @@ build = {
     link = { "static", "shared" },
     ["-sSCS_IDL_PATH"] = "%directory(scs-idl1.2)%/src",
     ["-sLOGGER_ROOT_PATH"] = "%directory(logger)%",
-    ["-sBOOST_ROOT_PATH"] = "%directory(boost)%",
+    ["-sBOOST_ROOT"] = "%directory(boost)%",
     ["-sMICO_DBG_ROOT_PATH"] = "%directory(mico-multithread-debug)%",
     ["-sMICO_ROOT_PATH"] = "%directory(mico-multithread)%",
     ["-sSCS_ROOT_PATH"] = "%directory(scs-cpp-mico)%",
