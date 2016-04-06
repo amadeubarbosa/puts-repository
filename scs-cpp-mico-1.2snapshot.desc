@@ -1,6 +1,6 @@
 name = "scs-cpp-mico"
 version = "1.2snapshot"
-url = SVNREPURL .. "/scs/core/cpp/branches/SCS_CORE_CPP_v1_02_00_2011_07_29"
+url = SVNREPURL .. "/scs/core/cpp/branches/01_02_00"
 dependencies = {
   "scs-idl1.2 == 1.2snapshot",
   "logger == 2.0snapshot",
@@ -14,7 +14,7 @@ build = {
   type = "bjam",
   src = ".",
   targets = {
-    "stage-libs",
+    "stage",
   },
   variables = {
     threading = { "multi" },
@@ -25,6 +25,7 @@ build = {
     ["-sBOOST_ROOT_PATH"] = "%directory(boost)%",
     ["-sMICO_DBG_ROOT_PATH"] = "%directory(mico-multithread-debug)%",
     ["-sMICO_ROOT_PATH"] = "%directory(mico-multithread)%",
+    ["-sMICO_BIN_PATH"] = "%directory(mico-multithread)%/idl %directory(mico-multithread)%/cpp",
     BOOST_BUILD_PATH = "%directory(boost-build)%"..":".."%directory(mico-bb)%",
     BJAM_SOURCE = "%directory(boost-build)%/engine",
  },
