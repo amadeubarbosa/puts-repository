@@ -28,6 +28,7 @@ build = {
     ["-sBOOST_ROOT"] = "%directory(boost)%",
     ["-sMICO_DBG_ROOT_PATH"] = "%directory(mico-multithread-debug)%",
     ["-sMICO_ROOT_PATH"] = "%directory(mico-multithread)%",
+    ["-sMICO_BIN_PATH"] = "%directory(mico-multithread)%/idl %directory(mico-multithread)%/cpp",
     ["-sSCS_ROOT_PATH"] = "%directory(scs-cpp-mico)%",
     ["-sOPENBUS_IDL_PATH"] = "%directory(openbus-idl2.0)%/src",
     ["-sOPENSSL_ROOT_PATH"] = "%directory(openssl)%",
