@@ -16,7 +16,7 @@ build = {
     threading = { "single", "multi" },
     variant = { "debug", "release" },
     link = {"shared", "static"},
-    ["-sBOOST_ROOT_PATH"] = "%directory(boost)%",
+    ["-sBOOST_ROOT"] = "%directory(boost)%",
     BOOST_BUILD_PATH = "%directory(boost-build)%",
     BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
