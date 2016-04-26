@@ -1,6 +1,6 @@
 name = "ftc-cpp"
 version = "1.4.0snapshot"
-url = SVNREPURL .. "/ftc/core/cpp/branches/FTC_v1_04_00_2012_03_27"
+url = GITREPURL .. "/ftc/ftc-core-cpp.git;branch=FTC_v1_04_00_2012_03_27"
 dependencies = {
   "openssl == 1.0.0j",
   "libevent == 2.0.20-stable",

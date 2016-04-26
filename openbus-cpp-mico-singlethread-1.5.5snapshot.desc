@@ -1,6 +1,6 @@
 name = "openbus-cpp-mico-singlethread"
 version = "1.5.5snapshot"
-url = SVNREPURL .. "/openbus/sdk/cpp/branches/01_05_05"
+url = GITREPURL .. "/openbus/openbus-sdk-cpp.git;branch=01_05_05"
 dependencies = {
   "lua == 5.1.3snapshot",
   "openbus-idl1.5 == 1.5snapshot",

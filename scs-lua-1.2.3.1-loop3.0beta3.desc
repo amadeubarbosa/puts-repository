@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "scs-lua"
 version = "1.2.3.1-loop3.0beta3"
-url = SVNREPURL.."/scs/core/lua/tags/01_02_03_01"
+url = GITREPURL .. "/scs/scs-core-lua.git;tag=01_02_03_01"
 dependencies = {
   "lua-bin == 5.2.2.1",
   "loop == 3.0beta3",

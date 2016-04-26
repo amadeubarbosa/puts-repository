@@ -1,6 +1,6 @@
 name = "scs-java"
 version = "1.3snapshot"
-url = SVNREPURL .. "/scs/core/java/trunk"
+url = GITREPURL .. "/scs/scs-core-java.git"
 dependencies = {
   "scs-idl1.3-java == "..version,
 }

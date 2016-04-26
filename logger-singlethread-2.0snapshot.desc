@@ -1,6 +1,6 @@
 name = "logger-singlethread"
 version = "2.0snapshot"
-url = SVNREPURL .. "/cpputils/logger/branches/02"
+url = GITREPURL .. "/engdist/logger.git;branch=02"
 dependencies = {
   "boost == 1.51.0",
 }

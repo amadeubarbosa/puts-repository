@@ -1,6 +1,6 @@
 name = "logger"
 version = "2.0.0.0"
-url = SVNREPURL .. "/cpputils/logger/tags/02_00"
+url = GITREPURL .. "/engdist/logger.git;tag=02_00"
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",

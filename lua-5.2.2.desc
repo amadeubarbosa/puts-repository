@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "lua"
 version = "5.2.2"
-url = SVNREPURL .. "/openbus/libs/lua/branches/5.2.2"
+url = GITREPURL .. "/openbus-3rd-party/lua.git;branch=5.2.2"
 build = {
   type = "tecmake",
   mf = { "config" },

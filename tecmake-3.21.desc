@@ -1,6 +1,6 @@
 name = "tecmake"
 version = "3.21"
-url = SVNREPURL.."/openbus/utils/tecmake/"..version
+url = GITREPURL.."/openbus-3rd-party/tecmake.git;tag="..version
 
 
 local tecmake_wrapper = [[#!/bin/bash

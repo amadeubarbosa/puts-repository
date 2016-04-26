@@ -1,6 +1,6 @@
 name = "scs-cpp-mico-multithread"
 version = "1.2.0snapshot"
-url = SVNREPURL .. "/scs/core/cpp/branches/SCS_CORE_CPP_v1_02_00_2011_07_29"
+url = GITREPURL .. "/scs/scs-core-cpp.git;branch=SCS_CORE_CPP_v1_02_00_2011_07_29"
 dependencies = {
   "lua == 5.1.3snapshot",
   "scs-idl1.2 == 1.2snapshot",

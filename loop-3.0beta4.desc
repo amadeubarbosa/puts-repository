@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "loop"
 version = "3.0beta4"
-url = SVNREPURL.."/loop/tags/LOOP_3_0_beta4"
+url = GITREPURL .. "/engdist/loop.git;tag=LOOP_3_0_beta4"
 dependencies = {
   "lua == 5.2.2.1",
   "lua-bin == 5.2.2.1",

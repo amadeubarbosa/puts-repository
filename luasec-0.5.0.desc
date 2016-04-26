@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "luasec"
 version = "0.5.0"
-url = SVNREPURL.."/openbus/libs/luasec/tags/0.5.0"
+url = GITREPURL.."/openbus-3rd-party/luasec.git;tag=0.5.0"
 dependencies = {
   "openssl == 1.0.0m",
   "lua == 5.2.2.1",

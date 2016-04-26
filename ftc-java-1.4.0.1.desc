@@ -1,6 +1,6 @@
 name = "ftc-java"
 version = "1.4.0.1"
-url = SVNREPURL .. "/ftc/core/java/tags/FTC_v1_04_00_01_2012_10_16"
+url = GITREPURL .. "/ftc/ftc-core-java.git;tag=FTC_v1_04_00_01_2012_10_16"
 build = {
   type = "maven",
   javadoc = true,

@@ -1,6 +1,6 @@
 name = "busexplorer"
 version = "1.2.0rc1"
-url = SVNREPURL .. "/openbus/utils/busexplorer/tags/01_02_00_RC1"
+url = GITREPURL .. "/openbus/openbus-explorer.git;tag=01_02_00_RC1"
 dependencies = { 
 -- recuperando dependencias do nexus
 }

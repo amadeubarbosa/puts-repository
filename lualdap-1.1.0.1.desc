@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "lualdap"
 version = "1.1.0.1"
-url = SVNREPURL.."/openbus/libs/lualdap/tags/1.1.0.1"
+url = GITREPURL .. "/openbus-3rd-party/lualdap.git;tags=1.1.0.1"
 dependencies = {
   "lua == 5.2.2.1",
   "openldap == 2.4.11-oblibs1.3.2-1",

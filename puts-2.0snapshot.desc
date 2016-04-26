@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "puts"
 version = "2.0snapshot"
-url = SVNREPURL.."/openbus/puts/trunk"
+url = GITREPURL.."/openbus/puts.git"
 dependencies = { 
   "tecmake == 3.21",
   "lua-bin == 5.1.3snapshot",

@@ -1,5 +1,5 @@
 name = "openbus-java"
-url = SVNREPURL .. "/openbus/sdk/java/branches/OB_SDK_JAVA_v1_05_02_2011_07_28"
+url = GITREPURL .. "/openbus/openbus-sdk-java.git;branch=OB_SDK_JAVA_v1_05_02_2011_07_28"
 version = "1.5.2snapshot"
 dependencies = {
   "scs-java == 1.2.1-0",

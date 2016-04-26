@@ -1,6 +1,6 @@
 name = "lsqlite3"
 version = "0.9.1snapshot"
-url = SVNREPURL .. "/openbus/libs/luasqlite3/branches/0.9.1"
+url = GITREPURL .. "/openbus-3rd-party/luasqlite3.git;branch=0.9.1"
 
 dependencies = {
   "lua == 5.2.2",

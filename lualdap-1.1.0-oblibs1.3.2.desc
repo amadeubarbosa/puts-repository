@@ -24,4 +24,4 @@ install_files = {
 dev_files = {
   ["../lib/${TEC_UNAME}/liblualdap.*"] = "lib",
   ["../include/*"] = "include/lualdap-1.1.0",
-}
+}[

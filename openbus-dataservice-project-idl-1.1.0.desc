@@ -1,6 +1,6 @@
 name = "openbus-dataservice-project-idl"
 version = "1.1.0"
-url = SVNREPURL .. "/openbus/services/data_service/project/idl/tags/OB_DS_PROJECT_IDL_v1_01_00_2012_01_19"
+url = GITREPURL .. "/data-service/data-service-project-idl.git;tag=OB_DS_PROJECT_IDL_v1_01_00_2012_01_19"
 dependencies = {
   "openbus-dataservice-core-idl == "..version,
 }

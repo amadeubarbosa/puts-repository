@@ -1,6 +1,6 @@
 name = "scs-cpp"
 version = "1.2snapshot"
-url = SVNREPURL .. "/scs/core/cpp/trunk"
+url = GITREPURL .. "/scs/scs-core-cpp.git"
 dependencies = {
   "scs-idl1.2 == 1.2snapshot",
   "logger == 2.0snapshot",

@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes "
 
 name = "openbus-lua"
 version = "1.5.3.2"
-url = SVNREPURL .. "/openbus/sdk/lua/tags/01_05_03_02"
+url = GITREPURL .. "/openbus/openbus-sdk-lua.git;tag=01_05_03_02"
 dependencies = { 
   "lua-bin == 5.1.3-oblibs1.3.2-1",
   "oilall == 0.5.0-patch1",

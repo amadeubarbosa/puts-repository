@@ -4,7 +4,7 @@ ALL_FLAGS = " LOOP_HOME="..INSTALL.TOP.."/lib/lua/5.1 LUA51="..PRODAPP.."/lua-".
 
 name = "scsall"
 version = "1.2.2.0"
-url = SVNREPURL .. "/scs/core/lua/tags/SCS_CORE_LUA_v1_02_02_00_2011_08_03"
+url = GITREPURL .. "/scs/scs-core-lua.git;tag=SCS_CORE_LUA_v1_02_02_00_2011_08_03"
 dependencies = {
   "lua-bin == "..lua_pkgversion,
   "oilall == 0.5.0-oblibs1.3.1",

@@ -1,6 +1,6 @@
 name = "tao-bb"
 version = "1.0"
-url = SVNREPURL .. "/cpputils/tao-bb/trunk"
+url = GITREPURL .. "/boost-build/tao-idl.git"
 dependencies = {
   "boost-build == 12m",
 }

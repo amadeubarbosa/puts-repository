@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "luuid"
 version = "1.0snapshot"
-url = SVNREPURL .. "/openbus/libs/luuid/branches/1.0"
+url = GITREPURL .. "/openbus-3rd-party/luuid.git;branch=1.0"
 dependencies = {
   "e2fsprogs == 1.40.8-oblibs1.3.2-1",
   "lua == 5.2.2",

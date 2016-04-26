@@ -1,6 +1,6 @@
 name = "scs-cpp-mico"
 version = "1.3snapshot"
-url = SVNREPURL .. "/scs/core/cpp/trunk"
+url = GITREPURL .. "/scs/scs-core-cpp.git"
 dependencies = {
   "scs-idl1.3 == 1.3snapshot",
   "mico-singlethread-debug == 2.3.13snapshot",

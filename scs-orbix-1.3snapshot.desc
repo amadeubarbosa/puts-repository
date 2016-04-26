@@ -2,7 +2,7 @@ IDL_VERSION="v1_05"
 
 name = "scs-orbix"
 version = "1.3snapshot"
-url = SVNREPURL .. "/scs/core/cpp/trunk"
+url = GITREPURL .. "/scs/scs-core-cpp.git"
 directory = PRODAPP .."/scs-cpp"
 build = {
   type = "tecmake",

@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "oil"
 version = "0.6snapshot"
-url = SVNREPURL .. "/oil/branches/OIL_0_6"
+url = GITREPURL .. "/engdist/oil.git;branch=OIL_0_6"
 dependencies = {
   "lua-bin == 5.2.2",
   "loop == 3.0snapshot",

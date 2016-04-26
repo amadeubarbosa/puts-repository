@@ -1,6 +1,6 @@
 name = "logger"
 version = "1snapshot"
-url = SVNREPURL .. "/cpputils/logger/trunk"
+url = GITREPURL .. "/engdist/logger.git"
 build = {
   type = "tecmake",
   src = ".",

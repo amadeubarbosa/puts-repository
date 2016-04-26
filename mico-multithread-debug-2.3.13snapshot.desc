@@ -1,6 +1,6 @@
 name = "mico-multithread-debug"
 version = "2.3.13snapshot"
-url = SVNREPURL .. "/openbus/libs/mico/branches/2.3.13"
+url = GITREPURL .. "/openbus-3rd-party/mico.git;branch=2.3.13"
 build = {
   type = "autotools",
   variables = {

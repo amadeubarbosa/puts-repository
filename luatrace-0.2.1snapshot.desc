@@ -1,6 +1,6 @@
 name = "luatrace"
 version = "0.2.1snapshot"
-url = SVNREPURL .. "/openbus/libs/luatrace/branches/0.2.1-beta"
+url = GITREPURL .. "/openbus-3rd-party/luatrace.git;branch=0.2.1-beta"
 build = {
   type = "command",
   Linux = { cmd = "make PLAT=linux reader static-writer dynamic-writer "..

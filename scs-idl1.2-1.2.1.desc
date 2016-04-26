@@ -2,7 +2,7 @@ IDL_VERSION="v1_05"
 
 name = "scs-idl1.2"
 version = "1.2.1"
-url = SVNREPURL .. "/scs/core/idl/tags/SCS_CORE_IDL_v1_02_01_2011_08_03"
+url = GITREPURL .. "/scs/scs-core-idl.git;tag=SCS_CORE_IDL_v1_02_01_2011_08_03"
 install_files = {
   ["src/scs.idl"] = "idl/"..IDL_VERSION,
 }

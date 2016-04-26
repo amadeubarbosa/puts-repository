@@ -1,6 +1,6 @@
 name = "openbus-cpp-mico"
 version = "1.5.4.4"
-url = SVNREPURL .. "/openbus/sdk/cpp/tags/01_05_04_04"
+url = GITREPURL .. "/openbus/openbus-sdk-cpp.git;tag=01_05_04_04"
 dependencies = {
   "boost-build == 12m",
   "mico-singlethread-debug == 2.3.13-oblibs2.0.0.0",

@@ -1,6 +1,6 @@
 name = "openbus-java-assistant"
 version = "2.1.0snapshot"
-url = SVNREPURL .. "/openbus/sdk/assistant/java/trunk"
+url = GITREPURL .. "/openbus/openbus-sdk-assistant-java.git"
 dependencies = { 
   "openbus-java == 2.1.0snapshot",
 }

@@ -1,4 +1,4 @@
 name = "oil-source"
 version = "0.6alpha2"
-url = SVNREPURL .. "/oil/tags/OIL_0_6_alpha2"
+url = GITREPURL .. "/engdist/oil.git;tag=OIL_0_6_alpha2"
 directory = PRODAPP .."/oil-"..version

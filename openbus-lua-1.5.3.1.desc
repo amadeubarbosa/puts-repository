@@ -4,7 +4,7 @@ LUA51_FLAG = "LUA51="..PRODAPP.."/lua-"..lua_pkgversion.." "
 
 name = "openbus-lua"
 version = "1.5.3.1"
-url = SVNREPURL .. "/openbus/sdk/lua/tags/OB_SDK_LUA_v1_05_03_01_2011_12_12"
+url = GITREPURL .. "/openbus/openbus-sdk-lua.git;tag=OB_SDK_LUA_v1_05_03_01_2011_12_12"
 dependencies = { 
   "lua-bin == "..lua_pkgversion,
   "oilall == 0.5.0-oblibs1.3.1",

@@ -1,3 +1,3 @@
 name = "openbus-source"
 version = "1.5.3snapshot"
-url = SVNREPURL .. "/openbus/core/branches/OB_v1_05_03_2011_07_28"
+url = GITREPURL .. "/openbus/openbus-core.git;branch=OB_v1_05_03_2011_07_28"

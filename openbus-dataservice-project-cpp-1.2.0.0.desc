@@ -1,7 +1,7 @@
 -- -*- mode: lua -*-
 name = "openbus-dataservice-project-cpp"
 version = "1.2.0.0"
-url = SVNREPURL .. "/openbus/services/data_service/project/cpp/tags/01_02_00_00"
+url = GITREPURL .. "/data-service/data-service-project-cpp.git;tag=01_02_00_00"
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",

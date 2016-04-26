@@ -1,6 +1,6 @@
 name = "scs-cpp-mico"
 version = "1.2snapshot"
-url = SVNREPURL .. "/scs/core/cpp/branches/01_02_00"
+url = GITREPURL .. "/scs/scs-core-cpp.git;branch=01_02_00"
 dependencies = {
   "scs-idl1.2 == 1.2snapshot",
   "logger == 2.0snapshot",

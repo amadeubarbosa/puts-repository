@@ -1,6 +1,6 @@
 name = "boost-quickbook"
 version = "1.6"
-url = SVNREPURL .. "/openbus/libs/quickbook/branches/1.6"
+url = GITREPURL .. "/openbus-3rd-party/quickbook.git;branch=1.6"
 dependencies = {
   "boost == 1.51.0-oblibs2.0.0.0",
   "boost-build == 12m",

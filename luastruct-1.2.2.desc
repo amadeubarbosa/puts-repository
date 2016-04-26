@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "luastruct"
 version = "1.2.2"
-url = SVNREPURL.."/openbus/libs/struct/tags/01_02_02"
+url = GITREPURL.."/openbus-3rd-party/struct;tag=01_02_02"
 dependencies = {
   "lua == 5.2.2",
 }

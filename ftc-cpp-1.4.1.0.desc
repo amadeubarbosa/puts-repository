@@ -1,6 +1,6 @@
 name = "ftc-cpp"
 version = "1.4.1.0"
-url = SVNREPURL .. "/ftc/core/cpp/tags/FTC_v1_04_01_00_2012_11_14"
+url = GITREPURL .. "/ftc/ftc-core-cpp.git;tag=FTC_v1_04_01_00_2012_11_14"
 dependencies = {
   "boost == 1.51.0",
   "boost-system == 1.51.0",

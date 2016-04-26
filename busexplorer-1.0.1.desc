@@ -1,6 +1,6 @@
 name = "busexplorer"
 version = "1.0.1"
-url = SVNREPURL .. "/openbus/utils/busexplorer/tags/01_00_01"
+url = GITREPURL .. "/openbus/openbus-explorer.git;tag=01_00_01"
 dependencies = { 
   "openbus-java == 2.0.0.2",
 }

@@ -1,6 +1,6 @@
 name = "boost"
 version = "1.55.0"
-url = SVNREPURL .. "/openbus/libs/boost/branches/1.55.0"
+url = GITREPURL .. "/openbus-3rd-party/boost.git;branch=1.55.0"
 dev_files = {
   ["boost"] = "include/boost",
 }

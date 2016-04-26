@@ -1,6 +1,6 @@
 name = "e2fsprogs"
 version = "1.40.8snapshot"
-url = SVNREPURL .. "/openbus/libs/e2fsprogs/branches/1.40.8"
+url = GITREPURL .. "/openbus-3rd-party/e2fsprogs.git;branch=1.40.8"
 build = {
   type = "autotools",
   MacOS = "./configure --prefix=".. TMPDIR ..

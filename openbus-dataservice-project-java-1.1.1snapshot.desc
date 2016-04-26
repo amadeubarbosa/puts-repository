@@ -1,6 +1,6 @@
 name = "openbus-dataservice-project-java"
 version = "1.1.1snapshot"
-url = SVNREPURL .. "/openbus/services/data_service/project/java/branches/01_01_01"
+url = GITREPURL .. "/data-service/data-service-project-java.git;branch=01_01_01"
 dependencies = {
   "openbus-dataservice-project-idl == 1.1.0",
   "openbus-dataservice-core-idl == 1.1.0",

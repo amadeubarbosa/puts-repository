@@ -5,7 +5,7 @@ version = "1.5.2"
 dependencies = {
   "scs-idl1.2 == 1.2.1",
 }
-url = SVNREPURL .. "/openbus/idl/tags/OB_IDL_v1_05_02_2011_08_03"
+url = GITREPURL .. "/openbus/openbus-idl.git;tag=OB_IDL_v1_05_02_2011_08_03"
 install_files = {
   ["src/*.idl"] = "idl/"..IDL_VERSION,
   [PRODAPP.."/scs-idl1.2-1.2.1/src/*.idl"] = "idl/"..IDL_VERSION,

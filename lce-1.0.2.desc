@@ -4,7 +4,7 @@ LUA51_FLAG = "LUA51="..PRODAPP.."/lua-"..lua_pkgversion.." "
 
 name = "lce"
 version = "1.0.2"
-url = SVNREPURL.."/luautils/lce/tags/v1_00_02_2011_12_12"
+url = GITREPURL.."/engdist/lce.git/tag=v1_00_02_2011_12_12"
 dependencies = {
   "openssl == 0.9.9",
   "lua == "..lua_pkgversion,

@@ -1,6 +1,6 @@
 name = "openbus-dataservice-core-java"
 version = "1.0.3.0"
-url = SVNREPURL .. "/openbus/services/data_service/core/java/tags/01_00_03_00"
+url = GITREPURL .. "/data-service/data-services-core-java.git;tag=01_00_03_00"
 build = {
   type = "maven",
   javadoc = true,

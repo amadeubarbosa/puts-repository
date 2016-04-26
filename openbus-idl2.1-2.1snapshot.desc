@@ -2,7 +2,7 @@ IDL_VERSION="v2_1"
 
 name = "openbus-idl2.1"
 version = "2.1snapshot"
-url = SVNREPURL .. "/openbus/idl/trunk"
+url = GITREPURL .. "/openbus/openbus-idl.git"
 dependencies = {
   "scs-idl1.2 == 1.2.1",
 }

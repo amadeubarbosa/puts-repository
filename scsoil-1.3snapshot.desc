@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "scsoil"
 version = "1.3snapshot"
-url = SVNREPURL .. "/scs/core/cppoil/trunk"
+url = GITREPURL .. "/scs/scs-core-cppoil.git"
 dependencies = {
   "lua == 5.1.3snapshot",
 }
