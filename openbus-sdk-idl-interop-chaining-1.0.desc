@@ -1,0 +1,3 @@
+name = "openbus-sdk-idl-interop-chaining"
+version = "1.0"
+url = GITREPURL .. "/openbus/openbus-sdk-idl-interop-chaining.git;tag=1_0"

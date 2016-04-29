@@ -1,0 +1,3 @@
+name = "openbus-sdk-idl-demo-multiplexing"
+version = "1.0"
+url = GITREPURL .. "/openbus/openbus-sdk-idl-demo-multiplexing.git;tag=1_0"

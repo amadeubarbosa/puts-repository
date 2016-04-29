@@ -4584,6 +4584,126 @@ repository = {
     ,
   }
   ,
+  ["openbus-sdk-idl-demo-callchain"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-demo-chainvalidation"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-demo-clock"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-demo-greetings"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-demo-hello"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-demo-multiplexing"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-demo-sharedauth"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-interop-basic"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-interop-chaining"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-interop-delegation"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-interop-protocol"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-sdk-idl-interop-sharedauth"] = {
+    ["1.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-session-service"] = {
     ["1.5.3.1"] = {
       [1] = {

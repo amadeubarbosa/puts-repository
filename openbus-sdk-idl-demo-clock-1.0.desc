@@ -1,0 +1,3 @@
+name = "openbus-sdk-idl-demo-clock"
+version = "1.0"
+url = GITREPURL .. "/openbus/openbus-sdk-idl-demo-clock.git;tag=1_0"
