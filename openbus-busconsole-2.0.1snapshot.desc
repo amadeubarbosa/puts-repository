@@ -15,6 +15,8 @@ dependencies = {
   "loop == 3.0snapshot",
   "luacothread == 1.0snapshot",
   "luaidl == 0.7snapshot",
+  "sqlite == 3.7.16.2",
+  "lsqlite3 == 0.9.1snapshot",
   "oil == 0.7snapshot",
   "scs-lua == 1.2.3snapshot",
   "openbus-lua == "..version,

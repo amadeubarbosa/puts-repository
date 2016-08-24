@@ -4,7 +4,6 @@ url = GITREPURL .. "/openbus-3rd-party/luasqlite3.git;branch=0.9.1"
 
 dependencies = {
   "lua == 5.2.2",
-  "luafilesystem == 1.4.2snapshot",
   "boost-build == 12m",
   "sqlite == 3.7.16.2",
 }
