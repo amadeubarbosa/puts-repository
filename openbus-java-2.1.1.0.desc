@@ -1,6 +1,6 @@
 name = "openbus-java"
 version = "2.1.1.0"
-url = GITREPURL .. "/openbus/openbus-sdk-java.git"
+url = GITREPURL .. "/openbus/openbus-sdk-java.git;tag=02_01_01_00"
 dependencies = {
   "scs-idl1.2 == 1.2.1",
   --"scs-java == 1.2.1.3",
