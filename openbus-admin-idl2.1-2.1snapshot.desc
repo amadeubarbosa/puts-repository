@@ -1,9 +1,0 @@
-IDL_VERSION="v2_1"
-
-name = "openbus-admin-idl2.1"
-version = "2.1snapshot"
-url = SVNREPURL .. "/openbus/core/trunk/idl"
-dependencies = {
-}
-install_files = {
-}
