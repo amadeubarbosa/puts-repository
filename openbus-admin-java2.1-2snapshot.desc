@@ -1,7 +1,7 @@
 IDL_VERSION="v2_1"
 
 name = "openbus-admin-java2.1"
-version = "1snapshot"
+version = "2snapshot"
 url = GITREPURL .. "/openbus/openbus-core-admin.git"
 dependencies = {
   "scs-idl1.2 == 1.2.1",
