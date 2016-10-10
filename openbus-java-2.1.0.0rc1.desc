@@ -7,6 +7,15 @@ dependencies = {
   --"openbus-idl2.1 == 2.1.0rc1",
   --"openbus-idl2.0 == 2.0.4",
   "openbus-admin-idl2.1 == 2.1.0.0rc1",
+  "openbus-sdk-idl-interop-chaining == 1.0",
+  "openbus-sdk-idl-interop-basic == 1.0",
+  "openbus-sdk-idl-interop-delegation == 1.0",
+  "openbus-sdk-idl-interop-protocol == 1.0",
+  "openbus-sdk-idl-demo-callchain == 1.0",
+  "openbus-sdk-idl-demo-greetings == 1.0",
+  "openbus-sdk-idl-demo-hello == 1.0",
+  "openbus-sdk-idl-demo-clock == 1.0",
+  "openbus-sdk-idl-demo-multiplexing == 1.0",
 }
 build = {
   type = "maven",
@@ -16,6 +25,15 @@ build = {
     -- ["v2_0.idlpath"] = "%directory(openbus-idl2.0)%",
     ["admin.idlpath"] = "%directory(openbus-admin-idl2.1)%",
     ["scs.idlpath"] = "%directory(scs-idl1.2)%",
+    ["openbus-sdk-idl-interop-basic.idlpath"] = "%directory(openbus-sdk-idl-interop-basic)%",
+    ["openbus-sdk-idl-interop-chaining.idlpath"] = "%directory(openbus-sdk-idl-interop-chaining)%",
+    ["openbus-sdk-idl-interop-delegation.idlpath"] = "%directory(openbus-sdk-idl-interop-delegation)%",
+    ["openbus-sdk-idl-interop-protocol.idlpath"] = "%directory(openbus-sdk-idl-interop-protocol)%",
+    ["openbus-sdk-idl-demo-greetings.idlpath"] = "%directory(openbus-sdk-idl-demo-greetings)%",
+    ["openbus-sdk-idl-demo-hello.idlpath"] = "%directory(openbus-sdk-idl-demo-hello)%",
+    ["openbus-sdk-idl-demo-clock.idlpath"] = "%directory(openbus-sdk-idl-demo-clock)%",
+    ["openbus-sdk-idl-demo-callchain.idlpath"] = "%directory(openbus-sdk-idl-demo-callchain)%",
+    ["openbus-sdk-idl-demo-multiplexing.idlpath"] = "%directory(openbus-sdk-idl-demo-multiplexing)%",
   },
 }
 
