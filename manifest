@@ -2053,26 +2053,6 @@ repository = {
     ,
   }
   ,
-  ["openbus-admin-java2.0"] = {
-    ["1snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
-  ["openbus-admin-java2.1"] = {
-    ["1snapshot"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
-  }
-  ,
   ["openbus-bin-acs"] = {
     ["1.5.4snapshot"] = {
       [1] = {
