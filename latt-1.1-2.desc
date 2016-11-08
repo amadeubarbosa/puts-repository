@@ -1,6 +1,6 @@
 name = "latt"
 version = "1.1-2"
-url = GITREPURL.."/engdist/latt.git;tags=v1_01_02_2012_06_29"
+url = GITREPURL.."/engdist/latt.git;tag=v1_01_02_2012_06_29"
 dev_files = {
   ["src/*"] = "lib/lua/5.2"
 }
