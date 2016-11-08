@@ -1,4 +1,4 @@
 name = "sdk-lua-source"
 version = "2.0beta"
-url = GITREPURL .. "/openbus/openbus-sdk-lua;tag=OB_SDK_LUA_v2_00_BETA_2012_05_10"
+url = GITREPURL .. "/openbus/openbus-sdk-lua.git;tag=OB_SDK_LUA_v2_00_BETA_2012_05_10"
 directory = PRODAPP .."/sdk-lua"
