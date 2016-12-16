@@ -1,6 +1,6 @@
 name = "sqlite"
 version = "3.7.16.2"
-url = GITREPURL .. "/openbus-3rd-party/sqlite.git;branch=3.7.16.2"
+url = GITREPURL .. "/openbus-3rd-party/sqlite.git;tag=3.7.16.2"
 build = {
   type = "autotools",
   configure = "CC=gcc ./configure --enable-threadsafe=no --prefix="..TMPDIR,

@@ -1,6 +1,6 @@
 name = "lsqlite3"
 version = "0.9.1snapshot"
-url = GITREPURL .. "/openbus-3rd-party/luasqlite3.git;branch=0.9.1"
+url = GITREPURL .. "/openbus-3rd-party/luasqlite3.git"
 
 dependencies = {
   "lua == 5.2.2",
@@ -10,23 +10,23 @@ dependencies = {
 
 build = {
   type = "bjam",
-  src = ".",
-  targets = { "dist" },
+  src = "bbuild",
+  targets = { "stage" },
   variables = {
     threading = { "single" },
     variant = { "release" },
     link = { "static", "shared" },
-    ["-sPUTS_INSTALL"] = INSTALL.TOP,
+    ["-sLUA"] = "%directory(lua)%",
+    ["-sSQLITE"] = "%directory(sqlite)%",
     BOOST_BUILD_PATH = "%directory(boost-build)%",
     BJAM_SOURCE = "%directory(boost-build)%/engine",
   },
   bjam_opts = {
     "-d+2",
-    "--user-config=bbuild/puts/user-config.jam",
   },
 }
 
 dev_files = {
-  ["dist/liblsqlite3*"] = "lib",
-  ["lsqlite3.h"] = "include/lsqlite3",
+  ["install/liblsqlite3*"] = "lib",
+  ["../lsqlite3.h"] = "include/lsqlite3",
 }
