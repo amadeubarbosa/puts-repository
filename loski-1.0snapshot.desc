@@ -1,0 +1,22 @@
+name = "loski"
+version = "1.0snapshot"
+url = "git+https://github.com/renatomaia/loski.git"
+dependencies = {
+ "lua == 5.2.2.1",
+}
+
+build = {
+  type = "command",
+  Linux = {
+    cmd = "sed -i -e 's#LUA_HOME=.*#LUA_HOME=../../lua-5.2.2.1#' config && make linux"
+  }
+}
+
+install_files = {
+  ["src/*.h"] = "include",
+  ["src/process.so"] = "lib/libprocess.so",
+  ["src/event.so"] = "lib/libevent.so",
+  ["src/network.so"] = "lib/libnetwork.so",
+  ["src/time.so"] = "lib/libtime.so",
+  ["src/filesys.so"] = "lib/libfilesys.so",
+}
