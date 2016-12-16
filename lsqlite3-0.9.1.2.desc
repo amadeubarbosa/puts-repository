@@ -3,7 +3,7 @@ version = "0.9.1.2"
 url = GITREPURL .. "/openbus-3rd-party/luasqlite3.git;tag=0.9.1.2"
 
 dependencies = {
-  "lua == 5.2.2.1",
+  "lua == 5.2.2",
   "boost-build == 12m",
   "sqlite == 3.7.16.2",
 }
