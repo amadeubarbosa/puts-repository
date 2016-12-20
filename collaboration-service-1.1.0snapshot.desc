@@ -1,6 +1,6 @@
 name = "collaboration-service"
 version = "1.1.0snapshot"
-url = GITREPURL.."/openbus/collaboration-service.git"
+url = GITREPURL.."/openbus/openbus-collaboration-service.git"
 dependencies = {
 	"boost-build == 12m",
 	"lua-bin == 5.2.2",
