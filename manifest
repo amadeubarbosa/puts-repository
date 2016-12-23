@@ -305,13 +305,6 @@ repository = {
       ,
     }
     ,
-    ["1.1.2"] = {
-      [1] = {
-        ["arch"] = "desc",
-      }
-      ,
-    }
-    ,
     ["1.2.0-rc1"] = {
       [1] = {
         ["arch"] = "desc",
@@ -319,6 +312,19 @@ repository = {
       ,
     }
     ,
+  }
+  ,
+  ["busexplorer-v20"] = {
+    ["1.1.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["busexplorer-v21"] = {
     ["1.2snapshot"] = {
       [1] = {
         ["arch"] = "desc",
