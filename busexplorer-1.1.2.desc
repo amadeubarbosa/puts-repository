@@ -1,6 +1,6 @@
 name = "busexplorer"
-version = "1snapshot"
-url = GITREPURL .. "/openbus/openbus-explorer.git"
+version = "1.1.2"
+url = GITREPURL .. "/openbus/openbus-explorer.git;tag=01_01_02"
 dependencies = { 
 -- recuperando dependencias do nexus
 }
@@ -15,5 +15,5 @@ build = {
 install_files = {
   ["BusExplorer/doc/README"] = ".",
   ["BusExplorer/etc/busexplorer.conf"] = ".",
-  ["BusExplorer/target/busexplorer-1-SNAPSHOT-jar-with-dependencies.jar"] = ".",
+  ["BusExplorer/target/busexplorer-1.1.2-jar-with-dependencies.jar"] = ".",
 }
