@@ -1,0 +1,48 @@
+name = "collaboration-service"
+version = "1.1.0.1"
+url = GITREPURL.."/openbus/collaboration-service.git;tag=01_01_00_01"
+dependencies = {
+  "boost-build == 12m",
+  "lua-bin == 5.2.2",
+  "luuid == 1.0.2",
+  "luastruct == 1.2.2",
+  "luasocket == 2.0.2.2",
+  "lce == 2.0.2",
+  "luafilesystem == 1.4.2.2",
+  "luavararg == 1.1.2",
+  "luatuple == 1.0beta5",
+  "loop == 3.0beta5",
+  "luacothread == 1.0beta5",
+  "luaidl == 0.7.0beta3",
+  "oil == 0.7.0beta3",
+  "scs-lua == 1.2.3.2",
+  "openbus-lua == 2.0.1.2",
+  "sqlite == 3.7.16.2",
+  "lsqlite3 == 0.9.1.2",
+}
+build = {
+  type = "bjam",
+  src = ".",
+  targets = {
+    "dist",
+  },
+  variables = {
+    variant = {"release"},
+    link = { "static" },
+    ["-sLOOP_BUILD"] = "%directory(loop)%",
+    ["-sOIL_BUILD"] = "%directory(oil)%",
+    ["-sPUTS_INSTALL"] = INSTALL.TOP,
+    BOOST_BUILD_PATH = "%directory(boost-build)%:"
+      .."%directory(collaboration-service)%/bbuild",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
+  },
+  bjam_opts = {
+    "-d+2",
+    "--user-config=bbuild/puts/user-config.jam",
+  },
+}
+install_files = {
+  ["dist/collaboration-service"] = "bin",
+  ["collab.adm"] = "admin",
+  ["shell/*"] = "shell",
+}
