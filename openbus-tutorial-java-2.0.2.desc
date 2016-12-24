@@ -6,7 +6,7 @@ local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 *.p
 local generate = "pdflatex FILE && bibtex FILE && pdflatex FILE && pdflatex FILE"
 build = {
   type = "command",
-  src = "doc",
+  src = ".",
   cmd = [[
   export TEXINPUTS=.:tex: &&
 ]]..clean..generate:gsub("FILE","book")..

@@ -4114,6 +4114,13 @@ repository = {
   }
   ,
   ["openbus-html-quick-start"] = {
+    ["2.0.0.9"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",

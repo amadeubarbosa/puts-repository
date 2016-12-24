@@ -1,6 +1,6 @@
 name = "openbus-html-intro"
 version = "2.0.0.9"
-subpackage_of = "openbus-busservice == "..version
+subpackage_of = "openbus-doc-allpdf == "..version
 
 local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 generated"
 local gen_metadata = "pdflatex openbus && bibtex openbus && pdflatex openbus"

@@ -1,6 +1,6 @@
 name = "openbus-doc-allpdf"
 version = "2.0.0.9"
-subpackage_of = "openbus-busservice == "..version
+url = GITREPURL .. "/openbus/openbus-core.git;tag=02_00_00_09"
 
 local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 *.pdf ; "
 local generate = "pdflatex FILE && bibtex FILE && pdflatex FILE && pdflatex FILE"
