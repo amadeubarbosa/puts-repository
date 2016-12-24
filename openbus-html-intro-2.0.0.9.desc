@@ -1,0 +1,21 @@
+name = "openbus-html-intro"
+version = "2.0.0.9"
+subpackage_of = "openbus-busservice == "..version
+
+local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 generated"
+local gen_metadata = "pdflatex openbus && bibtex openbus && pdflatex openbus"
+local convert_fig = "convert -density 300 -antialias -resize x600 figs/architecture.pdf figs/architecture.png"
+local latex2html = "latex2html -no_navigation -show_section_numbers -split 0 -mkdir -dir generated openbus -info '' -address ''" 
+local url = "http://webserver2.tecgraf.puc-rio.br/ftp_pub/openbus/docs/2.0.0/openbus/"
+local sed_crossref = "sed -e 's/openbus.html//g' -e 's#SRC=\"./#SRC=\""..url.."#g' -i.bak generated/index.html"
+
+build = {
+  type = "command",
+  src = "doc/openbus",
+  cmd = clean.." ; "..convert_fig.." && "..gen_metadata.." && "..
+        latex2html .." && ".. sed_crossref
+}
+install_files = {
+ ["generated/index.html"]       = "doc/openbus",
+ ["generated/architecture.png"] = "doc/openbus",
+}

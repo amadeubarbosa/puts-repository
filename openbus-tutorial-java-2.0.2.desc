@@ -1,0 +1,18 @@
+name = "openbus-tutorial-java"
+version = "2.0.2"
+url = GITREPURL .. "/openbus/openbus-tutorial.git;tag=JAVA_02_00_02"
+
+local clean = "rm -rf *.out *.log *.aux *.mtc *.toc *.maf *.bbl *.blg *.mtc1 *.pdf ; "
+local generate = "pdflatex FILE && bibtex FILE && pdflatex FILE && pdflatex FILE"
+build = {
+  type = "command",
+  src = "doc",
+  cmd = [[
+  export TEXINPUTS=.:tex: &&
+]]..clean..generate:gsub("FILE","book")..
+    clean..generate:gsub("FILE","slides")
+}
+install_files = {
+  ["book.pdf"]    = "doc/tutorial-java",
+  ["slides.pdf"]  = "doc/tutorial-java",
+}
