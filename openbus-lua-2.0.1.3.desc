@@ -1,0 +1,66 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes "
+
+name = "openbus-lua"
+version = "2.0.1.3"
+url = GITREPURL .. "/openbus/openbus-sdk-lua.git;tag=02_00_01_03"
+dependencies = { 
+  "lua-bin == 5.2.2",
+  "luuid == 1.0.2",
+  "luastruct == 1.2.2",
+  "luasocket == 2.0.2.2",
+  "lce == 2.0.2",
+  "luafilesystem == 1.4.2.2",
+  "luavararg == 1.1.2",
+  "luatuple == 1.0beta6",
+  "loop == 3.0beta6",
+  "luacothread == 1.0beta6",
+  "luaidl == 0.7.0beta3_loop3.0beta6",
+  "sqlite == 3.7.16.2",
+  "lsqlite3 == 0.9.1.2",
+  "oil == 0.7.0beta3_loop3.0beta6",
+  "scs-lua == 1.2.3.2",
+  -- for build only:
+  "scs-idl1.2 == 1.2.1",
+  "openbus-idl1.5 == 1.5.2-1",
+  "openbus-idl2.0 == 2.0.4",
+  "sdk-idl-source == 2.0.2",
+  "openbus-sdk-idl-interop-delegation == 1.0",
+  "openbus-sdk-idl-interop-chaining == 1.0",
+  "openbus-sdk-idl-interop-basic == 1.0",
+  "openbus-sdk-idl-interop-protocol == 1.0",
+}
+
+local vars = {
+  LUA52 = "%directory(lua-bin)%",
+  USE_LUA52 = "YES",
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "tecmake",
+  variables = vars,
+  mf = { "openbus" , "openbus parse-interops-idls" },
+  MacOS = { mf = { "openbus", "openbus BUILD_DYLIB=YES" }, },
+  SunOS510_64 = { mf = { "openbus "..SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/"..TEC_UNAME.."/libluaopenbus.so"] = "lib",
+  ["../lib/"..TEC_UNAME.."/libluaopenbus.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/"..TEC_UNAME.."/libluaopenbus.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/luaopenbus.h"] = "include/openbus/lua/",
+  ["../demo/assistant/*"]        = "demo/lua/assistant",
+  ["../demo/callchain/*"]        = "demo/lua/callchain",
+  ["../demo/dedicatedclock/*"]   = "demo/lua/dedicatedclock",
+  ["../demo/greetings/*"]        = "demo/lua/greetings",
+  ["../demo/hello/*"]            = "demo/lua/hello",
+  ["../demo/independentclock/*"] = "demo/lua/independentclock",
+  ["../demo/multiplexing/*"]     = "demo/lua/multiplexing",
+  ["../demo/utils.lua"]          = "demo/lua",
+}

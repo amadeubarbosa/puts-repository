@@ -5,8 +5,8 @@ version = "1.2.3.2"
 url = GITREPURL .. "/scs/scs-core-lua.git;tag=01_02_03_02"
 dependencies = {
   "lua-bin == 5.2.2",
-  "loop == 3.0beta5",
-  "oil >= 0.7.0beta2",
+  "loop ~> 3.0beta5",
+  "oil ~> 0.7.0beta2",
   "scs-idl1.2 == 1.2.1",
 }
 build = {
