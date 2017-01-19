@@ -751,6 +751,13 @@ repository = {
       ,
     }
     ,
+    ["2.0.2_loop3.0beta6"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.0lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -5433,6 +5440,13 @@ repository = {
     }
     ,
     ["1.2.3.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.2.3.2_loop3.0beta6"] = {
       [1] = {
         ["arch"] = "desc",
       }

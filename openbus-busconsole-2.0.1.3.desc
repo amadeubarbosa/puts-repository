@@ -8,7 +8,7 @@ dependencies = {
   "luuid == 1.0.2",
   "luastruct == 1.2.2",
   "luasocket == 2.0.2.2",
-  "lce == 2.0.2",
+  "lce == 2.0.2_loop3.0beta6",
   "luafilesystem == 1.4.2.2",
   "luavararg == 1.1.2",
   "luatuple == 1.0beta6",
@@ -18,7 +18,7 @@ dependencies = {
   "sqlite == 3.7.16.2",
   "lsqlite3 == 0.9.1.2",
   "oil == 0.7.0beta3_loop3.0beta6",
-  "scs-lua == 1.2.3.2",
+  "scs-lua == 1.2.3.2_loop3.0beta6",
   "openbus-lua == "..version,
 }
 
