@@ -16,12 +16,9 @@ build = {
   type = "command",
   variables = vars,
   src = "doc/website",
-  cmd =  [=[
-    mkdir output
-    $LUA_BIN_HOME/bin/$TEC_UNAME/lua52 -e"package.path=[[$LOOP_HOME/lua/?.lua;../../lua/?.lua]]" $LOOP_HOME/doc/build.lua sitemap.lua output
-  ]=],
+  cmd = [=[ $LUA_BIN_HOME/bin/$TEC_UNAME/lua52 -e"package.path=[[$LOOP_HOME/lua/?.lua;../../lua/?.lua]]" $LOOP_HOME/doc/build.lua sitemap.lua ]=]..TMPDIR,
 }
 
 install_files = {
-  ["output/*.htm"] = "doc/core",
+  [TMPDIR.."/*.htm"] = "doc/core",
 }
