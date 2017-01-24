@@ -1,0 +1,24 @@
+name = "openbus-busdocs"
+version = "2.1.0.1"
+subpackage_of = "openbus-busservice == "..version
+dependencies = {
+  "lua-bin == 5.2.2",
+  "loop == 3.0beta6",
+} 
+
+local vars = {}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "command",
+  variables = vars,
+  src = "doc/website",
+  cmd = [=[ $LUA_BIN_HOME/bin/$TEC_UNAME/lua52 -e"package.path=[[$LOOP_HOME/lua/?.lua;../../lua/?.lua]]" $LOOP_HOME/doc/build.lua sitemap.lua ]=]..TMPDIR,
+}
+
+install_files = {
+  [TMPDIR.."/*.htm"] = "doc/core",
+}
