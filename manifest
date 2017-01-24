@@ -4262,6 +4262,13 @@ repository = {
   }
   ,
   ["openbus-html-manual"] = {
+    ["2.1.0.1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -4272,6 +4279,13 @@ repository = {
   }
   ,
   ["openbus-html-overview"] = {
+    ["2.1.0.1"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
