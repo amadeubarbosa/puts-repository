@@ -1526,6 +1526,13 @@ repository = {
       ,
     }
     ,
+    ["0.5.2"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["0.5lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",

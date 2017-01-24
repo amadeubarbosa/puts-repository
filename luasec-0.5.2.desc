@@ -1,0 +1,38 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "luasec"
+version = "0.5.2"
+url = GITREPURL.."/openbus-3rd-party/luasec.git;tag=00_05_02"
+dependencies = {
+  "openssl == 1.0.0m",
+  "lua == 5.2.2",
+  "loop == 3.0beta6",
+}
+
+local vars = {
+  LUA52 = "%directory(lua)%",
+  USE_LUA52 = "YES",
+  OPENBUS_HOME = INSTALL.TOP, -- required by '.mak' when USE_STATIC
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "tecmake",
+  variables = vars,
+  mf = { "config" },
+  MacOS = { mf = { "config", "config BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "config "..SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/${TEC_UNAME}/libluasec.so"] = "lib",
+  ["../lib/${TEC_UNAME}/libluasec.dylib"] = "lib",
+}
+dev_files = {
+  ["../include/*.h"] = "include/luasec",
+  ["../lib/${TEC_UNAME}/libluasec.*"] = "lib",
+}
