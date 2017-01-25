@@ -7,7 +7,7 @@ dependencies = {
 
 build = {
   type = "maven",
-  javadoc = true,
+  javadoc = false,
   variables = { 
   },
 }
