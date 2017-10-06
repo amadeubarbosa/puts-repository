@@ -2514,6 +2514,26 @@ repository = {
     ,
   }
   ,
+  ["openbus-busextension"] = {
+    ["1.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
+  ["openbus-busextension-bbuild"] = {
+    ["1.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+  }
+  ,
   ["openbus-busservice"] = {
     ["2.0.0.0"] = {
       [1] = {

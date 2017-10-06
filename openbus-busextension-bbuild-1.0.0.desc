@@ -1,0 +1,107 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES"
+
+name = "openbus-busextension-bbuild"
+version = "1.0.0"
+url = GITREPURL .. "/openbus/openbus-governance-extension.git"
+--[[ TECMAKE BUILD 
+dependencies = {
+  "lua-bin == 5.2.2",
+  "luuid == 1.0.2",
+  "luastruct == 1.2.2",
+  "luasocket == 2.0.2.2",
+  "luasec == 0.5.2",
+  "lce == 2.0.2_loop3.0beta6",
+  "luafilesystem == 1.4.2.2",
+  "luavararg == 1.1.2",
+  "luatuple == 1.0beta6",
+  "loop == 3.0beta6",
+  "luacothread == 1.0beta6",
+  "luaidl == 0.7.0beta3_loop3.0beta6",
+  "sqlite == 3.7.16.2",
+  "lsqlite3 == 0.9.1.2",
+  "oil == 0.7.0beta3_loop3.0beta6",
+  "scs-idl1.2 == 1.2.1",
+  "scs-lua == 1.2.3.2_loop3.0beta6",
+  "openbus-idl2.0 == 2.0.4",
+  "openbus-idl2.1 == 2.1.0",
+  "openbus-lua == 2.1.0.1",
+} 
+
+local vars = {
+  LUA52 = "%directory(lua-bin)%",
+  USE_LUA52 = "YES",
+  CODEREV = assert(version:match("^1%.0%.(%w+)$"), "bad 'busextension' version"),
+  OPENBUS_HOME = INSTALL.TOP, -- required by '.mak' when USE_STATIC
+}
+for _, dep in ipairs(dependencies) do
+  local name = assert(dep:match("^([^=]-)%s=="))
+  vars[name:upper():gsub("[^%w]", "_").."_HOME"] = "%directory("..name..")%"
+end
+
+build = {
+  type = "tecmake",
+  variables = vars,
+  mf = { "busextension USE_STATIC=YES" },
+  SunOS510_64 = { mf = { "busextension USE_STATIC=YES "..SUNOS64_TECMAKE_FLAGS } },
+}
+install_files = {
+  ["../bin/${TEC_UNAME}/busextension"] = "bin",
+  ["../config/*"] = "config",
+}
+dev_files = {
+  ["../test/*"] = "test",
+  ["../idl/*.idl"] = "idl",
+}
+]]
+
+dependencies = {
+  "boost-build == 12m",
+  "lua-bin == 5.2.2",
+  "luuid == 1.0.2",
+  "luastruct == 1.2.2",
+  "luasocket == 2.0.2.2",
+  "luasec == 0.5.2",
+  "lce == 2.0.2_loop3.0beta6",
+  "luafilesystem == 1.4.2.2",
+  "luavararg == 1.1.2",
+  "luatuple == 1.0beta6",
+  "loop == 3.0beta6",
+  "luacothread == 1.0beta6",
+  "luaidl == 0.7.0beta3_loop3.0beta6",
+  "sqlite == 3.7.16.2",
+  "lsqlite3 == 0.9.1.2",
+  "oil == 0.7.0beta3_loop3.0beta6",
+  "scs-idl1.2 == 1.2.1",
+  "scs-lua == 1.2.3.2_loop3.0beta6",
+  "openbus-idl2.0 == 2.0.4",
+  "openbus-idl2.1 == 2.1.0",
+  "openbus-lua == 2.1.0.1",
+}
+build = {
+  type = "bjam",
+  src = "bbuild",
+  targets = {
+    "stage",
+  },
+  variables = {
+    variant = {"release"},
+    link = { "static" },
+    ["-sLUA"] = "%directory(lua-bin)%",
+    ["-sLCE"] = "%directory(lce)%",
+    ["-sLUUID"] = "%directory(luuid)%",
+    BOOST_BUILD_PATH = "%directory(boost-build)%",
+    BJAM_SOURCE = "%directory(boost-build)%/engine",
+  },
+  bjam_opts = {
+    "-d+2",
+    "--user-config=bbuild/puts/user-config.jam",
+  },
+}
+install_files = {
+  ["install/busextension"] = "bin",
+  ["config/*"] = "config/",
+}
+dev_files = {
+  ["test/*"] = "test",
+  ["idl/*.idl"] = "idl",
+}
