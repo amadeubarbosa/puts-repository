@@ -25,6 +25,10 @@ dependencies = {
   "openbus-idl2.0 == 2.0.4",
   "openbus-idl2.1 == 2.1.0",
   "sdk-idl-source == 2.1.0",
+  "openbus-sdk-idl-interop-delegation == 1.0",
+  "openbus-sdk-idl-interop-chaining == 1.0",
+  "openbus-sdk-idl-interop-basic == 1.0",
+  "openbus-sdk-idl-interop-protocol == 1.0",
 }
 
 local vars = {
@@ -39,9 +43,9 @@ end
 build = {
   type = "tecmake",
   variables = vars,
-  mf = { "openbus" },
-  MacOS = { mf = { "openbus", "openbus BUILD_DYLIB=YES" }, },
-  SunOS510_64 = { mf = { "openbus "..SUNOS64_TECMAKE_FLAGS } },
+  mf = { "openbus" , "openbus parse-interops-idls" },
+  MacOS = { mf = { "openbus", "openbus parse-interops-idls", "openbus BUILD_DYLIB=YES" }, },
+  SunOS510_64 = { mf = { "openbus "..SUNOS64_TECMAKE_FLAGS, "openbus parse-interops-idls" } },
 }
 build.Darwin = build.MacOS
 
