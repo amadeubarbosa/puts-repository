@@ -1,8 +1,8 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES"
 
 name = "openbus-busextension"
-version = "1.0.0"
-url = GITREPURL .. "/openbus/openbus-governance-extension.git;tag=01_00_00"
+version = "1.0snapshot"
+url = GITREPURL .. "/openbus/openbus-governance-extension.git"
 dependencies = {
   "lua-bin == 5.2.2",
   "luuid == 1.0.2",
@@ -29,7 +29,7 @@ dependencies = {
 local vars = {
   LUA52 = "%directory(lua-bin)%",
   USE_LUA52 = "YES",
-  CODEREV = assert(version:match("^1%.0%.(%w+)$"), "bad 'busextension' version"),
+  --CODEREV = assert(version:match("^1%.0%.(%w+)$"), "bad 'busextension' version"),
   OPENBUS_HOME = INSTALL.TOP, -- required by '.mak' when USE_STATIC
 }
 for _, dep in ipairs(dependencies) do

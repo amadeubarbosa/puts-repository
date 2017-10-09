@@ -2529,10 +2529,17 @@ repository = {
       ,
     }
     ,
+    ["1.0snapshot"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
   }
   ,
   ["openbus-busextension-bbuild"] = {
-    ["1.0.0"] = {
+    ["1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
       }

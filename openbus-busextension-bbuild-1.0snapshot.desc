@@ -1,7 +1,7 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES"
 
 name = "openbus-busextension-bbuild"
-version = "1.0.0"
+version = "1.0snapshot"
 url = GITREPURL .. "/openbus/openbus-governance-extension.git"
 --[[ TECMAKE BUILD 
 dependencies = {
