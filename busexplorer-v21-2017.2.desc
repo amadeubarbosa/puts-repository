@@ -1,13 +1,13 @@
 name = "busexplorer-v21"
-version = "1.2snapshot"
-url = GITREPURL .. "/openbus/openbus-explorer.git"
+version = "2017.2"
+url = GITREPURL .. "/openbus/openbus-explorer.git;tag=02_01-2017_02"
 dependencies = { 
 -- recuperando dependencias do nexus
 }
 
 build = {
   type = "maven",
-  javadoc = true,
+  javadoc = false,
   variables = { 
   },
 }
