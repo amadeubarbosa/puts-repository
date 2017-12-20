@@ -1,0 +1,31 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "openbus-audit-agent"
+version = "1.0.0"
+url = GITREPURL .. "/openbus/openbus-audit-agent.git;tag=01_00_00"
+dependencies = {
+  "lua == 5.2.2",
+  "lua-bin == 5.2.2",
+  "loop == 3.0beta6",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua)%",
+    USE_LUA52 = "YES",
+    LOOP_HOME = "%directory(loop)%",
+  },
+  mf = { "audit" },
+  MacOS = { mf = { "audit", "audit BUILD_DYLIB=Yes" } },
+  SunOS510_64 = { mf = { "audit "..SUNOS64_TECMAKE_FLAGS } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/"..TEC_UNAME.."/libluaopenbusaudit.so"] = "lib",
+  ["../lib/"..TEC_UNAME.."/libluaopenbusaudit.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/"..TEC_UNAME.."/libluaopenbusaudit.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/luaopenbusaudit.h"] = "include/luaopenbusaudit",
+}
