@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES"
 
 name = "openbus-busservice"
 version = "2.1.0snapshot"
-url = GITREPURL.."/openbus/openbus-core.git;branch=OPENBUS-3102"
+url = GITREPURL.."/openbus/openbus-core.git"
 dependencies = {
   "lua-bin == 5.2.2",
   "luuid == 1.0snapshot",
