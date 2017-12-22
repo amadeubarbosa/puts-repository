@@ -1,0 +1,33 @@
+SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
+
+name = "scs-lua"
+version = "1.2.3.2_oil0.7.0beta4"
+url = GITREPURL .. "/scs/scs-core-lua.git;tag=01_02_03_02"
+dependencies = {
+  "lua-bin == 5.2.2",
+  "loop == 3.0beta6",
+  "oil == 0.7.0beta4",
+  "scs-idl1.2 == 1.2.1",
+}
+build = {
+  type = "tecmake",
+  variables = {
+    LUA52 = "%directory(lua-bin)%",
+    USE_LUA52 = "YES",
+    LOOP_HOME = "%directory(loop)%",
+  },
+  mf = { "config", },
+  MacOS = { mf = {"config", "config BUILD_DYLIB=Yes"} },
+  SunOS510_64 = { mf = { "config "..SUNOS64_TECMAKE_FLAGS, } },
+}
+build.Darwin = build.MacOS
+
+install_files = {
+  ["../lib/"..TEC_UNAME.."/libluascs.so"] = "lib",
+  ["../lib/"..TEC_UNAME.."/libluascs.dylib"] = "lib",
+}
+dev_files = {
+  ["../lib/"..TEC_UNAME.."/libluascs.*"] = "lib",
+  ["../obj/"..TEC_UNAME.."/luascs.h"] = "include/scs/lua",
+  ["../schema"] = "schema",
+}

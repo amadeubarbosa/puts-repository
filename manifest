@@ -1450,6 +1450,13 @@ repository = {
       ,
     }
     ,
+    ["0.7.0beta4"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["0.7lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -2044,6 +2051,13 @@ repository = {
       ,
     }
     ,
+    ["0.7.0beta4"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["0.7lua51snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -2550,6 +2564,13 @@ repository = {
       ,
     }
     ,
+    ["2.1.0.2_oil0.7.0beta4"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -2585,6 +2606,13 @@ repository = {
   ,
   ["openbus-busextension"] = {
     ["1.0.0"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.0.1"] = {
       [1] = {
         ["arch"] = "desc",
       }
@@ -5004,6 +5032,13 @@ repository = {
       ,
     }
     ,
+    ["2.1.0.2_oil0.7.0beta4"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
     ["2.1.0snapshot"] = {
       [1] = {
         ["arch"] = "desc",
@@ -5746,6 +5781,13 @@ repository = {
     }
     ,
     ["1.2.3.2_loop3.0beta6"] = {
+      [1] = {
+        ["arch"] = "desc",
+      }
+      ,
+    }
+    ,
+    ["1.2.3.2_oil0.7.0beta4"] = {
       [1] = {
         ["arch"] = "desc",
       }

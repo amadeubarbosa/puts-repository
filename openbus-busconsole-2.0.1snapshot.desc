@@ -18,6 +18,7 @@ dependencies = {
   "sqlite == 3.7.16.2",
   "lsqlite3 == 0.9.1snapshot",
   "oil == 0.7snapshot",
+  "luaiconv == 7snapshot",
   "scs-lua == 1.2.3snapshot",
   "openbus-lua == "..version,
 }

@@ -15,6 +15,7 @@ dependencies = {
 	"luacothread == 1.0snapshot",
 	"luaidl == 0.7snapshot",
 	"oil == 0.7snapshot",
+	"luaiconv == 7snapshot",
 	"scs-lua == 1.2.3snapshot",
 	"openbus-lua == 2.0.1snapshot",
 	"sqlite == 3.7.16.2",
