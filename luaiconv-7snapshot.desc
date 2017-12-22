@@ -2,7 +2,7 @@ SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=Yes TEC_UNAME=SunOS510_64 BUILD_64=yes"
 
 name = "luaiconv"
 version = "7snapshot"
-url = GITREPURL .. "/openbus-3rd-party/luaiconv"
+url = GITREPURL .. "/openbus-3rd-party/luaiconv.git"
 dependencies = {
   "lua == 5.2.2",
 }
