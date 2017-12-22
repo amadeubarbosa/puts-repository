@@ -1,7 +1,7 @@
 SUNOS64_TECMAKE_FLAGS="USE_NODEPEND=YES TEC_UNAME=SunOS510_64 BUILD_64=YES "
 
 name = "openbus-busconsole"
-version = "2.1.0.2_oil0.7.0beta4"
+version = "2.1.0.3"
 subpackage_of = "openbus-lua == "..version
 dependencies = { 
   "lua-bin == 5.2.2",

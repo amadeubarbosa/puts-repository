@@ -24,7 +24,7 @@ dependencies = {
   "scs-lua == 1.2.3.2_oil0.7.0beta4",
   "openbus-idl2.0 == 2.0.4",
   "openbus-idl2.1 == 2.1.0",
-  "openbus-lua == 2.1.0.2",
+  "openbus-lua == 2.1.0.3",
 } 
 
 local vars = {
