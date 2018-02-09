@@ -17,8 +17,8 @@ dependencies = {
   "luaidl == 0.7snapshot",
   "sqlite == 3.7.16.2",
   "lsqlite3 == 0.9.1snapshot",
-  "oil == 0.7snapshot",
   "luaiconv == 7snapshot",
+  "oil == 0.7snapshot",
   "scs-lua == 1.2.3snapshot",
   -- for build only:
   "scs-idl1.2 == 1.2.1",

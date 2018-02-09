@@ -18,8 +18,8 @@ dependencies = {
   "luaidl == 0.7.0beta4",
   "sqlite == 3.7.16.2",
   "lsqlite3 == 0.9.1.2",
-  "oil == 0.7.0beta4",
   "luaiconv == 7.1",
+  "oil == 0.7.0beta4",
   "scs-lua == 1.2.3.2_oil0.7.0beta4",
   -- for build only:
   "scs-idl1.2 == 1.2.1",

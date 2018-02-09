@@ -6,6 +6,7 @@ url = GITREPURL .. "/engdist/oil.git"
 dependencies = {
   "lua-bin == 5.2.2",
   "loop == 3.0snapshot",
+  "luaiconv == 7snapshot",
 }
 build = {
   type = "tecmake",
