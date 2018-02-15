@@ -1,0 +1,19 @@
+name = "busexplorer-v21"
+version = "2018.1"
+url = GITREPURL .. "/openbus/openbus-explorer.git;tag=02_01-2018_01"
+dependencies = { 
+-- recuperando dependencias do nexus
+}
+
+build = {
+  type = "maven",
+  javadoc = false,
+  variables = { 
+  },
+}
+
+install_files = {
+  ["BusExplorer/doc/README"] = ".",
+  ["BusExplorer/etc/busexplorer.conf"] = ".",
+  ["BusExplorer/target/busexplorer*jar-with-dependencies.jar"] = ".",
+}
