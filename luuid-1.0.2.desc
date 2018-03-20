@@ -4,7 +4,7 @@ name = "luuid"
 version = "1.0.2"
 url = GITREPURL.."/openbus-3rd-party/luuid.git;tag=01_00_02"
 dependencies = {
-  "e2fsprogs == 1.40.8-oblibs1.3.2-1",
+  "e2fsprogs == 1.40.8.1",
   "lua == 5.2.2",
 }
 build = {
