@@ -2,6 +2,7 @@ name = "sgad"
 version = "1.0snapshot"
 url = GITREPURL.."/fpina/csbase-merge.git"
 dependencies = { "luacompat52 == 1.0snapshot","luabit32 == 1.0snapshot",
+  "lua == 5.1.3snapshot",
   "lua-bin == 5.1.3snapshot",
   "luastruct == 1.2lua51snapshot",
   "luasocket == 2.0.2lua51snapshot",
