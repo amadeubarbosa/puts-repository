@@ -1,3 +1,3 @@
 name = "luacompat52-source"
 version = "1.0snapshot"
-url = "git+ssh://git@vcs.tecgraf.puc-rio.br/openbus/lua-compat-52.git"
+url = GITREPURL.."/openbus-3rd-party/lua-compat-52.git"
