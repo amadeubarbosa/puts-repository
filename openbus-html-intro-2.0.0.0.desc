@@ -9,13 +9,14 @@ local latex2html = "latex2html -no_navigation -show_section_numbers -split 0 -mk
 local url = "http://webserver2.tecgraf.puc-rio.br/ftp_pub/openbus/docs/2.0.0/openbus/"
 local sed_crossref = "sed -e 's/openbus.html//g' -e 's#SRC=\"./#SRC=\""..url.."#g' -i.bak generated/index.html"
 
+install_files = {
+ ["generated/index.html"]       = "doc/openbus",
+ ["generated/architecture.png"] = "doc/openbus",
+}
+
 build = {
   type = "command",
   src = "doc/openbus",
   cmd = clean.." ; "..convert_fig.." && "..gen_metadata.." && "..
         latex2html .." && ".. sed_crossref
-}
-install_files = {
- ["generated/index.html"]       = "doc/openbus",
- ["generated/architecture.png"] = "doc/openbus",
 }
