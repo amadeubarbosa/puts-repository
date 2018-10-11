@@ -1,6 +1,6 @@
 name = "tecmake"
 version = "3.21"
-url = GITREPURL.."/openbus-3rd-party/tecmake.git;tag="..version
+url = GITREPURL.."/openbus-3rd-party/tecmake.git"
 
 
 local tecmake_wrapper = [[#!/bin/bash
@@ -29,6 +29,6 @@ build = {
 
 install_files = {
   [fname_script] = "bin",
-  ["*"] = "share/tecmake",
+  ["3.21/*"] = "share/tecmake",
   [fname_config] = "share/tecmake",
 }
